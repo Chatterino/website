@@ -4,6 +4,8 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  background: #000;
 }
 
 a {
@@ -14,3 +16,20 @@ a {
 * {
   box-sizing: border-box;
 }
+
+button {
+  outline: none !important;
+}
+
+/* hack */
+#chatprop-host > * {
+  width: 100%;
+}
+
+.carousel {
+  max-width: 1280px;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

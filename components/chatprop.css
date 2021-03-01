@@ -1,0 +1,143 @@
+/* 3D effect */
+.c-window {
+  transform: perspective(1600px) rotate3d(0.1, -0.1, 0.03, 20deg);
+  box-shadow: 0 0 1px 0 black, 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.c-window {
+  font-size: 12px;
+  font-family: "Segoe UI", Helvetica, Tahoma, Geneva, Verdana, sans-serif;
+  background: #111;
+  color: #fff;
+  border: 1px solid #5a5a5a;
+  height: 100%;
+
+  pointer-events: none;
+  user-select: none;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.c-window-titlebar {
+  color: #ccc;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 8px;
+}
+
+.c-tab {
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  margin-right: 1px;
+  padding: 0 8px;
+
+  background: #252525;
+  border-top: 1px solid #444;
+}
+
+.c-tab.active {
+  color: #fff;
+  border-top: 2px solid #00aeef;
+  background: #555;
+}
+.c-tab.seen {
+  color: #aaa;
+  border-top: 1px solid #444;
+}
+.c-tab.new-messages {
+  color: #eee;
+  border-top: 1px solid #888;
+}
+.c-tab.highlighted {
+  color: #eee;
+  border-top: 1px solid #ee6166;
+}
+
+.c-split-container {
+  background: #191919;
+  border-top: 2px solid #555;
+  display: flex;
+  flex-direction: row;
+
+  flex-grow: 1;
+  min-height: 0;
+}
+
+.c-split-container > * + * {
+  border-left: 1px solid #555;
+}
+
+.c-split {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+  min-height: 0;
+}
+
+.c-split-header {
+  height: 26px;
+  line-height: 26px;
+  display: flex;
+  flex-direction: row;
+
+  background: #2e2e2e;
+  border: 1px solid #333;
+  margin: 1px;
+  /* TODO second border */
+}
+.c-split-header > div {
+  padding: 0 8px;
+  margin: 0 auto;
+}
+
+.c-split-content {
+  font-size: 13px;
+
+  overflow: hidden;
+  padding: 4px 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  flex: 1;
+}
+
+.c-split-input {
+  height: 22px;
+  padding: 8px;
+
+  background: #232323;
+  border: 1px solid #333;
+  margin: 1px;
+}
+
+.c-timestamp {
+  color: #999;
+}
+
+.c-message {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1px 12px;
+}
+
+.c-message > * + * {
+  margin-left: 5px;
+}
+
+.c-emote-2x {
+  width: 32px;
+  height: 32px;
+}
+
+.c-username {
+  color: red;
+  font-weight: 600;
+}

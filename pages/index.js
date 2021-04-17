@@ -325,11 +325,19 @@ function Downloads() {
           <SmallDownloadButton data={freeBsd} />
         </div>
 
-        <div className="flex space-x-16 justify-center">
-          <Link href="changelog">Changelog</Link>
-          <Link href={windowsPortable}>Windows Portable</Link>
-          <Link href={nightly}>Nightly Build</Link>
-          <Link href={allDownloads}>All Downloads</Link>
+        <div className="flex flex-wrap justify-around">
+          <Link className="px-4" href="changelog">
+            Changelog
+          </Link>
+          <Link className="px-4" href={windowsPortable}>
+            Windows Portable
+          </Link>
+          <Link className="px-4" href={nightly}>
+            Nightly Build
+          </Link>
+          <Link className="px-4" href={allDownloads}>
+            Old Builds
+          </Link>
         </div>
       </div>
     </Section>

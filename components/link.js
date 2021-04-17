@@ -1,10 +1,13 @@
 // @ts-check
 import React from "react";
 
-function Link({ href, children }) {
+/**
+ * @param {{ href: string; className?: string; children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal; }} params
+ */
+function Link(params) {
   return (
-    <a href={href} className="underline">
-      {children}
+    <a href={params.href} className={"underline " + (params.className ?? "")}>
+      {params.children}
     </a>
   );
 }

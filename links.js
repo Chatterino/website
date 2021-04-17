@@ -9,18 +9,49 @@ export const nightly =
 export const allDownloads = "download";
 
 const currentVersion = "2.3.0";
-const downloadBaseUrl = `https://chatterino.fra1.digitaloceanspaces.com/bin/${currentVersion}`;
+export const baseDownloadLink = `https://chatterino.fra1.digitaloceanspaces.com/bin`;
+const dl = `https://chatterino.fra1.digitaloceanspaces.com/bin/${currentVersion}`;
+
+export const allVersions = [
+  "2.0.4-beta",
+  "2.1.0",
+  "2.1.4",
+  "2.1.5-4",
+  "2.1.6",
+  "2.1.7",
+  "2.2.0",
+  "2.2.1",
+  "2.2.2-fix",
+  "2.2.3-beta2",
+  "2.3.0",
+];
+export const allV1Versions = [
+  "0.2.6.4",
+  "1.0.9",
+  "1.1.0.0",
+  "1.2.11",
+  "1.2.12",
+  "1.2.13",
+  "1.2.3.0",
+  "1.2.4",
+  "1.2.5",
+  "1.2.6",
+  "1.2.8",
+  "1.2.9",
+  "1.3.2",
+  "1.3",
+];
 
 export const windows = [
   Windows,
   `${currentVersion} for Windows 64-Bit`,
-  `${downloadBaseUrl}/Chatterino%20Installer.exe`,
+  `${dl}/Chatterino%20Installer.exe`,
 ];
 export const linux = [Tux, "Linux", "linux"];
 export const freeBsd = [FreeBSD, "FreeBSD", "freebsd"];
-export const macOs = [Apple, "macOS", `${downloadBaseUrl}/Chatterino.dmg`];
-export const windowsPortable = `${downloadBaseUrl}/Chatterino%20Portable.zip`;
-export const linuxAppimageUrl = `${downloadBaseUrl}/Chatterino-x86_64.AppImage`;
+export const macOs = [Apple, "macOS", `${dl}/Chatterino.dmg`];
+export const windowsPortable = `${dl}/Chatterino%20Portable.zip`;
+export const linuxAppimageUrl = `${dl}/Chatterino-x86_64.AppImage`;
 
 export const linuxBuildFromSource =
   "https://github.com/Chatterino/chatterino2/blob/master/BUILDING_ON_LINUX.md";

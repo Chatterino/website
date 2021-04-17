@@ -19,6 +19,13 @@
     @apply underline;
   }
 
+  td {
+    @apply px-4;
+    @apply py-2;
+    @apply border;
+    @apply border-gray-500;
+  }
+
   .changelog h1 {
     @apply my-6;
   }

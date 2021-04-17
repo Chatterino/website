@@ -54,7 +54,7 @@ function Nav() {
           <div className="flex items-center px-3 md:px-6">
             <div className="text-gray-300 flex items-center w-auto">
               <div className="text-sm">
-                <NavLink href="#features" className="hidden sm:inline-block">
+                <NavLink href="/#features" className="hidden sm:inline-block">
                   Features
                 </NavLink>
                 <NavLink href={wiki}>Wiki</NavLink>
@@ -64,7 +64,7 @@ function Nav() {
 
             <div className="hidden sm:block lg:px-16">
               <Button>
-                <a href="#downloads" className="no-underline">
+                <a href="/#downloads" className="no-underline">
                   <Download />
                   <span>Download</span>
                 </a>

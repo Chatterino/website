@@ -4,7 +4,7 @@ import Section from "components/section";
 import Link from "components/link";
 import Text from "components/text";
 import Page from "components/page";
-import { linuxBuildFromSource } from "links";
+import { linuxAppimageUrl, linuxBuildFromSource } from "links";
 
 function LinuxPage() {
   return (
@@ -20,9 +20,7 @@ function LinuxPage() {
             <div className="p-4 mt-4 bg-gray-900 border-gray-600 border">
               <pre>cd /usr/local/bin</pre>
               <pre>
-                sudo bash -c "curl
-                https://chatterino.com/download/Chatterino-x86_64.AppImage &gt;
-                ./chatterino"
+                sudo bash -c "curl {linuxAppimageUrl} &gt; ./chatterino"
               </pre>
               <pre>sudo chmod +x ./chatterino</pre>
             </div>

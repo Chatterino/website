@@ -1,3 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+
+  a {
+    @apply underline;
+  }
+
+  .changelog h1 {
+    @apply my-6;
+  }
+
+  .changelog h2 {
+    @apply my-4;
+  }
+
+  .changelog li {
+    @apply my-1;
+    @apply ml-4;
+  }
+
+  .changelog li > ul > li {
+    @apply my-1;
+  }
+}
+
+.changelog ul {
+  @apply ml-4;
+  list-style-type: disc;
+}
+
+.changelog ul > li > ul {
+  @apply ml-4;
+  list-style-type: circle;
+}
+
 @font-face {
   font-family: "Noto Sans";
   src: url("fonts/NotoSans-Regular.ttf");
@@ -8,14 +57,13 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif !important;
 
   background: #000;
 }
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 * {
@@ -39,6 +87,6 @@ button {
   background: transparent !important;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+by {
+  display: none;
+}

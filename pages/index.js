@@ -1,7 +1,17 @@
 // @ts-check
-import React, { Component } from "react";
+import React from "react";
 import { Carousel } from "react-responsive-carousel";
-import { freeBsd, linux, macOs, wiki, windows, windowsPortable } from "links";
+import {
+  allDownloads,
+  freeBsd,
+  github,
+  linux,
+  macOs,
+  nightly,
+  wiki,
+  windows,
+  windowsPortable,
+} from "links";
 import { LinkInformation, Message, Privacy } from "components/logos";
 import ChatProp from "components/chatprop";
 import Button from "components/button";
@@ -110,23 +120,20 @@ function Features() {
 
         <div className="space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 gap-4 md:gap-y-12 md:gap-x-24">
           <FeatureCard title="Batteries Included">
-            <ul className="list-disc list-inside">
-              <li>Support for Twitch, BetterTTV and FrankerFaceZ emotes.</li>
+            <ul className="space-y-2">
+              <li>Support for Twitch, BetterTTV, and FrankerFaceZ emotes.</li>
               <li>Dark Theme. (also Light Theme.)</li>
-              <li>
-                Custom made Look &amp; Feel for the best chatting experience.
-              </li>
             </ul>
           </FeatureCard>
           <FeatureCard title="Lots of Customizations">
-            <ul className="list-disc list-inside">
+            <ul className="space-y-2">
               <li>View multiple chats side-by-side in one tab.</li>
               <li>Ignore or highlight messages based on your own criteria.</li>
             </ul>
           </FeatureCard>
           <FeatureCard title="Engage in Your Communities">
-            <ul className="list-disc list-inside">
-              <li>Talk in both online and top secret offline chats.</li>
+            <ul className="space-y-2">
+              <li>Talk in both online and top-secret offline chats.</li>
               <li>Get notified when people mention you.</li>
               <li>Connect to as many channels* as you like to.</li>
             </ul>
@@ -135,10 +142,10 @@ function Features() {
             </div>
           </FeatureCard>
           <FeatureCard title="Your Laptop Fans Get to Take a Break">
-            <ul className="list-disc list-inside">
+            <ul className="space-y-2">
               <li>
                 Chatterino is a native desktop application that’s easy on your
-                CPU &amp; GPU
+                CPU &amp; GPU.
               </li>
             </ul>
           </FeatureCard>
@@ -151,15 +158,15 @@ function Features() {
 function Features2() {
   return (
     <Section className="bg-gray-900 ">
-      <div className="p-16 space-y-16 md:space-y-0 md:space-x-16 md:grid md:grid-cols-3">
-        <div className="space-y-4">
+      <div className="p-16 space-y-16 md:space-y-0 md:space-x-16 md:flex">
+        <div className="space-y-4 flex-1">
           <Privacy />
           <div className="text-3xl">Streamer Mode</div>
           <div className="text-blue-200">
             Hide user content while OBS is running. Horses strictly prohibited.
           </div>
         </div>
-        <div className="space-y-4">
+        <div className="space-y-4 flex-1">
           <LinkInformation />
           <div className="text-3xl">Link Information</div>
           <div className="text-blue-200">
@@ -169,7 +176,7 @@ function Features2() {
             Note: This is disabled by default for privacy reasons.
           </div>
         </div>
-        <div className="space-y-4">
+        <div className="space-y-4 flex-1">
           <Message />
           <div className="text-3xl">Mentions Panel</div>
           <div className="text-blue-200">
@@ -208,6 +215,15 @@ function Testimonial({ name, occupation, children, imgsrc }) {
 
 let testimonials = [
   <Testimonial
+    name="pokelawls"
+    occupation="Streamer"
+    imgsrc="avatars/pokelawls.jpg"
+    key="poke"
+  >
+    I love Chatterino! It’s made my life much easier as a streamer. Such a great
+    chat program. Would highly recommend, has a lot of cool features!
+  </Testimonial>,
+  <Testimonial
     name="MOONMOON"
     occupation="Streamer"
     imgsrc="avatars/moonmoon.jpg"
@@ -225,17 +241,8 @@ let testimonials = [
     imgsrc="avatars/nymn.jpg"
     key="nymn"
   >
-    With a chat full of loud spammers, I wouldn't surive a day without my
+    With a chat full of loud spammers, I wouldn't survive a day without my
     beloved mentions tab!
-  </Testimonial>,
-  <Testimonial
-    name="pokelawls"
-    occupation="Streamer"
-    imgsrc="avatars/pokelawls.jpg"
-    key="poke"
-  >
-    I love Chatterino! It’s made my life much easier as a streamer. Such a great
-    chat program. Would highly recommend, has a lot of cool features!
   </Testimonial>,
 ];
 
@@ -283,12 +290,19 @@ function Miscellaneous() {
           </a>
         </div>
         <div className="p-16 space-y-4 bg-blue-500">
-          <div className="text-5xl">Placeholder</div>
+          <div className="text-5xl">Check on the development</div>
           <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            nulla leo, accumsan eget vulputate id, suscipit sed est. Sed at
-            augue elementum, mollis lectus nec, sollicitudin felis.
+            Chatterino is developed out in the open on our GitHub page. You can
+            join the discussion or report issues there!
           </div>
+          <a href={github} className="pt-3">
+            <Button
+              className="ml-0 mt-6"
+              colorsClassName="bg-white text-blue-500"
+            >
+              Pay us a visit
+            </Button>
+          </a>
         </div>
       </div>
     </Section>
@@ -311,10 +325,11 @@ function Downloads() {
           <SmallDownloadButton data={freeBsd} />
         </div>
 
-        <div className="flex space-x-16 justify-center ">
-          <Link href={windowsPortable}>Windows Portable</Link>
-          {/* <Link href="xD">Nightly Builds</Link> */}
+        <div className="flex space-x-16 justify-center">
           <Link href="changelog">Changelog</Link>
+          <Link href={windowsPortable}>Windows Portable</Link>
+          <Link href={nightly}>Nightly Build</Link>
+          <Link href={allDownloads}>All Downloads</Link>
         </div>
       </div>
     </Section>
@@ -350,7 +365,7 @@ function DownloadButton({ data }) {
         <div className="flex p-3">
           <div className="pr-6 h-6 w-auto">
             {/* <div  children={Icon} key={data[1]} /> */}
-            {Icon()}
+            <Icon />
           </div>
           <div>
             <div>Download Chatterino</div>

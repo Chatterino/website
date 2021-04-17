@@ -4,6 +4,7 @@ import Section from "components/section";
 import Link from "components/link";
 import Text from "components/text";
 import Page from "components/page";
+import { linuxBuildFromSource } from "links";
 
 function LinuxPage() {
   return (
@@ -47,8 +48,9 @@ function LinuxPage() {
           {/* Building from Source */}
           <h2 className="text-3xl pt-10 pb-4">Building from Source</h2>
           <Text>
-            If the options above don't work, then you can try this guide to
-            build it from source.
+            If the options above don't work, then you can try{" "}
+            <Link href={linuxBuildFromSource}>this guide</Link> to build it from
+            source.
           </Text>
         </Section>
       </div>

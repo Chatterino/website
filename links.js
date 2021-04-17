@@ -4,6 +4,9 @@ export const discord = "https://discord.gg/3vmJRwy";
 export const github = "https://github.com/chatterino/chatterino2";
 export const tip = "https://streamelements.com/fourtf/tip";
 export const wiki = "https://wiki.chatterino.com";
+export const nightly =
+  "https://github.com/Chatterino/chatterino2/releases/tag/nightly-build";
+export const allDownloads = "https://chatterino.com/download/";
 
 export const windows = [
   Windows,
@@ -20,3 +23,6 @@ export const macOs = [
 
 export const windowsPortable =
   "https://chatterino.com/download/Chatterino%20Portable.zip";
+
+export const linuxBuildFromSource =
+  "https://github.com/Chatterino/chatterino2/blob/master/BUILDING_ON_LINUX.md";

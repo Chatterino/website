@@ -8,7 +8,8 @@ export function Apple() {
       width="37"
       height="44"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1000 842"
+      viewBox="0 50 1000 1000 "
+      className="transform scale-125"
     >
       <path
         fill="currentColor"

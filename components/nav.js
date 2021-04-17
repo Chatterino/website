@@ -8,7 +8,9 @@ function NavLink({ href, children, ...props }) {
   return (
     <a
       href={href}
-      className={(props.className ?? "") + " py-3 px-4 hover:text-blue-400"}
+      className={
+        (props.className ?? "") + " py-3 px-4 hover:text-blue-400 no-underline"
+      }
     >
       {children}
     </a>
@@ -19,7 +21,7 @@ function Nav() {
   return (
     <div>
       <nav
-        className="bg-gray-800 fixed w-full flex items-center space-around md:px-12"
+        className="bg-gray-800 fixed w-full flex items-center space-around lg:px-12"
         style={{ zIndex: 10, height: 80 }}
       >
         <div
@@ -27,8 +29,8 @@ function Nav() {
           style={{ margin: "0 auto" }}
         >
           {/* logo */}
-          <a href="/">
-            <div className="flex items-center text-white hover:text-blue-400 p-4 sm:p-6 space-x-4">
+          <a href="/" className="no-underline">
+            <div className="flex items-center text-white hover:text-blue-400 p-4 sm:p-6 space-x-4 sm:pr-0">
               <img src="logo.png" className="w-8 h-8" />
               <div>Chatterino</div>
             </div>
@@ -60,9 +62,9 @@ function Nav() {
               </div>
             </div>
 
-            <div className="hidden sm:block md:px-16">
+            <div className="hidden sm:block lg:px-16">
               <Button>
-                <a href="#downloads">
+                <a href="#downloads" className="no-underline">
                   <Download />
                   <span>Download</span>
                 </a>

@@ -125,7 +125,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  padding: 1px 12px;
+  padding: 2px 12px;
 }
 
 .c-message > * + * {
@@ -140,4 +140,8 @@
 .c-username {
   color: red;
   font-weight: 600;
+}
+
+.c-highlighted {
+  background-color: #4c2c31;
 }

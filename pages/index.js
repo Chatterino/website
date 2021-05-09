@@ -244,6 +244,16 @@ let testimonials = [
     With a chat full of loud spammers, I wouldn't survive a day without my
     beloved mentions tab!
   </Testimonial>,
+  <Testimonial
+    name="EWROON"
+    occupation="Streamer"
+    imgsrc="avatars/ewroon.jpg"
+    key="ewroon"
+  >
+    Ever since i've discovered Chatterino my chat experience has changed
+    completely. It is really easy to use and very functional.Such a great chat
+    program. Would highly recommend!
+  </Testimonial>,
 ];
 
 function Testimonials() {

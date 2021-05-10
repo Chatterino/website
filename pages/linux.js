@@ -25,6 +25,18 @@ function LinuxPage() {
               <pre>sudo chmod +x ./chatterino</pre>
             </div>
           </Text>
+          {/* Flatpak */}
+          <h2 className="text-3xl pt-10 pb-4">Flatpak</h2>
+          <Text>
+            Chatterino is available on {" "}
+            <Link href="https://flathub.org/apps/details/com.chatterino.chatterino">
+              Flathub
+             </Link>.
+             To install it run: {" "}
+            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+              flatpak install chatterino
+            </code>{" "}
+          </Text>
           {/* AUR */}
           <h2 className="text-3xl pt-10 pb-4">Arch Linux</h2>
           <Text>

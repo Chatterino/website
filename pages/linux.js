@@ -31,7 +31,7 @@ function LinuxPage() {
             Chatterino is available on {" "}
             <Link href="https://flathub.org/apps/details/com.chatterino.chatterino">
               Flathub
-             </Link>{" "}.
+             </Link>.
              You can install it with: {" "}
             <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
               flatpak install chatterino

@@ -251,7 +251,7 @@ let testimonials = [
     key="ewroon"
   >
     Ever since i've discovered Chatterino my chat experience has changed
-    completely. It is really easy to use and very functional.Such a great chat
+    completely. It is really easy to use and very functional. Such a great chat
     program. Would highly recommend!
   </Testimonial>,
 ];

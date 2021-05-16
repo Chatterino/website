@@ -24,6 +24,8 @@ export const allVersions = [
   "2.2.2-fix",
   "2.2.3-beta2",
   "2.3.0",
+  "2.3.1",
+  "2.3.2",
 ];
 export const allV1Versions = [
   "0.2.6.4",

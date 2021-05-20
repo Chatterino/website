@@ -1,6 +1,6 @@
 import { Tux, Windows, FreeBSD, Apple } from "components/logos";
 
-export const discord = "https://discord.gg/3vmJRwy";
+export const discord = "https://discord.gg/rabs2GZd8b";
 export const github = "https://github.com/chatterino/chatterino2";
 export const tip = "https://streamelements.com/fourtf/tip";
 export const wiki = "https://wiki.chatterino.com";

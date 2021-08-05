@@ -135,11 +135,8 @@ function Features() {
             <ul className="space-y-2">
               <li>Talk in both online and top-secret offline chats.</li>
               <li>Get notified when people mention you.</li>
-              <li>Connect to as many channels* as you like to.</li>
+              <li>Connect to as many channels as you like to.</li>
             </ul>
-            <div className="text-sm pt-4">
-              * at &gt;50 connections it may be rate-limited
-            </div>
           </FeatureCard>
           <FeatureCard title="Your Laptop Fans Get to Take a Break">
             <ul className="space-y-2">

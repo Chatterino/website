@@ -6,6 +6,29 @@ import Section from "components/section";
  <Section className="changelog px-16">
 
 # Chatterino Changelog
+ 
+ 
+## 2.3.4
+
+- Major: Fixed connection issues when joining 20+ channels. (#3112, #3115)
+- Major: Added support for twitch's new emote format. (#2992)
+- Major: Removed support for (un)following users since Twitch has removed this feature for 3rd party applications. (#3076, #3078)
+- Major: Added the ability to add nicknames for users. (#137, #2981)
+- Minor: Added autocompletion in /whispers for Twitch emotes, Global Bttv/Ffz emotes and emojis. (#2999, #3033)
+- Minor: Messages now use the timestamps provided by twitch instead of the user machine's time. (#3021)
+- Minor: Added informative messages for recent-messages errors. (#3029)
+- Minor: Added a section with helpful Chatterino-related links to the About page. (#3068)
+- Minor: Now uses spaces instead of magic Unicode character for sending duplicate messages (#3081)
+- Minor: Added the `channel.live` variable for filters (#3092, #3110)
+- Bugfix: Fixed "smiley" emotes being unable to be "Tabbed" with autocompletion, introduced in v2.3.3. (#3010)
+- Bugfix: Fixed PubSub not properly trying to resolve pending listens when the pending listens list was larger than 50. (#3037)
+- Bugfix: Copy buttons in usercard now show properly in light mode (#3057)
+- Bugfix: Fixed comma appended to username completion when not at the beginning of the message. (#3060)
+- Bugfix: Fixed bug misplacing chat when zooming on Chrome with Chatterino Native Host extension (#1936)
+- Bugfix: Channel point redemptions from ignored users are now properly blocked. (#3102)
+- Dev: Ubuntu packages are now available (#2936)
+- Dev: Disabled update checker on Flatpak. (#3051)
+- Dev: Add logging for HTTP requests (#2991)
 
 
 ## 2.3.3

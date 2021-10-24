@@ -21,7 +21,5 @@
     "remark-github": "^10.0.1",
     "tailwindcss": "^2.0.3"
   },
-  "devDependencies": {
-    "typescript": "^4.4.3"
-  }
+  "devDependencies": {}
 }

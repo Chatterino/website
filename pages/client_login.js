@@ -81,7 +81,7 @@ export default function ClientLogin() {
   );
 }
 
-function createChatterinoDataString(oauthToken) {
+function createChatterinoDataString(oauthToken, user) {
   return `username=${user.login};user_id=${user.id};client_id=${TwitchClientID};oauth_token=${oauthToken};`;
 }
 

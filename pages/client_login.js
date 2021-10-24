@@ -66,7 +66,7 @@ export default function ClientLogin() {
   }
 
   return (
-    <Page title="Chatterino on Linux">
+    <Page title="Login - Chatterino">
       <Section className="p-16">
         <h2 className="m-4 mx-16">Chatterino Login</h2>
         <h5 className="font-bold text-center my-2 text-red-600 text-xl">Do not show on stream</h5>

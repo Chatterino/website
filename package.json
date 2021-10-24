@@ -20,6 +20,5 @@
     "react-responsive-carousel": "^3.2.12",
     "remark-github": "^10.0.1",
     "tailwindcss": "^2.0.3"
-  },
-  "devDependencies": {}
+  }
 }

@@ -30,31 +30,41 @@ export default function ClientLogin() {
   const hash = typeof window !== "undefined" ? window.location.hash : "";
   const [oauthToken, setOauthToken] = useState(null);
   const [user, setUser] = useState(null);
-  const [buttonColor, setButtonColor] = useState("bg-blue-500 hover:bg-blue-400");
+  const [buttonColor, setButtonColor] = useState(
+    "bg-blue-500 hover:bg-blue-400"
+  );
   const dataStringRef = useRef(null);
   const [errorMessage, setErrorMessage] = useState(null);
 
   useEffect(() => {
     const oauthHash = location.hash.substr(1);
-    const oauthToken = oauthHash.substr(oauthHash.indexOf('access_token=')).split('&')[0].split('=')[1];
+    const oauthToken = oauthHash
+      .substr(oauthHash.indexOf("access_token="))
+      .split("&")[0]
+      .split("=")[1];
     if (oauthToken) {
       setOauthToken(oauthToken);
-      history.replaceState(null, null, ' ');
-    };
-  }, [hash])
-
+      history.replaceState(null, null, " ");
+    }
+  }, [hash]);
 
   useEffect(() => {
     if (oauthToken) {
-      fetchUser(oauthToken).then(setUser).then(() => setErrorMessage(null)).catch(() => setErrorMessage("Failed to fetch user"));
+      fetchUser(oauthToken)
+        .then(setUser)
+        .then(() => setErrorMessage(null))
+        .catch(() => setErrorMessage("Failed to fetch user"));
     }
   }, [oauthToken]);
 
   const loggedIn = oauthToken && user;
 
-  const loginButtonClasses = "p-3 flex justify-center rounded shadow bg-purple-800 hover:bg-purple-600 hover:opacity-100 whitespace-nowrap no-underline my-5".split(" ")
+  const loginButtonClasses =
+    "p-3 flex justify-center rounded shadow bg-purple-800 hover:bg-purple-600 hover:opacity-100 whitespace-nowrap no-underline my-5".split(
+      " "
+    );
   if (loggedIn) {
-    loginButtonClasses.push("opacity-25")
+    loginButtonClasses.push("opacity-25");
   }
 
   const handleCopyClick = () => {
@@ -63,30 +73,49 @@ export default function ClientLogin() {
       window.document.execCommand("copy");
       setButtonColor("bg-green-600 hover:bg-green-500");
     }
-  }
+  };
 
   return (
     <Page title="Login - Chatterino">
       <Section className="p-16">
         <h2 className="m-4 text-center">Chatterino Login</h2>
-        <h5 className="font-bold text-center my-2 text-red-600 text-xl">Do not show on stream</h5>
-        {!loggedIn && <a href={createLoginUrl()} className={loginButtonClasses.join(" ")}>Login with Twitch</a>}
-        {errorMessage && <h6 className="font-bold text-center my-2 text-red-600 text-xl">Error: {errorMessage}</h6>}
-        {loggedIn && <>
-          <input type="text" ref={dataStringRef} readOnly className="appearance-none rounded bg-gray-900 w-full overflow-hidden resize-none p-3 my-2" value={createChatterinoDataString(oauthToken, user)} />
-          <button className={`rounded  w-full p-3 ${buttonColor}`} onClick={handleCopyClick}>Copy</button>
-          <div className="mt-6">
-            Steps:
-            <ul className="list-disc ml-4">
-            <li>
-            Click "Copy" or copy the text manually.
-            </li>
-            <li>
-            Then, in Chatterino, click "Paste login info".
-            </li>
-            </ul>
-          </div>
-        </>}
+        <h5 className="font-bold text-center my-2 text-red-600 text-xl">
+          Do not show on stream
+        </h5>
+        {errorMessage && (
+          <h6 className="font-bold text-center my-2 text-red-600 text-xl">
+            Error: {errorMessage}
+          </h6>
+        )}
+        {!loggedIn && (
+          <a href={createLoginUrl()} className={loginButtonClasses.join(" ")}>
+            Login with Twitch
+          </a>
+        )}
+        {loggedIn && (
+          <>
+            <input
+              type="text"
+              ref={dataStringRef}
+              readOnly
+              className="appearance-none rounded bg-gray-900 w-full overflow-hidden resize-none p-3 my-2"
+              value={createChatterinoDataString(oauthToken, user)}
+            />
+            <button
+              className={`rounded w-full p-3 ${buttonColor}`}
+              onClick={handleCopyClick}
+            >
+              Copy
+            </button>
+            <div className="mt-6">
+              Steps:
+              <ul className="list-disc ml-4">
+                <li>Click "Copy" or copy the text manually.</li>
+                <li>Then, in Chatterino, click "Paste login info".</li>
+              </ul>
+            </div>
+          </>
+        )}
       </Section>
     </Page>
   );
@@ -100,14 +129,14 @@ async function fetchUser(oauthToken) {
   const response = await fetch("https://api.twitch.tv/helix/users", {
     headers: {
       "Client-ID": twitchClientID,
-      "Authorization": `Bearer ${oauthToken}`
-    }
+      Authorization: `Bearer ${oauthToken}`,
+    },
   });
 
   const data = await response.json();
   return {
     id: data.data[0].id,
-    login: data.data[0].login
+    login: data.data[0].login,
   };
 }
 

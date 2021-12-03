@@ -2,9 +2,9 @@ import React, { useEffect, useState, useRef } from "react";
 import Section from "components/section";
 import Page from "components/page";
 
-const RedirectUrl = "https://chatterino.com/client_login";
-const TwitchClientID = "g5zg0400k4vhrx2g6xi4hgveruamlv";
-const Scopes = [
+const redirectUrl = "https://chatterino.com/client_login";
+const twitchClientID = "g5zg0400k4vhrx2g6xi4hgveruamlv";
+const scopes = [
   "user_subscriptions",
   "user_blocks_edit", // deprecated, replaced with "user:manage:blocked_users"
   "user_blocks_read", // deprecated, replaced with "user:read:blocked_users"
@@ -82,13 +82,13 @@ export default function ClientLogin() {
 }
 
 function createChatterinoDataString(oauthToken, user) {
-  return `username=${user.login};user_id=${user.id};client_id=${TwitchClientID};oauth_token=${oauthToken};`;
+  return `username=${user.login};user_id=${user.id};client_id=${twitchClientID};oauth_token=${oauthToken};`;
 }
 
 async function fetchUser(oauthToken) {
   const response = await fetch("https://api.twitch.tv/helix/users", {
     headers: {
-      "Client-ID": TwitchClientID,
+      "Client-ID": twitchClientID,
       "Authorization": `Bearer ${oauthToken}`
     }
   });
@@ -102,10 +102,10 @@ async function fetchUser(oauthToken) {
 
 function createLoginUrl() {
   const url = new URL("https://id.twitch.tv/oauth2/authorize");
-  url.searchParams.set("client_id", TwitchClientID);
-  url.searchParams.set("redirect_uri", RedirectUrl);
+  url.searchParams.set("client_id", twitchClientID);
+  url.searchParams.set("redirect_uri", redirectUrl);
   url.searchParams.set("response_type", "token");
-  url.searchParams.set("scope", Scopes.join(" "));
+  url.searchParams.set("scope", scopes.join(" "));
 
   return url;
 }

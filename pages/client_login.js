@@ -68,14 +68,25 @@ export default function ClientLogin() {
   return (
     <Page title="Login - Chatterino">
       <Section className="p-16">
-        <h2 className="m-4 mx-16">Chatterino Login</h2>
+        <h2 className="m-4 text-center">Chatterino Login</h2>
         <h5 className="font-bold text-center my-2 text-red-600 text-xl">Do not show on stream</h5>
         {!loggedIn && <a href={createLoginUrl()} className={loginButtonClasses.join(" ")}>Login with Twitch</a>}
+        {errorMessage && <h6 className="font-bold text-center my-2 text-red-600 text-xl">Error: {errorMessage}</h6>}
         {loggedIn && <>
           <input type="text" ref={dataStringRef} readOnly className="appearance-none rounded bg-gray-900 w-full overflow-hidden resize-none p-3 my-2" value={createChatterinoDataString(oauthToken, user)} />
           <button className={`rounded  w-full p-3 ${buttonColor}`} onClick={handleCopyClick}>Copy</button>
+          <div className="mt-6">
+            Steps:
+            <ul className="list-disc ml-4">
+            <li>
+            Click "Copy" or copy the text manually.
+            </li>
+            <li>
+            Then, in Chatterino, click "Paste login info".
+            </li>
+            </ul>
+          </div>
         </>}
-        {errorMessage && <h6 className="font-bold text-center my-2 text-red-600 text-xl">{errorMessage}</h6>}
       </Section>
     </Page>
   );

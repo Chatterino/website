@@ -37,6 +37,10 @@ export default function ClientLogin() {
   const [errorMessage, setErrorMessage] = useState(null);
 
   useEffect(() => {
+    if (location.hash === "") {
+      return;
+    }
+
     const oauthHash = location.hash.substr(1);
     const oauthToken = oauthHash
       .substr(oauthHash.indexOf("access_token="))

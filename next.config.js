@@ -14,7 +14,7 @@ function githubIssueLinks(options) {
     return {
       type: "link",
       title: null,
-      url: `${baseRepoUrl}/issues/${value.substr(1)}`,
+      url: `${baseRepoUrl}/issues/${value.slice(1)}`,
       children: [{ type: "text", value }],
     };
   }

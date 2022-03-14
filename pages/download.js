@@ -28,6 +28,11 @@ function V2() {
                 Linux AppImage
               </a>
             </td>
+          <td>
+              <a href={`${baseDownloadLink}/${v}/Chatterino.dmg`}>
+                Mac Silicon Installer
+              </a>
+            </td>
           </tr>
         </tbody>
       ))}

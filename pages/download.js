@@ -29,7 +29,7 @@ function V2() {
               </a>
             </td>
           <td>
-              <a href={`${baseDownloadLink}/${v}/Chatterino.dmg`}>
+              <a href={https://github.com/Chatterino/chatterino2/files/8240662/chatterino.app.zip}>
                 Mac Silicon Installer
               </a>
             </td>

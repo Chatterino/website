@@ -41,9 +41,9 @@ export default function ClientLogin() {
       return;
     }
 
-    const oauthHash = location.hash.substr(1);
+    const oauthHash = location.hash.slice(1);
     const oauthToken = oauthHash
-      .substr(oauthHash.indexOf("access_token="))
+      .slice(oauthHash.indexOf("access_token="))
       .split("&")[0]
       .split("=")[1];
     if (oauthToken) {

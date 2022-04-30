@@ -14,7 +14,7 @@
     "autoprefixer": "^10.4.4",
     "next": "^12.1.5",
     "postcss": "^8.2.13",
-    "react": "18.0.0",
+    "react": "18.1.0",
     "react-dom": "18.0.0",
     "react-elm-components": "^1.1.0",
     "react-responsive-carousel": "^3.2.23",

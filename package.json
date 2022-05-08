@@ -15,7 +15,7 @@
     "next": "^12.1.5",
     "postcss": "^8.4.13",
     "react": "18.1.0",
-    "react-dom": "18.0.0",
+    "react-dom": "18.1.0",
     "react-elm-components": "^1.1.0",
     "react-responsive-carousel": "^3.2.23",
     "remark-github": "^10.0.1",

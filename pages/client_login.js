@@ -27,6 +27,8 @@ const scopes = [
   "channel:manage:raids", // for starting/canceling raids
   "channel:manage:polls", // for creating & ending polls
   "channel:read:polls", // for reading broadcaster poll status
+  "channel:manage:predictions", // for creating & ending predictions
+  "channel:read:predictions", // for reading broadcaster prediction status
 ];
 
 export default function ClientLogin() {

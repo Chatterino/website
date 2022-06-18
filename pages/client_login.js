@@ -25,6 +25,8 @@ const scopes = [
   "user:manage:blocked_users", // for blocking/unblocking other users
   "moderator:manage:automod", // for approving/denying automod messages
   "channel:manage:raids", // for starting/canceling raids
+  "channel:manage:polls", // for creating & ending polls
+  "channel:read:polls", // for reading broadcaster poll status
 ];
 
 export default function ClientLogin() {

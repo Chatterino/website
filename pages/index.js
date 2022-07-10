@@ -44,8 +44,8 @@ function FirstHero() {
           </h1>
 
           <div className="text-center leading-relaxed pb-6">
-            Chatterino is a chat client for Twitch chat. It aims to be an improved/extended version
-            of the Twitch web chat.
+            Chatterino is a chat client for Twitch chat. It aims to be an
+            improved/extended version of the Twitch web chat.
           </div>
 
           <div className="grid pb-6">
@@ -140,7 +140,10 @@ function Features() {
           </FeatureCard>
           <FeatureCard title="Your Laptop Fans Get to Take a Break">
             <ul className="space-y-2">
-              <li>Chatterino is a native desktop application that’s easy on your CPU &amp; GPU.</li>
+              <li>
+                Chatterino is a native desktop application that’s easy on your
+                CPU &amp; GPU.
+              </li>
             </ul>
           </FeatureCard>
         </div>
@@ -164,7 +167,8 @@ function Features2() {
           <LinkInformation />
           <div className="text-3xl">Link Information</div>
           <div className="text-blue-200">
-            Preview image links before opening them. View YouTube stats. Preview emotes from links.
+            Preview image links before opening them. View YouTube stats. Preview
+            emotes from links.
             <br />
             Note: This is disabled by default for privacy reasons.
           </div>
@@ -173,8 +177,8 @@ function Features2() {
           <Message />
           <div className="text-3xl">Mentions Panel</div>
           <div className="text-blue-200">
-            Combine all your mentions in the “/mentions” panel to keep track. Don’t miss important
-            messages while streaming.
+            Combine all your mentions in the “/mentions” panel to keep track.
+            Don’t miss important messages while streaming.
           </div>
         </div>
         {/* Custom commands */}
@@ -207,30 +211,58 @@ function Testimonial({ name, occupation, children, imgsrc }) {
 }
 
 let testimonials = [
-  <Testimonial name="pokelawls" occupation="Streamer" imgsrc="avatars/pokelawls.jpg" key="poke">
-    I love Chatterino! It’s made my life much easier as a streamer. Such a great chat program. Would
-    highly recommend, has a lot of cool features!
+  <Testimonial
+    name="pokelawls"
+    occupation="Streamer"
+    imgsrc="avatars/pokelawls.jpg"
+    key="poke"
+  >
+    I love Chatterino! It’s made my life much easier as a streamer. Such a great
+    chat program. Would highly recommend, has a lot of cool features!
   </Testimonial>,
-  <Testimonial name="MOONMOON" occupation="Streamer" imgsrc="avatars/moonmoon.jpg" key="moonmoon">
+  <Testimonial
+    name="MOONMOON"
+    occupation="Streamer"
+    imgsrc="avatars/moonmoon.jpg"
+    key="moonmoon"
+  >
     <div className="flex flex-wrap items-center">
-      This program is not cringe. It is extremely POGGERS. I pepeRun from the normal Twitch chat
-      client because it is EXTREMELY cringe and lacking in basic features sported by Chatterino.
+      This program is not cringe. It is extremely POGGERS. I pepeRun from the
+      normal Twitch chat client because it is EXTREMELY cringe and lacking in
+      basic features sported by Chatterino.
     </div>
   </Testimonial>,
-  <Testimonial name="NymN" occupation="Streamer" imgsrc="avatars/nymn.jpg" key="nymn">
-    With a chat full of loud spammers, I wouldn't survive a day without my beloved mentions tab!
+  <Testimonial
+    name="NymN"
+    occupation="Streamer"
+    imgsrc="avatars/nymn.jpg"
+    key="nymn"
+  >
+    With a chat full of loud spammers, I wouldn't survive a day without my
+    beloved mentions tab!
   </Testimonial>,
-  <Testimonial name="EWROON" occupation="Streamer" imgsrc="avatars/ewroon.jpg" key="ewroon">
-    Ever since i've discovered Chatterino my chat experience has changed completely. It is really
-    easy to use and very functional. Such a great chat program. Would highly recommend!
+  <Testimonial
+    name="EWROON"
+    occupation="Streamer"
+    imgsrc="avatars/ewroon.jpg"
+    key="ewroon"
+  >
+    Ever since i've discovered Chatterino my chat experience has changed
+    completely. It is really easy to use and very functional. Such a great chat
+    program. Would highly recommend!
   </Testimonial>,
 ];
 
 function Testimonials() {
   return (
-    <Section className="p-6 md:p-12 bg-gray-800" style={{ maxWidth: 800, margin: "0 auto" }}>
+    <Section
+      className="p-6 md:p-12 bg-gray-800"
+      style={{ maxWidth: 800, margin: "0 auto" }}
+    >
       <div className="space-y-8">
-        <h1 className="text-white text-5xl text-center p-6">What Are the Users Saying?</h1>
+        <h1 className="text-white text-5xl text-center p-6">
+          What Are the Users Saying?
+        </h1>
 
         <div className="block md:hidden">{testimonials}</div>
         <div className="hidden md:block">
@@ -257,7 +289,8 @@ function Miscellaneous() {
         <div className="p-16 space-y-4">
           <div className="text-5xl">Visit the Wiki</div>
           <div>
-            Find information on Chatterino's features and help documents for troubleshooting.
+            Find information on Chatterino's features and help documents for
+            troubleshooting.
           </div>
           <a href={wiki} className="pt-3">
             <Button className="ml-0 mt-6">Check It Out</Button>
@@ -266,11 +299,14 @@ function Miscellaneous() {
         <div className="p-16 space-y-4 bg-blue-500">
           <div className="text-5xl">Check on the development</div>
           <div>
-            Chatterino is developed out in the open on our GitHub page. You can join the discussion
-            or report issues there!
+            Chatterino is developed out in the open on our GitHub page. You can
+            join the discussion or report issues there!
           </div>
           <a href={github} className="pt-3">
-            <Button className="ml-0 mt-6" colorsClassName="bg-white text-blue-500">
+            <Button
+              className="ml-0 mt-6"
+              colorsClassName="bg-white text-blue-500"
+            >
               Pay us a visit
             </Button>
           </a>
@@ -282,7 +318,9 @@ function Miscellaneous() {
 
 function Downloads() {
   return (
-    <Section style={{ backgroundImage: "url(bg_footer.jpg)", backgroundSize: "cover" }}>
+    <Section
+      style={{ backgroundImage: "url(bg_footer.jpg)", backgroundSize: "cover" }}
+    >
       <Anchor id="downloads" />
       <div className="space-y-6 py-20 px-2">
         <h2 className="text-center text-5xl">Downloads</h2>

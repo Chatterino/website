@@ -1,5 +1,5 @@
 // @ts-check
-import React from "react";
+import React, { useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import {
   allDownloads,
@@ -13,11 +13,11 @@ import {
   windowsPortable,
 } from "links";
 import { LinkInformation, Message, Privacy } from "components/logos";
-import ChatProp from "components/chatprop";
 import Button from "components/button";
 import Section from "components/section";
 import Link from "components/link";
 import Page from "components/page";
+import Chat from "components/chat";
 
 export default function Home() {
   return (
@@ -70,7 +70,7 @@ function FirstHero() {
           id="chatprop-host"
         >
           <noscript>Enable JavaScript to see this.</noscript>
-          <ChatProp />
+          <Chat />
         </div>
       </div>
     </Section>
@@ -393,8 +393,8 @@ function DownloadButton({ data }) {
 }
 
 function AutoDownloadButton() {
-  // @ts-ignore
-  if (process.browser) {
+  const [platform, setPlatform] = React.useState(windows);
+  useEffect(() => {
     const { platform } = window.navigator;
 
     const data = /linux|x11|ubuntu|debian|fedora/i.test(platform)
@@ -404,14 +404,12 @@ function AutoDownloadButton() {
       : /freebsd/i.test(platform)
       ? freeBsd
       : windows;
+    setPlatform(data);
+  });
 
-    return <DownloadButton data={data} />;
-  } else {
-    // wrapped in an extra div to make react render it properly
-    return (
-      <div>
-        <DownloadButton data={windows} />
-      </div>
-    );
-  }
+  return (
+    <div>
+      <DownloadButton data={platform} />
+    </div>
+  );
 }

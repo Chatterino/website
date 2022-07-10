@@ -355,8 +355,8 @@ function DownloadButton({ data }) {
 }
 
 function AutoDownloadButton() {
-  // @ts-ignore
-  if (process.browser) {
+  const [platform, setPlatform] = React.useState(windows);
+  useEffect(() => {
     const { platform } = window.navigator;
 
     const data = /linux|x11|ubuntu|debian|fedora/i.test(platform)
@@ -366,18 +366,12 @@ function AutoDownloadButton() {
       : /freebsd/i.test(platform)
       ? freeBsd
       : windows;
+    setPlatform(data);
+  });
 
-    return (
-      <div>
-        <DownloadButton data={data} />
-      </div>
-    );
-  } else {
-    // wrapped in an extra div to make react render it properly
-    return (
-      <div>
-        <DownloadButton data={windows} />
-      </div>
-    );
-  }
+  return (
+    <div>
+      <DownloadButton data={platform} />
+    </div>
+  );
 }

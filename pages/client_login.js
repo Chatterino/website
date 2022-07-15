@@ -29,6 +29,8 @@ const scopes = [
   "channel:read:polls", // for reading broadcaster poll status
   "channel:manage:predictions", // for creating & ending predictions
   "channel:read:predictions", // for reading broadcaster prediction status
+  "moderator:manage:announcements", // for announce api
+  "user:manage:whispers", // for whispers api
 ];
 
 export default function ClientLogin() {

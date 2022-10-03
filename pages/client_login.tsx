@@ -37,6 +37,7 @@ const scopes = [
   "moderator:manage:chat_settings", // for roomstate api like followersonly
   "channel:manage:moderators", // for add/remove mod api
   "channel:manage:vips", // for add/remove vip api
+  "moderator:read:chatters", // for get chatters
 ];
 
 export default function ClientLogin() {

@@ -1,4 +1,5 @@
-import { Tux, Windows, FreeBSD, Apple } from "components/logos";
+import { ReactNode } from "react";
+import { Tux, Windows, FreeBSD, Apple } from "./components/logos";
 
 export const discord = "https://discord.gg/rabs2GZd8b";
 export const github = "https://github.com/chatterino/chatterino2";
@@ -47,14 +48,15 @@ export const allV1Versions = [
   "1.3",
 ];
 
-export const windows = [
+export type DownloadType = [() => JSX.Element, string, string];
+export const windows: DownloadType = [
   Windows,
   `${currentVersion} for Windows 64-Bit`,
   `${dl}/Chatterino%20Installer.exe`,
 ];
-export const linux = [Tux, "Linux", "linux"];
-export const freeBsd = [FreeBSD, "FreeBSD", "freebsd"];
-export const macOs = [Apple, "macOS", `${dl}/Chatterino.dmg`];
+export const linux: DownloadType = [Tux, "Linux", "linux"];
+export const freeBsd: DownloadType = [FreeBSD, "FreeBSD", "freebsd"];
+export const macOs: DownloadType = [Apple, "macOS", `${dl}/Chatterino.dmg`];
 export const windowsPortable = `${dl}/Chatterino%20Portable.zip`;
 export const linuxAppimageUrl = `${dl}/Chatterino-x86_64.AppImage`;
 

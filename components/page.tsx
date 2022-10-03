@@ -1,10 +1,14 @@
-// @ts-check
 import Head from "next/head";
-import React from "react";
+import React, { ReactNode } from "react";
 import Footer from "./footer";
 import Nav from "./nav";
 
-function Page({ children, title }) {
+type Props = {
+  children: ReactNode
+  title: string
+}
+
+function Page({ children, title }: Props) {
   return (
     <div className={"text-white flex flex-col "} style={{ minHeight: "100vh" }}>
       <Head>

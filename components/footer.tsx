@@ -1,4 +1,3 @@
-// @ts-check
 import React from "react";
 import Link from "./link";
 import Section from "./section";

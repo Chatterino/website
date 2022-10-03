@@ -1,10 +1,9 @@
-// @ts-check
 import React from "react";
-import Section from "components/section";
-import Link from "components/link";
-import Text from "components/text";
-import Page from "components/page";
-import { linuxAppimageUrl, linuxBuildFromSource } from "links";
+import Section from "../components/section";
+import Link from "../components/link";
+import Text from "../components/text";
+import Page from "../components/page";
+import { linuxAppimageUrl, linuxBuildFromSource } from "../links";
 
 function LinuxPage() {
   return (

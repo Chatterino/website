@@ -1,5 +1,5 @@
-import Page from "components/page";
-import { allV1Versions, allVersions, baseDownloadLink } from "links";
+import Page from "../components/page";
+import { allV1Versions, allVersions, baseDownloadLink } from "../links";
 
 function V2() {
   return (
@@ -51,8 +51,8 @@ function V1() {
 export default function Downloads() {
   return (
     <Page title="Old Builds - Chatterino">
-      <div class="w-max m-auto">
-        <h1 class="py-16">Old Builds</h1>
+      <div className="w-max m-auto">
+        <h1 className="py-16">Old Builds</h1>
         <V2 />
         {/* <V1 /> */}
       </div>

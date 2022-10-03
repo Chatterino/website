@@ -1,15 +1,20 @@
-// @ts-check
-import React from "react";
-import { Discord, Download, GitHub } from "components/logos";
-import { discord, github, tip, wiki } from "links";
-import Button from "components/button";
+import React, { ReactNode } from "react";
+import { Discord, Download, GitHub } from "./logos";
+import { discord, github, tip, wiki } from "../links";
+import Button from "./button";
 
-function NavLink({ href, children, ...props }) {
+type Props = {
+  href: string
+  className?: string 
+  children?: ReactNode
+}
+
+function NavLink({ href, children, className }: Props) {
   return (
     <a
       href={href}
       className={
-        (props.className ?? "") + " py-3 px-4 hover:text-blue-400 no-underline"
+        (className ?? "") + " py-3 px-4 hover:text-blue-400 no-underline"
       }
     >
       {children}

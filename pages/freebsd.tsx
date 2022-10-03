@@ -1,7 +1,7 @@
 // @ts-check
 import React from "react";
-import Section from "components/section";
-import Page from "components/page";
+import Section from "../components/section";
+import Page from "../components/page";
 
 function LinuxPage() {
   return (

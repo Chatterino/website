@@ -1,12 +1,16 @@
-// @ts-check
 import "styles/globals.css";
 import "components/chatprop.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import React from "react";
+import React, { ComponentType } from "react";
 import Head from "next/head";
 
-function MyApp({ Component, pageProps }) {
+type Props = {
+  Component: ComponentType;
+  pageProps: any;
+}
+
+function MyApp({ Component, pageProps }: Props) {
   return (
     <div>
       <Head>

@@ -1,8 +1,8 @@
-// @ts-check
-import React, { useEffect } from "react";
+import React, { ReactNode, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import {
   allDownloads,
+  DownloadType,
   freeBsd,
   github,
   linux,
@@ -11,13 +11,13 @@ import {
   wiki,
   windows,
   windowsPortable,
-} from "links";
-import { LinkInformation, Message, Privacy } from "components/logos";
-import Button from "components/button";
-import Section from "components/section";
-import Link from "components/link";
-import Page from "components/page";
-import Chat from "components/chat";
+} from "../links";
+import { LinkInformation, Message, Privacy } from "../components/logos";
+import Button from "../components/button";
+import Section from "../components/section";
+import Link from "../components/link";
+import Page from "../components/page";
+import Chat from "../components/chat";
 
 export default function Home() {
   return (
@@ -77,7 +77,7 @@ function FirstHero() {
   );
 }
 
-function FeatureCard({ children, title }) {
+function FeatureCard({ children, title }: { children: ReactNode, title: string}) {
   return (
     <div className="bg-gray-700 p-8 rounded grid">
       <div className="place-self-center w-full">
@@ -88,7 +88,7 @@ function FeatureCard({ children, title }) {
   );
 }
 
-function Anchor({ id }) {
+function Anchor({ id }: { id: string }) {
   return (
     <div
       style={{
@@ -188,7 +188,14 @@ function Features2() {
   );
 }
 
-function Testimonial({ name, occupation, children, imgsrc }) {
+type TestimonialProps = {
+  children: ReactNode;
+  name: string;
+  occupation: string;
+  imgsrc: string
+}
+
+function Testimonial({ name, occupation, children, imgsrc }: TestimonialProps) {
   return (
     <div className="text-gray-400 bg-gray-900 p-8 m-8 rounded-lg text-left">
       <div className="flex space-x-8">
@@ -351,7 +358,7 @@ function Downloads() {
   );
 }
 
-function SmallDownloadButton({ data }) {
+function SmallDownloadButton({ data }: { data: DownloadType }) {
   let Icon = data[0];
 
   return (
@@ -371,7 +378,7 @@ function SmallDownloadButton({ data }) {
   );
 }
 
-function DownloadButton({ data }) {
+function DownloadButton({ data }: { data: DownloadType }) {
   let Icon = data[0];
 
   return (

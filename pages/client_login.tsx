@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
-import Section from "components/section";
-import Page from "components/page";
+import Section from "../components/section";
+import Page from "../components/page";
 
 const redirectUrl = "https://chatterino.com/client_login";
 const twitchClientID = "g5zg0400k4vhrx2g6xi4hgveruamlv";
@@ -41,13 +41,13 @@ const scopes = [
 
 export default function ClientLogin() {
   const hash = typeof window !== "undefined" ? window.location.hash : "";
-  const [oauthToken, setOauthToken] = useState(null);
-  const [user, setUser] = useState(null);
+  const [oauthToken, setOauthToken] = useState<string | null>(null);
+  const [user, setUser] = useState<null | User>(null);
   const [buttonColor, setButtonColor] = useState(
     "bg-blue-500 hover:bg-blue-400"
   );
-  const dataStringRef = useRef(null);
-  const [errorMessage, setErrorMessage] = useState(null);
+  const dataStringRef = useRef<HTMLInputElement | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   useEffect(() => {
     if (location.hash === "") {
@@ -61,7 +61,7 @@ export default function ClientLogin() {
       .split("=")[1];
     if (oauthToken) {
       setOauthToken(oauthToken);
-      history.replaceState(null, null, " ");
+      history.replaceState(null, "", " ");
     }
   }, [hash]);
 
@@ -105,7 +105,7 @@ export default function ClientLogin() {
           </h6>
         )}
         {!loggedIn && (
-          <a href={createLoginUrl()} className={loginButtonClasses.join(" ")}>
+          <a href={createLoginUrl().toString()} className={loginButtonClasses.join(" ")}>
             Login with Twitch
           </a>
         )}
@@ -138,11 +138,16 @@ export default function ClientLogin() {
   );
 }
 
-function createChatterinoDataString(oauthToken, user) {
+type User = {
+  id: string;
+  login: string;
+};
+
+function createChatterinoDataString(oauthToken: string, user: User) {
   return `username=${user.login};user_id=${user.id};client_id=${twitchClientID};oauth_token=${oauthToken};`;
 }
 
-async function fetchUser(oauthToken) {
+async function fetchUser(oauthToken: string): Promise<User> {
   const response = await fetch("https://api.twitch.tv/helix/users", {
     headers: {
       "Client-ID": twitchClientID,

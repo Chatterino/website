@@ -171,6 +171,6 @@ function useMounted() {
 export function ClientOnly(component) {
   return (props) => {
     const mounted = useMounted();
-    return mounted && React.createElement(component, props);
+    return mounted ? React.createElement(component, props) : null;
   };
 }

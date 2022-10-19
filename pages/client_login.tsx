@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useRef } from "react";
-import Section from "../components/section";
+import { useEffect, useRef, useState } from "react";
 import Page from "../components/page";
+import Section from "../components/section";
 
-const redirectUrl = "https://chatterino.com/client_login";
-const twitchClientID = "g5zg0400k4vhrx2g6xi4hgveruamlv";
+const redirectUrl = "http://localhost:3000/client_login";
+const twitchClientID = "a5yy9w99csjupf18smbm2uqd9nd4pt";
 const scopes = [
   "user_subscriptions",
   "user_blocks_edit", // deprecated, replaced with "user:manage:blocked_users"
@@ -43,6 +43,7 @@ const scopes = [
 export default function ClientLogin() {
   const hash = typeof window !== "undefined" ? window.location.hash : "";
   const [oauthToken, setOauthToken] = useState<string | null>(null);
+  const [hidden, setHidden] = useState(true);
   const [user, setUser] = useState<null | User>(null);
   const [buttonColor, setButtonColor] = useState(
     "bg-blue-500 hover:bg-blue-400"
@@ -112,13 +113,19 @@ export default function ClientLogin() {
         )}
         {loggedIn && (
           <>
-            <input
-              type="text"
-              ref={dataStringRef}
-              readOnly
-              className="appearance-none rounded bg-gray-900 w-full overflow-hidden resize-none p-3 my-2 blur-sm hover:blur-none transition-all delay-150"
-              value={createChatterinoDataString(oauthToken, user)}
-            />
+            <div className="flex gap-1 align-center my-2">
+              <div className="relative w-full">
+                {hidden && <div className="absolute top-0 left-0 w-full h-full bg-red-700 rounded" />}
+                <input
+                  type="text"
+                  ref={dataStringRef}
+                  readOnly
+                  className={`appearance-none rounded bg-gray-900 w-full overflow-hidden resize-none p-3`}
+                  value={createChatterinoDataString(oauthToken, user)}
+                />
+              </div>
+              <div className="flex align-center h-full bg-gray-900 rounded p-3 select-none cursor-pointer hover:bg-gray-700" onClick={() => setHidden(hidden => !hidden)}>🔎</div>
+            </div>
             <button
               className={`rounded w-full p-3 ${buttonColor}`}
               onClick={handleCopyClick}

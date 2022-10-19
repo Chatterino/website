@@ -116,7 +116,7 @@ export default function ClientLogin() {
               type="text"
               ref={dataStringRef}
               readOnly
-              className="appearance-none rounded bg-gray-900 w-full overflow-hidden resize-none p-3 my-2"
+              className="appearance-none rounded bg-gray-900 w-full overflow-hidden resize-none p-3 my-2 blur-sm hover:blur-none transition-all delay-150"
               value={createChatterinoDataString(oauthToken, user)}
             />
             <button

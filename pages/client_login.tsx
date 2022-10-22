@@ -2,8 +2,8 @@ import React, { useEffect, useState, useRef } from "react";
 import Section from "../components/section";
 import Page from "../components/page";
 
-const redirectUrl = "https://chatterino.com/client_login";
-const twitchClientID = "g5zg0400k4vhrx2g6xi4hgveruamlv";
+const redirectUrl = process.env.NEXT_PUBLIC_TWITCH_OAUTH_REDIRECT_URL!;
+const twitchClientID = process.env.NEXT_PUBLIC_TWITCH_OAUTH_CLIENT_ID!;
 const scopes = [
   "user_subscriptions",
   "user_blocks_edit", // deprecated, replaced with "user:manage:blocked_users"

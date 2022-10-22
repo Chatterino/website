@@ -20,7 +20,7 @@
     "react-elm-components": "^1.1.0",
     "react-responsive-carousel": "^3.2.23",
     "remark-github": "^11.2.3",
-    "tailwindcss": "^3.1.8"
+    "tailwindcss": "^3.2.1"
   },
   "devDependencies": {
     "@types/node": "18.11.2",

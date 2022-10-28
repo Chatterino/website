@@ -5,15 +5,15 @@ import Section from "../components/section";
 const redirectUrl = process.env.NEXT_PUBLIC_TWITCH_OAUTH_REDIRECT_URL!;
 const twitchClientID = process.env.NEXT_PUBLIC_TWITCH_OAUTH_CLIENT_ID!;
 const scopes = [
-  "channel_editor", // for /raid
+  "channel_editor", // for /raid, will be deprecated on or before Feb 18th 2023, already using "channel:manage:raids"
   "channel:moderate", // for seeing automod & which moderator banned/unbanned a user (felanbird unbanned weeb123)
   "channel:read:redemptions", // for getting the list of channel point redemptions
   "chat:edit", // for sending messages in chat
   "chat:read", // for viewing messages in chat
   "whispers:read", // for viewing recieved whispers
-  "whispers:edit", // for sending whispers
-  "channel_commercial", // for /commercial
-  "channel:edit:commercial", // in case twitch upgrades things in the future (and this scope is required)
+  "whispers:edit", // for sending whispers, will be deprecated on or before Feb 18th 2023, already using "user:manage:whispers"
+  "channel_commercial", // for /commercial, will be deprecated on or before Feb 18th 2023, already using "channel:edit:commercial"
+  "channel:edit:commercial", // for /commercial api
   "clips:edit", // for clip creation
   "channel:manage:broadcast", // for creating stream markers with /marker command, and for the /settitle and /setgame commands
   "user:read:blocked_users", // for getting list of blocked users

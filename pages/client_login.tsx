@@ -7,7 +7,7 @@ const twitchClientID = process.env.NEXT_PUBLIC_TWITCH_OAUTH_CLIENT_ID!;
 const scopes = [
   "channel_editor", // for /raid, will be deprecated on or before Feb 18th 2023, already using "channel:manage:raids"
   "channel:moderate", // for seeing automod & which moderator banned/unbanned a user (felanbird unbanned weeb123)
-  "channel:read:redemptions", // for getting the list of channel point redemptions
+  "channel:read:redemptions", // for getting the list of channel point redemptions (not currently used)
   "chat:edit", // for sending messages in chat
   "chat:read", // for viewing messages in chat
   "whispers:read", // for viewing recieved whispers
@@ -20,10 +20,10 @@ const scopes = [
   "user:manage:blocked_users", // for blocking/unblocking other users
   "moderator:manage:automod", // for approving/denying automod messages
   "channel:manage:raids", // for starting/canceling raids
-  "channel:manage:polls", // for creating & ending polls
-  "channel:read:polls", // for reading broadcaster poll status
-  "channel:manage:predictions", // for creating & ending predictions
-  "channel:read:predictions", // for reading broadcaster prediction status
+  "channel:manage:polls", // for creating & ending polls (not currently used)
+  "channel:read:polls", // for reading broadcaster poll status (not currently used)
+  "channel:manage:predictions", // for creating & ending predictions (not currently used)
+  "channel:read:predictions", // for reading broadcaster prediction status (not currently used)
   "moderator:manage:announcements", // for announce api
   "user:manage:whispers", // for whispers api
   "moderator:manage:banned_users", // for ban/unban/timeout/untimeout api
@@ -33,6 +33,7 @@ const scopes = [
   "channel:manage:moderators", // for add/remove mod api
   "channel:manage:vips", // for add/remove vip api
   "moderator:read:chatters", // for get chatters
+  "moderator:read:chatters", // for get chatters api (not currently used)
 ];
 
 export default function ClientLogin() {

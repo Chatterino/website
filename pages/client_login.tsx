@@ -6,12 +6,12 @@ const redirectUrl = process.env.NEXT_PUBLIC_TWITCH_OAUTH_REDIRECT_URL!;
 const twitchClientID = process.env.NEXT_PUBLIC_TWITCH_OAUTH_CLIENT_ID!;
 const scopes = [
   "channel_editor", // for /raid
-  "channel:moderate",
-  "channel:read:redemptions",
-  "chat:edit",
-  "chat:read",
-  "whispers:read",
-  "whispers:edit",
+  "channel:moderate", // for seeing automod & which moderator banned/unbanned a user (felanbird unbanned weeb123)
+  "channel:read:redemptions", // for getting the list of channel point redemptions
+  "chat:edit", // for sending messages in chat
+  "chat:read", // for viewing messages in chat
+  "whispers:read", // for viewing recieved whispers
+  "whispers:edit", // for sending whispers
   "channel_commercial", // for /commercial
   "channel:edit:commercial", // in case twitch upgrades things in the future (and this scope is required)
   "clips:edit", // for clip creation

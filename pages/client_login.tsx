@@ -14,7 +14,7 @@ const scopes = [
   "whispers:edit", // for sending whispers, will be deprecated on or before Feb 18th 2023, already using "user:manage:whispers"
   "channel_commercial", // for /commercial, will be deprecated on or before Feb 18th 2023, already using "channel:edit:commercial"
   "channel:edit:commercial", // for /commercial api
-  "clips:edit", // for clip creation
+  "clips:edit", // for /clip creation
   "channel:manage:broadcast", // for creating stream markers with /marker command, and for the /settitle and /setgame commands
   "user:read:blocked_users", // for getting list of blocked users
   "user:manage:blocked_users", // for blocking/unblocking other users
@@ -24,14 +24,14 @@ const scopes = [
   "channel:read:polls", // for reading broadcaster poll status (not currently used)
   "channel:manage:predictions", // for creating & ending predictions (not currently used)
   "channel:read:predictions", // for reading broadcaster prediction status (not currently used)
-  "moderator:manage:announcements", // for announce api
+  "moderator:manage:announcements", // for /announce api
   "user:manage:whispers", // for whispers api
   "moderator:manage:banned_users", // for ban/unban/timeout/untimeout api
-  "moderator:manage:chat_messages", // for delete message api
-  "user:manage:chat_color", // for update user color api
-  "moderator:manage:chat_settings", // for roomstate api like followersonly
-  "channel:manage:moderators", // for add/remove mod api
-  "channel:manage:vips", // for add/remove vip api
+  "moderator:manage:chat_messages", // for delete message api (/delete, /clear)
+  "user:manage:chat_color", // for update user color api (/color coral)
+  "moderator:manage:chat_settings", // for roomstate api (/followersonly, /uniquechat, /slow) https://dev.twitch.tv/docs/api/reference#get-chat-settings
+  "channel:manage:moderators", // for add/remove/view mod api
+  "channel:manage:vips", // for add/remove/view vip api
   "moderator:read:chatters", // for get chatters
   "moderator:read:chatters", // for get chatters api (not currently used)
 ];

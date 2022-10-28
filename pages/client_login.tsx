@@ -54,7 +54,6 @@ const scopes = [
   // https://dev.twitch.tv/docs/api/reference#add-channel-vip https://dev.twitch.tv/docs/api/reference#remove-channel-vip https://dev.twitch.tv/docs/api/reference#get-vips 
   "channel:manage:vips", // for add/remove/view vip api
 
-  "moderator:read:chatters", // for get chatters
   "moderator:read:chatters", // for get chatters api (not currently used) https://dev.twitch.tv/docs/api/reference#get-chatters
 ];
 

@@ -5,39 +5,84 @@ import Section from "../components/section";
 const redirectUrl = process.env.NEXT_PUBLIC_TWITCH_OAUTH_REDIRECT_URL!;
 const twitchClientID = process.env.NEXT_PUBLIC_TWITCH_OAUTH_CLIENT_ID!;
 const scopes = [
-  "user_subscriptions",
-  "user_blocks_edit", // deprecated, replaced with "user:manage:blocked_users"
-  "user_blocks_read", // deprecated, replaced with "user:read:blocked_users"
-  "user_follows_edit", // deprecated, soon to be removed later since we now use "user:edit:follows"
-  "channel_editor", // for /raid
-  "channel:moderate",
-  "channel:read:redemptions",
-  "chat:edit",
-  "chat:read",
-  "whispers:read",
-  "whispers:edit",
-  "channel_commercial", // for /commercial
-  "channel:edit:commercial", // in case twitch upgrades things in the future (and this scope is required)
-  "user:edit:follows", // for (un)following
-  "clips:edit", // for clip creation
+  "channel_editor", // for /raid, will be deprecated on or before Feb 18th 2023, already using "channel:manage:raids"
+  "channel:moderate", // for seeing automod & which moderator banned/unbanned a user (felanbird unbanned weeb123)
+  "channel:read:redemptions", // for getting the list of channel point redemptions (not currently used)
+  "chat:edit", // for sending messages in chat
+  "chat:read", // for viewing messages in chat
+  "whispers:read", // for viewing recieved whispers
+  "whispers:edit", // for sending whispers, will be deprecated on or before Feb 18th 2023, already using "user:manage:whispers"
+  "channel_commercial", // for /commercial, will be deprecated on or before Feb 18th 2023, already using "channel:edit:commercial"
+
+  // https://dev.twitch.tv/docs/api/reference#start-commercial
+  "channel:edit:commercial", // for /commercial api 
+
+  // https://dev.twitch.tv/docs/api/reference#create-clip
+  "clips:edit", // for /clip creation 
+
+  // https://dev.twitch.tv/docs/api/reference#create-stream-marker 
+  // https://dev.twitch.tv/docs/api/reference#modify-channel-information
   "channel:manage:broadcast", // for creating stream markers with /marker command, and for the /settitle and /setgame commands
-  "user:read:blocked_users", // for getting list of blocked users
+
+  // https://dev.twitch.tv/docs/api/reference#get-user-block-list
+  "user:read:blocked_users", // for getting list of blocked users 
+
+  // https://dev.twitch.tv/docs/api/reference#block-user 
+  // https://dev.twitch.tv/docs/api/reference#unblock-user
   "user:manage:blocked_users", // for blocking/unblocking other users
-  "moderator:manage:automod", // for approving/denying automod messages
+
+  // https://dev.twitch.tv/docs/api/reference#manage-held-automod-messages
+  "moderator:manage:automod", // for approving/denying automod messages 
+
+  // https://dev.twitch.tv/docs/api/reference#start-a-raid 
+  // https://dev.twitch.tv/docs/api/reference#cancel-a-raid
   "channel:manage:raids", // for starting/canceling raids
-  "channel:manage:polls", // for creating & ending polls
-  "channel:read:polls", // for reading broadcaster poll status
-  "channel:manage:predictions", // for creating & ending predictions
-  "channel:read:predictions", // for reading broadcaster prediction status
-  "moderator:manage:announcements", // for announce api
-  "user:manage:whispers", // for whispers api
-  "moderator:manage:banned_users", // for ban/unban/timeout/untimeout api
-  "moderator:manage:chat_messages", // for delete message api
-  "user:manage:chat_color", // for update user color api
-  "moderator:manage:chat_settings", // for roomstate api like followersonly
-  "channel:manage:moderators", // for add/remove mod api
-  "channel:manage:vips", // for add/remove vip api
-  "moderator:read:chatters", // for get chatters
+
+  // https://dev.twitch.tv/docs/api/reference#create-poll 
+  // https://dev.twitch.tv/docs/api/reference#end-poll
+  "channel:manage:polls", // for creating & ending polls (not currently used)
+
+  // https://dev.twitch.tv/docs/api/reference#get-polls
+  "channel:read:polls", // for reading broadcaster poll status (not currently used) 
+
+  // https://dev.twitch.tv/docs/api/reference#create-prediction 
+  // https://dev.twitch.tv/docs/api/reference#end-prediction
+  "channel:manage:predictions", // for creating & ending predictions (not currently used)
+
+  // https://dev.twitch.tv/docs/api/reference#get-predictions
+  "channel:read:predictions", // for reading broadcaster prediction status (not currently used) 
+
+  // https://dev.twitch.tv/docs/api/reference#send-chat-announcement
+  "moderator:manage:announcements", // for /announce api 
+
+  // https://dev.twitch.tv/docs/api/reference#send-whisper
+  "user:manage:whispers", // for whispers api 
+
+  // https://dev.twitch.tv/docs/api/reference#ban-user 
+  // https://dev.twitch.tv/docs/api/reference#unban-user
+  "moderator:manage:banned_users", // for ban/unban/timeout/untimeout api 
+  
+  // https://dev.twitch.tv/docs/api/reference#delete-chat-messages
+  "moderator:manage:chat_messages", // for delete message api (/delete, /clear)
+
+  // https://dev.twitch.tv/docs/api/reference#update-user-chat-color
+  "user:manage:chat_color", // for update user color api (/color coral)
+
+  // https://dev.twitch.tv/docs/api/reference#get-chat-settings
+  "moderator:manage:chat_settings", // for roomstate api (/followersonly, /uniquechat, /slow)
+
+  // https://dev.twitch.tv/docs/api/reference#get-moderators 
+  // https://dev.twitch.tv/docs/api/reference#add-channel-moderator 
+  // https://dev.twitch.tv/docs/api/reference#remove-channel-vip
+  "channel:manage:moderators", // for add/remove/view mod api
+
+  // https://dev.twitch.tv/docs/api/reference#add-channel-vip 
+  // https://dev.twitch.tv/docs/api/reference#remove-channel-vip 
+  // https://dev.twitch.tv/docs/api/reference#get-vips 
+  "channel:manage:vips", // for add/remove/view vip api
+
+  // https://dev.twitch.tv/docs/api/reference#get-chatters
+  "moderator:read:chatters", // for get chatters api (not currently used)
 ];
 
 export default function ClientLogin() {

@@ -84,11 +84,9 @@ const scopes = [
   // https://dev.twitch.tv/docs/api/reference#get-chatters
   "moderator:read:chatters", // for get chatters api (not currently used)
 
-  // https://dev.twitch.tv/docs/api/reference#get-shield-mode-status 
-  "moderator:read:shield_mode",  // for reading the channel's shield-mode status/settings (not currently used)
-  
+  // https://dev.twitch.tv/docs/api/reference#get-shield-mode-status  
   // https://dev.twitch.tv/docs/api/reference#update-shield-mode-status 
-  "moderator:manage:shield_mode", // for managing the channel's shield-mode status/settings (not currently used)
+  "moderator:manage:shield_mode", // for reading/managing the channel's shield-mode status/settings (not currently used)
 ];
 
 export default function ClientLogin() {

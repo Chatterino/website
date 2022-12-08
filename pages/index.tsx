@@ -121,7 +121,7 @@ function Features() {
         <div className="space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 gap-4 md:gap-y-12 md:gap-x-24">
           <FeatureCard title="Batteries Included">
             <ul className="space-y-2">
-              <li>Support for Twitch, BetterTTV, and FrankerFaceZ emotes.</li>
+              <li>Support for Twitch, BetterTTV, FrankerFaceZ, and 7TV emotes.</li>
               <li>Dark Theme. (also Light Theme.)</li>
             </ul>
           </FeatureCard>

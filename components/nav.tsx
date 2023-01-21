@@ -37,7 +37,7 @@ function Nav() {
           <a href="/" className="no-underline">
             <div className="flex items-center text-white hover:text-blue-400 p-4 sm:p-6 space-x-4 sm:pr-0">
               <img src="logo.png" className="w-8 h-8" />
-              <div>Chatterino</div>
+              <div className="hidden sm:block">Chatterino</div>
             </div>
           </a>
 

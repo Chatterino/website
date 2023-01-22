@@ -65,7 +65,7 @@ function FirstHero() {
         </div>
 
         <div
-          className="flex p-16 md:pl-4 md:pr-28"
+          className="flex p-16 md:pl-4 md:pr-28 max-xs:transform max-xs:scale-75 max-xs:p-0"
           style={{ height: "70vh", maxHeight: 600, zIndex: 1 }}
           id="chatprop-host"
         >
@@ -198,16 +198,16 @@ type TestimonialProps = {
 function Testimonial({ name, occupation, children, imgsrc }: TestimonialProps) {
   return (
     <div className="text-gray-400 bg-gray-900 p-8 m-8 rounded-lg text-left">
-      <div className="flex space-x-8">
+      <div className="flex space-x-8 max-xs:flex-col max-xs:space-x-0">
         <div
-          className="w-16 h-16 md:w-36 md:h-36 flex-shrink-0 rounded-full"
+          className="w-16 h-16 md:w-36 md:h-36 flex-shrink-0 rounded-full max-xs:self-center max-xs:mb-4"
           style={{
             backgroundImage: "url(" + imgsrc + ")",
             backgroundSize: "cover",
           }}
         />
         <div className="flex flex-col">
-          <div>{children}</div>
+          <div className="max-xs:mb-2">{children}</div>
           <div className="flex-grow" />
           <div className="text-xl text-white">{name}</div>
           <div className="text-sm text-white">{occupation}</div>
@@ -263,7 +263,7 @@ let testimonials = [
 function Testimonials() {
   return (
     <Section
-      className="p-6 md:p-12 bg-gray-800"
+      className="p-6 md:p-12 bg-gray-800 max-xs:p-0"
       style={{ maxWidth: 800, margin: "0 auto" }}
     >
       <div className="space-y-8">
@@ -293,8 +293,8 @@ function Miscellaneous() {
   return (
     <Section className="bg-gray-800">
       <div className="bg-gray-800 md:grid md:grid-cols-2 md:space-y-0">
-        <div className="p-16 space-y-4">
-          <div className="text-5xl">Visit the Wiki</div>
+        <div className="p-16 space-y-4 max-xs:p-6">
+          <div className="text-5xl max-xs:text-4xl">Visit the Wiki</div>
           <div>
             Find information on Chatterino's features and help documents for
             troubleshooting.
@@ -303,8 +303,8 @@ function Miscellaneous() {
             <Button className="ml-0 mt-6">Check It Out</Button>
           </a>
         </div>
-        <div className="p-16 space-y-4 bg-blue-500">
-          <div className="text-5xl">Check on the development</div>
+        <div className="p-16 space-y-4 bg-blue-500 max-xs:p-6">
+          <div className="text-5xl max-xs:text-4xl">Check on the development</div>
           <div>
             Chatterino is developed out in the open on our GitHub page. You can
             join the discussion or report issues there!

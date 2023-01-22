@@ -65,7 +65,7 @@ function FirstHero() {
         </div>
 
         <div
-          className="flex p-16 md:pl-4 md:pr-28"
+          className="flex p-16 md:pl-4 md:pr-28 max-xs:transform max-xs:scale-75 max-xs:p-0"
           style={{ height: "70vh", maxHeight: 600, zIndex: 1 }}
           id="chatprop-host"
         >

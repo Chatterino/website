@@ -198,16 +198,16 @@ type TestimonialProps = {
 function Testimonial({ name, occupation, children, imgsrc }: TestimonialProps) {
   return (
     <div className="text-gray-400 bg-gray-900 p-8 m-8 rounded-lg text-left">
-      <div className="flex space-x-8">
+      <div className="flex space-x-8 max-xs:flex-col max-xs:space-x-0">
         <div
-          className="w-16 h-16 md:w-36 md:h-36 flex-shrink-0 rounded-full"
+          className="w-16 h-16 md:w-36 md:h-36 flex-shrink-0 rounded-full max-xs:self-center max-xs:mb-4"
           style={{
             backgroundImage: "url(" + imgsrc + ")",
             backgroundSize: "cover",
           }}
         />
         <div className="flex flex-col">
-          <div>{children}</div>
+          <div className="max-xs:mb-2">{children}</div>
           <div className="flex-grow" />
           <div className="text-xl text-white">{name}</div>
           <div className="text-sm text-white">{occupation}</div>
@@ -263,7 +263,7 @@ let testimonials = [
 function Testimonials() {
   return (
     <Section
-      className="p-6 md:p-12 bg-gray-800"
+      className="p-6 md:p-12 bg-gray-800 max-xs:p-0"
       style={{ maxWidth: 800, margin: "0 auto" }}
     >
       <div className="space-y-8">

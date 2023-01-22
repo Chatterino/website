@@ -293,8 +293,8 @@ function Miscellaneous() {
   return (
     <Section className="bg-gray-800">
       <div className="bg-gray-800 md:grid md:grid-cols-2 md:space-y-0">
-        <div className="p-16 space-y-4">
-          <div className="text-5xl">Visit the Wiki</div>
+        <div className="p-16 space-y-4 max-xs:p-6">
+          <div className="text-5xl max-xs:text-4xl">Visit the Wiki</div>
           <div>
             Find information on Chatterino's features and help documents for
             troubleshooting.
@@ -303,8 +303,8 @@ function Miscellaneous() {
             <Button className="ml-0 mt-6">Check It Out</Button>
           </a>
         </div>
-        <div className="p-16 space-y-4 bg-blue-500">
-          <div className="text-5xl">Check on the development</div>
+        <div className="p-16 space-y-4 bg-blue-500 max-xs:p-6">
+          <div className="text-5xl max-xs:text-4xl">Check on the development</div>
           <div>
             Chatterino is developed out in the open on our GitHub page. You can
             join the discussion or report issues there!

@@ -264,7 +264,7 @@ function Testimonials() {
   return (
     <Section
       className="p-6 md:p-12 bg-gray-800 max-xs:p-0"
-      style={{ maxWidth: 800, margin: "0 auto" }}
+      style={{ margin: "0 auto" }}
     >
       <div className="space-y-8">
         <h1 className="text-white text-5xl text-center p-6">

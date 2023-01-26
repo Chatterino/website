@@ -88,6 +88,7 @@ button {
 
 .carousel {
   max-width: 800px;
+  margin: auto !important;
 }
 
 .slide {

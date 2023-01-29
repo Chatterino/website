@@ -87,6 +87,9 @@ const scopes = [
   // https://dev.twitch.tv/docs/api/reference#get-shield-mode-status  
   // https://dev.twitch.tv/docs/api/reference#update-shield-mode-status 
   "moderator:manage:shield_mode", // for reading/managing the channel's shield-mode status/settings (not currently used)
+
+  // https://dev.twitch.tv/docs/api/reference/#send-a-shoutout
+  "moderator:manage:shoutouts", // for reading/managing the channel's shoutouts (not currently used)
 ];
 
 export default function ClientLogin() {

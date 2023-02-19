@@ -31,7 +31,7 @@ export const allVersions = [
   "2.3.4",
   "2.3.5",
   "2.4.0",
-  "2.4.0"
+  "2.4.1"
 ];
 export const allV1Versions = [
   "0.2.6.4",

@@ -82,7 +82,7 @@ const scopes = [
   "channel:manage:vips", // for add/remove/view vip api
 
   // https://dev.twitch.tv/docs/api/reference#get-chatters
-  "moderator:read:chatters", // for get chatters api (not currently used)
+  "moderator:read:chatters", // for get chatters api
 
   // https://dev.twitch.tv/docs/api/reference#get-shield-mode-status  
   // https://dev.twitch.tv/docs/api/reference#update-shield-mode-status 

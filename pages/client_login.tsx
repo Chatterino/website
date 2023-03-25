@@ -5,14 +5,11 @@ import Section from "../components/section";
 const redirectUrl = process.env.NEXT_PUBLIC_TWITCH_OAUTH_REDIRECT_URL!;
 const twitchClientID = process.env.NEXT_PUBLIC_TWITCH_OAUTH_CLIENT_ID!;
 const scopes = [
-  "channel_editor", // for /raid, will be deprecated on or before Feb 18th 2023, already using "channel:manage:raids"
   "channel:moderate", // for seeing automod & which moderator banned/unbanned a user (felanbird unbanned weeb123)
   "channel:read:redemptions", // for getting the list of channel point redemptions (not currently used)
   "chat:edit", // for sending messages in chat
   "chat:read", // for viewing messages in chat
   "whispers:read", // for viewing recieved whispers
-  "whispers:edit", // for sending whispers, will be deprecated on or before Feb 18th 2023, already using "user:manage:whispers"
-  "channel_commercial", // for /commercial, will be deprecated on or before Feb 18th 2023, already using "channel:edit:commercial"
 
   // https://dev.twitch.tv/docs/api/reference#start-commercial
   "channel:edit:commercial", // for /commercial api 
@@ -82,7 +79,7 @@ const scopes = [
   "channel:manage:vips", // for add/remove/view vip api
 
   // https://dev.twitch.tv/docs/api/reference#get-chatters
-  "moderator:read:chatters", // for get chatters api (not currently used)
+  "moderator:read:chatters", // for get chatters api
 
   // https://dev.twitch.tv/docs/api/reference#get-shield-mode-status  
   // https://dev.twitch.tv/docs/api/reference#update-shield-mode-status 

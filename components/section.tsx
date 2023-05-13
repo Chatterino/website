@@ -1,10 +1,10 @@
 import { CSSProperties, ReactNode } from "react";
 
 type Props = {
-  children: ReactNode
-  className?: string
-  style?: CSSProperties
-}
+  children: ReactNode;
+  className?: string;
+  style?: CSSProperties;
+};
 
 function Section({ children, className, style }: Props) {
   return (

@@ -4,10 +4,10 @@ import { discord, github, tip, wiki } from "../links";
 import Button from "./button";
 
 type Props = {
-  href: string
-  className?: string 
-  children?: ReactNode
-}
+  href: string;
+  className?: string;
+  children?: ReactNode;
+};
 
 function NavLink({ href, children, className }: Props) {
   return (

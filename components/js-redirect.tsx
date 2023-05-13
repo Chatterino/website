@@ -1,6 +1,6 @@
 type Props = {
-  href: string
-}
+  href: string;
+};
 
 export default function JsRedirect({ href }: Props) {
   if (typeof window !== "undefined") {

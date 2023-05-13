@@ -1,12 +1,12 @@
 import { ReactNode } from "react";
 
 type Props = {
-  className?: string
-  colorsClassName?: string
-  children: ReactNode
-}
+  className?: string;
+  colorsClassName?: string;
+  children: ReactNode;
+};
 
-function Button({className, colorsClassName, children}: Props) {
+function Button({ className, colorsClassName, children }: Props) {
   return (
     <button
       className={

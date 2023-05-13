@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Tab from "./tab";
 import Split from "./split";
-import { addMessage, ClientOnly, initTabs, randomMessage, tabTitle } from "./common";
+import {
+  addMessage,
+  ClientOnly,
+  initTabs,
+  randomMessage,
+  tabTitle,
+} from "./common";
 
 function Chat() {
   const [tabs, setTabs] = useState(() => initTabs(new Date()));

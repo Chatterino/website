@@ -4,9 +4,9 @@ import Footer from "./footer";
 import Nav from "./nav";
 
 type Props = {
-  children: ReactNode
-  title: string
-}
+  children: ReactNode;
+  title: string;
+};
 
 function Page({ children, title }: Props) {
   return (

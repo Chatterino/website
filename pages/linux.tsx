@@ -27,11 +27,11 @@ function LinuxPage() {
           {/* Flatpak */}
           <h2 className="text-3xl pt-10 pb-4">Flatpak</h2>
           <Text>
-            Chatterino is available on {" "}
+            Chatterino is available on{" "}
             <Link href="https://flathub.org/apps/details/com.chatterino.chatterino">
               Flathub
-             </Link>.
-             To install it run: {" "}
+            </Link>
+            . To install it run:{" "}
             <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
               flatpak install chatterino
             </code>{" "}

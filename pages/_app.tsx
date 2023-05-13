@@ -8,7 +8,7 @@ import Head from "next/head";
 type Props = {
   Component: ComponentType;
   pageProps: any;
-}
+};
 
 function MyApp({ Component, pageProps }: Props) {
   return (

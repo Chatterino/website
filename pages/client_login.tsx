@@ -127,9 +127,10 @@ export default function ClientLogin() {
 
   const loggedIn = oauthToken && user;
 
-  const loginButtonClasses = "p-3 flex justify-center rounded shadow bg-purple-800 hover:bg-purple-600 hover:opacity-100 whitespace-nowrap no-underline my-5".split(
-    " "
-  );
+  const loginButtonClasses =
+    "p-3 flex justify-center rounded shadow bg-purple-800 hover:bg-purple-600 hover:opacity-100 whitespace-nowrap no-underline my-5".split(
+      " "
+    );
   if (loggedIn) {
     loginButtonClasses.push("opacity-25");
   }

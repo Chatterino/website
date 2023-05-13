@@ -1,5 +1,5 @@
 trailingComma: es5
-endOfLine: auto
+endOfLine: lf
 overrides:
   - files: "*.md"
     options:

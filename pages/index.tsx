@@ -77,7 +77,13 @@ function FirstHero() {
   );
 }
 
-function FeatureCard({ children, title }: { children: ReactNode, title: string}) {
+function FeatureCard({
+  children,
+  title,
+}: {
+  children: ReactNode;
+  title: string;
+}) {
   return (
     <div className="bg-gray-700 p-8 rounded grid">
       <div className="place-self-center w-full">
@@ -121,7 +127,9 @@ function Features() {
         <div className="space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 gap-4 md:gap-y-12 md:gap-x-24">
           <FeatureCard title="Batteries Included">
             <ul className="space-y-2">
-              <li>Support for Twitch, BetterTTV, FrankerFaceZ, and 7TV emotes.</li>
+              <li>
+                Support for Twitch, BetterTTV, FrankerFaceZ, and 7TV emotes.
+              </li>
               <li>Dark Theme. (also Light Theme.)</li>
             </ul>
           </FeatureCard>
@@ -192,8 +200,8 @@ type TestimonialProps = {
   children: ReactNode;
   name: string;
   occupation: string;
-  imgsrc: string
-}
+  imgsrc: string;
+};
 
 function Testimonial({ name, occupation, children, imgsrc }: TestimonialProps) {
   return (
@@ -304,7 +312,9 @@ function Miscellaneous() {
           </a>
         </div>
         <div className="p-16 space-y-4 bg-blue-500 max-xs:p-6">
-          <div className="text-5xl max-xs:text-4xl">Check on the development</div>
+          <div className="text-5xl max-xs:text-4xl">
+            Check on the development
+          </div>
           <div>
             Chatterino is developed out in the open on our GitHub page. You can
             join the discussion or report issues there!

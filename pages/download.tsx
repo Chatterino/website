@@ -41,7 +41,9 @@ function V1() {
       Legacy (really old + windows-only):{" "}
       {allV1Versions.reverse().map((v) => (
         <div>
-          <a key={v} href={`${baseDownloadLink}/1/chatterino-win-${v}.zip`}>{v}</a>
+          <a key={v} href={`${baseDownloadLink}/1/chatterino-win-${v}.zip`}>
+            {v}
+          </a>
         </div>
       ))}
     </div>

@@ -18,11 +18,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Check formatting with Prettier
-        uses: actionsx/prettier@e90ec5455552f0f640781bdd5f5d2415acb52f1a
+      - uses: actions/setup-node@v3
         with:
-          # prettier CLI arguments.
-          args: --write .
+          node-version: "18"
+          cache: "yarn"
+
+      - name: Run prettier
+        run: |-
+          npx --no-install prettier --write .
+
       - name: Show diff
         run: git --no-pager diff --exit-code --color=never
         shell: bash

@@ -14,7 +14,6 @@ export const baseDownloadLink = `https://chatterino.fra1.digitaloceanspaces.com/
 const dl = `https://chatterino.fra1.digitaloceanspaces.com/bin/${currentVersion}`;
 
 export const allVersions = [
-  "2.0.4-beta",
   "2.1.0",
   "2.1.4",
   "2.1.5-4",

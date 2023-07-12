@@ -1,7 +1,9 @@
 /* 3D effect */
 .c-window {
   transform: perspective(1600px) rotate3d(0.1, -0.1, 0.03, 20deg);
-  box-shadow: 0 0 1px 0 black, 0 15px 30px rgba(0, 0, 0, 0.4);
+  box-shadow:
+    0 0 1px 0 black,
+    0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
 .c-window {

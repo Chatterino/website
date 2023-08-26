@@ -7,6 +7,26 @@ import Section from "components/section";
 
 # Chatterino Changelog
 
+## 2.4.5 (Released 2023-08-26)
+
+- Major: AutoMod term management messages (e.g. testaccount added "noob" as a blocked term on AutoMod.) are now hidden in Streamer Mode if you have the "Hide moderation actions" setting enabled. (#4758)
+- Minor: Added `/shoutout <username>` command to shoutout a specified user. Note: This is only the /command, we are still unable to display when a shoutout happens. (#4638)
+- Minor: Added a setting to only show tabs with live channels (default toggle hotkey: Ctrl+Shift+L). (#4358)
+- Minor: Added an option to subscribe to and unsubscribe from reply threads. (#4680, #4739)
+- Minor: Added the ability to pin Reply threads to stay open while using the setting "Automatically close reply thread popup when it loses focus". (#4680)
+- Minor: Highlights loaded from message history will now correctly appear in the /mentions tab. (#4475)
+- Minor: Added an icon showing when streamer mode is enabled (#4410, #4690)
+- Minor: Added currency & duration to Hype Chat messages. (#4715)
+- Minor: Added `is:hype-chat` search option. (#4766)
+- Minor: Added `flags.hype_chat` filter variable. (#4766)
+- Minor: Nicknames are now taken into consideration when searching for messages. (#4663, #4742)
+- Minor: 7TV badges now automatically update upon changing them. (#4512)
+- Minor: The input completion and quick switcher are now styled to match your theme. (#4671)
+- Bugfix: Fixed an issue where Subscriptions & Announcements that contained ignored phrases would still appear if the Block option was enabled. (#4748)
+- Bugfix: Increased amount of blocked users loaded from 100 to 1,000. (#4721)
+- Bugfix: Fixed pings firing for the "Your username" highlight when not signed in. (#4698)
+- Bugfix: Fixed tab completion rarely completing the wrong word. (#4735)
+
 ## 2.4.4 (Released 2023-05-13)
 
 - Minor: Added `/shield` and `/shieldoff` commands to toggle shield mode. (#4580)

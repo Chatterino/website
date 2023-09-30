@@ -7,6 +7,18 @@ import Section from "components/section";
 
 # Chatterino Changelog
 
+## 2.4.6 (Released 2023-09-30)
+
+### **This is a Windows-only security release**
+
+This change brings a few less tested consequences, such as emote order being
+a bit different and some UI changes. These are being worked on for the next
+release.
+
+- Bugfix: Update Qt version from v5.15 to v6.5, fixing a [security issue with webp
+  loading](https://www.qt.io/blog/two-qt-security-advisorys-gdi-font-engine-webp-image-format). (#4844)
+- Minor: Migrate to the new Get Channel Followers Helix endpoint, fixing follower count not showing up in usercards. (#4809)
+
 ## 2.4.5 (Released 2023-08-26)
 
 - Major: AutoMod term management messages (e.g. testaccount added "noob" as a blocked term on AutoMod.) are now hidden in Streamer Mode if you have the "Hide moderation actions" setting enabled. (#4758)

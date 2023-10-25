@@ -27,5 +27,9 @@
     "@types/react": "18.2.32",
     "prettier": "3.0.3",
     "typescript": "5.2.2"
+  },
+  "engines": {
+    "node": ">=16",
+    "yarn": "^1"
   }
 }

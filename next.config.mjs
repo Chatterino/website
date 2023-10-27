@@ -45,4 +45,5 @@ const withMDX = (await import("@next/mdx")).default({
 
 export default withMDX({
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+  output: "export",
 });

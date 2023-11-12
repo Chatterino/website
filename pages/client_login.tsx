@@ -9,7 +9,7 @@ const scopes = [
   "channel:read:redemptions", // for getting the list of channel point redemptions (not currently used)
   "chat:edit", // for sending messages in chat
   "chat:read", // for viewing messages in chat
-  "user:chat:read", // for viewing messages in chat (+ eventsub?)
+  "user:read:chat", // for viewing messages in chat (+ eventsub?)
   "whispers:read", // for viewing recieved whispers
 
   // https://dev.twitch.tv/docs/api/reference#start-commercial

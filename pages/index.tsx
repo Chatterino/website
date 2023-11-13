@@ -417,10 +417,10 @@ function AutoDownloadButton() {
     const data = /linux|x11|ubuntu|debian|fedora/i.test(platform)
       ? linux
       : /mac/i.test(platform)
-      ? macOs
-      : /freebsd/i.test(platform)
-      ? freeBsd
-      : windows;
+        ? macOs
+        : /freebsd/i.test(platform)
+          ? freeBsd
+          : windows;
     setPlatform(data);
   });
 

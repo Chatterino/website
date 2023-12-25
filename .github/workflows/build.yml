@@ -24,7 +24,7 @@ jobs:
           cache: "yarn"
 
       - name: Run Cloudflare build
-        run: npx --no-install @cloudflare/next-on-pages@1
+        run: npx --yes @cloudflare/next-on-pages@1
 
       - name: List files
         run: |

@@ -26,7 +26,7 @@ jobs:
       - name: Run Cloudflare build
         run: npx --yes @cloudflare/next-on-pages@1
 
-      - name: List files
+      - name: Upload output files
         uses: actions/upload-artifact@v4
         with:
           name: Output Files

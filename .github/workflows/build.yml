@@ -1,0 +1,34 @@
+---
+name: Build
+
+on:
+  push:
+    branches: ["master", "main"]
+  pull_request:
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: "package.json"
+          cache: "yarn"
+
+      - name: Run Cloudflare build
+        run: |
+          yarn install
+          yarn run cloudflare-build
+
+      - name: Upload output files
+        uses: actions/upload-artifact@v4
+        with:
+          name: Output Files
+          path: out/*

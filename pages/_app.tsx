@@ -1,5 +1,5 @@
-import "styles/globals.css";
-import "components/chatprop.css";
+import "../styles/globals.css";
+import "../components/chatprop.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import React, { ComponentType } from "react";

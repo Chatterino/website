@@ -27,5 +27,7 @@ jobs:
         run: npx --yes @cloudflare/next-on-pages@1
 
       - name: List files
-        run: |
-          ls -la out
+        uses: actions/upload-artifact@v4
+        with:
+          name: Output Files
+          path: out/*

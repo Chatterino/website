@@ -24,7 +24,9 @@ jobs:
           cache: "yarn"
 
       - name: Run Cloudflare build
-        run: yarn run cloudflare-build
+        run: |
+          yarn install
+          yarn run cloudflare-build
 
       - name: Upload output files
         uses: actions/upload-artifact@v4

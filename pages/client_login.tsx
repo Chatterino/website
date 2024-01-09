@@ -88,6 +88,9 @@ const scopes = [
 
   // https://dev.twitch.tv/docs/api/reference/#send-a-shoutout
   "moderator:manage:shoutouts", // for reading/managing the channel's shoutouts (not currently used)
+
+  // https://dev.twitch.tv/docs/api/reference/#get-moderated-channels
+  "user:read:moderated_channels", // for reading where the user is modded (not currently used)
 ];
 
 export default function ClientLogin() {

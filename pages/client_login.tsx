@@ -9,7 +9,6 @@ const scopes = [
   "channel:read:redemptions", // for getting the list of channel point redemptions (not currently used)
   "chat:edit", // for sending messages in chat
   "chat:read", // for viewing messages in chat
-  "user:read:chat", // for viewing messages in chat (+ eventsub?)
   "whispers:read", // for viewing recieved whispers
 
   // https://dev.twitch.tv/docs/api/reference#start-commercial
@@ -91,6 +90,12 @@ const scopes = [
 
   // https://dev.twitch.tv/docs/api/reference/#get-moderated-channels
   "user:read:moderated_channels", // for reading where the user is modded (not currently used)
+
+  // https://dev.twitch.tv/docs/eventsub/eventsub-subscription-types/#channelchatmessage
+  "user:read:chat", // for reading chat via eventsub (not currently used)
+
+  // https://dev.twitch.tv/docs/api/reference/#send-chat-message
+  "user:write:chat", // for sending chat messages via helix (not currently used)
 ];
 
 export default function ClientLogin() {

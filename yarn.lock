@@ -584,12 +584,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.19.11":
-  version: 18.19.11
-  resolution: "@types/node@npm:18.19.11"
+"@types/node@npm:18.19.12":
+  version: 18.19.12
+  resolution: "@types/node@npm:18.19.12"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/159e6dc80868970531fbf8f06dd305eab75b1dc7a6788aae3a6dbc606dc7cacd14fc135e9bed40cb2824f01a57d14aeffff7fe494c17859b41e7a8f81a321716
+  checksum: 10c0/7e1996695b706de5cb1a916d1e7a2aaf93435fefebe7abee6dee4b7060c48196e1b01c530d32fc4681a4dd073f0cacd26ca33e7fc7d9cb7857f40b30450d1bd9
   languageName: node
   linkType: hard
 
@@ -1318,7 +1318,7 @@ __metadata:
     "@mdx-js/loader": "npm:^3.0.0"
     "@mdx-js/react": "npm:^3.0.0"
     "@next/mdx": "npm:^14.0.0"
-    "@types/node": "npm:18.19.11"
+    "@types/node": "npm:18.19.12"
     "@types/react": "npm:18.2.48"
     autoprefixer: "npm:^10.4.13"
     next: "npm:^14.0.0"

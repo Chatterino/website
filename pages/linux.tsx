@@ -39,6 +39,12 @@ function LinuxPage() {
             The Universe repository must be enabled for it to download the
             relevant dependencies.
           </Text>
+          <Text>
+          A ppa is available
+          sudo add-apt-repository ppa:chatterino/chatterino2
+          sudo apt update
+          </Text>
+          
           {/* Flatpak */}
           <h2 className="text-3xl pt-10 pb-4">Flatpak</h2>
           <Text>

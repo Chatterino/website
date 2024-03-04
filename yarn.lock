@@ -13,8 +13,8 @@ __metadata:
   linkType: hard
 
 "@cloudflare/next-on-pages@npm:^1.8.2":
-  version: 1.9.0
-  resolution: "@cloudflare/next-on-pages@npm:1.9.0"
+  version: 1.10.0
+  resolution: "@cloudflare/next-on-pages@npm:1.10.0"
   dependencies:
     acorn: "npm:^8.8.0"
     ast-types: "npm:^0.14.2"
@@ -31,13 +31,13 @@ __metadata:
   peerDependencies:
     "@cloudflare/workers-types": ^4.20240208.0
     vercel: ">=30.0.0"
-    wrangler: ^3.28.0
+    wrangler: ^3.28.2
   peerDependenciesMeta:
     "@cloudflare/workers-types":
       optional: true
   bin:
     next-on-pages: bin/index.js
-  checksum: 10c0/03409d9e2c7fd248df1171802d2e7eea7d3e580fe80fbed0c20d80f5c3926f8301a4dc631272bf6fdfad864c2c21aaf933ddcd7c57398f99e6b9252b9ee91f99
+  checksum: 10c0/3943d73a6136da9c247963450d01a1b3748e5795ec9b5e24695b731824726be418c0103738151a6ba16bade7f4f1a924e752b08c0db828359cf372bbc64a00c1
   languageName: node
   linkType: hard
 

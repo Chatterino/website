@@ -98,7 +98,7 @@ const scopes = [
   "user:write:chat", // for sending chat messages via helix (in testing)
 
   // https://dev.twitch.tv/docs/api/reference/#get-user-emotes
-  "user:read:emotes", // for sending chat messages via helix (not currently used)
+  "user:read:emotes", // for fetching emotes that a user can use via helix (not currently used)
 ];
 
 export default function ClientLogin() {

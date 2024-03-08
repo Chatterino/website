@@ -92,10 +92,13 @@ const scopes = [
   "user:read:moderated_channels", // for reading where the user is modded (not currently used)
 
   // https://dev.twitch.tv/docs/eventsub/eventsub-subscription-types/#channelchatmessage
-  "user:read:chat", // for reading chat via eventsub (not currently used)
+  "user:read:chat", // for reading chat via eventsub (in progress)
 
   // https://dev.twitch.tv/docs/api/reference/#send-chat-message
-  "user:write:chat", // for sending chat messages via helix (not currently used)
+  "user:write:chat", // for sending chat messages via helix (in testing)
+
+  // https://dev.twitch.tv/docs/api/reference/#get-user-emotes
+  "user:read:emotes", // for sending chat messages via helix (not currently used)
 ];
 
 export default function ClientLogin() {

@@ -53,6 +53,10 @@ const Chatters = [
   "WgXcQ",
 ];
 
+const TimeFormatter = new Intl.DateTimeFormat(undefined, {
+  timeStyle: "short",
+});
+
 /**
  * @template T
  * @param {T[]} array
@@ -83,9 +87,7 @@ export function tabTitle(tab) {
 
 /** @param {Date} time */
 export function formatTime(time) {
-  const hours = time.getUTCHours();
-  const minutes = time.getUTCMinutes();
-  return `${hours}:${minutes}`;
+  return TimeFormatter.format(time);
 }
 
 /**

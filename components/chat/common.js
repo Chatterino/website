@@ -54,7 +54,9 @@ const Chatters = [
 ];
 
 const TimeFormatter = new Intl.DateTimeFormat(undefined, {
-  timeStyle: "short",
+  hour: "2-digit",
+  minute: "2-digit",
+  hour12: false,
 });
 
 /**

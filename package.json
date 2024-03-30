@@ -26,7 +26,7 @@
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.8.2",
     "@types/node": "18.19.28",
-    "@types/react": "18.2.70",
+    "@types/react": "18.2.73",
     "prettier": "3.2.5",
     "typescript": "5.4.3",
     "vercel": "^33.0.1"

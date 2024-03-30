@@ -595,21 +595,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.2.70":
-  version: 18.2.70
-  resolution: "@types/react@npm:18.2.70"
+"@types/react@npm:18.2.73":
+  version: 18.2.73
+  resolution: "@types/react@npm:18.2.73"
   dependencies:
     "@types/prop-types": "npm:*"
-    "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 10c0/2107b1fa8963cabe33d981cf1c0e3b7534c9d12b98c1046cd9f7975851690a0780db011f6a1d637ae4e612ef00c94ebdbe76a9e2f9e0f3baa6aad3213932af41
-  languageName: node
-  linkType: hard
-
-"@types/scheduler@npm:*":
-  version: 0.16.8
-  resolution: "@types/scheduler@npm:0.16.8"
-  checksum: 10c0/f86de504945b8fc41b1f391f847444d542e2e4067cf7e5d9bfeb5d2d2393d3203b1161bc0ef3b1e104d828dabfb60baf06e8d2c27e27ff7e8258e6e618d8c4ec
+  checksum: 10c0/b6645ab3c20efa41cfccf58ce0be45419517a0ba4594e323dd400342fb1c1f9589d169cf9bfa85b5b0605e9097fe9de7734b6d0c533f5b9bc32aaadb624537a4
   languageName: node
   linkType: hard
 
@@ -1317,7 +1309,7 @@ __metadata:
     "@mdx-js/react": "npm:^3.0.0"
     "@next/mdx": "npm:^14.0.0"
     "@types/node": "npm:18.19.28"
-    "@types/react": "npm:18.2.70"
+    "@types/react": "npm:18.2.73"
     autoprefixer: "npm:^10.4.13"
     next: "npm:^14.0.0"
     postcss: "npm:^8.4.18"

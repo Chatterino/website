@@ -10,10 +10,8 @@ export const nightly =
 export const allDownloads = "download";
 
 export const currentVersion = "2.5.0";
-export const windowsVersion = "2.5.0";
 export const baseDownloadLink = `https://chatterino.fra1.digitaloceanspaces.com/bin`;
 const dl = `https://chatterino.fra1.digitaloceanspaces.com/bin/${currentVersion}`;
-const windowsDl = `https://chatterino.fra1.digitaloceanspaces.com/bin/${windowsVersion}`;
 
 export const allVersions = [
   "2.1.0",
@@ -60,13 +58,13 @@ export const allV1Versions = [
 export type DownloadType = [() => JSX.Element, string, string];
 export const windows: DownloadType = [
   Windows,
-  `${windowsVersion} for Windows 64-Bit`,
-  `${windowsDl}/Chatterino%20Installer.exe`,
+  `${currentVersion} for Windows 64-Bit`,
+  `${dl}/Chatterino%20Installer.exe`,
 ];
 export const linux: DownloadType = [Tux, "Linux", "linux"];
 export const freeBsd: DownloadType = [FreeBSD, "FreeBSD", "freebsd"];
 export const macOs: DownloadType = [Apple, "macOS", `${dl}/Chatterino.dmg`];
-export const windowsPortable = `${windowsDl}/Chatterino%20Portable.zip`;
+export const windowsPortable = `${dl}/Chatterino%20Portable.zip`;
 export const linuxAppimageUrl = `${dl}/Chatterino-x86_64.AppImage`;
 
 export const linuxBuildFromSource =

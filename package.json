@@ -16,8 +16,8 @@
     "autoprefixer": "^10.4.13",
     "next": "^14.0.0",
     "postcss": "^8.4.18",
-    "react": "18.3.0",
-    "react-dom": "18.3.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "react-elm-components": "^1.1.0",
     "react-responsive-carousel": "^3.2.23",
     "remark-github": "^12.0.0",
@@ -26,7 +26,7 @@
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.8.2",
     "@types/node": "18.19.31",
-    "@types/react": "18.3.0",
+    "@types/react": "18.3.1",
     "prettier": "3.2.5",
     "typescript": "5.4.5",
     "vercel": "^34.0.0"

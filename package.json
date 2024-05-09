@@ -31,7 +31,7 @@
     "typescript": "5.4.5",
     "vercel": "^34.0.0"
   },
-  "packageManager": "yarn@4.2.1",
+  "packageManager": "yarn@4.2.2",
   "engines": {
     "node": ">=18",
     "yarn": "^4"

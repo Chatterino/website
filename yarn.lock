@@ -716,12 +716,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/next@npm:4.2.8":
-  version: 4.2.8
-  resolution: "@vercel/next@npm:4.2.8"
+"@vercel/next@npm:4.2.9":
+  version: 4.2.9
+  resolution: "@vercel/next@npm:4.2.9"
   dependencies:
     "@vercel/nft": "npm:0.26.4"
-  checksum: 10c0/1f9815ac639bedb2b855ce60e9517293d72a5d2266dbff4a2a44e4bf1f366adfb7afdc6f3017133625fbb2181e87c62377e127cf9b72ba2eb54b8644fb492fe3
+  checksum: 10c0/2b52640456c856096b987f9320e7b6926fccbf5a48a472a9d7fe59cff55c24cf4f10dcca84d9313d7ecfe80cf64aef88538e6fefacbe0dd72de988524fbcb249
   languageName: node
   linkType: hard
 
@@ -825,15 +825,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/static-build@npm:2.5.3":
-  version: 2.5.3
-  resolution: "@vercel/static-build@npm:2.5.3"
+"@vercel/static-build@npm:2.5.4":
+  version: 2.5.4
+  resolution: "@vercel/static-build@npm:2.5.4"
   dependencies:
     "@vercel/gatsby-plugin-vercel-analytics": "npm:1.0.11"
     "@vercel/gatsby-plugin-vercel-builder": "npm:2.0.26"
     "@vercel/static-config": "npm:3.0.0"
     ts-morph: "npm:12.0.0"
-  checksum: 10c0/281d0731001ce6ae0ae35f1852b048469343000d8c7a6c5a249b122fcebfab7b6de535c36b7223407c26dcec1efaa772efe9413beb402aba211c92f933d45b9d
+  checksum: 10c0/7cbec827914bcdd7e129f90550c786f0169b2813f026a41cef3d9cd927c830e15c1b3df10895d7a6d2052be812db02aceff78a68e959eb69124034b7d079ae59
   languageName: node
   linkType: hard
 
@@ -5544,25 +5544,25 @@ __metadata:
   linkType: hard
 
 "vercel@npm:^34.0.0":
-  version: 34.1.9
-  resolution: "vercel@npm:34.1.9"
+  version: 34.1.10
+  resolution: "vercel@npm:34.1.10"
   dependencies:
     "@vercel/build-utils": "npm:8.0.0"
     "@vercel/fun": "npm:1.1.0"
     "@vercel/go": "npm:3.1.1"
     "@vercel/hydrogen": "npm:1.0.2"
-    "@vercel/next": "npm:4.2.8"
+    "@vercel/next": "npm:4.2.9"
     "@vercel/node": "npm:3.1.0"
     "@vercel/python": "npm:4.2.0"
     "@vercel/redwood": "npm:2.0.8"
     "@vercel/remix-builder": "npm:2.1.5"
     "@vercel/ruby": "npm:2.1.0"
-    "@vercel/static-build": "npm:2.5.3"
+    "@vercel/static-build": "npm:2.5.4"
     chokidar: "npm:3.3.1"
   bin:
     vc: dist/index.js
     vercel: dist/index.js
-  checksum: 10c0/5fb293ff5eed9ecaab88c7bf47f756ae95c1f2d0992e8b3fb29c242d7669b4d1af76e67a6342c95d6ede00c83a268055d4544f10917d4cda5ec8e3a14937129e
+  checksum: 10c0/11070b430748e37fdb28b895d2b091470c5b6990a6a0e521d493aa2e7176ef081bcba89f8e671ac7ab7e45ba8145917bb3cf4575796a028b7c5dcbbba0cdd46f
   languageName: node
   linkType: hard
 

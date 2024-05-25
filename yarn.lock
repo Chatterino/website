@@ -1319,6 +1319,7 @@ __metadata:
     "@types/node": "npm:18.19.33"
     "@types/react": "npm:18.3.2"
     autoprefixer: "npm:^10.4.13"
+    mdast-util-find-and-replace: "npm:^3.0.0"
     next: "npm:^14.0.0"
     postcss: "npm:^8.4.18"
     prettier: "npm:3.2.5"

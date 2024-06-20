@@ -99,6 +99,9 @@ const scopes = [
 
   // https://dev.twitch.tv/docs/api/reference/#get-user-emotes
   "user:read:emotes", // for fetching emotes that a user can use via helix (not currently used)
+
+  // https://dev.twitch.tv/docs/api/reference/#warn-chat-user
+  "moderator:manage:warnings", // for /warn api (and channel.moderate v2 eventsub in the future)
 ];
 
 export default function ClientLogin() {

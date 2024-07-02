@@ -29,7 +29,7 @@
     "@types/node": "18.19.39",
     "@types/react": "18.3.3",
     "prettier": "3.3.2",
-    "typescript": "5.5.2",
+    "typescript": "5.5.3",
     "vercel": "^34.0.0"
   },
   "packageManager": "yarn@4.3.1",

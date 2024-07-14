@@ -59,6 +59,9 @@ function LinuxPage() {
               chatterino2-git
             </Link>{" "}
             package will build and install chatterino.
+            <Link href="https://aur.archlinux.org/packages/chatterino2/">
+          for a stable version
+          </Link>{" "}
           </Text>
           {/* Fedora */}
           <h2 className="text-3xl pt-10 pb-4">Fedora Linux</h2>

@@ -775,10 +775,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/python@npm:4.3.0":
-  version: 4.3.0
-  resolution: "@vercel/python@npm:4.3.0"
-  checksum: 10c0/600d8443b745c8a36736f7347ee023f1a6f33acde9a80ba606b660952b5399a3a194efdf2f8cf3b1eec3c75c927749c26e1176079d853582c0d34603cbffe14e
+"@vercel/python@npm:4.3.1":
+  version: 4.3.1
+  resolution: "@vercel/python@npm:4.3.1"
+  checksum: 10c0/ba1cf32e3b5027c23afe4bdfaf5897ab402378a73f6eae96ca9686c954ddf1bffbad56a52470846e866685af7c70d0e5d42e94fa4e08a91624e818838d5299b3
   languageName: node
   linkType: hard
 
@@ -5545,8 +5545,8 @@ __metadata:
   linkType: hard
 
 "vercel@npm:^35.0.0":
-  version: 35.2.0
-  resolution: "vercel@npm:35.2.0"
+  version: 35.2.1
+  resolution: "vercel@npm:35.2.1"
   dependencies:
     "@vercel/build-utils": "npm:8.3.5"
     "@vercel/fun": "npm:1.1.0"
@@ -5554,7 +5554,7 @@ __metadata:
     "@vercel/hydrogen": "npm:1.0.4"
     "@vercel/next": "npm:4.3.6"
     "@vercel/node": "npm:3.2.7"
-    "@vercel/python": "npm:4.3.0"
+    "@vercel/python": "npm:4.3.1"
     "@vercel/redwood": "npm:2.1.3"
     "@vercel/remix-builder": "npm:2.2.1"
     "@vercel/ruby": "npm:2.1.0"
@@ -5563,7 +5563,7 @@ __metadata:
   bin:
     vc: dist/index.js
     vercel: dist/index.js
-  checksum: 10c0/e16657deb16811a927580c3a973d7ad0213b42010dca8a7dcc99258f7079671fda509af12771fa5d1871805fa162f9063bfa938cceac5dab0aba1f5642b10de0
+  checksum: 10c0/f8767c0f4c8f390e95da4aa2e698349646f65ed509ce97d4732334507e547d066fdc3b3a3afe824614d969bc6194b123287da4ca21e0c04e32e301d3d1b7db18
   languageName: node
   linkType: hard
 

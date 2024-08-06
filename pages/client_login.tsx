@@ -98,10 +98,13 @@ const scopes = [
   "user:write:chat", // for sending chat messages via helix (in testing)
 
   // https://dev.twitch.tv/docs/api/reference/#get-user-emotes
-  "user:read:emotes", // for fetching emotes that a user can use via helix (not currently used)
+  "user:read:emotes", // for fetching emotes that a user can use via helix
 
   // https://dev.twitch.tv/docs/api/reference/#warn-chat-user
   "moderator:manage:warnings", // for /warn api (and channel.moderate v2 eventsub in the future)
+
+  // https://dev.twitch.tv/docs/api/reference/#get-followed-channels
+  "user:read:follows", // for determining if the current user follows a streamer
 ];
 
 export default function ClientLogin() {

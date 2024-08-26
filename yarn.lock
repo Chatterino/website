@@ -5538,8 +5538,8 @@ __metadata:
   linkType: hard
 
 "vercel@npm:^37.0.0":
-  version: 37.1.1
-  resolution: "vercel@npm:37.1.1"
+  version: 37.1.2
+  resolution: "vercel@npm:37.1.2"
   dependencies:
     "@vercel/build-utils": "npm:8.3.7"
     "@vercel/fun": "npm:1.1.0"
@@ -5556,7 +5556,7 @@ __metadata:
   bin:
     vc: dist/index.js
     vercel: dist/index.js
-  checksum: 10c0/e30c5480e6b6c08e016137a0c1a7897b164eb4aff89b4cee3c5a174aa12eb6af57d760cb61ccf00049e99dc97ba66f3b46ee054afd803085641bf6e317702851
+  checksum: 10c0/4dc505dde0189d6e38f71bf1adeca622a55f4f6abea5e8fe5947feba625fa724b76f2422a40ef99cbc4ad869a00f032fff9318ac87657bfb2fd4e41dbb621149
   languageName: node
   linkType: hard
 

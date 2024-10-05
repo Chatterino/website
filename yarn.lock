@@ -13,8 +13,8 @@ __metadata:
   linkType: hard
 
 "@cloudflare/next-on-pages@npm:^1.8.2":
-  version: 1.13.3
-  resolution: "@cloudflare/next-on-pages@npm:1.13.3"
+  version: 1.13.5
+  resolution: "@cloudflare/next-on-pages@npm:1.13.5"
   dependencies:
     acorn: "npm:^8.8.0"
     ast-types: "npm:^0.14.2"
@@ -37,7 +37,7 @@ __metadata:
       optional: true
   bin:
     next-on-pages: bin/index.js
-  checksum: 10c0/6d406d9d48ebc299168dad9f060040830d79b73b38f44513d971e93345356289b70e3eb3f1eec12e4e3a73e4a9d32058fa7ee260777fb319230e45c4ee527fc1
+  checksum: 10c0/381c3a09d362e9a51857d2ffd0ec9cb658573de677a8b36e82d44f4709f5b698d7497ede423b4b6efe5f45e660c43baea2bd34a34b4225784d8c76b02cdd7172
   languageName: node
   linkType: hard
 

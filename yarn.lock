@@ -895,12 +895,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/next@npm:4.3.18":
-  version: 4.3.18
-  resolution: "@vercel/next@npm:4.3.18"
+"@vercel/next@npm:4.3.19":
+  version: 4.3.19
+  resolution: "@vercel/next@npm:4.3.19"
   dependencies:
     "@vercel/nft": "npm:0.27.3"
-  checksum: 10c0/0ab5ea6dbe81842af425e4e9ff51b57356a725728aa2350f8cf2c211e27028706c6f6f4a5553853867194790f376e793d204a81879dc8bf785b171ff9f837e13
+  checksum: 10c0/28e7ffbf956be6cc74d9437ec59569507390a9ed27ea803406f171ca7bf0cbcbed07dd82edd57bc39dffe71e3896d7e196b5ea2bb6310164c68fd07c1a311cba
   languageName: node
   linkType: hard
 
@@ -954,10 +954,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/python@npm:4.3.1":
-  version: 4.3.1
-  resolution: "@vercel/python@npm:4.3.1"
-  checksum: 10c0/ba1cf32e3b5027c23afe4bdfaf5897ab402378a73f6eae96ca9686c954ddf1bffbad56a52470846e866685af7c70d0e5d42e94fa4e08a91624e818838d5299b3
+"@vercel/python@npm:4.4.1":
+  version: 4.4.1
+  resolution: "@vercel/python@npm:4.4.1"
+  checksum: 10c0/efc06221557e0b4ef9c896625db301b69f9eb0a5dfc5f7710e3609bf6e0b1ead6a365b95b73c7a071099d75dc80c980c4e52b39e4f50cd2f19f96f291da8fcca
   languageName: node
   linkType: hard
 
@@ -1504,7 +1504,7 @@ __metadata:
     remark-github: "npm:^12.0.0"
     tailwindcss: "npm:^3.2.1"
     typescript: "npm:5.6.3"
-    vercel: "npm:^37.0.0"
+    vercel: "npm:^39.0.0"
   languageName: unknown
   linkType: soft
 
@@ -5866,17 +5866,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vercel@npm:^37.0.0":
-  version: 37.14.0
-  resolution: "vercel@npm:37.14.0"
+"vercel@npm:^39.0.0":
+  version: 39.0.2
+  resolution: "vercel@npm:39.0.2"
   dependencies:
     "@vercel/build-utils": "npm:8.4.12"
     "@vercel/fun": "npm:1.1.0"
     "@vercel/go": "npm:3.2.0"
     "@vercel/hydrogen": "npm:1.0.9"
-    "@vercel/next": "npm:4.3.18"
+    "@vercel/next": "npm:4.3.19"
     "@vercel/node": "npm:3.2.24"
-    "@vercel/python": "npm:4.3.1"
+    "@vercel/python": "npm:4.4.1"
     "@vercel/redwood": "npm:2.1.8"
     "@vercel/remix-builder": "npm:2.2.13"
     "@vercel/ruby": "npm:2.1.0"
@@ -5885,7 +5885,7 @@ __metadata:
   bin:
     vc: dist/index.js
     vercel: dist/index.js
-  checksum: 10c0/75c312b062d24d1474ad3a6148bf8912fc4285888c69a6e093b0f73d1b67beb68311ef0eef6ff2b35355c7065bbf906ffdb50cc26ce0e397e7874448834258ec
+  checksum: 10c0/8aa2530a4326d10f9b2b5ba2ed651d8f8b7167b6332be978ae1d3fab6768722e55e58e8f72618ee8a05d9b9fea30686d8a3e101e097a45f80546bf2923951094
   languageName: node
   linkType: hard
 

@@ -11,6 +11,8 @@ import Section from "../components/section";
 
 ### User Card Pronouns
 
+<div className="changelog-entry">
+
 You can now show a user's pronoun from [pr.alejo.io](https://pr.alejo.io) in their User Card.
 
 This feature can be enabled with the "Show user's pronouns in user card" setting.
@@ -19,7 +21,11 @@ This feature can be enabled with the "Show user's pronouns in user card" setting
 
 Authored by @franzitrone with help from @nerixyz @pajlada @iProdigy
 
+</div>
+
 ### Plugins alpha release
+
+<div className="changelog-entry">
 
 We are testing a plugin system in Chatterino. If you want to test it out, you can enable it in the settings under the "Plugins" tab(?).
 
@@ -33,7 +39,11 @@ Plugins are currently able to:
 
 Authored by @Mm2PL with help from @nerixyz @pajlada
 
+</div>
+
 ### Added overlay window support
+
+<div className="changelog-entry">
 
 This is a transparent window you can put on top of other things - might be useful for recording things or other things.
 
@@ -43,7 +53,11 @@ TODO: add pictures
 
 Authored by @nerixyz with help from @pajlada
 
-#### Improved support for Twitch features
+</div>
+
+### Improved support for Twitch features
+
+<div className="changelog-entry">
 
 This adds headers above messages using the **Message Effects** or **Gigantify an Emote** feature. We don't actually show any message effects, nor do we gigantify the emote, but you can pretend the emote is bigger now that you know it's meant to be gigantified.
 
@@ -63,13 +77,21 @@ Added the `/warn` command which prevents the user from chatting until they ackno
 
 Authored by @iProdigy and @pajlada with help from @nerixyz
 
-#### Improved tab unread indicators
+</div>
+
+### Improved tab unread indicators
+
+<div className="changelog-entry">
 
 If you have the same channel open in multiple tabs, "reading" the message in one tab marks the other tabs as unread.
 
 Authored by @hemirt with help from @nerixyz @pajlada
 
-#### Added support for adding icons to inline moderation actions
+</div>
+
+### Added support for adding icons to inline moderation actions
+
+<div className="changelog-entry">
 
 If you use the inline moderation buttons, you can now upload custom icons for those buttons. This can be especially useful when you have a lot of them.
 
@@ -79,13 +101,21 @@ TODO: add picture
 
 Authored by @Mm2PL with help from @nerixyz and @pajlada
 
-#### Improved high-DPI support on Windows
+</div>
+
+### Improved high-DPI support on Windows
+
+<div className="changelog-entry">
 
 Text, buttons, windows should now better respect your Windows display scale setting. If you've previously increased your font size & Chatterino2 scale then you might need to re-adjust them with this release.
 
 Authored by @nerixyz
 
-#### Duplicating tabs
+</div>
+
+### Duplicating tabs
+
+<div className="changelog-entry">
 
 Added the ability to duplicate tabs. This saves filters.
 
@@ -93,32 +123,52 @@ TODO: improve description & maybe a little gif
 
 Authored by @KleberPF with help from @kornes @nerixyz @8thony @pajlada
 
-#### Improved error handling for Twitch API requests
+</div>
+
+### Improved error handling for Twitch API requests
+
+<div className="changelog-entry">
 
 When using the `/settitle` and `/setgame` commands you're now told what's actually wrong.
 
 Authored by @JakeRYW
 
-#### Updated browser list for "Open links in private mode" feature
+</div>
+
+### Updated browser list for "Open links in private mode" feature
+
+<div className="changelog-entry">
 
 Added Brave, google-chrome-stable, firefox-devedition, firefox-developer-edition, firefox-beta, and firefox-nightly
 
 Authored by @Niller2005 and @teknsl
 
-#### Settings improvements
+</div>
+
+### Settings improvements
+
+<div className="changelog-entry">
 
 - Dragging & dropping now shows a line indicator instead of rectangle while reordering entries in tables.
 - Added some search tags for settings so it's easier to find them using search (e.g. "bttv" and "ffz" show all the BetterTTV and FrankerFaceZ settings.)
 
 Authored by @nerixyz and @pajlada
 
-#### Improved link handling
+</div>
+
+### Improved link handling
+
+<div className="changelog-entry">
 
 More actual links are now parsed as links, and non-links-but-things-that-look-like-links no longer parse as links.
 
 Authored by @nerixyz
 
-#### Added multi-channel support for ban/timeout/untimeout/unban commands
+</div>
+
+### Added multi-channel support for ban/timeout/untimeout/unban commands
+
+<div className="changelog-entry">
 
 The `/ban`, `/timeout`, `/unban`, `/untimeout` commands now accept multiple channels if you want to easier wipe out cross-channel shenanigans.
 
@@ -138,19 +188,31 @@ Example moderation button action:
 
 Authored by @pajlada
 
-#### Helix API emote loading
+</div>
+
+### Helix API emote loading
+
+<div className="changelog-entry">
 
 We now use Twitch's Helix API to load the list of emote's you can post. This means we can now see most emotes you have access to, including event emotes.
 
 Authored by @nerixyz with help from @Felanbird @occluder @iProdigy @pajlada
 
-#### Removed beta IRC support
+</div>
+
+### Removed beta IRC support
+
+<div className="changelog-entry">
 
 If you were one of the 6 people using the IRC capability of Chatterino2, we have decided to no longer pursue this option - at least not in the way we did here. This release completely removes the IRC support. If you had IRC splits open before, they'll be replaced with empty splits with this release.
 
 Authored by @pajlada
 
-#### Modified tab visibility control
+</div>
+
+### Modified tab visibility control
+
+<div className="changelog-entry">
 
 Tab visibility control is now more verbose but hopefully easier to understand when right-clicking the tab bar.
 
@@ -160,7 +222,11 @@ Custom hotkeys can still be added to swap to various tab visibility modes.
 
 Authored by @pajlada with help from @nerixyz and @Mm2PL
 
-#### Miscellaneous features
+</div>
+
+### Miscellaneous features
+
+<div className="changelog-entry">
 
 - Chat popups now remember their last size. - Authored by @maliByatzes
 - You can now use touchscreen gestures scroll in chat splits. - Authored by @camporter with help from @nerixyz @pajlada
@@ -176,7 +242,11 @@ Authored by @pajlada with help from @nerixyz and @Mm2PL
 - Moderators can now see when users are warned or when raids are started/cancelled. - Authored by @iProdigy
 - The window layout settings file is now backed up like your other settings, in case of an unfortunate event. - Authored by @nerixyz
 
-#### Miscellaneous bugfixes
+</div>
+
+### Miscellaneous bugfixes
+
+<div className="changelog-entry">
 
 - Fixes an issue when double-click selecting outside of a message, multiline-rendering that start at a trailing space, and some RTL text quirks. - Authored by @nerixyz
 - Emote names are no longer duplicated when using smarter emote completion method. - Authored by @ilya-zlobintsev
@@ -203,11 +273,17 @@ Authored by @pajlada with help from @nerixyz and @Mm2PL
 - Fixed pause indicator not appearing in certain cases. - Authored by @nerixyz
 - Fixed usercards not showing the login name in specific cases. - Authored by @Mm2PL
 
-#### Nerdier things
+</div>
+
+### Nerdier things
+
+<div className="changelog-entry">
 
 This release will be the last release of Chatterino2 that supports Qt5, meaning Windows 7 will disappear. Please update your Windows system if you're still on Windows 7.
 
 A huge effort has been taken to refactor our message building process, adding a bunch of tests to them to ensuring it will take a lot more effort for us to break message building going forward. - Authored by @nerixyz with help from @pajlada
+
+</div>
 
 ## 2.5.1 (Released 2024-04-28)
 

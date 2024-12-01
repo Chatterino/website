@@ -41,6 +41,12 @@
   .changelog h3 {
     @apply mt-6;
     @apply mb-2;
+    @apply font-bold;
+    @apply text-cyan-100;
+  }
+
+  .changelog div.changelog-entry {
+    @apply ml-3;
   }
 
   .changelog li {

@@ -4,3 +4,9 @@ overrides:
   - files: "*.md"
     options:
       proseWrap: preserve
+  - files: "*.mjs"
+    options:
+      tabWidth: 2
+  - files: "*.css"
+    options:
+      tabWidth: 2

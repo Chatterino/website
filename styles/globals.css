@@ -26,6 +26,10 @@
     @apply border-gray-500;
   }
 
+  .changelog {
+    @apply mx-6;
+  }
+
   .changelog h1 {
     @apply my-6;
   }
@@ -34,9 +38,32 @@
     @apply my-4;
   }
 
+  .changelog h3 {
+    @apply mt-6;
+    @apply mb-2;
+  }
+
   .changelog li {
     @apply my-1;
     @apply ml-4;
+  }
+
+  .changelog .gh-author {
+    @apply font-bold;
+  }
+
+  .changelog .gh-avatar {
+    @apply ml-1;
+    @apply mr-0.5;
+    display: inline-block;
+    line-height: 14px;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    height: 1em;
+    border-radius: 50%;
+    flex-shrink: 0;
+    overflow: hidden;
+    vertical-align: middle;
   }
 
   .changelog li > ul > li {

@@ -926,9 +926,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/node@npm:3.2.27":
-  version: 3.2.27
-  resolution: "@vercel/node@npm:3.2.27"
+"@vercel/node@npm:3.2.28":
+  version: 3.2.28
+  resolution: "@vercel/node@npm:3.2.28"
   dependencies:
     "@edge-runtime/node-utils": "npm:2.3.0"
     "@edge-runtime/primitives": "npm:4.1.0"
@@ -950,7 +950,7 @@ __metadata:
     ts-node: "npm:10.9.1"
     typescript: "npm:4.9.5"
     undici: "npm:5.28.4"
-  checksum: 10c0/7a59dccb27b8a6430d7b3c33bc7e2f50da963eacc6020207b7f18ad3ca84850b28430f1d64006e5e8eb199195e25c8396eeb1af028962369dcb07d962216b7dc
+  checksum: 10c0/b5c33f1e1557c86860094c0d0aff331be3aa095dec152330d0c119087cdbf7fa0d8aa9435a662f41013b2f336601e4468f09649be25958eab68c87cf915b9c14
   languageName: node
   linkType: hard
 
@@ -5836,15 +5836,15 @@ __metadata:
   linkType: hard
 
 "vercel@npm:^39.0.0":
-  version: 39.1.2
-  resolution: "vercel@npm:39.1.2"
+  version: 39.1.3
+  resolution: "vercel@npm:39.1.3"
   dependencies:
     "@vercel/build-utils": "npm:8.6.0"
     "@vercel/fun": "npm:1.1.0"
     "@vercel/go": "npm:3.2.1"
     "@vercel/hydrogen": "npm:1.0.9"
     "@vercel/next": "npm:4.4.0"
-    "@vercel/node": "npm:3.2.27"
+    "@vercel/node": "npm:3.2.28"
     "@vercel/python": "npm:4.5.1"
     "@vercel/redwood": "npm:2.1.8"
     "@vercel/remix-builder": "npm:2.2.14"
@@ -5854,7 +5854,7 @@ __metadata:
   bin:
     vc: dist/index.js
     vercel: dist/index.js
-  checksum: 10c0/61a125247ae0837e022f91551e1ea0a256d260967583845a9e8d59b2988ec94f2acc207d43b203d051b9a54ceb8fb7707ba7aeeb8e8330937f26d5a9e28f3c8d
+  checksum: 10c0/fa147878e79665dba9e695ac2cd67acec4bfcd6662caab4deeb72b671649abf107977a1b20b231234fdc4387c3eb6274bcce3826beaec161d91b3123d4447bd4
   languageName: node
   linkType: hard
 

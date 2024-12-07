@@ -75,6 +75,18 @@
     @apply my-4 max-w-96 text-gray-300 italic text-center;
   }
 
+  .changelog code {
+    @apply m-0 whitespace-break-spaces bg-gray-900 rounded-md;
+    padding: 0.25em 0.4em;
+    font-size: 90%;
+  }
+
+  .changelog kbd {
+    @apply m-0 whitespace-break-spaces bg-gray-900 border-gray-600 border border-b-2 rounded-sm;
+    padding: 0.2em 0.5em;
+    font-size: 75%;
+  }
+
   .changelog li > ul > li {
     @apply my-1;
   }

@@ -5,5 +5,5 @@ export default function FigureGroup({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="flex gap-4 justify-center flex-wrap">{children}</div>;
+  return <div className="flex gap-4 justify-left flex-wrap">{children}</div>;
 }

@@ -9,38 +9,6 @@ import Section from "../components/section";
 
 ## 2.5.2 (Released TBD)
 
-### User Card Pronouns
-
-<div className="changelog-entry">
-
-You can now show a user's pronoun from [pr.alejo.io](https://pr.alejo.io) in their User Card.
-
-This feature can be enabled with the "Show user's pronouns in user card" setting.
-
-![img](https://i.pajlada.se/rnLdM.png)
-
-Authored by @franzitrone with help from @nerixyz @pajlada @iProdigy
-
-</div>
-
-### Plugins alpha release
-
-<div className="changelog-entry">
-
-We are testing a plugin system in Chatterino. If you want to test it out, you can enable it in the settings under the "Plugins" tab(?).
-
-Plugin documentation can be found in [the Chatterino2 repo](https://github.com/Chatterino/chatterino2/blob/master/docs/wip-plugins.md).
-
-The plugin system uses Lua with [sol2](https://github.com/ThePhD/sol2) by [ThePhD](https://github.com/ThePhD).
-
-Plugins are currently able to:
-
-- TODO: List capabilities (e.g. network requests, making messages)
-
-Authored by @Mm2PL with help from @nerixyz @pajlada
-
-</div>
-
 ### Added overlay window support
 
 <div className="changelog-entry">
@@ -55,7 +23,7 @@ Authored by @nerixyz with help from @pajlada
 
 </div>
 
-### Improved support for Twitch features
+### Improved support for new Twitch features
 
 <div className="changelog-entry">
 
@@ -79,17 +47,7 @@ Authored by @iProdigy and @pajlada with help from @nerixyz
 
 </div>
 
-### Improved tab unread indicators
-
-<div className="changelog-entry">
-
-If you have the same channel open in multiple tabs, "reading" the message in one tab marks the other tabs as unread.
-
-Authored by @hemirt with help from @nerixyz @pajlada
-
-</div>
-
-### Added support for adding icons to inline moderation actions
+### Added Twitch moderation features
 
 <div className="changelog-entry">
 
@@ -100,6 +58,72 @@ To add an icon to a moderation action, click Moderation in the Settings dialog, 
 TODO: add picture
 
 Authored by @Mm2PL with help from @nerixyz and @pajlada
+
+</div>
+
+<br/>
+
+<div className="changelog-entry">
+
+The `/ban`, `/timeout`, `/unban`, `/untimeout` commands now accept multiple channels if you want to easier wipe out cross-channel shenanigans.
+
+Examples:
+
+- Ban user in the chat you have selected: `/ban forsen`
+- Ban user in a specific chat: `/ban --channel pajlada forsen`
+- Ban user in two chat: `/ban --channel pajlada --channel nymn forsen`
+
+Example command:
+
+- Ban the user you right-clicked in the current channel + another channel: `/ban --channel {channel.name} --channel nymn {user.name}`
+
+Example moderation button action:
+
+- Ban the user in the current channel + another channel: `/ban --channel {channel.name} --channel nymn {user.name}`
+
+Authored by @pajlada
+
+</div>
+
+### User Card Pronouns
+
+<div className="changelog-entry">
+
+You can now show a user's pronoun from [pr.alejo.io](https://pr.alejo.io) in their User Card.
+
+This feature can be enabled with the "Show user's pronouns in user card" setting.
+
+![img](https://i.pajlada.se/rnLdM.png)
+
+Authored by @franzitrone with help from @nerixyz @pajlada @iProdigy
+
+</div>
+
+### Improved tab unread indicators
+
+<div className="changelog-entry">
+
+If you have the same channel open in multiple tabs, "reading" the message in one tab marks the other tabs as unread.
+
+Authored by @hemirt with help from @nerixyz @pajlada
+
+</div>
+
+### Plugins alpha release
+
+<div className="changelog-entry">
+
+We are testing a plugin system in Chatterino. If you want to test it out, you can enable it in the settings under the "Plugins" tab(?).
+
+Plugin documentation can be found in [the Chatterino2 repo](https://github.com/Chatterino/chatterino2/blob/master/docs/wip-plugins.md).
+
+The plugin system uses Lua with [sol2](https://github.com/ThePhD/sol2) by [ThePhD](https://github.com/ThePhD).
+
+Plugins are currently able to:
+
+- TODO: List capabilities (e.g. network requests, making messages)
+
+Authored by @Mm2PL with help from @nerixyz @pajlada
 
 </div>
 
@@ -122,6 +146,20 @@ Added the ability to duplicate tabs. This saves filters.
 TODO: improve description & maybe a little gif
 
 Authored by @KleberPF with help from @kornes @nerixyz @8thony @pajlada
+
+</div>
+
+### Modified tab visibility control
+
+<div className="changelog-entry">
+
+Tab visibility control is now more verbose but hopefully easier to understand when right-clicking the tab bar.
+
+This removes the default Ctrl+Shift+L hotkey which was used for toggling the "live only" tab visibility state. With there being more than two states, this caused more confusion than it helped.
+
+Custom hotkeys can still be added to swap to various tab visibility modes.
+
+Authored by @pajlada with help from @nerixyz and @Mm2PL
 
 </div>
 
@@ -166,30 +204,6 @@ Authored by @nerixyz
 
 </div>
 
-### Added multi-channel support for ban/timeout/untimeout/unban commands
-
-<div className="changelog-entry">
-
-The `/ban`, `/timeout`, `/unban`, `/untimeout` commands now accept multiple channels if you want to easier wipe out cross-channel shenanigans.
-
-Examples:
-
-- Ban user in the chat you have selected: `/ban forsen`
-- Ban user in a specific chat: `/ban --channel pajlada forsen`
-- Ban user in two chat: `/ban --channel pajlada --channel nymn forsen`
-
-Example command:
-
-- Ban the user you right-clicked in the current channel + another channel: `/ban --channel {channel.name} --channel nymn {user.name}`
-
-Example moderation button action:
-
-- Ban the user in the current channel + another channel: `/ban --channel {channel.name} --channel nymn {user.name}`
-
-Authored by @pajlada
-
-</div>
-
 ### Helix API emote loading
 
 <div className="changelog-entry">
@@ -207,20 +221,6 @@ Authored by @nerixyz with help from @Felanbird @occluder @iProdigy @pajlada
 If you were one of the 6 people using the IRC capability of Chatterino2, we have decided to no longer pursue this option - at least not in the way we did here. This release completely removes the IRC support. If you had IRC splits open before, they'll be replaced with empty splits with this release.
 
 Authored by @pajlada
-
-</div>
-
-### Modified tab visibility control
-
-<div className="changelog-entry">
-
-Tab visibility control is now more verbose but hopefully easier to understand when right-clicking the tab bar.
-
-This removes the default Ctrl+Shift+L hotkey which was used for toggling the "live only" tab visibility state. With there being more than two states, this caused more confusion than it helped.
-
-Custom hotkeys can still be added to swap to various tab visibility modes.
-
-Authored by @pajlada with help from @nerixyz and @Mm2PL
 
 </div>
 

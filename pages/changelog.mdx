@@ -13,12 +13,12 @@ import Section from "../components/section";
 
 <div className="changelog-entry">
 
-This is a transparent window you can put on top of other things - might be useful for recording things or other things.
+You can now press <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>N</kbd> to open an
+overlay window of your selected split.
 
-TODO: add nicer description
+![img](https://i.pajlada.se/da27C.png)
 
-TODO: add pictures
-
+<br />
 Authored by @nerixyz with help from @pajlada
 
 </div>
@@ -27,13 +27,20 @@ Authored by @nerixyz with help from @pajlada
 
 <div className="changelog-entry">
 
-This adds headers above messages using the **Message Effects** or **Gigantify an Emote** feature. We don't actually show any message effects, nor do we gigantify the emote, but you can pretend the emote is bigger now that you know it's meant to be gigantified.
+Messages using the **Message Effects** or **Gigantify an Emote** power-up
+feature are now highlighted. We don't actually show any message effects, nor do we gigantify the emote, but you can pretend the emote is bigger now that you know it's meant to be gigantified.
 
-TODO: add picture
+![message-effects](https://i.pajlada.se/RZHpw.png)
 
-We better indicate whether messages came from the **Shared chat** feature
+![gigantic-emote](https://i.pajlada.se/owWvk.png)
 
-TODO: add picture
+<br />
+
+Messages from Shared Chats now indicate which channel it was sent in.
+
+![shared-chat](https://i.pajlada.se/tMdMx.png)
+
+<br />
 
 We've provided better control of some AutoMod features. You can control whether or not to show AutoMod messages that were blocked due to a blocked term. By default, no blocked terms will be visible if you have streamer mode enabled.
 
@@ -41,8 +48,11 @@ We've provided better control of some AutoMod features. You can control whether 
 
 ![streamer mode disabled](https://i.pajlada.se/Bqt1q.png)
 
+<br />
+
 Added the `/warn` command which prevents the user from chatting until they acknowledge the warning on Twitch's website.
 
+<br />
 Authored by @iProdigy and @pajlada with help from @nerixyz
 
 </div>
@@ -55,15 +65,20 @@ If you use the inline moderation buttons, you can now upload custom icons for th
 
 To add an icon to a moderation action, click Moderation in the Settings dialog, go to the Moderation buttons tab, and double-click the icon cell next to your action.
 
-TODO: add picture
+![in-settings](https://i.pajlada.se/cx8xY.png)
 
+In chat:
+
+![in-chat](https://i.pajlada.se/qHHLi.png)
+
+After clicking the moderation icon:
+
+![after-action](https://i.pajlada.se/MnpCR.png)
+
+<br />
 Authored by @Mm2PL with help from @nerixyz and @pajlada
 
-</div>
-
-<br/>
-
-<div className="changelog-entry">
+<br />
 
 The `/ban`, `/timeout`, `/unban`, `/untimeout` commands now accept multiple channels if you want to easier wipe out cross-channel shenanigans.
 
@@ -81,6 +96,7 @@ Example moderation button action:
 
 - Ban the user in the current channel + another channel: `/ban --channel {channel.name} --channel nymn {user.name}`
 
+<br />
 Authored by @pajlada
 
 </div>
@@ -95,6 +111,7 @@ This feature can be enabled with the "Show user's pronouns in user card" setting
 
 ![img](https://i.pajlada.se/rnLdM.png)
 
+<br />
 Authored by @franzitrone with help from @nerixyz @pajlada @iProdigy
 
 </div>
@@ -105,6 +122,7 @@ Authored by @franzitrone with help from @nerixyz @pajlada @iProdigy
 
 If you have the same channel open in multiple tabs, "reading" the message in one tab marks the other tabs as unread.
 
+<br />
 Authored by @hemirt with help from @nerixyz @pajlada
 
 </div>
@@ -123,6 +141,7 @@ Plugins are currently able to:
 
 - TODO: List capabilities (e.g. network requests, making messages)
 
+<br />
 Authored by @Mm2PL with help from @nerixyz @pajlada
 
 </div>
@@ -133,6 +152,7 @@ Authored by @Mm2PL with help from @nerixyz @pajlada
 
 Text, buttons, windows should now better respect your Windows display scale setting. If you've previously increased your font size & Chatterino2 scale then you might need to re-adjust them with this release.
 
+<br />
 Authored by @nerixyz
 
 </div>
@@ -141,10 +161,12 @@ Authored by @nerixyz
 
 <div className="changelog-entry">
 
-Added the ability to duplicate tabs. This saves filters.
+You can now duplicate tabs by right-clicking the tab and clicking "Duplicate
+Tab". This will duplicate all splits in the tab, and their associated filters.
 
-TODO: improve description & maybe a little gif
+TODO: maybe add a little gif
 
+<br />
 Authored by @KleberPF with help from @kornes @nerixyz @8thony @pajlada
 
 </div>
@@ -159,6 +181,7 @@ This removes the default Ctrl+Shift+L hotkey which was used for toggling the "li
 
 Custom hotkeys can still be added to swap to various tab visibility modes.
 
+<br />
 Authored by @pajlada with help from @nerixyz and @Mm2PL
 
 </div>
@@ -169,6 +192,7 @@ Authored by @pajlada with help from @nerixyz and @Mm2PL
 
 When using the `/settitle` and `/setgame` commands you're now told what's actually wrong.
 
+<br />
 Authored by @JakeRYW
 
 </div>
@@ -177,8 +201,11 @@ Authored by @JakeRYW
 
 <div className="changelog-entry">
 
-Added Brave, google-chrome-stable, firefox-devedition, firefox-developer-edition, firefox-beta, and firefox-nightly
+Added Brave, google-chrome-stable, firefox-devedition,
+firefox-developer-edition, firefox-beta, and firefox-nightly as
+supported browsers.
 
+<br />
 Authored by @Niller2005 and @teknsl
 
 </div>
@@ -190,6 +217,7 @@ Authored by @Niller2005 and @teknsl
 - Dragging & dropping now shows a line indicator instead of rectangle while reordering entries in tables.
 - Added some search tags for settings so it's easier to find them using search (e.g. "bttv" and "ffz" show all the BetterTTV and FrankerFaceZ settings.)
 
+<br />
 Authored by @nerixyz and @pajlada
 
 </div>
@@ -200,6 +228,7 @@ Authored by @nerixyz and @pajlada
 
 More actual links are now parsed as links, and non-links-but-things-that-look-like-links no longer parse as links.
 
+<br />
 Authored by @nerixyz
 
 </div>
@@ -210,6 +239,7 @@ Authored by @nerixyz
 
 We now use Twitch's Helix API to load the list of emotes you can post. This means we can now see most emotes you have access to, including event emotes.
 
+<br />
 Authored by @nerixyz with help from @Felanbird @occluder @iProdigy @pajlada
 
 </div>
@@ -220,6 +250,7 @@ Authored by @nerixyz with help from @Felanbird @occluder @iProdigy @pajlada
 
 If you were one of the 6 people using the IRC capability of Chatterino2, we have decided to no longer pursue this option - at least not in the way we did here. This release completely removes the IRC support. If you had IRC splits open before, they'll be replaced with empty splits with this release.
 
+<br />
 Authored by @pajlada
 
 </div>
@@ -425,16 +456,16 @@ A huge effort has been taken to refactor our message building process, adding a 
 
 ### New Contributors
 
-- [@GongBingWong](https://github.com/GongBingWong) made their first contribution in #4848
-- [@libklein](https://github.com/libklein) made their first contribution in #4854
-- [@h3o66](https://github.com/h3o66) made their first contribution in #4867
-- [@baines](https://github.com/baines) made their first contribution in #4922
-- [@crazysmc](https://github.com/crazysmc) made their first contribution in #4998
-- [@gremble0](https://github.com/gremble0) made their first contribution in #5013
-- [@fraxxio](https://github.com/fraxxio) made their first contribution in #5061
-- [@Manfred](https://github.com/Manfred) made their first contribution in #5148
-- [@KleberPF](https://github.com/KleberPF) made their first contribution in #5172
-- [@Heryin](https://github.com/Heryin) made their first contribution in #5263
+- @GongBingWong made their first contribution in #4848
+- @libklein made their first contribution in #4854
+- @h3o66 made their first contribution in #4867
+- @baines made their first contribution in #4922
+- @crazysmc made their first contribution in #4998
+- @gremble0 made their first contribution in #5013
+- @fraxxio made their first contribution in #5061
+- @Manfred made their first contribution in #5148
+- @KleberPF made their first contribution in #5172
+- @Heryin made their first contribution in #5263
 
 ## 2.4.6 (Released 2023-09-30)
 

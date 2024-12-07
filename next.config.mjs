@@ -36,10 +36,26 @@ usernames=(
     "felanbird"
     "teknsl"
     "occluder"
+    "jupjohn"
+    "malibyatzes"
+    "camporter"
+    "lbrooney"
+    "dnsge"
+    "ilya-zlobintsev"
+    "gongbingwong"
+    "libklein"
+    "h3o66"
+    "baines"
+    "crazysmc"
+    "gremble0"
+    "fraxxio"
+    "manfred"
+    "heryin"
 );
 rm -f /tmp/gh-avatar-xd
 echo "const ghAvatars = {" > /tmp/gh-avatar-xd
 for username in $usernames; do
+    >&2 echo "Fetching $username"
     avatar_url="$(gh api /users/$username | jq -r '.avatar_url')"
     printf '    "%s": "%s",\n' "$username" "$avatar_url" >> /tmp/gh-avatar-xd
 done
@@ -63,17 +79,37 @@ const ghAvatars = {
   felanbird: "https://avatars.githubusercontent.com/u/41973452?v=4",
   teknsl: "https://avatars.githubusercontent.com/u/64030674?v=4",
   occluder: "https://avatars.githubusercontent.com/u/69414142?v=4",
+  jupjohn: "https://avatars.githubusercontent.com/u/4962764?v=4",
+  malibyatzes: "https://avatars.githubusercontent.com/u/130395400?v=4",
+  camporter: "https://avatars.githubusercontent.com/u/494446?v=4",
+  lbrooney: "https://avatars.githubusercontent.com/u/80072393?v=4",
+  dnsge: "https://avatars.githubusercontent.com/u/24928223?v=4",
+  "ilya-zlobintsev": "https://avatars.githubusercontent.com/u/22796665?v=4",
+  gongbingwong: "https://avatars.githubusercontent.com/u/123975332?v=4",
+  libklein: "https://avatars.githubusercontent.com/u/42714034?v=4",
+  h3o66: "https://avatars.githubusercontent.com/u/9846218?v=4",
+  baines: "https://avatars.githubusercontent.com/u/1444224?v=4",
+  crazysmc: "https://avatars.githubusercontent.com/u/128479338?v=4",
+  gremble0: "https://avatars.githubusercontent.com/u/45577341?v=4",
+  fraxxio: "https://avatars.githubusercontent.com/u/101990229?v=4",
+  manfred: "https://avatars.githubusercontent.com/u/1195?v=4",
+  heryin: "https://avatars.githubusercontent.com/u/54620595?v=4",
 };
+
+const ignoredUsernames = new Set(["mentions", "usernames"]);
 
 function author(options) {
   return (tree) => {
     findAndReplace(tree, [[/@[\w\d-]+/g, replace]], {
-      ignore: ["list", "li", "ul", "link", "linkReference"],
+      ignore: ["link", "linkReference"],
     });
   };
 
   function replace(value, _no, _match) {
     const username = value.slice(1);
+    if (ignoredUsernames.has(username)) {
+      return _match;
+    }
     let pfp = null;
     if (username.toLowerCase() in ghAvatars) {
       pfp = ghAvatars[username.toLowerCase()];

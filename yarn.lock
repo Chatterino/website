@@ -1501,6 +1501,7 @@ __metadata:
     react-dom: "npm:18.3.1"
     react-elm-components: "npm:^1.1.0"
     react-responsive-carousel: "npm:^3.2.23"
+    remark-custom-heading-id: "npm:^2.0.0"
     remark-github: "npm:^12.0.0"
     tailwindcss: "npm:^3.2.1"
     typescript: "npm:5.7.2"
@@ -3316,6 +3317,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mdast-heading-id@npm:*":
+  version: 2.0.0
+  resolution: "mdast-heading-id@npm:2.0.0"
+  checksum: 10c0/abddc7705cec0366069f2440f8b4999bcf7625606b3358d27879dae74189b377fdc7db22a530fa04fb136fa3e24228b33657093655b38827495c7d2664c38b4e
+  languageName: node
+  linkType: hard
+
 "mdast-util-find-and-replace@npm:^3.0.0":
   version: 3.0.1
   resolution: "mdast-util-find-and-replace@npm:3.0.1"
@@ -3658,6 +3666,15 @@ __metadata:
     micromark-util-symbol: "npm:^2.0.0"
     micromark-util-types: "npm:^2.0.0"
   checksum: 10c0/4e91baab0cc71873095134bd0e225d01d9786cde352701402d71b72d317973954754e8f9f1849901f165530e6421202209f4d97c460a27bb0808ec5a3fc3148c
+  languageName: node
+  linkType: hard
+
+"micromark-heading-id@npm:*":
+  version: 2.0.0
+  resolution: "micromark-heading-id@npm:2.0.0"
+  dependencies:
+    micromark-util-symbol: "npm:^2.0.0"
+  checksum: 10c0/93dce12ec362bbe2fa280afd6b8dda4760413d00d0bc770bef24efe3de43ba6660a644b079b92eb83e874e564358a8157ced7c80278d486f6d6c02c50f96098c
   languageName: node
   linkType: hard
 
@@ -4810,6 +4827,17 @@ __metadata:
   version: 1.0.2
   resolution: "reghex@npm:1.0.2"
   checksum: 10c0/b5cc2df396cf2e36d6803e1de8cb6c6b8e7de493d35f5377c9a1414023521f82736a63b492c46ddfcbd93e4eb5417732426cc36254b2133fb8a0d7ba74b9fd36
+  languageName: node
+  linkType: hard
+
+"remark-custom-heading-id@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "remark-custom-heading-id@npm:2.0.0"
+  dependencies:
+    mdast-heading-id: "npm:*"
+    micromark-heading-id: "npm:*"
+    unist-util-visit: "npm:^5.0.0"
+  checksum: 10c0/1e674f9218d7eb996ebd26275bd519e0536337b96f9e490cf3c1adb70fa75016d3347607d422f5c067e2dbc25f57c7ffd1e4bfae25e168007c0e3cab461cca03
   languageName: node
   linkType: hard
 

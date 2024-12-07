@@ -67,6 +67,14 @@
     border-radius: 50%;
   }
 
+  .changelog figure {
+    @apply flex flex-col items-center my-4;
+  }
+
+  .changelog figcaption {
+    @apply my-4 max-w-96 text-gray-300 italic text-center;
+  }
+
   .changelog li > ul > li {
     @apply my-1;
   }

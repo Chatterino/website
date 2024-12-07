@@ -55,21 +55,16 @@
   }
 
   .changelog .gh-author {
-    @apply font-bold;
+    @apply font-bold whitespace-nowrap underline-offset-2;
   }
 
   .changelog .gh-avatar {
-    @apply ml-1;
-    @apply mr-0.5;
-    display: inline-block;
-    line-height: 14px;
-    max-width: 100%;
-    overflow-wrap: anywhere;
-    height: 1em;
+    @apply ml-px mr-1 mb-1 inline-block max-w-full overflow-hidden align-middle;
+    width: 18px;
+    height: 18px;
+    box-shadow: 0 0 0 1px #ffffff26;
+    line-height: 1;
     border-radius: 50%;
-    flex-shrink: 0;
-    overflow: hidden;
-    vertical-align: middle;
   }
 
   .changelog li > ul > li {

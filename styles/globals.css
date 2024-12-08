@@ -157,3 +157,28 @@ button {
 by {
   display: none;
 }
+
+:is(h1, h2, h3, h4, h5, h6)[id] {
+  & > a {
+    @apply opacity-0 ml-2 font-normal no-underline;
+    transition:
+      color 100ms,
+      opacity 125ms;
+  }
+
+  &:target {
+    @apply scroll-m-24;
+    & > a {
+      @apply text-cyan-500 opacity-100;
+    }
+  }
+
+  &:target > a,
+  > a:hover {
+    @apply text-cyan-500 opacity-100;
+  }
+
+  &:hover > a {
+    @apply opacity-100;
+  }
+}

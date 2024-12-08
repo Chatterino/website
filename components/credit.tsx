@@ -58,7 +58,9 @@ export default function Credit({ author, helper }: Props) {
   return (
     <div className="text-gray-300 mt-3 mb-4 text-sm">
       Authored by {formatList(authorElements)}
-      {helperElements && <> with help from {formatList(helperElements)}</>}
+      {helperElements.length ? (
+        <> with help from {formatList(helperElements)}</>
+      ) : null}
     </div>
   );
 }

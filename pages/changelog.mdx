@@ -4,6 +4,7 @@ import Section from "../components/section";
 import Figure from "../components/figure";
 import FigureGroup from "../components/figure-group";
 import Credit from "../components/credit";
+import { discord } from "../links";
 
 <Head>
   <title>Changelog - Chatterino</title>
@@ -150,15 +151,22 @@ If you have the same channel open in multiple tabs, "reading" the message in one
 
 <div className="changelog-entry">
 
-We are testing a plugin system in Chatterino. If you want to test it out, you can enable it in the settings under the "Plugins" tab(?).
+We are testing a plugin system in Chatterino. Plugins are disabled by default.
+To enable them, open the settings, go to `Plugins` and check the `Enable
+plugins` checkbox.
 
 Plugin documentation can be found in [the Chatterino2 repo](https://github.com/Chatterino/chatterino2/blob/master/docs/wip-plugins.md).
 
 The plugin system uses Lua with [sol2](https://github.com/ThePhD/sol2) by [ThePhD](https://github.com/ThePhD).
 
-Plugins are currently able to:
+Got any ideas for what you'd like to be able to create with Plugins? Let us
+know in [this discussion.](https://github.com/Chatterino/chatterino2/discussions/4999)
 
-- TODO: List capabilities (e.g. network requests, making messages)
+Have you started playing around with plugins and feel like something is
+missing, or something is unergonomic? [Start a new discussion.](https://github.com/Chatterino/chatterino2/discussions/new?category=ideas)
+
+Have you questions about plugins? Ask in our <a href={discord}>Discord</a> or [start a new
+discussion.](https://github.com/Chatterino/chatterino2/discussions/new?category=q-a)
 
 <Credit author="Mm2PL" helper="nerixyz, pajlada" />
 

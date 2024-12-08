@@ -55,21 +55,36 @@
   }
 
   .changelog .gh-author {
-    @apply font-bold;
+    @apply font-bold whitespace-nowrap underline-offset-2;
   }
 
   .changelog .gh-avatar {
-    @apply ml-1;
-    @apply mr-0.5;
-    display: inline-block;
-    line-height: 14px;
-    max-width: 100%;
-    overflow-wrap: anywhere;
-    height: 1em;
+    @apply ml-px mr-1 mb-1 inline-block max-w-full overflow-hidden align-middle;
+    width: 18px;
+    height: 18px;
+    box-shadow: 0 0 0 1px #ffffff26;
+    line-height: 1;
     border-radius: 50%;
-    flex-shrink: 0;
-    overflow: hidden;
-    vertical-align: middle;
+  }
+
+  .changelog figure {
+    @apply flex flex-col items-start my-4;
+  }
+
+  .changelog figcaption {
+    @apply my-4 max-w-96 text-gray-300 italic text-center;
+  }
+
+  .changelog code {
+    @apply m-0 whitespace-break-spaces bg-gray-900 rounded-md;
+    padding: 0.25em 0.4em;
+    font-size: 90%;
+  }
+
+  .changelog kbd {
+    @apply m-0 whitespace-break-spaces bg-gray-900 border-gray-600 border border-b-2 rounded-sm;
+    padding: 0.2em 0.5em;
+    font-size: 75%;
   }
 
   .changelog li > ul > li {

@@ -9,7 +9,11 @@ interface Props {
 function Figure({ children, src, width }: Props) {
   return (
     <figure>
-      <img src={src} width={width} />
+      {src.endsWith(".webm") ? (
+        <video src={src} width={width} controls autoPlay loop />
+      ) : (
+        <img src={src} width={width} />
+      )}
       <figcaption>{children}</figcaption>
     </figure>
   );

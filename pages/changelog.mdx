@@ -23,7 +23,7 @@ import { discord } from "../links";
 <div className="changelog-entry">
 
 You can now press <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>N</kbd> to open an
-overlay window of your selected split.
+overlay window of your selected [split](https://wiki.chatterino.com/Glossary/).
 
 <Figure src="./changelog/2.5.2/overlay-window.png" width="500">
   Active overlay window over a stream
@@ -127,7 +127,7 @@ Example moderation button action:
 
 You can now show a user's pronoun from [pr.alejo.io](https://pr.alejo.io) in their User Card.
 
-This feature can be enabled with the "Show user's pronouns in user card" setting.
+This feature can be enabled with the `Show user's pronouns in user card` setting.
 
 <Figure src="./changelog/2.5.2/user-card-pronouns.png" width="400">
   Pronouns shown in the user card
@@ -248,7 +248,7 @@ supported browsers.
 
 <div className="changelog-entry">
 
-More actual links are now parsed as links, and non-links-but-things-that-look-like-links no longer parse as links.
+Prefixes and suffixes like parentheses around links are now recognized, and domain names are now checked, resulting in less false-positives.
 
 <Credit author="nerixyz" />
 
@@ -284,8 +284,8 @@ If you were one of the 6 people using the IRC capability of Chatterino2, we have
 - Added the `--login <username>` CLI argument. This can be used to specify which account to start logged in as. - Authored by @lbrooney
 - Initiating a reply will now show the message you're replying to, and the reply button has been made slightly prettier. - Authored by @dnsge and @nerixyz with help from @jupjohn and @pajlada
 - Added `flags.action` filter variable, allowing you to filter on `/me` messages. - Authored by @Mm2PL
-- Improved subscription & resubscriptions messages when they are multi-month subs. - Authored by @iProdigy
-- Chatlogs can now be organized by stream IDs rather than the current date. This makes it easier to log streams that consistently cross date boundaries. - Authored by @pajlada
+- Improved subscription & resubscription messages when they are multi-month subs. - Authored by @iProdigy
+- Chat logs can now be organized by stream IDs rather than the current date. This makes it easier to log streams that consistently cross date boundaries. - Authored by @pajlada
 - The size of the emote popup is now saved, and it now reloads Twitch emotes as they appear. - Authored by @nerixyz
 - Added a setting to suppress live notifications on startup. - Authored by @nerixyz
 - Added a warning before you block a channel, ensuring you're aware of the consequences. - Authored by @nerixyz
@@ -298,12 +298,12 @@ If you were one of the 6 people using the IRC capability of Chatterino2, we have
 
 <div className="changelog-entry">
 
-- Fixes an issue when double-click selecting outside of a message, multiline-rendering that start at a trailing space, and some RTL text quirks. - Authored by @nerixyz
+- Fixes an issue when double-click selecting outside of a message, multiline-rendering that starts at a trailing space, and some RTL text quirks. - Authored by @nerixyz
 - Emote names are no longer duplicated when using smarter emote completion method. - Authored by @ilya-zlobintsev
-- Shutting down Chatterino2 is now done in a more clean manner, meaning there's less chance for file corruption due to an unclean exit. - Authored by @nerixyz and @pajlada
+- Shutting down Chatterino2 is now done in a more clean manner, meaning there's less chance for file corruption due to an unclean exit. If you experience crashes when closing Chatterino, please open an issue. - Authored by @nerixyz and @pajlada
 - Fixed network requests timing out despite them not being in flight for that long, for Qt 6.3+ where we have the technology. - Authored by @pajlada
 - You can now customize the appearance of the scrollbar & its thumb (the handle you can drag). Hiding the scrollbar thumb will disable mouse click & drag interactions in the scrollbar. - Authored by @pajlada
-- Fixed tab move animation occasionally failing to start after closing a tab. - Authored by @kornes with help from @nerixyz
+- Fixed the animation for moving a tab occasionally failing to display after closing a tab. - Authored by @kornes with help from @nerixyz
 - Fixed message history occasionally not loading after a sleep. - Authored by @nerixyz
 - Fixed windows on Windows not saving correctly when snapping them to the edges. Authored by @nerixyz with help from @8thony
 - Fixed user info card popups adding duplicate line to log files. - Authored by @pajlada
@@ -316,7 +316,7 @@ If you were one of the 6 people using the IRC capability of Chatterino2, we have
 - Fixed some tooltips not being readable. - Authored by @pajlada
 - Fixed log files being locked longer than needed. - Authored by @nerixyz with help from @kornes
 - Fixed global badges not showing in anonymous mode. - Authored by @nerixyz
-- Fixed incorrect message being disabled in some cases upon approving or denying an automod caught message. - Authored by @iProdigy with help from @jupjohn
+- Fixed incorrect message being disabled in some cases upon approving or denying a message caught by AutoMod. - Authored by @iProdigy with help from @jupjohn
 - Fixed emotes starting with ":" not tab-completing. - Authored by @nerixyz
 - Fixed 7TV emotes messing with Qt's HTML. - Authored by @nerixyz
 - Fixed incorrect messages getting replaced visually. - Authored by @nerixyz

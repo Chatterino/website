@@ -6,8 +6,6 @@ type Props = {
 };
 
 function GitHubUser({ username }: { username: string }) {
-  // Authored by <a href="https://github.com/nerixyz" class="gh-author">
-  // <img src="https://avatars.githubusercontent.com/u/19953266?v=4&amp;s=60" class="gh-avatar">@nerixyz</a> with help from <a href="https://github.com/pajlada" class="gh-author"><img src="https://avatars.githubusercontent.com/u/962989?v=4&amp;s=60" class="gh-avatar">@pajlada</a>
   const avatarURL = `https://avatars.githubusercontent.com/${username}?v=4&s=60`;
   return (
     <a href={`https://github.com/${username}`} className="gh-author">

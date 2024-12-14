@@ -19,11 +19,7 @@ function formatUsers(users: string[] | undefined): React.ReactNode[] {
     return [];
   }
 
-  return (
-    users.map((username) => <GitHubUser username={username.trim()} />) || [
-      <p>TODO REMOVE THIS SINCE AUTHORS SHOULD ALWAYS BE SET</p>,
-    ]
-  );
+  return users.map((username) => <GitHubUser username={username.trim()} />);
 }
 
 export default function Credit({ author, helper }: Props) {

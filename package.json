@@ -30,7 +30,7 @@
     "@cloudflare/next-on-pages": "^1.8.2",
     "@types/node": "22.10.2",
     "@types/react": "18.3.16",
-    "prettier": "3.4.1",
+    "prettier": "3.4.2",
     "typescript": "5.7.2",
     "vercel": "^39.0.0"
   },

@@ -1,3 +1,6 @@
+import remarkHeadingId from "remark-custom-heading-id";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+
 const { findAndReplace } = await import("mdast-util-find-and-replace");
 
 const baseRepoUrl = "https://github.com/Chatterino/Chatterino2";
@@ -39,7 +42,19 @@ function majorMinorColoring() {
 const withMDX = (await import("@next/mdx")).default({
   extension: /\.mdx$/,
   options: {
-    remarkPlugins: [githubIssueLinks, majorMinorColoring],
+    remarkPlugins: [githubIssueLinks, majorMinorColoring, remarkHeadingId],
+    rehypePlugins: [
+      [
+        rehypeAutolinkHeadings,
+        {
+          behavior: "append",
+          content: {
+            type: "text",
+            value: "#",
+          },
+        },
+      ],
+    ],
   },
 });
 

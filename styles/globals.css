@@ -26,6 +26,10 @@
     @apply border-gray-500;
   }
 
+  .changelog {
+    @apply mx-6;
+  }
+
   .changelog h1 {
     @apply my-6;
   }
@@ -34,9 +38,53 @@
     @apply my-4;
   }
 
+  .changelog h3 {
+    @apply mt-6;
+    @apply mb-2;
+    @apply font-bold;
+    @apply text-cyan-100;
+  }
+
+  .changelog div.changelog-entry {
+    @apply ml-3;
+  }
+
   .changelog li {
     @apply my-1;
     @apply ml-4;
+  }
+
+  .changelog .gh-author {
+    @apply font-bold whitespace-nowrap underline-offset-2;
+  }
+
+  .changelog .gh-avatar {
+    @apply ml-px mr-1 mb-1 inline-block max-w-full overflow-hidden align-middle;
+    width: 18px;
+    height: 18px;
+    box-shadow: 0 0 0 1px #ffffff26;
+    line-height: 1;
+    border-radius: 50%;
+  }
+
+  .changelog figure {
+    @apply flex flex-col items-start my-4;
+  }
+
+  .changelog figcaption {
+    @apply my-4 max-w-96 text-gray-300 italic text-center;
+  }
+
+  .changelog code {
+    @apply m-0 whitespace-break-spaces bg-gray-900 rounded-md;
+    padding: 0.25em 0.4em;
+    font-size: 90%;
+  }
+
+  .changelog kbd {
+    @apply m-0 whitespace-break-spaces bg-gray-900 border-gray-600 border border-b-2 rounded-sm;
+    padding: 0.2em 0.5em;
+    font-size: 75%;
   }
 
   .changelog li > ul > li {
@@ -108,4 +156,29 @@ button {
 
 by {
   display: none;
+}
+
+:is(h1, h2, h3, h4, h5, h6)[id] {
+  & > a {
+    @apply opacity-0 ml-2 font-normal no-underline;
+    transition:
+      color 100ms,
+      opacity 125ms;
+  }
+
+  &:target {
+    @apply scroll-m-24;
+    & > a {
+      @apply text-cyan-500 opacity-100;
+    }
+  }
+
+  &:target > a,
+  > a:hover {
+    @apply text-cyan-500 opacity-100;
+  }
+
+  &:hover > a {
+    @apply opacity-100;
+  }
 }

@@ -54,7 +54,8 @@ function LinuxPage() {
               Note: the "nightly" branch on Flathub is currently not up to date.
             </Text>
             <Text>
-              Installing via CLI is preferred as GUI package managers might use the outdated branch.
+              Installing via CLI is preferred as GUI package managers might use
+              the outdated branch.
             </Text>
           </Text>
           {/* AUR */}

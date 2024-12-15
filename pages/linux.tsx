@@ -48,8 +48,15 @@ function LinuxPage() {
             </Link>
             . To install it run:{" "}
             <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-              flatpak install chatterino
+              flatpak install com.chatterino.chatterino/x86_64/stable
             </code>{" "}
+            <Text>
+              Note: the "nightly" branch on Flathub is currently not up to date.
+            </Text>
+            <Text>
+              Installing via CLI is preferred as GUI package managers might use
+              the outdated branch.
+            </Text>
           </Text>
           {/* AUR */}
           <h2 className="text-3xl pt-10 pb-4">Arch Linux</h2>

@@ -56,7 +56,7 @@ export const allV1Versions = [
   "1.3",
 ];
 
-export type DownloadType = [() => JSX.Element, string, string];
+export type DownloadType = [() => React.JSX.Element, string, string];
 export const windows: DownloadType = [
   Windows,
   `${currentVersion} for Windows 64-Bit`,

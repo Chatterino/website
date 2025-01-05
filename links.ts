@@ -9,7 +9,7 @@ export const nightly =
   "https://github.com/Chatterino/chatterino2/releases/tag/nightly-build";
 export const allDownloads = "download";
 
-export const currentVersion = "2.5.1";
+export const currentVersion = "2.5.2";
 export const baseDownloadLink = `https://chatterino.fra1.digitaloceanspaces.com/bin`;
 const dl = `https://chatterino.fra1.digitaloceanspaces.com/bin/${currentVersion}`;
 
@@ -38,6 +38,7 @@ export const allVersions = [
   "2.4.6",
   "2.5.0",
   "2.5.1",
+  "2.5.2",
 ];
 export const allV1Versions = [
   "0.2.6.4",
@@ -60,12 +61,12 @@ export type DownloadType = [() => React.JSX.Element, string, string];
 export const windows: DownloadType = [
   Windows,
   `${currentVersion} for Windows 64-Bit`,
-  `${dl}/Chatterino%20Installer.exe`,
+  `${dl}/Chatterino.Installer.exe`,
 ];
 export const linux: DownloadType = [Tux, "Linux", "linux"];
 export const freeBsd: DownloadType = [FreeBSD, "FreeBSD", "freebsd"];
 export const macOs: DownloadType = [Apple, "macOS", `${dl}/Chatterino.dmg`];
-export const windowsPortable = `${dl}/Chatterino%20Portable.zip`;
+export const windowsPortable = `${dl}/Chatterino.Portable.zip`;
 export const linuxAppimageUrl = `${dl}/Chatterino-x86_64.AppImage`;
 
 export const linuxBuildFromSource =

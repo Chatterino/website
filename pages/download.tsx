@@ -9,12 +9,12 @@ function V2() {
           <tr>
             <td className="text-white">{v}</td>
             <td className="pa-4">
-              <a href={`${baseDownloadLink}/${v}/Chatterino%20Installer.exe`}>
+              <a href={`${baseDownloadLink}/${v}/Chatterino.Installer.exe`}>
                 Windows Installer
               </a>
             </td>
             <td>
-              <a href={`${baseDownloadLink}/${v}/Chatterino%20Portable.zip`}>
+              <a href={`${baseDownloadLink}/${v}/Chatterino.Portable.zip`}>
                 Windows Portable
               </a>
             </td>

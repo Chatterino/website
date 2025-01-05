@@ -61,12 +61,12 @@ export type DownloadType = [() => React.JSX.Element, string, string];
 export const windows: DownloadType = [
   Windows,
   `${currentVersion} for Windows 64-Bit`,
-  `${dl}/Chatterino%20Installer.exe`,
+  `${dl}/Chatterino.Installer.exe`,
 ];
 export const linux: DownloadType = [Tux, "Linux", "linux"];
 export const freeBsd: DownloadType = [FreeBSD, "FreeBSD", "freebsd"];
 export const macOs: DownloadType = [Apple, "macOS", `${dl}/Chatterino.dmg`];
-export const windowsPortable = `${dl}/Chatterino%20Portable.zip`;
+export const windowsPortable = `${dl}/Chatterino.Portable.zip`;
 export const linuxAppimageUrl = `${dl}/Chatterino-x86_64.AppImage`;
 
 export const linuxBuildFromSource =

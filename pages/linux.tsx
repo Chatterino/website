@@ -10,6 +10,7 @@ import {
 } from "../links";
 
 function LinuxPage() {
+  const ubuntu2404Link = `https://github.com/Chatterino/chatterino2/releases/download/v${currentVersion}/Chatterino-Ubuntu-24.04.deb`;
   const ubuntu2204Link = `https://github.com/Chatterino/chatterino2/releases/download/v${currentVersion}/Chatterino-Ubuntu-22.04.deb`;
   const ubuntu2004Link = `https://github.com/Chatterino/chatterino2/releases/download/v${currentVersion}/Chatterino-Ubuntu-20.04.deb`;
   return (
@@ -17,6 +18,16 @@ function LinuxPage() {
       <div className="p-16">
         <Section>
           <h1 className="text-5xl">Chatterino on Linux</h1>
+          {/* Ubuntu 24.04 */}
+          <h2 className="text-3xl pt-10 pb-4">Ubuntu 24.04 (Noble Numbat)</h2>
+          <Text>
+            A .deb file is available from{" "}
+            <Link href={ubuntu2404Link}>here</Link>.
+          </Text>
+          <Text>
+            The Universe repository must be enabled for it to download the
+            relevant dependencies.
+          </Text>
           {/* Ubuntu 22.04 */}
           <h2 className="text-3xl pt-10 pb-4">
             Ubuntu 22.04 (Jammy Jellyfish)

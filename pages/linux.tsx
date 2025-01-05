@@ -19,9 +19,7 @@ function LinuxPage() {
         <Section>
           <h1 className="text-5xl">Chatterino on Linux</h1>
           {/* Ubuntu 24.04 */}
-          <h2 className="text-3xl pt-10 pb-4">
-            Ubuntu 24.04 (Noble Numbat)
-          </h2>
+          <h2 className="text-3xl pt-10 pb-4">Ubuntu 24.04 (Noble Numbat)</h2>
           <Text>
             A .deb file is available from{" "}
             <Link href={ubuntu2404Link}>here</Link>.

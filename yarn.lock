@@ -959,10 +959,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/python@npm:4.6.0":
-  version: 4.6.0
-  resolution: "@vercel/python@npm:4.6.0"
-  checksum: 10c0/6fe79cad1d0bbcb742be784b218d66587f7f195aeb7b3390326be390d30a6aba8bd06fd4955abc9705bef1fbd594212c6844acf70feeacf29e6c2cd34614538d
+"@vercel/python@npm:4.7.0":
+  version: 4.7.0
+  resolution: "@vercel/python@npm:4.7.0"
+  checksum: 10c0/e5e5439731bf9c8adc9d3278175c4a5910a0bbee30f53a958be31396c16959c5fe88ae51fb734bd2b3de211ab9eeeee15b92583f9ffda2c650878696a14807e5
   languageName: node
   linkType: hard
 
@@ -5879,8 +5879,8 @@ __metadata:
   linkType: hard
 
 "vercel@npm:^39.0.0":
-  version: 39.2.6
-  resolution: "vercel@npm:39.2.6"
+  version: 39.3.0
+  resolution: "vercel@npm:39.3.0"
   dependencies:
     "@vercel/build-utils": "npm:9.0.1"
     "@vercel/fun": "npm:1.1.2"
@@ -5888,16 +5888,16 @@ __metadata:
     "@vercel/hydrogen": "npm:1.0.11"
     "@vercel/next": "npm:4.4.2"
     "@vercel/node": "npm:5.0.2"
-    "@vercel/python": "npm:4.6.0"
+    "@vercel/python": "npm:4.7.0"
     "@vercel/redwood": "npm:2.1.12"
     "@vercel/remix-builder": "npm:5.0.2"
     "@vercel/ruby": "npm:2.1.0"
     "@vercel/static-build": "npm:2.5.41"
     chokidar: "npm:4.0.0"
   bin:
-    vc: dist/index.js
-    vercel: dist/index.js
-  checksum: 10c0/5f4c648d641d9e2c3172311ee92323216774bfec714cc5705076a50892c4ec09fc003838c8debff08e96744257f09fb58524b16195427cf2c76f18be70005210
+    vc: dist/vc.js
+    vercel: dist/vc.js
+  checksum: 10c0/3cd1bd94a7458629f507864d69114fdf0dbe3c9a0a9e71b0a02dce93912f727b1f53f00638f964fec2f9566ffbb7a05416dbd5badd938ccaeded19db0edef89f
   languageName: node
   linkType: hard
 

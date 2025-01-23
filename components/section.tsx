@@ -12,7 +12,7 @@ function Section({ children, className, style, prose }: Props) {
     <div className={className} style={style}>
       <div className="grid">
         <div
-          className={`${prose ? "max-w-(--breakpoint-lg)" : "max-w-(--breakpoint-xl)"} place-self-center`}
+          className={`${prose ? "max-w-256" : "max-w-320"} place-self-center`}
         >
           {children}
         </div>

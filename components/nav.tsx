@@ -30,7 +30,7 @@ function Nav() {
         style={{ zIndex: 10, height: 80 }}
       >
         <div
-          className="max-w-(--breakpoint-xl) w-full flex justify-between"
+          className="max-w-320 w-full flex justify-between"
           style={{ margin: "0 auto" }}
         >
           {/* logo */}

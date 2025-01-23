@@ -9,7 +9,7 @@ import {
   tabTitle,
 } from "./common";
 
-function Chat() {
+function Chat({ version }: { version: string }) {
   const [tabs, setTabs] = useState(() => initTabs(new Date()));
 
   useEffect(() => {
@@ -25,7 +25,7 @@ function Chat() {
 
   return (
     <div className="c-window">
-      <div className="c-window-titlebar">Chatterino</div>
+      <div className="c-window-titlebar">Chatterino {version}</div>
       <div>
         {tabs.map((tab) => (
           <Tab key={tabTitle(tab)} title={tabTitle(tab)} status={tab.status} />

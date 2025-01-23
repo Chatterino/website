@@ -85,7 +85,7 @@ function FeatureCard({
   title: string;
 }) {
   return (
-    <div className="bg-gray-700 p-8 rounded grid">
+    <div className="bg-gray-700 p-8 rounded-sm grid">
       <div className="place-self-center w-full">
         <h2 className="text-3xl pb-6">{title}</h2>
         <div className="text-blue-200">{children}</div>
@@ -110,13 +110,7 @@ function Anchor({ id }: { id: string }) {
 
 function Features() {
   return (
-    <Section
-      className="bg-gray-800"
-      style={{
-        marginTop: -64,
-        backgroundColor: "rgba(31, 30, 30, var(--tw-bg-opacity)",
-      }}
-    >
+    <Section className="bg-gray-900/50 -mt-16">
       <Anchor id="features" />
       <div className="text-gray-200 p-6 md:p-12 space-y-12">
         <div className="space-y-6">
@@ -208,7 +202,7 @@ function Testimonial({ name, occupation, children, imgsrc }: TestimonialProps) {
     <div className="text-gray-400 bg-gray-900 p-8 m-8 rounded-lg text-left">
       <div className="flex space-x-8 max-xs:flex-col max-xs:space-x-0">
         <div
-          className="w-16 h-16 md:w-36 md:h-36 flex-shrink-0 rounded-full max-xs:self-center max-xs:mb-4"
+          className="w-16 h-16 md:w-36 md:h-36 shrink-0 rounded-full max-xs:self-center max-xs:mb-4"
           style={{
             backgroundImage: "url(" + imgsrc + ")",
             backgroundSize: "cover",
@@ -216,7 +210,7 @@ function Testimonial({ name, occupation, children, imgsrc }: TestimonialProps) {
         />
         <div className="flex flex-col">
           <div className="max-xs:mb-2">{children}</div>
-          <div className="flex-grow" />
+          <div className="grow" />
           <div className="text-xl text-white">{name}</div>
           <div className="text-sm text-white">{occupation}</div>
         </div>
@@ -270,10 +264,7 @@ let testimonials = [
 
 function Testimonials() {
   return (
-    <Section
-      className="p-6 md:p-12 bg-gray-800 max-xs:p-0"
-      style={{ margin: "0 auto" }}
-    >
+    <Section className="p-6 md:p-12 bg-gray-800 max-xs:p-0 mx-auto">
       <div className="space-y-8">
         <h1 className="text-white text-5xl text-center p-6">
           What Are the Users Saying?

@@ -110,13 +110,7 @@ function Anchor({ id }: { id: string }) {
 
 function Features() {
   return (
-    <Section
-      className="bg-gray-800"
-      style={{
-        marginTop: -64,
-        backgroundColor: "rgba(31, 30, 30, var(--tw-bg-opacity)",
-      }}
-    >
+    <Section className="bg-gray-900/50 -mt-16">
       <Anchor id="features" />
       <div className="text-gray-200 p-6 md:p-12 space-y-12">
         <div className="space-y-6">
@@ -270,10 +264,7 @@ let testimonials = [
 
 function Testimonials() {
   return (
-    <Section
-      className="p-6 md:p-12 bg-gray-800 max-xs:p-0"
-      style={{ margin: "0 auto" }}
-    >
+    <Section className="p-6 md:p-12 bg-gray-800 max-xs:p-0 mx-auto">
       <div className="space-y-8">
         <h1 className="text-white text-5xl text-center p-6">
           What Are the Users Saying?

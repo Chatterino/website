@@ -2,6 +2,7 @@ import React, { ReactNode, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import {
   allDownloads,
+  currentVersion,
   DownloadType,
   freeBsd,
   github,
@@ -70,7 +71,7 @@ function FirstHero() {
           id="chatprop-host"
         >
           <noscript>Enable JavaScript to see this.</noscript>
-          <Chat />
+          <Chat version={currentVersion} />
         </div>
       </div>
     </Section>

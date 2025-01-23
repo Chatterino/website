@@ -146,7 +146,7 @@ export default function ClientLogin() {
   const loggedIn = oauthToken && user;
 
   const loginButtonClasses =
-    "p-3 flex justify-center rounded shadow bg-purple-800 hover:bg-purple-600 hover:opacity-100 whitespace-nowrap no-underline my-5".split(
+    "p-3 flex justify-center rounded-sm shadow-sm bg-purple-800 hover:bg-purple-600 hover:opacity-100 whitespace-nowrap no-underline my-5".split(
       " "
     );
   if (loggedIn) {
@@ -186,25 +186,25 @@ export default function ClientLogin() {
             <div className="flex gap-1 align-center my-2">
               <div className="relative w-full">
                 {hidden && (
-                  <div className="absolute top-0 left-0 w-full h-full bg-red-700 rounded" />
+                  <div className="absolute top-0 left-0 w-full h-full bg-red-700 rounded-sm" />
                 )}
                 <input
                   type="text"
                   ref={dataStringRef}
                   readOnly
-                  className={`appearance-none rounded bg-gray-900 w-full overflow-hidden resize-none p-3`}
+                  className={`appearance-none rounded-sm bg-gray-900 w-full overflow-hidden resize-none p-3`}
                   value={createChatterinoDataString(oauthToken, user)}
                 />
               </div>
               <div
-                className="flex align-center h-full bg-gray-900 rounded p-3 select-none cursor-pointer hover:bg-gray-700"
+                className="flex align-center h-full bg-gray-900 rounded-sm p-3 select-none cursor-pointer hover:bg-gray-700"
                 onClick={() => setHidden((hidden) => !hidden)}
               >
                 🔎
               </div>
             </div>
             <button
-              className={`rounded w-full p-3 ${buttonColor}`}
+              className={`rounded-sm w-full p-3 ${buttonColor}`}
               onClick={handleCopyClick}
             >
               Copy

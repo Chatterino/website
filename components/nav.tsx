@@ -30,7 +30,7 @@ function Nav() {
         style={{ zIndex: 10, height: 80 }}
       >
         <div
-          className="max-w-screen-xl w-full flex justify-between"
+          className="max-w-(--breakpoint-xl) w-full flex justify-between"
           style={{ margin: "0 auto" }}
         >
           {/* logo */}
@@ -43,7 +43,7 @@ function Nav() {
 
           {/* expand button */}
           {/* <div className="block lg:hidden">
-            <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+            <button className="flex items-center px-3 py-2 border rounded-sm text-teal-200 border-teal-400 hover:text-white hover:border-white">
               <svg
                 className="fill-current h-3 w-3"
                 viewBox="0 0 20 20"

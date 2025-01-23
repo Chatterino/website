@@ -16,7 +16,7 @@ function Page({ children, title }: Props) {
       </Head>
       <Nav />
 
-      <div className="flex-grow">{children}</div>
+      <div className="grow">{children}</div>
       <Footer />
     </div>
   );

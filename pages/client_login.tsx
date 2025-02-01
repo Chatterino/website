@@ -101,18 +101,18 @@ const scopes = [
   "user:read:emotes", // for fetching emotes that a user can use via helix
 
   // https://dev.twitch.tv/docs/api/reference/#warn-chat-user
-  "moderator:manage:warnings", // for /warn api & channel.moderate v2 eventsub topic
+  "moderator:manage:warnings", // for /warn api & channel.moderate eventsub topic
 
   // https://dev.twitch.tv/docs/api/reference/#get-followed-channels
   "user:read:follows", // for determining if the current user follows a streamer
 
-  "moderator:manage:blocked_terms", // for channel.moderate v2 eventsub topic
+  "moderator:manage:blocked_terms", // for channel.moderate eventsub topic
 
-  "moderator:manage:unban_requests", // for channel.moderate v2 eventsub topic
+  "moderator:manage:unban_requests", // for channel.moderate eventsub topic
 
-  "moderator:read:moderators", // for channel.moderate v2 eventsub topic
+  "moderator:read:moderators", // for channel.moderate eventsub topic
 
-  "moderator:read:vips", // for channel.moderate v2 eventsub topic
+  "moderator:read:vips", // for channel.moderate eventsub topic
 ];
 
 export default function ClientLogin() {

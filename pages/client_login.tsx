@@ -57,16 +57,16 @@ const scopes = [
 
   // https://dev.twitch.tv/docs/api/reference#ban-user
   // https://dev.twitch.tv/docs/api/reference#unban-user
-  "moderator:manage:banned_users", // for ban/unban/timeout/untimeout api
+  "moderator:manage:banned_users", // for ban/unban/timeout/untimeout api & channel.moderate eventsub topic
 
   // https://dev.twitch.tv/docs/api/reference#delete-chat-messages
-  "moderator:manage:chat_messages", // for delete message api (/delete, /clear)
+  "moderator:manage:chat_messages", // for delete message api (/delete, /clear) & channel.moderate eventsub topic
 
   // https://dev.twitch.tv/docs/api/reference#update-user-chat-color
   "user:manage:chat_color", // for update user color api (/color coral)
 
   // https://dev.twitch.tv/docs/api/reference#get-chat-settings
-  "moderator:manage:chat_settings", // for roomstate api (/followersonly, /uniquechat, /slow)
+  "moderator:manage:chat_settings", // for roomstate api (/followersonly, /uniquechat, /slow) & channel.moderate eventsub topic
 
   // https://dev.twitch.tv/docs/api/reference#get-moderators
   // https://dev.twitch.tv/docs/api/reference#add-channel-moderator
@@ -101,10 +101,18 @@ const scopes = [
   "user:read:emotes", // for fetching emotes that a user can use via helix
 
   // https://dev.twitch.tv/docs/api/reference/#warn-chat-user
-  "moderator:manage:warnings", // for /warn api (and channel.moderate v2 eventsub in the future)
+  "moderator:manage:warnings", // for /warn api & channel.moderate v2 eventsub topic
 
   // https://dev.twitch.tv/docs/api/reference/#get-followed-channels
   "user:read:follows", // for determining if the current user follows a streamer
+
+  "moderator:manage:blocked_terms", // for channel.moderate v2 eventsub topic
+
+  "moderator:manage:unban_requests", // for channel.moderate v2 eventsub topic
+
+  "moderator:read:moderators", // for channel.moderate v2 eventsub topic
+
+  "moderator:read:vips", // for channel.moderate v2 eventsub topic
 ];
 
 export default function ClientLogin() {

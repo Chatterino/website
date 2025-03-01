@@ -114,7 +114,7 @@ const scopes = [
 
   "moderator:read:vips", // for channel.moderate eventsub topic
 
-  "moderator:read:suspicious_users", // for channel.suspicious_user.message
+  "moderator:read:suspicious_users", // for channel.suspicious_user.message and channel.suspicious_user.update
 ];
 
 export default function ClientLogin() {

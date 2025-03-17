@@ -119,6 +119,46 @@ your distro already runs something).
 
 </div>
 
+### Miscellaneous changes {#2.5.3-miscellaneous-changes}
+
+<div className="changelog-entry">
+
+- Channels that are visible are now joined first. <Credit author="Nerixyz" prs="5850" inline />
+
+- You can now allow other extensions to interact with Chatterino. <Credit author="MiguVT" prs="5997" inline />
+
+- Added `Set highlight sounds` and `Open subscription page` hotkeys. <Credit author="brian6932" prs="5856, 6030" inline />
+
+- `/clear` messages now stack like timeouts. <Credit author="Nerixyz" prs="5806" inline />
+
+- Updated browser list for incognito browser support. <Credit author="teknsl, Wissididom" prs="5805, 5810" inline />
+
+- Improved error messaging of the `/clip` command. <Credit author="pajlada" prs="5879" inline />
+
+- Clicking on a live notification can now open the channel in a custom player. (#5880)
+
+- Hotkeys and their keybinds are now searchable. <Credit author="apa420" prs="5884" inline />
+
+- Overlay windows can now be zoomed independently (by default: <kbd>CTRL</kbd>+<kbd>+</kbd>/<kbd>-</kbd>). <Credit author="Nerixyz" prs="6016" inline />
+
+- The `/watching` channel is now supported on all platforms. <Credit author="Nerixyz" prs="6031, 6043" inline />
+
+- You can now customize the font weight of chat messages. <Credit author="Nerixyz" prs="6037" inline />
+
+- Added the ability to filter on messages by the author's user ID. <Credit author="apa420" prs="5862" inline />
+
+  Example filter: `author.user_id == "22484632"`
+
+- Messages can now be deleted by right-clicking them. <Credit author="Nerixyz" prs="5956" inline />
+
+- Messages from restricted users are now hidden in streamer mode. <Credit author="pajlada" prs="6042, 6049" inline />
+
+  You can disable this in settings.
+
+- Linux & macOS now cleanly handle SIGINT/SIGTERM signals. <Credit author="pajlada" prs="6053" inline />
+
+</div>
+
 ### Miscellaneous fixes {#2.5.3-miscellaneous-fixes}
 
 <div className="changelog-entry">
@@ -164,46 +204,6 @@ your distro already runs something).
 - The emote button no longer looks crunchy. <Credit author="pajlada" prs="6080" inline />
 
 - Fixed a potential way to escape the Lua Plugin sandbox. <Credit author="Mm2pl" prs="5846" inline />
-
-</div>
-
-### Miscellaneous changes {#2.5.3-miscellaneous-changes}
-
-<div className="changelog-entry">
-
-- Channels that are visible are now joined first. <Credit author="Nerixyz" prs="5850" inline />
-
-- You can now allow other extensions to interact with Chatterino. <Credit author="MiguVT" prs="5997" inline />
-
-- Added `Set highlight sounds` and `Open subscription page` hotkeys. <Credit author="brian6932" prs="5856, 6030" inline />
-
-- `/clear` messages now stack like timeouts. <Credit author="Nerixyz" prs="5806" inline />
-
-- Updated browser list for incognito browser support. <Credit author="teknsl, Wissididom" prs="5805, 5810" inline />
-
-- Improved error messaging of the `/clip` command. <Credit author="pajlada" prs="5879" inline />
-
-- Clicking on a live notification can now open the channel in a custom player. (#5880)
-
-- Hotkeys and their keybinds are now searchable. <Credit author="apa420" prs="5884" inline />
-
-- Overlay windows can now be zoomed independently (by default: <kbd>CTRL</kbd>+<kbd>+</kbd>/<kbd>-</kbd>). <Credit author="Nerixyz" prs="6016" inline />
-
-- The `/watching` channel is now supported on all platforms. <Credit author="Nerixyz" prs="6031, 6043" inline />
-
-- You can now customize the font weight of chat messages. <Credit author="Nerixyz" prs="6037" inline />
-
-- Added the ability to filter on messages by the author's user ID. <Credit author="apa420" prs="5862" inline />
-
-  Example filter: `author.user_id == "22484632"`
-
-- Messages can now be deleted by right-clicking them. <Credit author="Nerixyz" prs="5956" inline />
-
-- Messages from restricted users are now hidden in streamer mode. <Credit author="pajlada" prs="6042, 6049" inline />
-
-  You can disable this in settings.
-
-- Linux & macOS now cleanly handle SIGINT/SIGTERM signals. <Credit author="pajlada" prs="6053" inline />
 
 </div>
 

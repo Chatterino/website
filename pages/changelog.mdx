@@ -23,7 +23,7 @@ import { discord, github } from "../links";
 <div className="changelog-entry">
 
 Twitch is shutting down the old API we used to get moderation events & channel
-point events from. In this release, we've updated to Twitch's new API
+point events from in the middle of April. In this release, we've updated to Twitch's new API
 [EventSub](https://dev.twitch.tv/docs/eventsub/).
 
 This change has one known drawback:
@@ -58,7 +58,7 @@ href={github}>GitHub</a>.
 
 Fixes various crashes that could occur when:
 
-- making a Lua HTTP request
+- making a Lua HTTP request from a coroutine
 - clicking the "Install" button for an update on Linux or macOS
 - closing down Chatterino
 - trying to search in an uninitialized split
@@ -119,6 +119,46 @@ your distro already runs something).
 
 </div>
 
+### Miscellaneous changes {#2.5.3-miscellaneous-changes}
+
+<div className="changelog-entry">
+
+- Channels that are visible are now joined first. <Credit author="Nerixyz" prs="5850" inline />
+
+- You can now allow other browser extensions to interact with Chatterino. <Credit author="MiguVT" prs="5997" inline />
+
+- Added `Set highlight sounds` and `Open subscription page` hotkeys. <Credit author="brian6932" prs="5856, 6030" inline />
+
+- `/clear` messages now stack like timeouts. <Credit author="Nerixyz" prs="5806" inline />
+
+- Updated browser list for incognito browser support. <Credit author="teknsl, Wissididom" prs="5805, 5810" inline />
+
+- Improved error messaging of the `/clip` command. <Credit author="pajlada" prs="5879" inline />
+
+- Clicking on a live notification can now open the channel in a custom player. (#5880)
+
+- Hotkeys and their keybinds are now searchable. <Credit author="apa420" prs="5884" inline />
+
+- Overlay windows can now be zoomed independently (by default: <kbd>CTRL</kbd>+<kbd>+</kbd>/<kbd>-</kbd>). <Credit author="Nerixyz" prs="6016" inline />
+
+- The `/watching` channel is now supported on all platforms. <Credit author="Nerixyz" prs="6031, 6043" inline />
+
+- You can now customize the font weight of chat messages. <Credit author="Nerixyz" prs="6037" inline />
+
+- Added the ability to filter on messages by the author's user ID. <Credit author="apa420" prs="5862" inline />
+
+  Example filter: `author.user_id == "22484632"`
+
+- Messages can now be deleted by right-clicking them. <Credit author="Nerixyz" prs="5956" inline />
+
+- Messages from restricted users are now hidden in streamer mode. <Credit author="pajlada" prs="6042, 6049" inline />
+
+  You can disable this in settings.
+
+- Linux & macOS now cleanly handle SIGINT/SIGTERM signals. <Credit author="pajlada" prs="6053" inline />
+
+</div>
+
 ### Miscellaneous fixes {#2.5.3-miscellaneous-fixes}
 
 <div className="changelog-entry">
@@ -167,59 +207,16 @@ your distro already runs something).
 
 </div>
 
-### Miscellaneous changes {#2.5.3-miscellaneous-changes}
-
-<div className="changelog-entry">
-
-- Channels that are visible are now joined first. <Credit author="Nerixyz" prs="5850" inline />
-
-- You can now allow other extensions to interact with Chatterino. <Credit author="MiguVT" prs="5997" inline />
-
-- Added `Set highlight sounds` and `Open subscription page` hotkeys. <Credit author="brian6932" prs="5856, 6030" inline />
-
-- `/clear` messages now stack like timeouts. <Credit author="Nerixyz" prs="5806" inline />
-
-- Updated browser list for incognito browser support. <Credit author="teknsl, Wissididom" prs="5805, 5810" inline />
-
-- Improved error messaging of the `/clip` command. <Credit author="pajlada" prs="5879" inline />
-
-- Clicking on a live notification can now open the channel in a custom player. (#5880)
-
-- Hotkeys and their keybinds are now searchable. <Credit author="apa420" prs="5884" inline />
-
-- Overlay windows now inherit the global zoom level and can be zoomed independently. <Credit author="Nerixyz" prs="6016" inline />
-
-- The `/watching` channel is now supported on all platforms. <Credit author="Nerixyz" prs="6031, 6043" inline />
-
-- You can now customize the font weight of chat messages. <Credit author="Nerixyz" prs="6037" inline />
-
-- Added the ability to filter on messages by the author's user ID. <Credit author="apa420" prs="5862" inline />
-
-  Example filter: `author.user_id == "22484632"`
-
-- Messages can now be deleted by right-clicking them. <Credit author="Nerixyz" prs="5956" inline />
-
-- Messages from restricted users are now hidden in streamer mode. <Credit author="pajlada" prs="6042, 6049" inline />
-
-  You can disable this in settings.
-
-- Linux & macOS now cleanly handle SIGINT/SIGTERM signals. <Credit author="pajlada" prs="6053" inline />
-
-</div>
-
 ### Nerdier things {#2.5.3-nerd-things}
 
 <div className="changelog-entry">
 
-This release does _not_ support Qt5, meaning if you're on Windows 7 you won't
-be able to run this. Please update your operating system.
-
-<br />
-
-A WEBP support check is run on startup. If your system doesn't support webp
-for whatever reason (e.g. packaging has gone wrong), you'll see a warning
-popup. Feel free to reach out if you need help figuring out why this is
-showing up for you.
+- From this release onwards, Qt 5 is no longer supported, meaning if you're on Windows 7 or 8 you won't
+  be able to run this. Please update your operating system.
+- A WEBP support check is run on startup. If your system doesn't support WEBP
+  for whatever reason (e.g. packaging has gone wrong), you'll see a warning
+  popup. Feel free to reach out if you need help figuring out why this is
+  showing up for you.
 
 </div>
 

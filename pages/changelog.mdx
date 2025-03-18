@@ -67,6 +67,20 @@ Fixes various crashes that could occur when:
 
 </div>
 
+### Windows shortcut {#2.5.3-windows-shortcut}
+
+<div className="changelog-entry">
+
+We've made some changes to the shortcut on Windows - this means that you might
+have to recreate the shortcut pointing to Chatterino in your start menu or
+task bar.
+This change was necessary to ensure desktop notifications can fetch the
+correct application information when they're being displayed.
+
+<Credit author="8thony" prs="5975" />
+
+</div>
+
 ### Join order {#2.5.3-join-order}
 
 <div className="changelog-entry">
@@ -202,8 +216,6 @@ your distro already runs something).
 - Fixed channel point redemptions with messages not showing up if PubSub is disconnected. <Credit author="Nerixyz" prs="5948" inline />
 
 - Fixed the input font not immediately updating when zooming in/out. <Credit author="Nerixyz" prs="5960" inline />
-
-- Fixed missing special shortcut for Windows live notifications. <Credit author="8thony" prs="5975" inline />
 
 - Fixed color input thinking blue is also red. <Credit author="Zakary2841" prs="5982" inline />
 

@@ -3,6 +3,8 @@ import React from "react";
 type Props = {
   author: string;
   helper?: string;
+  inline?: boolean;
+  prs?: string;
 };
 
 function GitHubUser({ username }: { username: string }) {
@@ -10,6 +12,17 @@ function GitHubUser({ username }: { username: string }) {
   return (
     <a href={`https://github.com/${username}`} className="gh-author">
       <img src={avatarURL} className="gh-avatar" />@{username}
+    </a>
+  );
+}
+
+function PullRequest({ pullRequestID }: { pullRequestID: string }) {
+  return (
+    <a
+      href={`https://github.com/Chatterino/chatterino2/pull/${pullRequestID}`}
+      className="gh-pr"
+    >
+      #{pullRequestID}
     </a>
   );
 }
@@ -22,7 +35,15 @@ function formatUsers(users: string[] | undefined): React.ReactNode[] {
   return users.map((username) => <GitHubUser username={username.trim()} />);
 }
 
-export default function Credit({ author, helper }: Props) {
+function formatPRs(prs: string[]): React.ReactNode[] {
+  if (!prs) {
+    return [];
+  }
+
+  return prs.map((pr) => <PullRequest pullRequestID={pr.trim()} />);
+}
+
+export default function Credit({ author, helper, inline, prs }: Props) {
   const formatList = (list: React.ReactNode[]) => {
     if (list.length === 0) return null;
     // @username
@@ -49,12 +70,21 @@ export default function Credit({ author, helper }: Props) {
   const authorElements = formatUsers(author.split(","));
   const helperElements = formatUsers(helper?.split(","));
 
-  return (
-    <div className="text-gray-300 mt-3 mb-4 text-sm">
+  const prList = formatPRs(prs?.split(",") ?? []);
+
+  const contents = (
+    <>
       Authored by {formatList(authorElements)}
       {helperElements.length ? (
         <> with help from {formatList(helperElements)}</>
       ) : null}
-    </div>
+      {prList.length ? <> in {formatList(prList)}</> : null}
+    </>
   );
+
+  if (inline) {
+    return <span className="text-gray-300 mt-3 mb-4 text-sm">{contents}</span>;
+  } else {
+    return <div className="text-gray-300 mt-3 mb-4 text-sm">{contents}</div>;
+  }
 }

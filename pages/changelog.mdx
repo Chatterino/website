@@ -4,7 +4,7 @@ import Section from "../components/section";
 import Figure from "../components/figure";
 import FigureGroup from "../components/figure-group";
 import Credit from "../components/credit";
-import { discord } from "../links";
+import { discord, github } from "../links";
 
 <Head>
   <title>Changelog - Chatterino</title>
@@ -15,6 +15,216 @@ import { discord } from "../links";
  <Section className="changelog px-16" prose>
 
 # Chatterino Changelog
+
+## 2.5.3 beta 1 (Released TBD) {#2.5.3}
+
+### Twitch EventSub support {#2.5.3-eventsub}
+
+<div className="changelog-entry">
+
+Twitch is shutting down the old API we used to get moderation events & channel
+point events from in the middle of April. In this release, we've updated to Twitch's new API
+[EventSub](https://dev.twitch.tv/docs/eventsub/).
+
+This change has one known drawback:
+
+- Channel point redemptions might not render correctly. There's a feature
+  request on [Twitch's
+  UserVoice](https://twitch.uservoice.com/forums/310213-developers/suggestions/43371027-allow-getting-realtime-updates-on-polls-prediction)
+  that you can upvote if you'd like to see this feature return.
+
+To support the new API we've had to request some more scopes when you log in
+with your account. You will be prompted to log in again on startup if you're missing any
+required scopes.
+
+Have you run into any issues with this? Let us know on our <a
+href={discord}>Discord</a>, or make a bug report on our <a
+href={github}>GitHub</a>.
+
+<Credit
+  author="pajlada, Nerixyz, iProdigy"
+  prs="5837, 5895, 5897, 5904, 5910, 5903, 5915, 5916, 5930, 5935, 5932, 5943,
+  5952, 5953, 5968, 5973, 5974, 5980, 5981, 5985, 5990, 5992, 5993, 5996,
+  5995, 6000, 6001, 6002, 6003, 6005, 6007, 6010, 6008, 6012, 6013, 6015,
+  6017, 6027, 6028, 6035, 6036, 6040, 6041, 6048, 6058, 6059, 6078, 6079,
+  6072, 6083, 6086, 6092, 6093"
+/>
+
+</div>
+
+### Crash fixes {#2.5.3-crash-fixes}
+
+<div className="changelog-entry">
+
+Fixes various crashes that could occur when:
+
+- making a Lua HTTP request from a coroutine
+- clicking the "Install" button for an update on Linux or macOS
+- closing down Chatterino
+- trying to search in an uninitialized split
+
+<Credit author="Mm2PL, pajlada" prs="5800, 5818, 6018, 6057" />
+
+</div>
+
+### Monospaced timestamps {#2.5.3-monospaced-timestamps}
+
+<div className="changelog-entry">
+
+Some fonts don't include monospaced numbers - with Chatterino 2.5.3 even fonts
+without monospaced numbers will render timestamps as if they were.
+
+<FigureGroup>
+  <Figure src="./changelog/2.5.3/monospaced-timestamps-before.png" width="406">
+    Before the change
+  </Figure>
+  <Figure src="./changelog/2.5.3/monospaced-timestamps-after.png" width="406">
+    After the change
+  </Figure>
+</FigureGroup>
+
+<Credit author="pajlada" prs="6062" />
+
+</div>
+
+### Tab styles {#2.5.3-tab-styles}
+
+<div className="changelog-entry">
+
+You can now make your tabs a bit more compact with tab styles
+
+<FigureGroup>
+  <Figure src="./changelog/2.5.3/tab-style-normal.png" width="406">
+    Normal
+  </Figure>
+  <Figure src="./changelog/2.5.3/tab-style-compact.png" width="406">
+    Compact
+  </Figure>
+</FigureGroup>
+
+<Credit author="apa420" prs="5858" />
+
+</div>
+
+### Linux desktop notifications {#2.5.3-linux-desktop-notifications}
+
+<div className="changelog-entry">
+
+We now support desktop notifications on Linux using
+[libnotify](https://gitlab.gnome.org/GNOME/libnotify). This requires
+you to be running a desktop notification daemon like [dunst](https://dunst-project.org/) (or more likely,
+your distro already runs something).
+
+<Credit author="camporter, 4rneee" prs="5881, 5971, 5976" />
+
+</div>
+
+### Miscellaneous changes {#2.5.3-miscellaneous-changes}
+
+<div className="changelog-entry">
+
+- Channels that are visible are now joined first. <Credit author="Nerixyz" prs="5850" inline />
+
+- You can now allow other browser extensions to interact with Chatterino. <Credit author="MiguVT" prs="5997" inline />
+
+- Added `Set highlight sounds` and `Open subscription page` hotkeys. <Credit author="brian6932" prs="5856, 6030" inline />
+
+- `/clear` messages now stack like timeouts. <Credit author="Nerixyz" prs="5806" inline />
+
+- Updated browser list for incognito browser support. <Credit author="teknsl, Wissididom" prs="5805, 5810" inline />
+
+- Improved error messaging of the `/clip` command. <Credit author="pajlada" prs="5879" inline />
+
+- Clicking on a live notification can now open the channel in a custom player. (#5880)
+
+- Hotkeys and their keybinds are now searchable. <Credit author="apa420" prs="5884" inline />
+
+- Overlay windows can now be zoomed independently (by default: <kbd>CTRL</kbd>+<kbd>+</kbd>/<kbd>-</kbd>). <Credit author="Nerixyz" prs="6016" inline />
+
+- The `/watching` channel is now supported on all platforms. <Credit author="Nerixyz" prs="6031, 6043" inline />
+
+- You can now customize the font weight of chat messages. <Credit author="Nerixyz" prs="6037" inline />
+
+- Added the ability to filter on messages by the author's user ID. <Credit author="apa420" prs="5862" inline />
+
+  Example filter: `author.user_id == "22484632"`
+
+- Messages can now be deleted by right-clicking them. <Credit author="Nerixyz" prs="5956" inline />
+
+- Messages from restricted users are now hidden in streamer mode. <Credit author="pajlada" prs="6042, 6049" inline />
+
+  You can disable this in settings.
+
+- Linux & macOS now cleanly handle SIGINT/SIGTERM signals. <Credit author="pajlada" prs="6053" inline />
+
+</div>
+
+### Miscellaneous fixes {#2.5.3-miscellaneous-fixes}
+
+<div className="changelog-entry">
+
+- Fixed an issue where commands would sometimes reset if Chatterino was improperly shut down. <Credit author="pajlada" prs="6011" inline />
+
+- Fixed missing word wrap in update popup. <Credit author="8thony" prs="5811" inline />
+
+- Tabs now rescale as expected when changing the "Zoom" option. <Credit author="Nerixyz" prs="5794, 5833" inline />
+
+- Closing a usercard will no longer cause stop-logging messages to be generated in channel logs. <Credit author="Nerixyz" prs="5828" inline />
+
+- "Hide deleted messages" now works as expected. <Credit author="Nerixyz, pajlada" prs="5844, 5854" inline />
+
+- Fixed announcements not showing up in mentions tab. <Credit author="M4tthewDE" prs="5857" inline />
+
+- Fixed the reply button showing for inline whispers and announcements. <Credit author="M4tthewDE" prs="5863" inline />
+
+- Fixed suspicious user treatment update messages not being searchable. <Credit author="iProdigy" prs="5865" inline />
+
+- Ensure settings save after reauthenticating with a Twitch account. <Credit author="NyanyanKat" prs="5901" inline />
+
+- Fixed user info popup's opened from `/live` making invalid network requests. <Credit author="kyleScarmack" prs="5959" inline />
+
+- Ensure miniaudio backend exits even if it doesn't exit cleanly. <Credit author="pajlada" prs="5896" inline />
+
+- Fixed search in emote popup not always working correctly. <Credit author="Nerixyz" prs="5946" inline />
+
+- Fixed some text inputs being dark in light themes. <Credit author="pajlada" prs="6055" inline />
+
+- Fixed channel point redemptions with messages not showing up if PubSub is disconnected. <Credit author="Nerixyz" prs="5948" inline />
+
+- Fixed the input font not immediately updating when zooming in/out. <Credit author="Nerixyz" prs="5960" inline />
+
+- Fixed missing special shortcut for Windows live notifications. <Credit author="8thony" prs="5975" inline />
+
+- Fixed color input thinking blue is also red. <Credit author="Zakary2841" prs="5982" inline />
+
+- Fixed a thick border on Windows 11. <Credit author="Nerixyz" prs="5836" inline />
+
+- Fixed some windows not immediately closing. <Credit author="Nerixyz" prs="6054" inline />
+
+- The emote button no longer looks crunchy. <Credit author="pajlada" prs="6080" inline />
+
+- Fixed a potential way to escape the Lua Plugin sandbox. <Credit author="Mm2pl" prs="5846" inline />
+
+</div>
+
+### Nerdier things {#2.5.3-nerd-things}
+
+<div className="changelog-entry">
+
+- From this release onwards, Qt 5 is no longer supported, meaning if you're on Windows 7 or 8 you won't
+  be able to run this. Please update your operating system.
+- A WEBP support check is run on startup. If your system doesn't support WEBP
+  for whatever reason (e.g. packaging has gone wrong), you'll see a warning
+  popup. Feel free to reach out if you need help figuring out why this is
+  showing up for you.
+
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
 
 ## 2.5.2 (Released 2025-01-05) {#2.5.2}
 

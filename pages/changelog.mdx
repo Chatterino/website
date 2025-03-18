@@ -67,6 +67,18 @@ Fixes various crashes that could occur when:
 
 </div>
 
+### Join order {#2.5.3-join-order}
+
+<div className="changelog-entry">
+
+If you have a lot of channels open, you might have noticed that Chatterino can
+be slow at joining some of them.
+We now prioritize joining the channels that are in your active tab, reducing the time-to-type-a-message by anywhere from 0 seconds to 60 seconds!
+
+<Credit author="Nerixyz" prs="5850" />
+
+</div>
+
 ### Monospaced timestamps {#2.5.3-monospaced-timestamps}
 
 <div className="changelog-entry">
@@ -122,8 +134,6 @@ your distro already runs something).
 ### Miscellaneous changes {#2.5.3-miscellaneous-changes}
 
 <div className="changelog-entry">
-
-- Channels that are visible are now joined first. <Credit author="Nerixyz" prs="5850" inline />
 
 - You can now allow other browser extensions to interact with Chatterino. <Credit author="MiguVT" prs="5997" inline />
 

@@ -16,15 +16,15 @@ import { discord, github } from "../links";
 
 # Chatterino Changelog
 
-## 2.5.3 beta 1 (Released 2025-03-18) {#2.5.3}
+## 2.5.3 (Released 2025-03-23) {#2.5.3}
 
 ### Twitch EventSub support {#2.5.3-eventsub}
 
 <div className="changelog-entry">
 
 Twitch is shutting down the old API we used to get moderation events & channel
-point events from in the middle of April. In this release, we've updated to Twitch's new API
-[EventSub](https://dev.twitch.tv/docs/eventsub/).
+point events from. In this release we've updated to Twitch's new API
+["EventSub"](https://dev.twitch.tv/docs/eventsub/).
 
 This change has one known drawback:
 
@@ -37,7 +37,7 @@ To support the new API we've had to request some more scopes when you log in
 with your account. You will be prompted to log in again on startup if you're missing any
 required scopes.
 
-Have you run into any issues with this? Let us know on our <a
+If you run into any issues with this, please let us know on our <a
 href={discord}>Discord</a>, or make a bug report on our <a
 href={github}>GitHub</a>.
 
@@ -138,10 +138,40 @@ You can now make your tabs a bit more compact with tab styles
 
 We now support desktop notifications on Linux using
 [libnotify](https://gitlab.gnome.org/GNOME/libnotify). This requires
-you to be running a desktop notification daemon like [dunst](https://dunst-project.org/) (or more likely,
-your distro already runs something).
+you to be running a desktop notification daemon. You probably already have one
+installed, if not you can install and run [dunst](https://dunst-project.org/).
 
 <Credit author="camporter, 4rneee" prs="5881, 5971, 5976" />
+
+</div>
+
+### Right-click to delete message {#2.5.3-right-click-delete-message}
+
+<div className="changelog-entry">
+
+As a moderator, there's now an option to delete the message in the menu when you
+right-click it.
+
+<Figure src="./changelog/2.5.3/delete-message-menu.png" width="552">
+  Delete MOSSCODE's message 🦀
+</Figure>
+
+<Credit author="Nerixyz" helper="pajlada" prs="5956, 6100" />
+
+</div>
+
+### Shared chat badges {#2.5.3-shared-chat-badges}
+
+<div className="changelog-entry">
+
+Shared chat messages now use the source streamer's profile picture instead of
+a generic badge when possible.
+
+<Figure src="./changelog/2.5.3/shared-chat-badge.png" width="268">
+  Shared chat message from waterlynn's channel
+</Figure>
+
+<Credit author="treuks" helper="pajlada, Nerixyz" prs="5760" />
 
 </div>
 
@@ -159,7 +189,7 @@ your distro already runs something).
 
 - Improved error messaging of the `/clip` command. <Credit author="pajlada" prs="5879" inline />
 
-- Clicking on a live notification can now open the channel in a custom player. (#5880)
+- Clicking on a live notification can now open the channel in a custom player. <Credit author="Nerixyz" prs="5880" inline />
 
 - Hotkeys and their keybinds are now searchable. <Credit author="apa420" prs="5884" inline />
 
@@ -172,8 +202,6 @@ your distro already runs something).
 - Added the ability to filter on messages by the author's user ID. <Credit author="apa420" prs="5862" inline />
 
   Example filter: `author.user_id == "22484632"`
-
-- Messages can now be deleted by right-clicking them. <Credit author="Nerixyz" prs="5956" inline />
 
 - Messages from restricted users are now hidden in streamer mode. <Credit author="pajlada" prs="6042, 6049" inline />
 
@@ -211,7 +239,7 @@ your distro already runs something).
 
 - Fixed search in emote popup not always working correctly. <Credit author="Nerixyz" prs="5946" inline />
 
-- Fixed some text inputs being dark in light themes. <Credit author="pajlada" prs="6055" inline />
+- Fixed some text inputs being dark in light themes. <Credit author="pajlada" helper="Nerixyz" prs="6055, 6096, 6098" inline />
 
 - Fixed channel point redemptions with messages not showing up if PubSub is disconnected. <Credit author="Nerixyz" prs="5948" inline />
 
@@ -226,6 +254,12 @@ your distro already runs something).
 - The emote button no longer looks crunchy. <Credit author="pajlada" prs="6080" inline />
 
 - Fixed a potential way to escape the Lua Plugin sandbox. <Credit author="Mm2pl" prs="5846" inline />
+
+- Don't set default binding for "Toggle local R9K" on macOS. <Credit author="jacob-thompson" helper="pajlada" prs="5764" inline />
+
+  Was <kbd>CTRL</kbd> + <kdb>H</kdb> before, which clashes with a system binding.
+
+- Moderation buttons are no longer shown on your own usercard. <Credit author="Jujufrost" prs="6107" inline />
 
 </div>
 

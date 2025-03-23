@@ -23,8 +23,8 @@ import { discord, github } from "../links";
 <div className="changelog-entry">
 
 Twitch is shutting down the old API we used to get moderation events & channel
-point events from in the middle of April. In this release, we've updated to Twitch's new API
-[EventSub](https://dev.twitch.tv/docs/eventsub/).
+point events from. In this release we've updated to Twitch's new API
+["EventSub"](https://dev.twitch.tv/docs/eventsub/).
 
 This change has one known drawback:
 
@@ -37,7 +37,7 @@ To support the new API we've had to request some more scopes when you log in
 with your account. You will be prompted to log in again on startup if you're missing any
 required scopes.
 
-Have you run into any issues with this? Let us know on our <a
+If you run into any issues with this, please let us know on our <a
 href={discord}>Discord</a>, or make a bug report on our <a
 href={github}>GitHub</a>.
 

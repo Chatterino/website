@@ -1077,12 +1077,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/next@npm:4.7.7":
-  version: 4.7.7
-  resolution: "@vercel/next@npm:4.7.7"
+"@vercel/next@npm:4.7.8":
+  version: 4.7.8
+  resolution: "@vercel/next@npm:4.7.8"
   dependencies:
     "@vercel/nft": "npm:0.27.10"
-  checksum: 10c0/715f5dc793eea30fe3e54719e49f3066d135bd181b9af679277c6944a1e926c72042e87e5a4e36ffb3ce1d67751dc2398a1755a806a03995da262923ca966fa6
+  checksum: 10c0/b3772ec3f30bb3de313a7fe74d68fc575e81c5690822401db7de20b467021df7119318796f43795febf3999457cc5cce16f15f400af0a0059014e775bf25d336
   languageName: node
   linkType: hard
 
@@ -5528,14 +5528,14 @@ __metadata:
   linkType: hard
 
 "vercel@npm:^41.0.0":
-  version: 41.6.1
-  resolution: "vercel@npm:41.6.1"
+  version: 41.6.2
+  resolution: "vercel@npm:41.6.2"
   dependencies:
     "@vercel/build-utils": "npm:10.5.1"
     "@vercel/fun": "npm:1.1.5"
     "@vercel/go": "npm:3.2.1"
     "@vercel/hydrogen": "npm:1.2.0"
-    "@vercel/next": "npm:4.7.7"
+    "@vercel/next": "npm:4.7.8"
     "@vercel/node": "npm:5.1.14"
     "@vercel/python": "npm:4.7.2"
     "@vercel/redwood": "npm:2.3.0"
@@ -5547,7 +5547,7 @@ __metadata:
   bin:
     vc: dist/vc.js
     vercel: dist/vc.js
-  checksum: 10c0/211622a30b80ab0b93f3aeffcf3d2c0137da90c085d93330e8a1b9df23165b005caaef0282396e9bb79dc3bf2b29ec48ef57f387d2c70e88c40f43bd4005d1b8
+  checksum: 10c0/0c58ddccff56196a5ec9be06edc41843b34feee7c990f1466032f1c5e5eea4e4be45b6c336751a2f1ee51c6971fc939dd965557da352229313ab33d6d50d832a
   languageName: node
   linkType: hard
 

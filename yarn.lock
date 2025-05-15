@@ -1221,9 +1221,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/remix-builder@npm:5.4.5":
-  version: 5.4.5
-  resolution: "@vercel/remix-builder@npm:5.4.5"
+"@vercel/remix-builder@npm:5.4.6":
+  version: 5.4.6
+  resolution: "@vercel/remix-builder@npm:5.4.6"
   dependencies:
     "@vercel/error-utils": "npm:2.0.3"
     "@vercel/nft": "npm:0.29.2"
@@ -1231,7 +1231,7 @@ __metadata:
     path-to-regexp: "npm:6.1.0"
     path-to-regexp-updated: "npm:path-to-regexp@6.3.0"
     ts-morph: "npm:12.0.0"
-  checksum: 10c0/538c332066fb354fecffd7e5e07aab60f4811d7b2b084d6c5e3d7042aa503f1e855735082d91a6912db9527dd967b06d55b0868ad40d7cf1c6fd3e5c3c02ae5e
+  checksum: 10c0/a42706e67cee12a7eaf02d90061b0339ed97d94b0161a71928ab5771d50f8e66087659f8750935871c03590b81a5f0cd0a7a64eb6f8cc3ee965c52b803687964
   languageName: node
   linkType: hard
 
@@ -5553,8 +5553,8 @@ __metadata:
   linkType: hard
 
 "vercel@npm:^41.0.0":
-  version: 41.7.6
-  resolution: "vercel@npm:41.7.6"
+  version: 41.7.8
+  resolution: "vercel@npm:41.7.8"
   dependencies:
     "@vercel/build-utils": "npm:10.5.1"
     "@vercel/fun": "npm:1.1.6"
@@ -5564,7 +5564,7 @@ __metadata:
     "@vercel/node": "npm:5.1.16"
     "@vercel/python": "npm:4.7.2"
     "@vercel/redwood": "npm:2.3.1"
-    "@vercel/remix-builder": "npm:5.4.5"
+    "@vercel/remix-builder": "npm:5.4.6"
     "@vercel/ruby": "npm:2.2.0"
     "@vercel/static-build": "npm:2.7.7"
     chokidar: "npm:4.0.0"
@@ -5572,7 +5572,7 @@ __metadata:
   bin:
     vc: dist/vc.js
     vercel: dist/vc.js
-  checksum: 10c0/89aa8c28786b1bfc17dbef3de9f13b8b7c4befe01878e609cab2f0f0d5304b647f7a73fd8aebf5c8152a7eb87210f0d38df9225ac8351d6facd076875c8e5bba
+  checksum: 10c0/7e91e8f393d06c0c5823eeb3a17643acb5a5d00efcebd0ff166f1f0d0b6d1f0d3832f2910a499b21aac1084e47bec4f95dc22766339d52327392c0db30500d7a
   languageName: node
   linkType: hard
 

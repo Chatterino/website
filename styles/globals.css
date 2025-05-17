@@ -127,6 +127,7 @@
 @font-face {
   font-family: "Noto Sans";
   src: url("../fonts/NotoSans-Regular.ttf");
+  font-display: swap;
 }
 
 html,

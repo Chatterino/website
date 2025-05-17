@@ -65,11 +65,48 @@ function LinuxPage() {
           {/* AUR */}
           <h2 className="text-3xl pt-10 pb-4">Arch Linux</h2>
           <Text>
-            The{" "}
+            Get the latest stable version with{" "}
+            <Link href="https://aur.archlinux.org/packages/chatterino2-bin/">
+              chatterino2-bin
+            </Link>{" "}
+            (e.g. with yay{" "}
+            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+              yay -S chatterino2-bin
+            </code>
+            )
+          </Text>
+          <Text>
+            Get the latest nightly version with{" "}
+            <Link href="https://aur.archlinux.org/packages/chatterino2-nightly-bin/">
+              chatterino2-nightly-bin
+            </Link>{" "}
+            (e.g. with yay{" "}
+            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+              yay -S chatterino2-nightly-bin
+            </code>
+            )
+          </Text>
+          <Text>
+            Build latest stable version from source with{" "}
+            <Link href="https://aur.archlinux.org/packages/chatterino2/">
+              chatterino2
+            </Link>{" "}
+            (e.g. with yay{" "}
+            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+              yay -S chatterino2
+            </code>
+            )
+          </Text>
+          <Text>
+            Build latest development version from source with{" "}
             <Link href="https://aur.archlinux.org/packages/chatterino2-git/">
               chatterino2-git
             </Link>{" "}
-            package will build and install chatterino.
+            (e.g. with yay{" "}
+            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+              yay -S chatterino2-git
+            </code>
+            )
           </Text>
           {/* Fedora */}
           <h2 className="text-3xl pt-10 pb-4">Fedora Linux</h2>

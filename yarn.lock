@@ -1651,7 +1651,7 @@ __metadata:
     remark-github: "npm:^12.0.0"
     tailwindcss: "npm:^4.0.0"
     typescript: "npm:5.8.3"
-    vercel: "npm:^41.0.0"
+    vercel: "npm:^42.0.0"
   languageName: unknown
   linkType: soft
 
@@ -5552,9 +5552,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vercel@npm:^41.0.0":
-  version: 41.7.8
-  resolution: "vercel@npm:41.7.8"
+"vercel@npm:^42.0.0":
+  version: 42.1.0
+  resolution: "vercel@npm:42.1.0"
   dependencies:
     "@vercel/build-utils": "npm:10.5.1"
     "@vercel/fun": "npm:1.1.6"
@@ -5572,7 +5572,7 @@ __metadata:
   bin:
     vc: dist/vc.js
     vercel: dist/vc.js
-  checksum: 10c0/7e91e8f393d06c0c5823eeb3a17643acb5a5d00efcebd0ff166f1f0d0b6d1f0d3832f2910a499b21aac1084e47bec4f95dc22766339d52327392c0db30500d7a
+  checksum: 10c0/30126afa13f19a3daf7088ce99411e7238f3b7e28fe8aa404c45b3efa3e80e471f1f8292601086455d9c1b3c59701bbbad5171bdd5293c7bddc7859e35e5fbb0
   languageName: node
   linkType: hard
 

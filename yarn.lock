@@ -5621,8 +5621,8 @@ __metadata:
   linkType: hard
 
 "vercel@npm:^43.0.0":
-  version: 43.1.0
-  resolution: "vercel@npm:43.1.0"
+  version: 43.2.0
+  resolution: "vercel@npm:43.2.0"
   dependencies:
     "@vercel/blob": "npm:1.0.2"
     "@vercel/build-utils": "npm:10.6.1"
@@ -5641,7 +5641,7 @@ __metadata:
   bin:
     vc: dist/vc.js
     vercel: dist/vc.js
-  checksum: 10c0/9a5a986048fd2e875ba7ae794b984d3cc21cacbb114d037ff1f04cf3b2301a626eb8cbf6b271130c350561fbf60142e3e8db4524f3e5e4f56d22793d4f2c72b3
+  checksum: 10c0/cb3eaf88f2476d05cfe7877ac315ca0aff98504e16e02da9b7e757c471ae742fce2c4b2001c04de1f77b4bfcebcef06a03ff89af63773205c99af456f12f5c99
   languageName: node
   linkType: hard
 

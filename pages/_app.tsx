@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }: Props) {
   return (
     <div>
       <Head>
+        <link rel="icon" href="/logo.svg" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

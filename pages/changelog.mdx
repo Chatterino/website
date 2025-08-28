@@ -3,7 +3,7 @@ import Nav from "../components/nav";
 import Section from "../components/section";
 import Figure from "../components/figure";
 import FigureGroup from "../components/figure-group";
-import Credit from "../components/credit";
+import Credit, { GitHubUser } from "../components/credit";
 import { discord, github } from "../links";
 
 <Head>
@@ -15,6 +15,169 @@ import { discord, github } from "../links";
  <Section className="changelog px-16" prose>
 
 # Chatterino Changelog
+
+## 2.5.4 (Beta 1, Not yet released) {#2.5.4}
+
+### Usercards {#2.5.4-usercards}
+
+<div className="changelog-entry">
+
+- You can now add notes for a user in the usercard by clicking on the "Add notes" button. Notes are saved globally per user.
+  <Credit author="fourtf, pajlada" prs="6122, 6318" inline />
+- When a user is live, the usercard will now show a red dot next to their name. Hovering over it will reveal the number of viewers.
+  <Credit author="Nerixyz" prs="6383" inline />
+- The "Created" and "Following since" dates now have a tooltip that shows the duration since since that event.
+  <Credit author="Nerixyz" helper="pajlada" prs="6384" inline />
+
+<Figure src="./changelog/2.5.4/usercard.png" width="400">
+  New usercard view
+</Figure>
+
+</div>
+
+### Chat {#2.5.4-chat-input}
+
+<div className="changelog-entry">
+
+- When colon-completing emotes in chat, you can now use `:~` to filter for zero-width emotes.
+  <Credit author="droidicus" helper="pajlada, Nerixyz" prs="6362" inline />
+- Chatterino now saves the emotes from third party providers and loads these if they fail to load upon restarting the app.
+  <Credit
+    author="occluder"
+    helper="pajlada, Mm2PL, Nerixyz"
+    prs="6125, 6229"
+    inline
+  />
+- You can now disable the reduced opacity for historical messages.
+  <Credit author="fourtf" helper="Mm2PL" prs="6121" inline />
+- The paused indicator is now more visible and easier to notice.
+  <Credit
+    author="jacob-thompson"
+    helper="pajlada, Nerixyz, iProdigy"
+    prs="6123"
+    inline
+  />
+- On Linux, you can now set the window background to a transparent color.
+  <Credit author="apa420" prs="6137" inline />
+- In addition to the existing options like opening a split, you can now open the channel in a custom player when clicking on a twitch.tv link in chat.
+  <Credit author="brian6932" prs="6403" inline />
+- Chatterino now supports emojis from Unicode 16.0.
+  <Credit author="Nerixyz, pajlada" prs="6155" inline />
+- The emote and badge size can now be changed independently of Chatterino's overall scale.
+  <Credit author="4rneee" helpers="pajlada" prs="6126" inline />
+- In fast chats, you might not notice that your message was successfully sent. Chatterino can now pulse the text input when your messages have been received in chat.
+  <Credit author="pajlada" prs="6380" inline />
+
+<Figure src="./changelog/2.5.4/colon-tilde-complete.png" width="300">
+  Colon completing only zero-width emotes
+</Figure>
+
+</div>
+
+### Plugins {#2.5.4-plugins}
+
+<div className="changelog-entry">
+
+- Through `c2.WebSocket`, plugins can now open WebSocket connections. This can be used to listen to events from thrid party services, for example.
+  <Credit
+    author="Nerixyz"
+    helper="Mm2PL, pajlada"
+    prs="6076, 6141, 6186, 6314, 6315"
+    inline
+  />
+- Plugins can now create styled messages through `c2.Message.new()`.
+  Previously, only system (gray) messages could be created.
+  Compared to C++, there are a few capabilities missing&mdash;namely emotes and images.
+  These will be added in future releases along with an API to inspect and alter existing messages (e.g. in filters).
+  <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="5754" inline />
+- For plugin developers, there is a new REPL (read-eval-print-loop) window similar to the browser console.
+  It displays log messages and allows you to evaluate Lua code in the context of the plugin.
+  You have to manually enable this in your [`settings.json`](https://wiki.chatterino.com/Settings/) where you have to set `/plugins/repl/enabled` to `true`.
+  <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6120" inline />
+
+If you have ideas for plugins, check out [this discussion](https://github.com/Chatterino/chatterino2/discussions/4999).
+
+<Figure src="./changelog/2.5.4/plugin-repl.png" width="400">
+  Plugin REPL showing the new message API.
+</Figure>
+
+</div>
+
+### Settings {#2.5.4-settings}
+
+<div className="changelog-entry">
+
+- Filters, nicknames, and commands are now searchable from the top bar.
+  <Credit author="apa420" helper="nerixyz" prs="5886, 5890, 5891" inline />
+- There's a new hotkey action for opening the account selector.
+  <Credit author="teknsl" prs="6192" inline />
+
+</div>
+
+### Logging {#2.5.4-logging}
+
+<div className="changelog-entry">
+
+The timestamp used in the logs is now customizable similar to the one used in the app itself. Additionally, logs can now use the timestamp of messages provided by Twitch instead of the local one.
+
+<Credit author="droidicus" helper="fourtf, pajlada, nerixyz" prs="6338, 6346" />
+
+</div>
+
+### Image Uploader {#2.5.4-image-uploader}
+
+<div className="changelog-entry">
+
+- Chatterino can now export and import the image uploader configuration to/from the clipboard.
+  The import also supports (a subset of) the format used by the ShareX application.
+  If you run an image host, consider providing this configuration format for Chatterino users.
+  <Credit
+    author="knobby-tires, x3rt"
+    helpers="pajlada, Nerixyz"
+    prs="6284, 6387, 6394"
+    inline
+  />
+- The JSON selector can now query arrays using their indices like `foo.0`.
+  <Credit author="Nerixyz" prs="6193" inline />
+
+</div>
+
+### UI {#2.5.4-ui}
+
+<div className="changelog-entry">
+
+Various buttons now use vector icons over the old rasterized ones. This makes them appear sharp at any scale.
+
+<Credit
+  author="pajlada, jupjohn, Nerixyz"
+  prs="6102, 6255, 6266, 6302, 6268, 6334, 6371, 6372, 6349, 6385, 6267, 6397, 6398, 6412, 6414, 6399"
+/>
+
+</div>
+
+### Miscellaneous changes {#2.5.4-miscellaneous-changes}
+
+<div className="changelog-entry">
+
+TODO
+
+</div>
+
+### New Contributors {#2.5.4-new-contributors}
+
+<div className="changelog-entry">
+
+Thank you to everyone who helped with this release, especially the new contributors:
+
+<GitHubUser username="droidicus" />,
+<GitHubUser username="isgkm" />,
+<GitHubUser username="knobby-tires" />,
+<GitHubUser username="occluder" />,
+<GitHubUser username="vincent0955" />,
+<GitHubUser username="x3rt" />, and
+<GitHubUser username="ynot01" />.
+
+</div>
 
 ## 2.5.3 (Released 2025-03-23) {#2.5.3}
 

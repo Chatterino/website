@@ -26,7 +26,7 @@ import { discord, github } from "../links";
   <Credit author="fourtf, pajlada" prs="6122, 6318" inline />
 - When a user is live, the usercard will now show a red dot next to their name. Hovering over it will reveal the number of viewers.
   <Credit author="Nerixyz" prs="6383" inline />
-- The "Created" and "Following since" dates now have a tooltip that shows the duration since since that event.
+- The "Created" and "Following since" dates now have a tooltip that shows the duration since that event.
   <Credit author="Nerixyz" helper="pajlada" prs="6384" inline />
 
 <Figure src="./changelog/2.5.4/usercard.png" width="400">
@@ -59,7 +59,7 @@ import { discord, github } from "../links";
   />
 - On Linux, you can now set the window background to a transparent color.
   <Credit author="apa420" prs="6137" inline />
-- In addition to the existing options like opening a split, you can now open the channel in a custom player when clicking on a twitch.tv link in chat.
+- In addition to the existing options like opening a split, you can now open a channel in a custom player when right-clicking on a twitch.tv link.
   <Credit author="brian6932" prs="6403" inline />
 - Chatterino now supports emojis from Unicode 16.0.
   <Credit author="Nerixyz, pajlada" prs="6155" inline />
@@ -78,7 +78,7 @@ import { discord, github } from "../links";
 
 <div className="changelog-entry">
 
-- Through `c2.WebSocket`, plugins can now open WebSocket connections. This can be used to listen to events from thrid party services, for example.
+- Through `c2.WebSocket`, plugins can now open WebSocket connections. This can be used to listen to events from third party services, for example.
   <Credit
     author="Nerixyz"
     helper="Mm2PL, pajlada"
@@ -92,7 +92,7 @@ import { discord, github } from "../links";
   <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="5754" inline />
 - For plugin developers, there is a new REPL (read-eval-print-loop) window similar to the browser console.
   It displays log messages and allows you to evaluate Lua code in the context of the plugin.
-  You have to manually enable this in your [`settings.json`](https://wiki.chatterino.com/Settings/) where you have to set `/plugins/repl/enabled` to `true`.
+  You have to manually enable this in your [`settings.json`](https://wiki.chatterino.com/Settings/) where you have to set `plugins.repl.enabled` to `true` and restart. Then you can open the REPL from the plugin settings.
   <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6120" inline />
 
 If you have ideas for plugins, check out [this discussion](https://github.com/Chatterino/chatterino2/discussions/4999).
@@ -109,7 +109,7 @@ If you have ideas for plugins, check out [this discussion](https://github.com/Ch
 
 - Filters, nicknames, and commands are now searchable from the top bar.
   <Credit author="apa420" helper="nerixyz" prs="5886, 5890, 5891" inline />
-- There's a new hotkey action for opening the account selector.
+- There's a new hotkey action available for opening the account selector.
   <Credit author="teknsl" prs="6192" inline />
 
 </div>

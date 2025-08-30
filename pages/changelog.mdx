@@ -30,7 +30,7 @@ You can now add notes for a user in the usercard by clicking on the "Add notes" 
 
 </div>
 
-### Usercards {#2.5.4-usercards}
+### Usercard indicators {#2.5.4-usercard-indicators}
 
 <div className="changelog-entry">
 
@@ -48,7 +48,17 @@ The "Created" and "Following since" dates now have a tooltip that shows the dura
 
 </div>
 
-### Chat {#2.5.4-chat-input}
+### Duplicate messages {#2.5.4-duplicate-messages}
+
+<div className="changelog-entry">
+
+The "Allow sending duplicate messages" setting now works again.
+
+<Credit author="brian6932" helper="tetyys, Nerixyz, pajlada, jupjohn, Mm2PL" prs="6417" />
+
+</div>
+
+### Chat input {#2.5.4-chat-input}
 
 <div className="changelog-entry">
 
@@ -60,16 +70,26 @@ When colon-completing emotes in chat, you can now use `:~` to filter for zero-wi
 
 <Credit author="droidicus" helper="pajlada, Nerixyz" prs="6362" />
 
-- Bugfix: Fixed duplicate message sending for single-worded messages. (#6417)
+In fast chats, you might not notice that your message was successfully sent. Chatterino can now pulse the text input when your messages have been received in chat.
 
-- Chatterino now saves the emotes from third party providers and loads these if they fail to load upon restarting the app. <Credit author="occluder" helper="pajlada, Mm2PL, Nerixyz" prs="6125, 6229" inline />
+TODO: insert gif here
+
+<Credit author="pajlada" prs="6380" />
+
+</div>
+
+### Chat window {#2.5.4-chat-window}
+
+<div className="changelog-entry">
+
+
 - You can now disable the reduced opacity for historical messages. <Credit author="fourtf" helper="Mm2PL" prs="6121" inline />
 - Chatterino now supports emojis from Unicode 16.0. <Credit author="Nerixyz" prs="6155" inline />
 - The paused indicator is now more visible and easier to notice. <Credit author="jacob-thompson" helper="pajlada, Nerixyz, iProdigy" prs="6123" inline />
 - On Linux, you can now set the window background to a transparent color. <Credit author="apa420" prs="6137" inline />
 - In addition to the existing options like opening a split, you can now open a channel in a custom player when right-clicking on a twitch.tv link. <Credit author="brian6932" prs="6403" inline />
 - The emote and badge size can now be changed independently of Chatterino's overall scale. <Credit author="4rneee" helpers="pajlada" prs="6126" inline />
-- In fast chats, you might not notice that your message was successfully sent. Chatterino can now pulse the text input when your messages have been received in chat. <Credit author="pajlada" prs="6380" inline />
+- Chatterino now saves the emotes from third party providers and loads these if they fail to load upon restarting the app. <Credit author="occluder" helper="pajlada, Mm2PL, Nerixyz" prs="6125, 6229" inline />
 
 
 </div>

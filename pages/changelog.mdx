@@ -98,24 +98,22 @@ In fast chats, you might not notice that your message was successfully sent. Cha
 
 <div className="changelog-entry">
 
-- You can now disable the reduced opacity for historical messages. <Credit author="fourtf" helper="Mm2PL" prs="6121" inline />
-- Chatterino now supports emojis from Unicode 16.0. <Credit author="Nerixyz" prs="6155" inline />
-- The paused indicator is now more visible and easier to notice. <Credit author="jacob-thompson" helper="pajlada, Nerixyz, iProdigy" prs="6123" inline />
-- On Linux, you can now set the window background to a transparent color. <Credit author="apa420" prs="6137" inline />
-- In addition to the existing options like opening a split, you can now open a channel in a custom player when right-clicking on a twitch.tv link. <Credit author="brian6932" prs="6403" inline />
-- The emote and badge size can now be changed independently of Chatterino's overall scale. <Credit author="4rneee" helpers="pajlada" prs="6126" inline />
-- Chatterino now saves the emotes from third party providers and loads these if they fail to load upon restarting the app. <Credit author="occluder" helper="pajlada, Mm2PL, Nerixyz" prs="6125, 6229" inline />
+You can now disable the reduced opacity for historical messages.
 
-</div>
+<FigureGroup>
+  <Figure src="./changelog/2.5.4/historic-opacity-default.png" width="406">
+    The default look
+  </Figure>
+  <Figure src="./changelog/2.5.4/historic-opacity-disabled.png" width="406">
+    With the setting disabled
+  </Figure>
+</FigureGroup>
+<Credit author="fourtf" helper="Mm2PL" prs="6121" />
 
-### Settings {#2.5.4-settings}
+Chatterino now supports emojis from Unicode 16.0.
 
-<div className="changelog-entry">
-
-- Filters, nicknames, and commands are now searchable from the top bar.
-  <Credit author="apa420" helper="nerixyz" prs="5886, 5890, 5891" inline />
-- Added a new hotkey action available for opening the account selector.
-  <Credit author="teknsl" prs="6192" inline />
+<i>Editor's note: it seems like these are not available on Twitch right now.</i>
+<Credit author="Nerixyz" prs="6155" />
 
 </div>
 
@@ -139,8 +137,7 @@ local one. This behaviour is disabled by default.
 <div className="changelog-entry">
 
 Chatterino can now export and import the image uploader configuration to/from the clipboard.
-The import also supports (a subset of) the format used by the ShareX application.
-If you run an image host, consider providing this configuration format for Chatterino users.
+The import also supports a subset of the format used by the ShareX application.
 
 <Credit
   author="knobby-tires, x3rt"
@@ -159,6 +156,15 @@ For image upload services that serve the response in an array, the JSON selector
 <div className="changelog-entry">
 
 Various buttons now use vector icons over the old rasterized ones. This makes them appear sharp at any scale.
+
+<FigureGroup>
+  <Figure src="./changelog/2.5.4/buttons-old.png" width="406">
+    Chatterino v2.5.3
+  </Figure>
+  <Figure src="./changelog/2.5.4/buttons-new.png" width="406">
+    Chatterino v2.5.4
+  </Figure>
+</FigureGroup>
 
 <Credit
   author="pajlada, Nerixyz, jupjohn, leungbk"
@@ -215,7 +221,7 @@ Fixes various crashes that could occur when:
 - running Chatterino attached to a conhost that was closed before Chatterino
 - EventSub had connection issues
 - searching in an emote popup that was started from a non-Twitch channel
-- plugins would make an HTPT request from a timeout handler
+- plugins would make an HTTP request from a timeout handler
 
 <Credit
   author="pajlada, vincent0955, Nerixyz"
@@ -230,11 +236,25 @@ Fixes various crashes that could occur when:
 
 <div className="changelog-entry">
 
+- The paused indicator is now more visible and easier to notice. <Credit author="jacob-thompson" helper="pajlada, Nerixyz, iProdigy" prs="6123" inline />
+
+- In addition to the existing options like opening a split, you can now open a channel in a custom player when right-clicking on a twitch.tv link. <Credit author="brian6932" prs="6403" inline />
+
+- The emote and badge size can now be changed independently of Chatterino's overall scale. <Credit author="4rneee" helpers="pajlada" prs="6126" inline />
+
+- Chatterino now saves the emotes from third party providers and loads these if they fail to load upon restarting the app. <Credit author="occluder" helper="pajlada, Mm2PL, Nerixyz" prs="6125, 6229" inline />
+
 - Message character length label font is now monospaced, meaning the message input box should jump around a little bit less. <Credit author="pajlada" prs="6366" inline />
 
 - Popup overlay now only draws an outline when being interacted with. <Credit author="teknsl" prs="6140" inline />
 
-- You can now disable the "double-click tab to rename" behaviour. <Credit author="jupjohn" pr="6163, 6184" />
+- You can now disable the "double-click tab to rename" behaviour. <Credit author="jupjohn" pr="6163, 6184" inline />
+
+- In the settings dialog, you can now search for filters, nicknames, and commands from the top bar. <Credit author="apa420" prs="5886, 5890, 5891" inline />
+
+- You can now add a custom hotkey for opening the account selector. <Credit author="teknsl" prs="6192" inline />
+
+- On Linux, you can now set the window background to a transparent color. <Credit author="apa420" prs="6137" inline />
 
 </div>
 
@@ -276,11 +296,10 @@ Fixes various crashes that could occur when:
 - Don't add reply buttons to messages that are invalid reply targets. <Credit
   author="hemirt" helper="fourtf, Nerixyz, Wissididom, pajlada" prs="6119" inline />
 
-- Fixed an issue where eventsub subscriptions might fail after changing user.
-  <Credit author="pajlada" prs="6348" inline />
+- Fixed an issue where eventsub subscriptions might fail after changing user. <Credit author="pajlada" prs="6348" inline />
 
-- Fixed eventsub message delete notifications not being affected by "Show
-  deletions of single messages". <Credit author="Mm2PL" prs="6233" inline />
+- Fixed eventsub message delete notifications not being affected by the "Show
+  deletions of single messages" setting. <Credit author="Mm2PL" prs="6233" inline />
 
 - Fixed inconsistent spaces in messages when using fractional scaling. <Credit
   author="Nerixyz" prs="6231, 6254" inline />
@@ -318,17 +337,15 @@ Fixes various crashes that could occur when:
   chat dialog input for macOS. <Credit author="jacob-thompson" helper="Mm2PL,
   	 Nerixyz" prs="6111" inline />
 
-- Fixed the emote popup erroneously logging messages to the `Other` directory.
-  <Credit author="pajlada" prs="6165" inline />
+- Fixed the emote popup erroneously logging messages to the `Other` directory. <Credit author="pajlada" prs="6165" inline />
 
 - Fixed message contents being cleared when using the close button for
   replies. <Credit author="pajlada" prs="6145" inline />
 
-- Fixed missing BetterTTV live updates of emotes. <Credit author="iProdidgy"
+- Fixed missing BetterTTV live updates of emotes. <Credit author="iProdigy"
   helper="Nerixyz" prs="6132" inline />
 
-- Fixed scrolling now working on inputs in the settings. <Credit
-  author="Nerixyz" prs="6128" inline />
+- Scrolling over a combobox or spinbox in the settings dialog now scrolls the setting dialog instead of changing values. <Credit author="Nerixyz" prs="6128" inline />
 
 - Don't create native messaging manifest file if browser directory doesn't
   exist. <Credit author="4rneee" prs="6116" inline />

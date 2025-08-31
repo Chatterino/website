@@ -7,7 +7,7 @@ type Props = {
   prs?: string;
 };
 
-function GitHubUser({ username }: { username: string }) {
+export function GitHubUser({ username }: { username: string }) {
   const avatarURL = `https://avatars.githubusercontent.com/${username}?v=4&s=60`;
   return (
     <a href={`https://github.com/${username}`} className="gh-author">

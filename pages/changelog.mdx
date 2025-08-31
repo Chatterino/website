@@ -26,7 +26,11 @@ You can now add notes for a user in the usercard by clicking on the "Add notes" 
 
 <Figure src="./changelog/2.5.4/usercard-notes.png"></Figure>
 
-<Credit author="fourtf, pajlada" helper="isgkm, Nerixyz" prs="6122, 6318, 6413" />
+<Credit
+  author="fourtf, pajlada"
+  helper="isgkm, Nerixyz"
+  prs="6122, 6318, 6413"
+/>
 
 </div>
 
@@ -54,7 +58,11 @@ The "Created" and "Following since" dates now have a tooltip that shows the dura
 
 The "Allow sending duplicate messages" setting now works again.
 
-<Credit author="brian6932" helper="tetyys, Nerixyz, pajlada, jupjohn, Mm2PL" prs="6417" />
+<Credit
+  author="brian6932"
+  helper="tetyys, Nerixyz, pajlada, jupjohn, Mm2PL"
+  prs="6417"
+/>
 
 </div>
 
@@ -72,7 +80,7 @@ When colon-completing emotes in chat, you can now use `:~` to filter for zero-wi
 
 In fast chats, you might not notice that your message was successfully sent. Chatterino can now pulse the text input when your messages have been received in chat.
 
-TODO: insert gif here
+<Figure src="./changelog/2.5.4/chatinput-pulse.webm" width="350"></Figure>
 
 <Credit author="pajlada" prs="6380" />
 
@@ -82,7 +90,6 @@ TODO: insert gif here
 
 <div className="changelog-entry">
 
-
 - You can now disable the reduced opacity for historical messages. <Credit author="fourtf" helper="Mm2PL" prs="6121" inline />
 - Chatterino now supports emojis from Unicode 16.0. <Credit author="Nerixyz" prs="6155" inline />
 - The paused indicator is now more visible and easier to notice. <Credit author="jacob-thompson" helper="pajlada, Nerixyz, iProdigy" prs="6123" inline />
@@ -90,7 +97,6 @@ TODO: insert gif here
 - In addition to the existing options like opening a split, you can now open a channel in a custom player when right-clicking on a twitch.tv link. <Credit author="brian6932" prs="6403" inline />
 - The emote and badge size can now be changed independently of Chatterino's overall scale. <Credit author="4rneee" helpers="pajlada" prs="6126" inline />
 - Chatterino now saves the emotes from third party providers and loads these if they fail to load upon restarting the app. <Credit author="occluder" helper="pajlada, Mm2PL, Nerixyz" prs="6125, 6229" inline />
-
 
 </div>
 
@@ -102,9 +108,6 @@ TODO: insert gif here
   <Credit author="apa420" helper="nerixyz" prs="5886, 5890, 5891" inline />
 - Added a new hotkey action available for opening the account selector.
   <Credit author="teknsl" prs="6192" inline />
-
-TODO
-- Minor: Allow disabling of double-click tab renaming through setting. (#6163, #6184)
 
 </div>
 
@@ -131,7 +134,11 @@ Chatterino can now export and import the image uploader configuration to/from th
 The import also supports (a subset of) the format used by the ShareX application.
 If you run an image host, consider providing this configuration format for Chatterino users.
 
-<Credit author="knobby-tires, x3rt" helpers="pajlada, Nerixyz" prs="6284, 6387, 6394" />
+<Credit
+  author="knobby-tires, x3rt"
+  helpers="pajlada, Nerixyz"
+  prs="6284, 6387, 6394"
+/>
 
 For image upload services that serve the response in an array, the JSON selector can now query arrays using their indices like `foo.0`.
 
@@ -145,9 +152,12 @@ For image upload services that serve the response in an array, the JSON selector
 
 Various buttons now use vector icons over the old rasterized ones. This makes them appear sharp at any scale.
 
-<Credit author="pajlada, Nerixyz, jupjohn, leungbk" prs="6102, 6106, 6255,
+<Credit
+  author="pajlada, Nerixyz, jupjohn, leungbk"
+  prs="6102, 6106, 6255,
 	6266, 6302, 6268, 6334, 6371, 6372, 6349, 6385, 6267, 6397, 6398, 6412,
-	6414, 6399, 6426" />
+	6414, 6399, 6426"
+/>
 
 </div>
 
@@ -157,7 +167,11 @@ Various buttons now use vector icons over the old rasterized ones. This makes th
 
 Through `c2.WebSocket`, plugins can now open WebSocket connections. This can be used to listen to events from third party services.
 
-<Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6076, 6141, 6186, 6314, 6315" />
+<Credit
+  author="Nerixyz"
+  helper="Mm2PL, pajlada"
+  prs="6076, 6141, 6186, 6314, 6315"
+/>
 
 Plugins can now create styled messages through `c2.Message.new()`.
 Previously, only system (gray) messages could be created.
@@ -178,49 +192,8 @@ You have to manually enable this in your [`settings.json`](https://wiki.chatteri
 
 If you have ideas for plugins, check out [this discussion](https://github.com/Chatterino/chatterino2/discussions/4999).
 
-</div>
-
-### Miscellaneous changes {#2.5.4-miscellaneous-changes}
-
-<div className="changelog-entry">
-
-- Minor: Consolidate twitch.tv URLs to start with www (#6407)
-- Minor: Message character length label is now monospaced. (#6366)
-- Minor: Popup overlay now only draws an outline when being interacted with. (#6140)
-
-</div>
-
-### Miscellaneous fixes {#2.5.4-miscellaneous-fixes}
-
-<div className="changelog-entry">
-
-- Bugfix: Fixed the split input not updating its height upon tab-completion. (#6411)
-- Bugfix: Fixed a setting description not filtering correctly on search. (#6389)
-- Bugfix: Fixed command triggers showing as '/...' when the value is longer than the column width. (#6369)
-- Bugfix: Fixed theme changes not instantly applying to messages. (#6373)
-- Bugfix: Emotes that failed to load their images now show as text. (#6355)
-- Bugfix: Fixed invalid commands from being forwarded to Helix, making it possible for information to leak (e.g. if you typed `/bann username ban reason` it would be seen by others in chat as `username ban reason`). (#6272, #6330)
-- Bugfix: Don't add reply buttons to messages that are invalid reply targets. (#6119)
-- Bugfix: Fixed an issue where eventsub subscriptions might fail after changing user. (#6348)
-- Bugfix: Fixed eventsub message delete notifications not being affected by "Show deletions of single messages". (#6233)
-- Bugfix: Fixed inconsistent spaces in messages when using fractional scaling. (#6231, #6254)
-- Bugfix: Fixed split resizing mode sometimes getting stuck or acting weird if you released Ctrl before the left mouse button. (#6396)
-- Bugfix: Fixed notebook buttons (settings, account switcher, streamer mode) not performing a relayout when their visibility changed, causing a gap until resize. Linux / macOS only. (#6328)
-- Bugfix: Fixed shared chat badges displaying pixelated when Chatterino is scaled too much. (#6146)
-- Bugfix: Fixed some Twitch commands not getting tab-completed correctly. (#6143)
-- Bugfix: Correctly color usernames in subscription, announcement, bits badge tier update, raid, and other similar notification messages, taking all color sources into consideration. (#6323)
-- Bugfix: Correctly color gifter & recipient usernames in subscription gift messages, taking all color sources into consideration. (#6322)
-- Bugfix: Fixed an issue where Splits could get lost by dragging it onto your Recycle Bin. (#6147)
-- Bugfix: Fixed an issue where text boxes in the settings dialog could be stuck with an old value. (#6286)
-- Bugfix: Fixed blocked users showing up in "Users joined:" and "Users parted:" messages. (#6181)
-- Bugfix: Handle <kbd>CMD</kbd> + <kbd>BACKSPACE</kbd> behavior explicitly in main chat dialog input for macOS. (#6111)
-- Bugfix: Fixed the emote popup erroneously logging messages to the `Other` directory. (#6165)
-- Bugfix: Fixed message contents being cleared when using the close button for replies. (#6145)
-- Bugfix: Fixed missing BetterTTV live updates of emotes. (#6132)
-- Bugfix: Fixed scrolling now working on inputs in the settings. (#6128)
-- Bugfix: Don't create native messaging manifest file if browser directory doesn't exist. (#6116)
-- Bugfix: Automatic streamer mode detection now works from Flatpak. (#6250)
-- Bugfix: Commands are no longer tab-completable in the middle of messages. (#6273)
+You can find technical documentation for plugins
+[here](https://github.com/Chatterino/chatterino2/blob/445865d0d814fd2aa9a689895bb92c5787762add/docs/wip-plugins.md).
 
 </div>
 
@@ -236,8 +209,127 @@ Fixes various crashes that could occur when:
 - searching in an emote popup that was started from a non-Twitch channel
 - plugins would make an HTPT request from a timeout handler
 
-<Credit author="pajlada, vincent0955, Nerixyz" helper="Leppunen, brian6932" prs="6187,
-	6197, 6161, 6204, 6213, 6368, 6357, 6375" />
+<Credit
+  author="pajlada, vincent0955, Nerixyz"
+  helper="Leppunen, brian6932"
+  prs="6187,
+	6197, 6161, 6204, 6213, 6368, 6357, 6375"
+/>
+
+</div>
+
+### Miscellaneous changes {#2.5.4-miscellaneous-changes}
+
+<div className="changelog-entry">
+
+- Message character length label font is now monospaced, meaning the message input box should jump around a little bit less. <Credit author="pajlada" prs="6366" inline />
+
+- Popup overlay now only draws an outline when being interacted with. <Credit author="teknsl" prs="6140" inline />
+
+- You can now disable the "double-click tab to rename" behaviour. <Credit author="jupjohn" pr="6163, 6184" />
+
+</div>
+
+### Miscellaneous fixes {#2.5.4-miscellaneous-fixes}
+
+<div className="changelog-entry">
+
+- All Twitch links are now properly prefixed with `www` ensuring no unneccessary redirect happens. <Credit author="cqttv" prs="6407" inline />
+
+- Emotes that failed to load their images now show as text. <Credit
+  author="Nerixyz" prs="6355" inline />
+
+- Fixed the split input not updating its height upon tab-completion. <Credit
+    author="Nerixyz"
+    prs="6411"
+    inline
+  />
+
+- Fixed a setting description not filtering correctly on search. <Credit
+    author="hemirt"
+    prs="6389"
+    inline
+  />
+
+- Fixed command triggers showing as '/...' when the value is longer than the column width. <Credit
+    author="jupjohn"
+    prs="6369"
+    inline
+  />
+
+- Fixed theme changes not instantly applying to messages. <Credit
+  author="Nerixyz" prs="6373" inline />
+
+- Fixed invalid commands from being forwarded to Helix, making it possible for
+  information to leak (e.g. if you typed `/bann username ban reason` it would be
+  seen by others in chat as `username ban reason`). <Credit
+  author="pajlada, Nerixyz" prs="6272, 6330" inline />
+
+- Don't add reply buttons to messages that are invalid reply targets. <Credit
+  author="hemirt" helper="fourtf, Nerixyz, Wissididom, pajlada" prs="6119" inline />
+
+- Fixed an issue where eventsub subscriptions might fail after changing user.
+  <Credit author="pajlada" prs="6348" inline />
+
+- Fixed eventsub message delete notifications not being affected by "Show
+  deletions of single messages". <Credit author="Mm2PL" prs="6233" inline />
+
+- Fixed inconsistent spaces in messages when using fractional scaling. <Credit
+  author="Nerixyz" prs="6231, 6254" inline />
+
+- Fixed split resizing mode sometimes getting stuck or acting weird if you
+  released Ctrl before the left mouse button. <Credit author="pajlada" prs="6396" inline />
+
+- Fixed notebook buttons (settings, account switcher, streamer mode) not
+  performing a relayout when their visibility changed, causing a gap until
+  resize. Linux / macOS only. <Credit author="pajlada" prs="6328" inline />
+
+- Fixed shared chat badges displaying pixelated when Chatterino is scaled too
+  much. <Credit author="Nerixyz" prs="6146" inline />
+
+- Fixed some Twitch commands not getting tab-completed correctly. <Credit
+  author="Nerixyz" prs="6143" inline />
+
+- Correctly color usernames in subscription, announcement, bits badge tier
+  update, raid, and other similar notification messages, taking all color
+  sources into consideration. <Credit author="pajlada" prs="6323" inline />
+
+- Correctly color gifter & recipient usernames in subscription gift messages,
+  taking all color sources into consideration. <Credit author="pajlada" prs="6322" inline />
+
+- Fixed an issue where Splits could get lost by dragging it onto your Recycle
+  Bin. <Credit author="pajlada" helper="rod41732" prs="6147" inline />
+
+- Fixed an issue where text boxes in the settings dialog could be stuck with
+  an old value. <Credit author="pajlada" prs="6286" inline />
+
+- Fixed blocked users showing up in "Users joined:" and "Users parted:"
+  messages. <Credit author="pajlada" helper="Nerixyz, iProdigy" prs="6181" inline />
+
+- Handle <kbd>CMD</kbd> + <kbd>BACKSPACE</kbd> behavior explicitly in main
+  chat dialog input for macOS. <Credit author="jacob-thompson" helper="Mm2PL,
+  	 Nerixyz" prs="6111" inline />
+
+- Fixed the emote popup erroneously logging messages to the `Other` directory.
+  <Credit author="pajlada" prs="6165" inline />
+
+- Fixed message contents being cleared when using the close button for
+  replies. <Credit author="pajlada" prs="6145" inline />
+
+- Fixed missing BetterTTV live updates of emotes. <Credit author="iProdidgy"
+  helper="Nerixyz" prs="6132" inline />
+
+- Fixed scrolling now working on inputs in the settings. <Credit
+  author="Nerixyz" prs="6128" inline />
+
+- Don't create native messaging manifest file if browser directory doesn't
+  exist. <Credit author="4rneee" prs="6116" inline />
+
+- Automatic streamer mode detection now works from Flatpak. <Credit
+  author="ilya-zlobintsev" prs="6250" inline />
+
+- Commands are no longer tab-completable in the middle of messages. <Credit
+  author="pajlada" prs="6273" inline />
 
 </div>
 
@@ -256,8 +348,8 @@ Thank you to everyone who helped with this release, especially the new contribut
 <GitHubUser username="knobby-tires" />,
 <GitHubUser username="droidicus" />,
 <GitHubUser username="vincent0955" />,
-<GitHubUser username="isgkm" />,
-<GitHubUser username="x3rt" />, and
+<GitHubUser username="isgkm" />, and
+<GitHubUser username="x3rt" />.
 
 </div>
 

@@ -16,7 +16,7 @@ import { discord, github } from "../links";
 
 # Chatterino Changelog
 
-## 2.5.4 beta 1 (Released 2025-08-31) {#2.5.4}
+## 2.5.4 (Released 2025-09-21) {#2.5.4}
 
 ### User notes {#2.5.4-user-notes}
 
@@ -84,7 +84,7 @@ When colon-completing emotes in chat, you can now use `:~` to filter for zero-wi
   Colon completing only zero-width emotes
 </Figure>
 
-<Credit author="droidicus" helper="pajlada, Nerixyz" prs="6362" />
+<Credit author="droidicus" helper="pajlada, Nerixyz" prs="6362, 6440" />
 
 In fast chats, you might not notice that your message was successfully sent. Chatterino can now pulse the text input when your messages have been received in chat.
 
@@ -168,9 +168,10 @@ Various buttons now use vector icons over the old rasterized ones. This makes th
 
 <Credit
   author="pajlada, Nerixyz, jupjohn, leungbk"
+  helpers="otaviobia"
   prs="6102, 6106, 6255,
 	6266, 6302, 6268, 6334, 6371, 6372, 6349, 6385, 6267, 6397, 6398, 6412,
-	6414, 6399, 6426"
+	6414, 6399, 6426, 6447, 6453, 6457"
 />
 
 </div>
@@ -207,7 +208,7 @@ You have to manually enable this in your [`settings.json`](https://wiki.chatteri
 If you have ideas for plugins, check out [this discussion](https://github.com/Chatterino/chatterino2/discussions/4999).
 
 You can find technical documentation for plugins
-[here](https://github.com/Chatterino/chatterino2/blob/445865d0d814fd2aa9a689895bb92c5787762add/docs/wip-plugins.md).
+[here](https://github.com/Chatterino/chatterino2/blob/4927ad8bb7b1db86c28566623eafcd0009734794/docs/wip-plugins.md).
 
 </div>
 
@@ -273,6 +274,12 @@ Fixes various crashes that could occur when:
     inline
   />
 
+- Fixed flickering tooltips on Wayland. <Credit
+    author="2547techno"
+    prs="6451"
+    inline
+  />
+
 - Fixed a setting description not filtering correctly on search. <Credit
     author="hemirt"
     prs="6389"
@@ -335,7 +342,7 @@ Fixes various crashes that could occur when:
 
 - Handle <kbd>CMD</kbd> + <kbd>BACKSPACE</kbd> behavior explicitly in main
   chat dialog input for macOS. <Credit author="jacob-thompson" helper="Mm2PL,
-  	 Nerixyz" prs="6111" inline />
+  	 Nerixyz" prs="6111, 6469" inline />
 
 - Fixed the emote popup erroneously logging messages to the `Other` directory. <Credit author="pajlada" prs="6165" inline />
 
@@ -356,6 +363,20 @@ Fixes various crashes that could occur when:
 - Commands are no longer tab-completable in the middle of messages. <Credit
   author="pajlada" prs="6273" inline />
 
+- Fixed plugin channel comparisons. <Credit
+  author="Nerixyz" prs="6456" inline />
+
+- Update the message length font when updating your chat font. <Credit
+  author="Obertura777" prs="6462" inline />
+
+- Improved stability of the plugin error handling. <Credit author="Nerixyz" prs="6441" inline />
+
+- Fixed "A message from X has been deleted" messages logging empty messages to
+  disk. <Credit author="jupjohn" prs="6465" inline />
+
+- Do not set default hotkeys for focusing splits on macOS, as Option + Arrows
+  are used for cursor navigation. <Credit author="jacob-thompson" prs="6470" inline />
+
 </div>
 
 ### New Contributors {#2.5.4-new-contributors}
@@ -373,8 +394,10 @@ Thank you to everyone who helped with this release, especially the new contribut
 <GitHubUser username="knobby-tires" />,
 <GitHubUser username="droidicus" />,
 <GitHubUser username="vincent0955" />,
-<GitHubUser username="isgkm" />, and
-<GitHubUser username="x3rt" />.
+<GitHubUser username="isgkm" />,
+<GitHubUser username="x3rt" />,
+<GitHubUser username="Obertura777" />, and
+<GitHubUser username="otaviobia" />.
 
 </div>
 

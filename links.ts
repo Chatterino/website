@@ -9,7 +9,7 @@ export const nightly =
   "https://github.com/Chatterino/chatterino2/releases/tag/nightly-build";
 export const allDownloads = "download";
 
-export const currentVersion = "2.5.3";
+export const currentVersion = "2.5.4";
 export const baseDownloadLink = `https://chatterino.fra1.digitaloceanspaces.com/bin`;
 const dl = `https://chatterino.fra1.digitaloceanspaces.com/bin/${currentVersion}`;
 

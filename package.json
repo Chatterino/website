@@ -17,8 +17,8 @@
     "mdast-util-find-and-replace": "^3.0.0",
     "next": "^15.0.0",
     "postcss": "^8.4.18",
-    "react": "19.1.1",
-    "react-dom": "19.1.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "react-elm-components": "^1.1.0",
     "react-responsive-carousel": "^3.2.23",
     "rehype-autolink-headings": "^7.1.0",
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.8.2",
     "@types/node": "22.18.8",
-    "@types/react": "19.1.14",
+    "@types/react": "19.2.0",
     "prettier": "3.6.2",
     "typescript": "5.9.3",
     "vercel": "^48.0.0"

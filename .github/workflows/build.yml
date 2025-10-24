@@ -28,7 +28,7 @@ jobs:
           yarn run cloudflare-build
 
       - name: Upload output files
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: Output Files
           path: out/*

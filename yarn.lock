@@ -1174,12 +1174,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:22.18.8":
-  version: 22.18.8
-  resolution: "@types/node@npm:22.18.8"
+"@types/node@npm:22.18.12":
+  version: 22.18.12
+  resolution: "@types/node@npm:22.18.12"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10c0/54473730e7417b923fec427f62ed3204259acbd8e450a7593bad8ae02a75effcfcc864b34bf02c108eeb9c04a404791687f42b801bafa5264a8761f4df9122fd
+  checksum: 10c0/13a4638f2baba3efba2b8bc369dd6f950dccbfca78f318f9c9f2c7adc11fce14fc119723c38567dada2d57a873c092b7356c024924d5974a08f3c1f93dc706c6
   languageName: node
   linkType: hard
 
@@ -1856,7 +1856,7 @@ __metadata:
     "@mdx-js/react": "npm:^3.0.0"
     "@next/mdx": "npm:^15.0.0"
     "@tailwindcss/postcss": "npm:^4.0.0"
-    "@types/node": "npm:22.18.8"
+    "@types/node": "npm:22.18.12"
     "@types/react": "npm:19.2.2"
     mdast-util-find-and-replace: "npm:^3.0.0"
     next: "npm:^15.0.0"

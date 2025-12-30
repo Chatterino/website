@@ -9,8 +9,7 @@ function Footer() {
         <div>
           Chatterino is made by{" "}
           <Link href="https://twitter.com/fourtf_xd">fourtf</Link>,{" "}
-          <Link href="https://twitter.com/pajlada">pajlada</Link> and
-          contributors.
+          <Link href="https://pajlada.se">pajlada</Link>, and contributors.
         </div>
         <div>
           Design by <Link href="https://twitter.com/smaczny">Smaczny</Link>

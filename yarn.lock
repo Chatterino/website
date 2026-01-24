@@ -1637,10 +1637,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/detect-agent@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@vercel/detect-agent@npm:1.0.0"
-  checksum: 10c0/c7e838307720bab0d55a467c3a0463f516b94c51668a5d1e4e1637c0ea9c35aa578ca89fe626253d199ccd8ec2a09776fd0d05e978e51770f7f5c7ab7f4c0b1c
+"@vercel/detect-agent@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@vercel/detect-agent@npm:1.1.0"
+  checksum: 10c0/39a9fcae6eac43c661f830b3b8e7faa6c00476bcede69a4ddb1d7647b3baf5eb9d900f395065a991e7354000cf75d6e815dc1f872ef067bb475dcdc1957cbdf0
   languageName: node
   linkType: hard
 
@@ -1869,10 +1869,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/python@npm:6.3.0":
-  version: 6.3.0
-  resolution: "@vercel/python@npm:6.3.0"
-  checksum: 10c0/11756d021665e54a6f76cf58cbf25d260c3884b1f3196fb3ab60c4324d644df015c5f417b7d469fdee2ea3fafbbcbcbbad4aec838ef2f353984dca1950ae0be3
+"@vercel/python@npm:6.3.1":
+  version: 6.3.1
+  resolution: "@vercel/python@npm:6.3.1"
+  checksum: 10c0/a9aac61d75bdb24d61373f52e5a4c119a901a8c3afecb9bd2fb99c9c2adfe05b020f9ad3caa807513daf141b61694331647c3de15154da0c7b21d8ed13365854
   languageName: node
   linkType: hard
 
@@ -6690,13 +6690,13 @@ __metadata:
   linkType: hard
 
 "vercel@npm:^50.0.0":
-  version: 50.4.10
-  resolution: "vercel@npm:50.4.10"
+  version: 50.5.0
+  resolution: "vercel@npm:50.5.0"
   dependencies:
     "@vercel/backends": "npm:0.0.23"
     "@vercel/blob": "npm:1.0.2"
     "@vercel/build-utils": "npm:13.2.15"
-    "@vercel/detect-agent": "npm:1.0.0"
+    "@vercel/detect-agent": "npm:1.1.0"
     "@vercel/elysia": "npm:0.1.26"
     "@vercel/express": "npm:0.1.33"
     "@vercel/fastify": "npm:0.1.29"
@@ -6709,7 +6709,7 @@ __metadata:
     "@vercel/nestjs": "npm:0.2.30"
     "@vercel/next": "npm:4.15.16"
     "@vercel/node": "npm:5.5.27"
-    "@vercel/python": "npm:6.3.0"
+    "@vercel/python": "npm:6.3.1"
     "@vercel/redwood": "npm:2.4.9"
     "@vercel/remix-builder": "npm:5.5.9"
     "@vercel/ruby": "npm:2.2.4"
@@ -6722,7 +6722,7 @@ __metadata:
   bin:
     vc: dist/vc.js
     vercel: dist/vc.js
-  checksum: 10c0/c255d301a0b8d8f7d59ce8cb91c74d49d1d64a87fb0c1915cf0f5df52ed5e2fc996f9cf8520c6958e95dd751a8361f372d84498798c0d51a1e020848ef98b90b
+  checksum: 10c0/1246dc3e68a7af15e3df1a22dce1f382aa15e132f60ed9395f6e9a5c1cf1687f2d641b1a0c14e496a9410d94c609759ce88614349626e203686c33ff9fc0c1f8
   languageName: node
   linkType: hard
 

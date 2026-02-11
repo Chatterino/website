@@ -29,7 +29,7 @@
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.8.2",
     "@types/node": "24.10.12",
-    "@types/react": "19.2.13",
+    "@types/react": "19.2.14",
     "prettier": "3.8.1",
     "typescript": "5.9.3",
     "vercel": "^50.0.0"

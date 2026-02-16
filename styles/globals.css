@@ -103,6 +103,10 @@
     font-size: 90%;
   }
 
+  .changelog a code {
+    @apply text-blue-300 underline decoration-blue-300;
+  }
+
   .changelog kbd {
     @apply m-0 whitespace-break-spaces bg-gray-900 border-gray-600 border border-b-2 rounded-xs;
     padding: 0.2em 0.5em;

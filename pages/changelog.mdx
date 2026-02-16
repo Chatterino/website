@@ -53,15 +53,60 @@ import { discord, github } from "../links";
 
 ### Plugin things
 
-- Minor: Added message introspection and manipulation. (#6353)
-- Minor: Added link support to plugin message API. (#6386, #6527)
-- Minor: Added a JSON API for plugins (`require('chatterino.json')`). (#6420)
-- Minor: Added an API to get the current Twitch account in plugins. (#6554, #6675)
-- Minor: Added `debug.traceback` for plugins. (#6652)
-- Minor: Added message read/update methods to the `Channel` plugin API. (#6650)
-- Minor: Added a display name change event to `Channel` for plugins. (#6594)
-- Bugfix: Fixed Lua errors from handlers of HTTP requests not being logged. (#6452)
-- Dev: The LuaLS meta files moved from `docs/plugin-meta.lua` to `docs/lua-meta/globals.lua`. (#6530)
+<div className="changelog-entry">
+
+In this update, plugins can make use of several new APIs:
+
+- **Access and modify messages in channels**: New methods like
+  [`Channel:message_snapshot`](https://github.com/Chatterino/chatterino2/blob/09a6c3fd7a19fe0178a0e0060c848febab3ae294/docs/wip-plugins.md#channelmessage_snapshotn_items) allow plugins to retrieve all messages available in a channel.
+  The returned [`c2.Message`](https://github.com/Chatterino/chatterino2/blob/09a6c3fd7a19fe0178a0e0060c848febab3ae294/docs/wip-plugins.md#message)s can be queried (e.g. accessing individual elements). Except for their flags,
+  messages in a channel can't be modified. However, you can replace messages in channels ([`Channel:replace_message`](https://github.com/Chatterino/chatterino2/blob/09a6c3fd7a19fe0178a0e0060c848febab3ae294/docs/wip-plugins.md#channelreplace_messagemessage-replacement-hint)).
+
+  <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6353, 6650" inline />
+
+- **Add links to message elements**: Many message elements in Chatterino can now have a link attached to them.
+  These links can open a usercard, jump to a message, copy text, and more.
+
+  <Credit author="Mm2PL" helper="Nerixyz, pajlada" prs="6386, 6527" inline />
+
+- **Parse and serialize JSON**: Many APIs communicate through JSON. To avoid having to include a third party library
+  every time, Chatterino now provides a built-in [`chatterino.json`](https://github.com/Chatterino/chatterino2/blob/09a6c3fd7a19fe0178a0e0060c848febab3ae294/docs/wip-plugins.md#json-api) module that you can `require()`.
+
+  <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6420, 6530" inline />
+
+- **Get the current Twitch account**: [`c2.current_account()`](https://github.com/Chatterino/chatterino2/blob/09a6c3fd7a19fe0178a0e0060c848febab3ae294/docs/wip-plugins.md#current_account) gives you the currently logged in account and its ID.
+
+  <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6554, 6675" inline />
+
+- **Traceback for protected calls**: When a function fails in protected mode with [`pcall`](https://www.lua.org/manual/5.4/manual.html#pdf-pcall),
+  you often want to get a stack trace of where the error happened.
+  To help with this, we now include [`debug.traceback`](https://www.lua.org/manual/5.4/manual.html#pdf-debug.traceback).
+  You can pass this as the second argument to [`xpcall`](https://www.lua.org/manual/5.4/manual.html#pdf-xpcall).
+
+  <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6652" inline />
+
+- **Display name change events**: Plugins can now get notified when the display name of a channel changes with
+  [`Channel:on_display_name_changed`](https://github.com/Chatterino/chatterino2/blob/09a6c3fd7a19fe0178a0e0060c848febab3ae294/docs/wip-plugins.md#channelon_display_name_changedcb).
+  <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6594" inline />
+
+<p class="my-4">
+  One other notable change is that the LuaLS meta files moved from
+  `docs/plugin-meta.lua` to
+  [`docs/lua-meta/globals.lua`](https://github.com/Chatterino/chatterino2/blob/master/docs/lua-meta/globals.lua)
+  because of the new JSON module, which has a separate meta file.
+</p>
+
+<p class="my-4">
+  If you have ideas for plugins, check out [this
+  discussion](https://github.com/Chatterino/chatterino2/discussions/4999). For
+  an overview of proposed features, check out [the graph in this
+  comment](https://github.com/Chatterino/chatterino2/discussions/4999#discussioncomment-14093379).
+</p>
+
+You can find technical documentation for plugins
+[here](https://github.com/Chatterino/chatterino2/blob/09a6c3fd7a19fe0178a0e0060c848febab3ae294/docs/wip-plugins.md).
+
+</div>
 
 ### Miscellaneous fixes {#2.5.5-miscellaneous-fixes}
 
@@ -88,6 +133,7 @@ import { discord, github } from "../links";
 - Bugfix: Fixed incorrect deletion length in tab autocomplete when completion included emojis. (#6800)
 - Bugfix: Fixed WebSockets for 7TV or BTTV not connecting on Windows if IPv6 attempts fail. (#6805)
 - Bugfix: Fixed portable updates not showing an error if the updater is not present. (#6801)
+- Bugfix: Fixed Lua errors from handlers of HTTP requests not being logged. (#6452)
 
 ### Stability fixes
 

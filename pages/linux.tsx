@@ -119,7 +119,7 @@ function LinuxPage() {
             <a href="https://src.fedoraproject.org/user/solomoncyj">
               solomoncyj
             </a>
-            .
+            :{" "}
             <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
               sudo dnf install chatterino
             </code>

@@ -29,9 +29,76 @@ import { discord, github } from "../links";
 
 ### Shared moderator command improvements
 
-- Minor: Added broadcaster-only `/poll`, `/cancelpoll`, and `/endpoll` commands. (#6583, #6605)
-- Minor: Added broadcaster-only `/prediction`, `/cancelprediction`, `/lockprediction`, and `/completeprediction` commands. (#6583, #6612, #6632, #6749)
-- Minor: Add `/(un)monitor` and `/(un)restrict` commands for moderators. (#6750, #6785)
+<div className="changelog-entry">
+
+Streamers can now use `/poll`, `/cancelpoll`, and `/endpoll` to manage polls inside Chatterino.
+
+<br/>
+
+Examples:
+ - Start a poll for what game to play:  
+ `/poll --title "what game to play today" --duration 60 --choice "expedition 33" --choice "eu5" --choice "disco elysium" --points 69`
+ - Cancel the poll you just started:  
+ `/cancelpoll`
+ - End the poll, preventing further votes from coming in and showing some poll information in chat:  
+ `/endpoll`
+
+Note: This is only available for streamers, not moderators. If you would like
+moderators to be able to do this please see <a
+href="https://twitch.uservoice.com/forums/310213-developers/suggestions/43347684-allow-channel-moderators-to-control-polls-predicti">this
+Twitch UserVoice</a>.
+
+<Credit
+  author="iProdigy"
+  helper="Nerixyz, pajlada"
+  prs="6583, 6605"
+/>
+
+</div>
+
+<div className="changelog-entry">
+
+Streamers can now use `/prediction`, `/cancelprediction`, `/lockprediction`, and `/completeprediction` to manage predictions inside Chatterino.
+
+<br/>
+
+Examples:
+ - Start a prediction for what programming language to use:  
+ `/prediction --title "what lang will i use today" --duration 5m --choice "golang" --choice "kotlin" --choice "rust"`
+ - Cancel the poll you just started:  
+ `/cancelpoll`
+ - End the poll, preventing further votes from coming in and showing some poll information in chat:  
+ `/endpoll`
+
+Note: This is only available for streamers, not moderators. If you would like
+moderators to be able to do this please see <a
+href="https://twitch.uservoice.com/forums/310213-developers/suggestions/43347684-allow-channel-moderators-to-control-polls-predicti">this
+Twitch UserVoice</a>.
+
+<Credit
+  author="iProdigy"
+  helper="Nerixyz, pajlada"
+  prs="6583, 6612, 6632, 6749"
+/>
+
+</div>
+
+<div className="changelog-entry">
+
+Streamers and moderators can now use `/monitor`, `/unmonitor`, `/restrict`, and `/unrestrict` to control the suspicious chatter list from Chatterino.
+
+<br/>
+
+Examples:
+ - Restrict forsen from chatting:  
+ `/restrict forsen`
+
+<Credit
+  author="iProdigy"
+  prs="6750, 6785"
+/>
+
+</div>
 
 ### Should have their own things, but at the bottom since they're minor features
 

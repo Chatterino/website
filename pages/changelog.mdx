@@ -113,6 +113,11 @@ comment](https://github.com/Chatterino/chatterino2/discussions/4999#discussionco
 You can find technical documentation for plugins
 [here](https://github.com/Chatterino/chatterino2/blob/09a6c3fd7a19fe0178a0e0060c848febab3ae294/docs/wip-plugins.md).
 
+### Stability fixes
+
+- Bugfix: Fixed a crash that could occur when network requests were loading/saving cache as Chatterino was being shut down. (#6698)
+- Bugfix: Fixed a potential crash when closing Chatterino with a slow network connection. (#6645)
+- Dev: Be more hesitant about setting saves. (#6620)
 
 ### Miscellaneous fixes {#2.5.5-miscellaneous-fixes}
 
@@ -142,12 +147,6 @@ You can find technical documentation for plugins
 - Fixed scrollbar rect computation potentially resulting in overflows. <Credit author="Nerixyz" prs="6547" inline />
 
 </div>
-
-### Stability fixes
-
-- Bugfix: Fixed a crash that could occur when network requests were loading/saving cache as Chatterino was being shut down. (#6698)
-- Bugfix: Fixed a potential crash when closing Chatterino with a slow network connection. (#6645)
-- Dev: Be more hesitant about setting saves. (#6620)
 
 ### For packagers?
 

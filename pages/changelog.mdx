@@ -89,7 +89,15 @@ In this update, plugins can make use of several new APIs:
   [`Channel:on_display_name_changed`](https://github.com/Chatterino/chatterino2/blob/09a6c3fd7a19fe0178a0e0060c848febab3ae294/docs/wip-plugins.md#channelon_display_name_changedcb).
   <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6594" inline />
 
-<br />
+</div>
+
+<div className="changelog-entry">
+
+Some fixes to plugins:
+
+ - Fixed Lua errors from handlers of HTTP requests not being logged. <Credit author="Nerixyz" prs="6452" inline />
+
+ </div>
 
 The LuaLS meta files moved from `docs/plugin-meta.lua` to [`docs/lua-meta/globals.lua`](https://github.com/Chatterino/chatterino2/blob/master/docs/lua-meta/globals.lua) because of the new JSON module, which has a separate meta file.
 
@@ -105,7 +113,6 @@ comment](https://github.com/Chatterino/chatterino2/discussions/4999#discussionco
 You can find technical documentation for plugins
 [here](https://github.com/Chatterino/chatterino2/blob/09a6c3fd7a19fe0178a0e0060c848febab3ae294/docs/wip-plugins.md).
 
-</div>
 
 ### Miscellaneous fixes {#2.5.5-miscellaneous-fixes}
 

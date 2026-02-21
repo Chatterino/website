@@ -116,30 +116,32 @@ You can find technical documentation for plugins
 
 ### Miscellaneous fixes {#2.5.5-miscellaneous-fixes}
 
-- Bugfix: Fixed context menu hotkeys not working on macOS. (#6778)
-- Minor: Moderators and VIPs in shared chats now show their channel badges. (#6653)
-- Minor: Badges now link to their home page like emotes in the context menu. (#6437)
-- Minor: Fixed usercard resizing improperly without recent messages. (#6496)
-- Minor: Consolidate font picking into one dialog. (#6531)
-- Minor: Added a description for the logging option under moderation tab. (#6514)
-- Minor: Fixed "edit hotkey" dialog opening like a normal window. (#6540)
-- Bugfix: Expose the "Extra extension IDs" setting on non-Windows systems too. (#6509)
-- Bugfix: Fixed some commands and filters not working as expected in seach popups. (#6539)
-- Bugfix: Fixed settings occasionally not opening when clicking on "Manage Accounts" in the account switcher. (#6543)
-- Bugfix: Fixed font change not resulting in forced layout update. (#6536)
-- Bugfix: Fixed scrollbar rect computation potentially resulting in overflows. (#6547)
-- Bugfix: Fixed websocket connections failing if the DNS resolving gave bad hosts. (#6631)
-- Bugfix: Fixed restore button not showing on Windows. (#6565)
-- Bugfix: Fixed custom player URIs for external players not always working due to URL percent-encoding. (#6725)
-- Bugfix: Fixed popups and the overlay not being draggable on Wayland. (#6573)
-- Bugfix: Fixed middle-clicking usernames in a local channel opening an invalid viewercard. (#6577)
-- Bugfix: Added `desktop-entry` hint to Linux notifications. (#6615)
-- Bugfix: Fix highlight mentions not updating when username changes. (#6723, #6739)
-- Bugfix: Fixed Return and Enter being treated as different keys on macOS. (#6726)
-- Bugfix: Fixed incorrect deletion length in tab autocomplete when completion included emojis. (#6800)
-- Bugfix: Fixed WebSockets for 7TV or BTTV not connecting on Windows if IPv6 attempts fail. (#6805)
-- Bugfix: Fixed portable updates not showing an error if the updater is not present. (#6801)
-- Bugfix: Fixed Lua errors from handlers of HTTP requests not being logged. (#6452)
+<div className="changelog-entry">
+
+- Fixed mnemonic menu hotkeys not working on macOS. <Credit author="Leafyzito" prs="6778" inline />
+- Fixed Return and Enter being treated as different keys on macOS. <Credit author="Nevicar" prs="6729" inline />
+- Moderators and VIPs in shared chats now show their channel badges. <Credit author="jupjohn" prs="6653" inline />
+- Badges now link to their home page like emotes in the context menu. <Credit author="Nerixyz" prs="6437" inline />
+- Fixed usercard sometimes sizing itself improperly. <Credit author="teknsl" prs="6496" inline />
+- Consolidate font picking into one dialog. <Credit author="teknsl" helper="pajlada" prs="6531" inline />
+- The "edit hotkey" dialog now opens like a normal window. <Credit author="jupjohn" prs="6540" inline />
+- The "Extra extension IDs" setting is now exposed to all operating systems. <Credit author="crazysmc" helper="pajlada" prs="6509" inline />
+- Fixed some commands and filters not working as expected in search popups. <Credit author="Nerixyz" prs="6539" inline />
+- Fixed an issue where occasionally the "Manage Accounts" button in the account switcher would do nothing. <Credit author="Nerixyz" prs="6543" inline />
+- Fixed font changes not always updating immediately. <Credit author="teknsl" helper="Nerixyz" prs="6536" inline />
+- Fixed the "Restore" button not showing on Windows. <Credit author="Nerixyz" prs="6565" inline />
+- Fixed custom player URIs for external players not always working due to URL percent-encoding. <Credit author="SonicSegFault" prs="6725" inline />
+- Fixed middle-clicking usernames in a local channel opening an invalid viewercard. <Credit author="Julia-Roman" prs="6577" inline />
+- The "Your username (automatic)" highlight now correctly updates if you've changed your username. <Credit author="SonicSegFault" helper="Nerixyz, pajlada" prs="6723, 6739" inline />
+- Fixed some tab-completion inconsistencies when the completion included emojis. <Credit author="ruinivist" prs="6800" inline />
+- Notify the user if the update fails in a portable installation if the updater is not present. <Credit author="Nerixyz" prs="6801" inline />
+- Fixed websocket connection issues with IPv6. <Credit author="pajlada, Nerixyz" prs="6631, 6805" inline />
+- Fixed popups and the overlay not being draggable on Wayland. <Credit author="Nerixyz" prs="6573" inline />
+- Linux notifications now have a `desktop-entry` hint added to them. <Credit author="teknsl" prs="6615" inline />
+- Better described moderation logging options. <Credit author="Nikk0o" helper="Nerixyz, jupjohn, pajlada" prs="6514" inline />
+- Fixed scrollbar rect computation potentially resulting in overflows. <Credit author="Nerixyz" prs="6547" inline />
+
+</div>
 
 ### Stability fixes
 

@@ -102,21 +102,154 @@ Examples:
 
 ### Should have their own things, but at the bottom since they're minor features
 
-- Minor: Add categories to the emoji viewer. (#6598)
-- Minor: Added support for BetterTTV Pro subscriber badges. (#6625, #6724)
-- Minor: Add search engine selection for context menu search action. (#6743, #6770)
-- Minor: Add a separate highlight option for watchstreak notifications. (#6571, #6581)
-- Minor: Added setting for character limit of deleted messages. (#6491)
-- Minor: Added a menu action to sort tabs alphabetically. (#6551, #6710)
-- Minor: Added options to close multiple visible tabs. (#6515, #6619)
-- Minor: Added a setting to show the stream title in live messages. (#6572)
-- Minor: Added title and duration options for `/clip` command. (#6669)
-- Minor: Added the ability to filter on messages by the author's external badges (example: `author.external_badges contains "chatterino:Top Donator"` or `author.external_badges contains "frankerfacez:bot"`). (#6709)
+<div className="changelog-entry">
+
+The emote popup now includes categories for the emoji list.
+
+<Figure src="./changelog/2.5.5/emoji-categories.png"></Figure>
+
+<Credit
+  author="treejadey"
+  prs="6598"
+/>
+
+</div>
+
+<div className="changelog-entry">
+
+Your BetterTTV Pro subscriber badge is now visible in Chatterino.
+
+<Credit
+  author="Nerixyz"
+  helper="pajlada"
+  prs="6625, 6724"
+/>
+
+</div>
+
+<div className="changelog-entry">
+
+Added a separate highlight option for watchstreak notifications.
+
+<Credit
+  author="devPoland"
+  helper="pajlada"
+  prs="6571, 6581"
+/>
+
+</div>
+
+<div className="changelog-entry">
+
+You can now control the character limit of deleted messages with the "Limit
+length of deleted messages" setting.
+
+<Credit
+  author="jacob-thompson"
+  prs="6491"
+/>
+
+</div>
+
+<div className="changelog-entry">
+
+You can now search for your chat messages selection with a search engine of
+your choice. See the "Enable search in right-click context" setting and its
+accompanying options/preset search engines.
+
+<Figure src="./changelog/2.5.5/search-context-menu.png"></Figure>
+
+<Credit
+  author="leafyzito"
+  helper="4rneee, pajlada"
+  prs="6743, 6770"
+/>
+
+</div>
+
+<div className="changelog-entry">
+
+You can now right-click any tab and sort your tabs by name alphabetically.
+This is an action, not a setting meaning if you want to sort your tabs again,
+	 you have to click the sort action again.
+
+<Credit
+  author="teknsl"
+  helper="ruinivist, Nerixyz, pajlada"
+  prs="6551, 6710"
+/>
+
+</div>
+
+<div className="changelog-entry">
+
+Similar to in browsers, you can now close multiple tabs at the same time (e.g. close other tabs, close tabs to the right etc).
+
+TODO: reword? image?
+
+<Credit
+  author="otaviobia"
+  helper="jupjohn"
+  prs="6515, 6619"
+/>
+
+</div>
+
+<div className="changelog-entry">
+
+You can now customize the /live messages to include the stream title.
+
+<Credit
+  author="Julia-Roman"
+  prs="6572"
+/>
+
+</div>
+
+<div className="changelog-entry">
+
+You can now pre-define the title & duration of a clip.
+Examples:
+ - `/clip the title`
+ - `/clip --duration 10 the title`
+
+<Credit
+  author="iProdigy"
+  prs="6669"
+/>
+
+</div>
+
+<div className="changelog-entry">
+
+You can now create a filter based on the author's external badges.
+Examples:
+ - `author.external_badges contains "chatterino:Top Donator"`
+ - `author.external_badges contains "frankerfacez:bot"`
+
+<Credit
+  author="achow101, pajlada"
+  prs="6709"
+/>
+
+</div>
+
+<div className="changelog-entry">
+
+TODO
 
 - Minor: Added Markdown support to user notes. (#6490)
 - Bugfix: Fixed <kbd>CMD</kbd> + <kbd>DELETE</kbd> behavior in the user notes editing dialog for macOS. (#6676)
 
+</div>
+
+<div className="changelog-entry">
+
+TODO
+
 - Minor: Added action to reset `/watching`. (#6759)
+
+</div>
 
 ### Plugins {#2.5.5-plugins}
 

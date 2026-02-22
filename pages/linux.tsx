@@ -107,6 +107,15 @@ function LinuxPage() {
               yay -S chatterino2-git
             </code>
             )
+          {/* Fedora */}
+          <h2 className="text-3xl pt-10 pb-4">Fedora Linux</h2>
+          <Text>
+            Run{" "}
+            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+              dnf install chatterino2
+            </code>{" "}
+            to install it from the ports tree.
+          </Text>
           </Text>
           {/* OpenSuse */}
           <h2 className="text-3xl pt-10 pb-4">OpenSuse</h2>
@@ -116,15 +125,6 @@ function LinuxPage() {
               opi install chatterino2
             </code>{" "}
             to install it from obs.
-          </Text>
-          {/* Fedora */}
-          <h2 className="text-3xl pt-10 pb-4">Fedora Linux</h2>
-          <Text>
-            Run{" "}
-            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-              dnf install chatterino2
-            </code>{" "}
-            to install it from the ports tree.
           </Text>
           {/* AppImage */}
           <h2 className="text-3xl pt-10 pb-4">AppImage for all distros</h2>

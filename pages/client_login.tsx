@@ -114,7 +114,11 @@ const scopes = [
 
   "moderator:read:vips", // for channel.moderate eventsub topic
 
-  "moderator:read:suspicious_users", // for channel.suspicious_user.message and channel.suspicious_user.update
+  "moderator:read:suspicious_users", // for channel.suspicious_user.message and channel.suspicious_user.update eventsub topics
+
+  // https://dev.twitch.tv/docs/api/reference#add-suspicious-status-to-chat-user
+  // https://dev.twitch.tv/docs/api/reference#remove-suspicious-status-from-chat-user
+  "moderator:manage:suspicious_users",
 ];
 
 export default function ClientLogin() {

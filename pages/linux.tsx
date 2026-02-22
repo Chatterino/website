@@ -110,11 +110,18 @@ function LinuxPage() {
           {/* Fedora */}
           <h2 className="text-3xl pt-10 pb-4">Fedora Linux</h2>
           <Text>
-            Run{" "}
+            Get the latest stable version of Chatterino through{" "}
+            <a href="https://src.fedoraproject.org/rpms/chatterino2">
+              Fedora's official package
+            </a>{" "}
+            packaged by{" "}
+            <a href="https://src.fedoraproject.org/user/solomoncyj">
+              solomoncyj
+            </a>
+            :{" "}
             <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-              dnf install chatterino2
-            </code>{" "}
-            to install it from the ports tree.
+              sudo dnf install chatterino
+            </code>
           </Text>
           </Text>
           {/* OpenSuse */}

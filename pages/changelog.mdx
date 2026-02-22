@@ -18,16 +18,59 @@ import { discord, github } from "../links";
 
 ## 2.5.5 Beta 1 (Released 2026-02-??) {#2.5.5}
 
-### Should have their own things
+### Lead Moderator support {#2.5.5-lead-moderator}
 
-- Minor: Added a countdown timer to the input box to show when you can chat again during slow mode or after a timeout. This feature is disabled by default, and can be enabled with the "Show countdown on slow mode or when timed out" setting. (#6782, #6791)
+<div className="changelog-entry">
 
-- Bugfix: Moderation checks now include the lead moderator badge. (#6642)
-- Bugfix: Fixed lead moderator badges not being filtered by the `Channel` badge setting. (#6665)
+This release improves support for the Lead Moderator role.
 
-- Dev: Added experimental spell checker support. (#6446, #6703, #6722, #6730, #6731, #6779, #6780)
+Unfortunately, many of the features of the Lead Moderator can only be performed through the Twitch website and not through third party applications like Chatterino.
 
-### Shared moderator command improvements
+<Credit
+  author="Juliapixel, jupjohn"
+  helper="pajlada"
+  prs="6642, 6665"
+/>
+
+</div>
+
+### Slow Mode counter {#2.5.5-slow-mode-counter}
+
+<div className="changelog-entry">
+
+Added a countdown timer to the input box to show when you can chat again during slow mode or after you've been timed out.  
+This feature is disabled by default, and can be enabled with the "Show countdown on slow mode or when timed out" setting.
+
+<Figure src="./changelog/2.5.5/countdown.png"></Figure>
+
+<Credit
+  author="achow101"
+  helper="Nerixyz, pajlada"
+  prs="6782, 6791"
+/>
+
+</div>
+
+### Experimental spell checking {#2.5.5-spell-checking}
+
+<div className="changelog-entry">
+
+Added experimental spell checker support. Unless you're on Linux, this
+currently requires you to bring your own dictionary.
+
+We intend to explore the possibility of including some common dictionaries.
+
+<Figure src="./changelog/2.5.5/spellcheck.png"></Figure>
+
+<Credit
+  author="Nerixyz"
+  helper="pajlada, 4rneee, 2547techno"
+  prs="6446, 6703, 6722, 6730, 6731, 6779, 6780"
+/>
+
+</div>
+
+### Shared moderator command improvements {#2.5.5-moderator-commands}
 
 <div className="changelog-entry">
 
@@ -100,7 +143,7 @@ Examples:
 
 </div>
 
-### Should have their own things, but at the bottom since they're minor features
+### Emoji categories {#2.5.5-emoji-categories}
 
 <div className="changelog-entry">
 
@@ -115,9 +158,13 @@ The emote popup now includes categories for the emoji list.
 
 </div>
 
+### BetterTTV Pro badge support {#2.5.5-betterttv-pro-badges}
+
 <div className="changelog-entry">
 
 Your BetterTTV Pro subscriber badge is now visible in Chatterino.
+
+<Figure src="./changelog/2.5.5/betterttv-badge.png"></Figure>
 
 <Credit
   author="Nerixyz"
@@ -127,29 +174,7 @@ Your BetterTTV Pro subscriber badge is now visible in Chatterino.
 
 </div>
 
-<div className="changelog-entry">
-
-Added a separate highlight option for watchstreak notifications.
-
-<Credit
-  author="devPoland"
-  helper="pajlada"
-  prs="6571, 6581"
-/>
-
-</div>
-
-<div className="changelog-entry">
-
-You can now control the character limit of deleted messages with the "Limit
-length of deleted messages" setting.
-
-<Credit
-  author="jacob-thompson"
-  prs="6491"
-/>
-
-</div>
+### Search {#2.5.5-search}
 
 <div className="changelog-entry">
 
@@ -167,87 +192,69 @@ accompanying options/preset search engines.
 
 </div>
 
+### Miscellaneous features {#2.5.5-misc-features}
+
 <div className="changelog-entry">
 
-You can now right-click any tab and sort your tabs by name alphabetically.
-This is an action, not a setting meaning if you want to sort your tabs again,
-	 you have to click the sort action again.
+ - Added a separate highlight option for watchstreak notifications. <Credit
+  author="devPoland"
+  helper="pajlada"
+  prs="6571, 6581"
+  inline
+/>
 
-<Credit
+ - You can now control the character limit of deleted messages with the "Limit length of deleted messages" setting. <Credit
+  author="jacob-thompson"
+  prs="6491"
+  inline
+/>
+
+ - You can now right-click any tab and sort your tabs by name alphabetically. This is an action, not a setting meaning if you want to sort your tabs again, you have to click the sort action again. <Credit
   author="teknsl"
   helper="ruinivist, Nerixyz, pajlada"
   prs="6551, 6710"
+  inline
 />
 
-</div>
-
-<div className="changelog-entry">
-
-Similar to in browsers, you can now close multiple tabs at the same time (e.g. close other tabs, close tabs to the right etc).
-
-TODO: reword? image?
-
-<Credit
+ - You can now close multiple tabs at the same time (e.g. close other tabs, or close tabs to the right) <Credit
   author="otaviobia"
   helper="jupjohn"
   prs="6515, 6619"
+  inline
 />
 
-</div>
-
-<div className="changelog-entry">
-
-You can now customize the /live messages to include the stream title.
-
-<Credit
+ - You can now customize the /live messages to include the stream title. <Credit
   author="Julia-Roman"
   prs="6572"
+  inline
 />
 
-</div>
-
-<div className="changelog-entry">
-
-You can now pre-define the title & duration of a clip.
-Examples:
- - `/clip the title`
- - `/clip --duration 10 the title`
-
-<Credit
+ - You can now pre-define the title & duration of a clip (Usage: `/clip --duration 10 the title`). <Credit
   author="iProdigy"
   prs="6669"
+  inline
 />
 
-</div>
-
-<div className="changelog-entry">
-
-You can now create a filter based on the author's external badges.
-Examples:
- - `author.external_badges contains "chatterino:Top Donator"`
- - `author.external_badges contains "frankerfacez:bot"`
-
-<Credit
+ - You can now create a filter based on the author's external badges. (e.g.
+		 `author.external_badges contains "chatterino:Top Donator"` or
+		 `author.external_badges contains "frankerfacez:bot"`) <Credit
   author="achow101, pajlada"
   prs="6709"
+  inline
 />
 
-</div>
+ - You can now use Markdown in user notes. <Credit
+  author="jacob-thompson"
+  helper="pajlada, Nerixyz"
+  prs="6490, 6676"
+  inline
+/>
 
-<div className="changelog-entry">
-
-TODO
-
-- Minor: Added Markdown support to user notes. (#6490)
-- Bugfix: Fixed <kbd>CMD</kbd> + <kbd>DELETE</kbd> behavior in the user notes editing dialog for macOS. (#6676)
-
-</div>
-
-<div className="changelog-entry">
-
-TODO
-
-- Minor: Added action to reset `/watching`. (#6759)
+ - You can now reset the channel in the `/watching` chat. <Credit
+  author="Nerixyz"
+  prs="6759"
+  inline
+/>
 
 </div>
 
@@ -352,20 +359,6 @@ TODO: ADD https://github.com/Chatterino/chatterino2/pull/6662/changes here later
 - Linux notifications now have a `desktop-entry` hint added to them. <Credit author="teknsl" prs="6615" inline />
 - Better described moderation logging options. <Credit author="Nikk0o" helper="Nerixyz, jupjohn, pajlada" prs="6514" inline />
 - Fixed scrollbar rect computation potentially resulting in overflows. <Credit author="Nerixyz" prs="6547" inline />
-
-</div>
-
-### For packagers?
-
-- Dev: Added a CMake option `CHATTERINO_EXTRA_BUILD_STRING` which allows the packager to provide an optional freestanding Qt-HTML string that shows up in the About page under the Chatterino version. (#6766)
-- Dev: Enable C++ 23. (#6693)
-
-### Maybe not include
-
-- Minor: Removed messaging about running flatpak. This is already apparent in the newer Flatpak runtimes. (#6768)
-- Bugfix: Forward query params to websocket URLs. (#6141)
-
-<div className="changelog-entry">
 
 </div>
 

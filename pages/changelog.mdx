@@ -110,10 +110,12 @@ Streamers can now use `/prediction`, `/cancelprediction`, `/lockprediction`, and
 Examples:
  - Start a prediction for what programming language to use:  
  `/prediction --title "what lang will i use today" --duration 5m --choice "golang" --choice "kotlin" --choice "rust"`
- - Cancel the poll you just started:  
- `/cancelpoll`
- - End the poll, preventing further votes from coming in and showing some poll information in chat:  
- `/endpoll`
+ - Lock the prediction votes early:  
+ `/lockprediction`
+ - Cancel the prediction, refunding all points:  
+ `/cancelprediction`
+ - Complete the prediction, declaring a winner:  
+ `/completeprediction --choice "rust"`
 
 Note: This is only available for streamers, not moderators. If you would like
 moderators to be able to do this please see <a

@@ -2,6 +2,7 @@ import Head from "next/head";
 import Nav from "../components/nav";
 import Section from "../components/section";
 import Figure from "../components/figure";
+import Callout from "../components/callout";
 import FigureGroup from "../components/figure-group";
 import Credit, { GitHubUser } from "../components/credit";
 import { discord, github } from "../links";
@@ -88,10 +89,12 @@ Examples:
  - End the poll, preventing further votes from coming in and showing some poll information in chat:  
  `/endpoll`
 
-Note: This is only available for streamers, not moderators. If you would like
-moderators to be able to do this please see <a
-href="https://twitch.uservoice.com/forums/310213-developers/suggestions/43347684-allow-channel-moderators-to-control-polls-predicti">this
-Twitch UserVoice</a>.
+{/* prettier-ignore */}
+<Callout type="note">
+  This is only available for streamers, not moderators. If you would like
+  moderators to be able to do this please see
+  <a href="https://twitch.uservoice.com/forums/310213-developers/suggestions/43347684-allow-channel-moderators-to-control-polls-predicti">this Twitch UserVoice</a>.
+</Callout>
 
 <Credit
   author="iProdigy"
@@ -117,10 +120,12 @@ Examples:
  - Complete the prediction, declaring a winner:  
  `/completeprediction --choice "rust"`
 
-Note: This is only available for streamers, not moderators. If you would like
-moderators to be able to do this please see <a
-href="https://twitch.uservoice.com/forums/310213-developers/suggestions/43347684-allow-channel-moderators-to-control-polls-predicti">this
-Twitch UserVoice</a>.
+{/* prettier-ignore */}
+<Callout type="note">
+  This is only available for streamers, not moderators. If you would like
+  moderators to be able to do this please see
+  <a href="https://twitch.uservoice.com/forums/310213-developers/suggestions/43347684-allow-channel-moderators-to-control-polls-predicti">this Twitch UserVoice</a>.
+</Callout>
 
 <Credit
   author="iProdigy"

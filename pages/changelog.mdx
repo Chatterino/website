@@ -58,7 +58,8 @@ This feature is disabled by default, and can be enabled with the "Show countdown
 Added experimental spell checker support. Unless you're on Linux, this
 currently requires you to bring your own dictionary.
 
-We intend to explore the possibility of including some common dictionaries.
+We intend to explore the possibility of including some common dictionaries
+into Chatterino so you don't have to bring your own.
 
 You can find all spell checker options under the <strong>External tools</strong> settings page.
 
@@ -182,7 +183,7 @@ Your BetterTTV Pro subscriber badge is now visible in Chatterino.
 
 <div className="changelog-entry">
 
-You can now search for your chat messages selection with a search engine of
+You can now search the selected text with a search engine of
 your choice. See the "Enable search in right-click context" setting and its
 accompanying options/preset search engines.
 
@@ -214,8 +215,8 @@ accompanying options/preset search engines.
 />
 
  - You can now right-click any tab and sort your tabs by name alphabetically. This is an action, not a setting meaning if you want to sort your tabs again, you have to click the sort action again. <Credit
-  author="teknsl"
-  helper="ruinivist, Nerixyz, pajlada"
+  author="teknsl, ruinivist"
+  helper="Nerixyz, pajlada"
   prs="6551, 6710"
   inline
 />
@@ -274,6 +275,8 @@ accompanying options/preset search engines.
 
 In this update, plugins can make use of several new APIs:
 
+{/* TODO: Replace commit hashes with tag when 2.5.5 is released */}
+
 - **Access and modify messages in channels**: New methods like
   [`Channel:message_snapshot`](https://github.com/Chatterino/chatterino2/blob/09a6c3fd7a19fe0178a0e0060c848febab3ae294/docs/wip-plugins.md#channelmessage_snapshotn_items) allow plugins to retrieve all messages available in a channel.
   The returned [`c2.Message`](https://github.com/Chatterino/chatterino2/blob/09a6c3fd7a19fe0178a0e0060c848febab3ae294/docs/wip-plugins.md#message)s can be queried (e.g. accessing individual elements). Except for their flags,
@@ -316,6 +319,7 @@ Some fixes to plugins:
 
  </div>
 
+{/* TODO: Replace commit hashes with tag when 2.5.5 is released */}
 The LuaLS meta files moved from `docs/plugin-meta.lua` to [`docs/lua-meta/globals.lua`](https://github.com/Chatterino/chatterino2/blob/master/docs/lua-meta/globals.lua) because of the new JSON module, which has a separate meta file.
 
 <br />
@@ -327,6 +331,7 @@ comment](https://github.com/Chatterino/chatterino2/discussions/4999#discussionco
 
 <br />
 
+{/* TODO: Replace commit hashes with tag when 2.5.5 is released */}
 You can find technical documentation for plugins
 [here](https://github.com/Chatterino/chatterino2/blob/09a6c3fd7a19fe0178a0e0060c848febab3ae294/docs/wip-plugins.md).
 
@@ -338,7 +343,7 @@ Various changes made to the stability of Chatterino.
 
 - Fixed a crash that could occur when network requests were loading/saving cache as Chatterino was being shut down. <Credit author="pajlada" prs="6698" inline />
 - Fixed a crash that could occur when closing Chatterino with a slow network connection. <Credit author="Nerixyz" prs="6645" inline />
-- Improved setting stability. <Credit author="pajlada, Nerixyz" prs="6620, 6662" inline />
+- Improved setting stability. <Credit author="pajlada, Nerixyz" helper="Mm2PL" prs="6620, 6662" inline />
 
 </div>
 
@@ -351,7 +356,7 @@ Various changes made to the stability of Chatterino.
 - Moderators and VIPs in shared chats now show their channel badges. <Credit author="jupjohn" prs="6653" inline />
 - Badges now link to their home page like emotes in the context menu. <Credit author="Nerixyz" prs="6437" inline />
 - Fixed usercard sometimes sizing itself improperly. <Credit author="teknsl" prs="6496" inline />
-- Consolidate font picking into one dialog. <Credit author="teknsl" helper="pajlada" prs="6531" inline />
+- Consolidate font picking into one dialog. <Credit author="teknsl, pajlada" helper="Nerixyz" prs="6531" inline />
 - The "edit hotkey" dialog now opens like a normal window. <Credit author="jupjohn" prs="6540" inline />
 - The "Extra extension IDs" setting is now exposed to all operating systems. <Credit author="crazysmc" helper="pajlada" prs="6509" inline />
 - Fixed some commands and filters not working as expected in search popups. <Credit author="Nerixyz" prs="6539" inline />
@@ -363,7 +368,7 @@ Various changes made to the stability of Chatterino.
 - The "Your username (automatic)" highlight now correctly updates if you've changed your username. <Credit author="SonicSegFault" helper="Nerixyz, pajlada" prs="6723, 6739" inline />
 - Fixed some tab-completion inconsistencies when the completion included emojis. <Credit author="ruinivist" prs="6800" inline />
 - Notify the user if the update fails in a portable installation if the updater is not present. <Credit author="Nerixyz" prs="6801" inline />
-- Fixed WebSocket connection issues with IPv6. <Credit author="pajlada, Nerixyz" prs="6631" inline />
+- Fixed WebSocket connection issues with IPv6. <Credit author="pajlada, Nerixyz" prs="6631, 6804" inline />
 - Improved WebSocket connection retries on Windows. <Credit author="Nerixyz" prs="6805" inline />
 - Fixed popups and the overlay not being draggable on Wayland. <Credit author="Nerixyz" prs="6573" inline />
 - Linux notifications now have a `desktop-entry` hint added to them. <Credit author="teknsl" prs="6615" inline />
@@ -372,7 +377,7 @@ Various changes made to the stability of Chatterino.
 
 </div>
 
-TODO: Add list of all new contributors here and thank them
+{/*TODO: Add list of all new contributors here and thank them*/}
 
 <br />
 <br />

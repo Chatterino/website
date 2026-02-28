@@ -65,7 +65,7 @@ We intend to explore the possibility of including some common dictionaries.
 <Credit
   author="Nerixyz"
   helper="pajlada, 4rneee, 2547techno"
-  prs="6446, 6703, 6722, 6730, 6731, 6779, 6780"
+  prs="6446, 6703, 6722, 6730, 6731, 6779, 6780, 6822, 6751"
 />
 
 </div>
@@ -256,6 +256,12 @@ accompanying options/preset search engines.
   inline
 />
 
+ - Follower-mode duration now displays as hours or days if possible. <Credit
+  author="Nerixyz"
+  prs="6812"
+  inline
+/>
+
 </div>
 
 ### Plugins {#2.5.5-plugins}
@@ -328,8 +334,7 @@ Various changes made to the stability of Chatterino.
 
 - Fixed a crash that could occur when network requests were loading/saving cache as Chatterino was being shut down. <Credit author="pajlada" prs="6698" inline />
 - Fixed a crash that could occur when closing Chatterino with a slow network connection. <Credit author="Nerixyz" prs="6645" inline />
-- Improved setting stability. <Credit author="pajlada" prs="6620" inline />
-TODO: ADD https://github.com/Chatterino/chatterino2/pull/6662/changes here later
+- Improved setting stability. <Credit author="pajlada, Nerixyz" prs="6620, 6662" inline />
 
 </div>
 
@@ -354,7 +359,8 @@ TODO: ADD https://github.com/Chatterino/chatterino2/pull/6662/changes here later
 - The "Your username (automatic)" highlight now correctly updates if you've changed your username. <Credit author="SonicSegFault" helper="Nerixyz, pajlada" prs="6723, 6739" inline />
 - Fixed some tab-completion inconsistencies when the completion included emojis. <Credit author="ruinivist" prs="6800" inline />
 - Notify the user if the update fails in a portable installation if the updater is not present. <Credit author="Nerixyz" prs="6801" inline />
-- Fixed websocket connection issues with IPv6. <Credit author="pajlada, Nerixyz" prs="6631, 6805" inline />
+- Fixed WebSocket connection issues with IPv6. <Credit author="pajlada, Nerixyz" prs="6631, 6805" inline />
+- Improved WebSocket connection retries on Windows. <Credit author="Nerixyz" prs="6805" inline />
 - Fixed popups and the overlay not being draggable on Wayland. <Credit author="Nerixyz" prs="6573" inline />
 - Linux notifications now have a `desktop-entry` hint added to them. <Credit author="teknsl" prs="6615" inline />
 - Better described moderation logging options. <Credit author="Nikk0o" helper="Nerixyz, jupjohn, pajlada" prs="6514" inline />

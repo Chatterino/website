@@ -108,6 +108,22 @@ function LinuxPage() {
             </code>
             )
           </Text>
+          {/* Fedora official */}
+          <h2 className="text-3xl pt-10 pb-4">Fedora</h2>
+          <Text>
+            Get the latest stable version of Chatterino through{" "}
+            <a href="https://src.fedoraproject.org/rpms/chatterino2">
+              Fedora's official package
+            </a>{" "}
+            packaged by{" "}
+            <a href="https://src.fedoraproject.org/user/solomoncyj">
+              solomoncyj
+            </a>
+            :{" "}
+            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+              sudo dnf install chatterino
+            </code>
+          </Text>
           {/* AppImage */}
           <h2 className="text-3xl pt-10 pb-4">AppImage for all distros</h2>
           <Text>

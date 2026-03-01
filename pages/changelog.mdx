@@ -2,6 +2,7 @@ import Head from "next/head";
 import Nav from "../components/nav";
 import Section from "../components/section";
 import Figure from "../components/figure";
+import Callout from "../components/callout";
 import FigureGroup from "../components/figure-group";
 import Credit, { GitHubUser } from "../components/credit";
 import { discord, github } from "../links";
@@ -15,6 +16,379 @@ import { discord, github } from "../links";
  <Section className="changelog px-16" prose>
 
 # Chatterino Changelog
+
+## 2.5.5 Beta 1 (Released 2026-03-01) {#2.5.5}
+
+### Lead Moderator support {#2.5.5-lead-moderator}
+
+<div className="changelog-entry">
+
+This release improves support for the Lead Moderator role.
+
+Unfortunately, many of the features of the Lead Moderator can only be performed through the Twitch website and not through third party applications like Chatterino.
+
+<Credit author="Juliapixel, jupjohn" helper="pajlada" prs="6642, 6665" />
+
+</div>
+
+### Slow Mode counter {#2.5.5-slow-mode-counter}
+
+<div className="changelog-entry">
+
+Added a countdown timer to the input box to show when you can chat again during slow mode or after you've been timed out.  
+This feature is disabled by default, and can be enabled with the "Show countdown on slow mode or when timed out" setting.
+
+<Figure src="./changelog/2.5.5/countdown.png"></Figure>
+
+<Credit author="achow101" helper="Nerixyz, pajlada" prs="6782, 6791" />
+
+</div>
+
+### Experimental spell checking {#2.5.5-spell-checking}
+
+<div className="changelog-entry">
+
+Added experimental spell checker support. Unless you're on Linux, this
+currently requires you to bring your own dictionary.
+
+We intend to explore the possibility of including some common dictionaries
+into Chatterino so you don't have to bring your own.
+
+You can find all spell checker options under the <strong>External tools</strong> settings page.
+
+<Figure src="./changelog/2.5.5/spellcheck.png"></Figure>
+
+<Credit
+  author="Nerixyz, 4rneee"
+  helper="pajlada, 2547techno"
+  prs="6446, 6703, 6722, 6730, 6731, 6779, 6780, 6822, 6751"
+/>
+
+</div>
+
+### Shared moderator command improvements {#2.5.5-moderator-commands}
+
+<div className="changelog-entry">
+
+Streamers can now use `/poll`, `/cancelpoll`, and `/endpoll` to manage polls inside Chatterino.
+
+<br />
+
+Examples:
+
+- Start a poll for what game to play:  
+  `/poll --title "what game to play today" --duration 60 --choice "expedition 33" --choice "eu5" --choice "disco elysium" --points 69`
+- Cancel the poll you just started:  
+  `/cancelpoll`
+- End the poll, preventing further votes from coming in and showing some poll information in chat:  
+  `/endpoll`
+
+{/* prettier-ignore */}
+<Callout type="note">
+  This is only available for streamers, not moderators. If you would like
+  moderators to be able to do this please see
+  <a href="https://twitch.uservoice.com/forums/310213-developers/suggestions/43347684-allow-channel-moderators-to-control-polls-predicti">this Twitch UserVoice</a>.
+</Callout>
+
+<Credit author="iProdigy" helper="Nerixyz, pajlada" prs="6583, 6605" />
+
+</div>
+
+<div className="changelog-entry">
+
+Streamers can now use `/prediction`, `/cancelprediction`, `/lockprediction`, and `/completeprediction` to manage predictions inside Chatterino.
+
+<br />
+
+Examples:
+
+- Start a prediction for what programming language to use:  
+  `/prediction --title "what lang will i use today" --duration 5m --choice "golang" --choice "kotlin" --choice "rust"`
+- Lock the prediction votes early:  
+  `/lockprediction`
+- Cancel the prediction, refunding all points:  
+  `/cancelprediction`
+- Complete the prediction, declaring a winner:  
+  `/completeprediction --choice "rust"`
+
+{/* prettier-ignore */}
+<Callout type="note">
+  This is only available for streamers, not moderators. If you would like
+  moderators to be able to do this please see
+  <a href="https://twitch.uservoice.com/forums/310213-developers/suggestions/43347684-allow-channel-moderators-to-control-polls-predicti">this Twitch UserVoice</a>.
+</Callout>
+
+<Credit
+  author="iProdigy"
+  helper="Nerixyz, pajlada"
+  prs="6583, 6612, 6632, 6749"
+/>
+
+</div>
+
+<div className="changelog-entry">
+
+Streamers and moderators can now use `/monitor`, `/unmonitor`, `/restrict`, and `/unrestrict` to control the suspicious chatter list from Chatterino.
+
+<br />
+
+Examples:
+
+- Restrict forsen from chatting:  
+  `/restrict forsen`
+
+<Credit author="iProdigy" prs="6750, 6785" />
+
+</div>
+
+### Emoji categories {#2.5.5-emoji-categories}
+
+<div className="changelog-entry">
+
+The emote popup now includes categories for the emoji list.
+
+<Figure src="./changelog/2.5.5/emoji-categories.png"></Figure>
+
+<Credit author="treejadey" prs="6598" />
+
+</div>
+
+### BetterTTV Pro badge support {#2.5.5-betterttv-pro-badges}
+
+<div className="changelog-entry">
+
+Your BetterTTV Pro subscriber badge is now visible in Chatterino.
+
+<Figure src="./changelog/2.5.5/betterttv-badge.png"></Figure>
+
+<Credit author="Nerixyz" helper="pajlada" prs="6625, 6724" />
+
+</div>
+
+### Search {#2.5.5-search}
+
+<div className="changelog-entry">
+
+You can now search the selected text with a search engine of
+your choice. See the "Enable search in right-click context" setting and its
+accompanying options/preset search engines.
+
+<Figure src="./changelog/2.5.5/search-context-menu.png"></Figure>
+
+<Credit author="leafyzito" helper="4rneee, pajlada" prs="6743, 6770" />
+
+</div>
+
+### Miscellaneous features {#2.5.5-miscellaneous-features}
+
+<div className="changelog-entry">
+
+- Added a separate highlight option for watchstreak notifications. <Credit
+    author="devPoland"
+    helper="pajlada"
+    prs="6571, 6581"
+    inline
+  />
+
+- You can now control the character limit of deleted messages with the "Limit length of deleted messages" setting. <Credit
+    author="jacob-thompson"
+    prs="6491"
+    inline
+  />
+
+- You can now right-click any tab and sort your tabs by name alphabetically. This is an action, not a setting meaning if you want to sort your tabs again, you have to click the sort action again. <Credit
+    author="teknsl, ruinivist"
+    helper="Nerixyz, pajlada"
+    prs="6551, 6710"
+    inline
+  />
+
+- You can now close multiple tabs at the same time (e.g. close other tabs, or close tabs to the right) <Credit
+    author="otaviobia"
+    helper="jupjohn"
+    prs="6515, 6619"
+    inline
+  />
+
+- You can now customize the /live messages to include the stream title. <Credit
+    author="Julia-Roman"
+    prs="6572"
+    inline
+  />
+
+- You can now pre-define the title & duration of a clip (Usage: `/clip --duration 10 the title`). <Credit
+    author="iProdigy"
+    prs="6669"
+    inline
+  />
+
+- You can now create a filter based on the author's external badges. (e.g.
+  `author.external_badges contains "chatterino:Top Donator"` or
+  `author.external_badges contains "frankerfacez:bot"`) <Credit
+    author="achow101, pajlada"
+    prs="6709"
+    inline
+  />
+
+- You can now use Markdown in user notes. <Credit
+    author="jacob-thompson"
+    helper="pajlada, Nerixyz"
+    prs="6490, 6676"
+    inline
+  />
+
+- You can now reset the channel in the `/watching` chat. <Credit
+    author="Nerixyz"
+    prs="6759"
+    inline
+  />
+
+- Follower-mode duration now displays as hours or days if possible. <Credit
+    author="Nerixyz"
+    prs="6812"
+    inline
+  />
+
+</div>
+
+### Plugins {#2.5.5-plugins}
+
+<div className="changelog-entry">
+
+In this update, plugins can make use of several new APIs:
+
+{/* TODO: Replace when 2.5.5 is released */}
+
+- **Access and modify messages in channels**: New methods like
+  [`Channel:message_snapshot`](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md#channelmessage_snapshotn_items) allow plugins to retrieve all messages available in a channel. The returned
+  [`c2.Message`](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md#message)s can be queried (e.g. accessing individual elements). Except for their flags,
+  messages in a channel can't be modified. However, you can replace messages in channels ([`Channel:replace_message`](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md#channelreplace_messagemessage-replacement-hint)).
+
+  <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6353, 6650" inline />
+
+- **Add links to message elements**: Many message elements in Chatterino can now have a link attached to them.
+  These links can open a usercard, jump to a message, copy text, and more.
+
+  <Credit author="Mm2PL" helper="Nerixyz, pajlada" prs="6386, 6527" inline />
+
+{/* TODO: Replace when 2.5.5 is released */}
+
+- **Parse and serialize JSON**: Many APIs communicate through JSON. To avoid having to include a third party library
+  every time, Chatterino now provides a built-in
+  [`chatterino.json`](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md#json-api) module that you can `require()`.
+
+  <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6420, 6530" inline />
+
+{/* TODO: Replace when 2.5.5 is released */}
+
+- **Get the current Twitch account**:
+  [`c2.current_account()`](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md#current_account) gives you the currently logged in account and its ID.
+
+  <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6554, 6675" inline />
+
+- **Traceback for protected calls**: When a function fails in protected mode with [`pcall`](https://www.lua.org/manual/5.4/manual.html#pdf-pcall),
+  you often want to get a stack trace of where the error happened.
+  To help with this, we now include [`debug.traceback`](https://www.lua.org/manual/5.4/manual.html#pdf-debug.traceback).
+  You can pass this as the second argument to [`xpcall`](https://www.lua.org/manual/5.4/manual.html#pdf-xpcall).
+
+  <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6652" inline />
+
+{/* TODO: Replace when 2.5.5 is released */}
+
+- **Display name change events**: Plugins can now get notified when the display name of a channel changes with
+  [`Channel:on_display_name_changed`](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md#channelon_display_name_changedcb).
+  <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6594" inline />
+
+</div>
+
+<div className="changelog-entry">
+
+Some fixes to plugins:
+
+- Fixed Lua errors from handlers of HTTP requests not being logged. <Credit author="Nerixyz" prs="6452" inline />
+
+ </div>
+
+{/* TODO: Replace tag when 2.5.5 is released */}
+The LuaLS meta files moved from `docs/plugin-meta.lua` to [`docs/lua-meta/globals.lua`](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/lua-meta/globals.lua) because of the new JSON module, which has a separate meta file.
+
+<br />
+
+If you have ideas for plugins, check out [this
+discussion](https://github.com/Chatterino/chatterino2/discussions/4999). For
+an overview of proposed features, check out [the graph in this
+comment](https://github.com/Chatterino/chatterino2/discussions/4999#discussioncomment-14093379).
+
+<br />
+
+{/* TODO: Replace tag when 2.5.5 is released */}
+You can find technical documentation for plugins
+[here](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md).
+
+### Stability {#2.5.5-stability}
+
+Various changes made to the stability of Chatterino.
+
+<div className="changelog-entry">
+
+- Fixed a crash that could occur when network requests were loading/saving cache as Chatterino was being shut down. <Credit author="pajlada" prs="6698" inline />
+- Fixed a crash that could occur when closing Chatterino with a slow network connection. <Credit author="Nerixyz" prs="6645" inline />
+- Improved setting stability. <Credit author="pajlada, Nerixyz" helper="Mm2PL" prs="6620, 6662" inline />
+
+</div>
+
+### Miscellaneous fixes {#2.5.5-miscellaneous-fixes}
+
+<div className="changelog-entry">
+
+- Fixed mnemonic menu hotkeys not working on macOS. <Credit author="Leafyzito" prs="6778" inline />
+- Fixed Return and Enter being treated as different keys on macOS. <Credit author="Nevicar" prs="6729" inline />
+- Moderators and VIPs in shared chats now show their channel badges. <Credit author="jupjohn" prs="6653" inline />
+- Badges now link to their home page like emotes in the context menu. <Credit author="Nerixyz" prs="6437" inline />
+- Fixed usercard sometimes sizing itself improperly. <Credit author="teknsl" prs="6496" inline />
+- Consolidate font picking into one dialog. <Credit author="teknsl, pajlada" helper="Nerixyz" prs="6531" inline />
+- The "edit hotkey" dialog now opens like a normal window. <Credit author="jupjohn" prs="6540" inline />
+- The "Extra extension IDs" setting is now exposed to all operating systems. <Credit author="crazysmc" helper="pajlada" prs="6509" inline />
+- Fixed some commands and filters not working as expected in search popups. <Credit author="Nerixyz" prs="6539" inline />
+- Fixed an issue where occasionally the "Manage Accounts" button in the account switcher would do nothing. <Credit author="Nerixyz" prs="6543" inline />
+- Fixed font changes not always updating immediately. <Credit author="teknsl" helper="Nerixyz" prs="6536" inline />
+- Fixed the "Restore" button not showing on Windows. <Credit author="Nerixyz" prs="6565" inline />
+- Fixed custom player URIs for external players not always working due to URL percent-encoding. <Credit author="SonicSegFault" prs="6725" inline />
+- Fixed middle-clicking usernames in a local channel opening an invalid viewercard. <Credit author="Julia-Roman" prs="6577" inline />
+- The "Your username (automatic)" highlight now correctly updates if you've changed your username. <Credit author="SonicSegFault" helper="Nerixyz, pajlada" prs="6723, 6739" inline />
+- Fixed some tab-completion inconsistencies when the completion included emojis. <Credit author="ruinivist" prs="6800" inline />
+- Notify the user if the update fails in a portable installation if the updater is not present. <Credit author="Nerixyz" prs="6801" inline />
+- Fixed WebSocket connection issues with IPv6. <Credit author="pajlada, Nerixyz" prs="6631, 6804" inline />
+- Improved WebSocket connection retries on Windows. <Credit author="Nerixyz" prs="6805" inline />
+- Fixed popups and the overlay not being draggable on Wayland. <Credit author="Nerixyz" prs="6573" inline />
+- Linux notifications now have a `desktop-entry` hint added to them. <Credit author="teknsl" prs="6615" inline />
+- Better described moderation logging options. <Credit author="Nikk0o" helper="Nerixyz, jupjohn, pajlada" prs="6514" inline />
+- Fixed scrollbar rect computation potentially resulting in overflows. <Credit author="Nerixyz" prs="6547" inline />
+
+</div>
+
+### New Contributors {#2.5.5-new-contributors}
+
+<div className="changelog-entry">
+
+Thank you to everyone who helped with this release, especially the new contributors:
+
+<GitHubUser username="Nikk0o" />,
+<GitHubUser username="Julia-Roman" />,
+<GitHubUser username="devPoland" />,
+<GitHubUser username="solomoncyj" />,
+<GitHubUser username="vxtk" />,
+<GitHubUser username="Juliapixel" />,
+<GitHubUser username="ruinivist" />,
+<GitHubUser username="SonicSegFault" />,
+<GitHubUser username="Nevicar" />,
+<GitHubUser username="Leafyzito" />, and
+<GitHubUser username="achow101" />.
+
+</div>
+
+<br />
+<br />
 
 ## 2.5.4 (Released 2025-09-21) {#2.5.4}
 

@@ -18,6 +18,7 @@ import { discord, github } from "../links";
 # Chatterino Changelog
 
 {/* TODO: Update date */}
+
 ## 2.5.5 Beta 1 (Released 2026-02-??) {#2.5.5}
 
 ### Lead Moderator support {#2.5.5-lead-moderator}
@@ -28,11 +29,7 @@ This release improves support for the Lead Moderator role.
 
 Unfortunately, many of the features of the Lead Moderator can only be performed through the Twitch website and not through third party applications like Chatterino.
 
-<Credit
-  author="Juliapixel, jupjohn"
-  helper="pajlada"
-  prs="6642, 6665"
-/>
+<Credit author="Juliapixel, jupjohn" helper="pajlada" prs="6642, 6665" />
 
 </div>
 
@@ -45,11 +42,7 @@ This feature is disabled by default, and can be enabled with the "Show countdown
 
 <Figure src="./changelog/2.5.5/countdown.png"></Figure>
 
-<Credit
-  author="achow101"
-  helper="Nerixyz, pajlada"
-  prs="6782, 6791"
-/>
+<Credit author="achow101" helper="Nerixyz, pajlada" prs="6782, 6791" />
 
 </div>
 
@@ -81,15 +74,16 @@ You can find all spell checker options under the <strong>External tools</strong>
 
 Streamers can now use `/poll`, `/cancelpoll`, and `/endpoll` to manage polls inside Chatterino.
 
-<br/>
+<br />
 
 Examples:
- - Start a poll for what game to play:  
- `/poll --title "what game to play today" --duration 60 --choice "expedition 33" --choice "eu5" --choice "disco elysium" --points 69`
- - Cancel the poll you just started:  
- `/cancelpoll`
- - End the poll, preventing further votes from coming in and showing some poll information in chat:  
- `/endpoll`
+
+- Start a poll for what game to play:  
+  `/poll --title "what game to play today" --duration 60 --choice "expedition 33" --choice "eu5" --choice "disco elysium" --points 69`
+- Cancel the poll you just started:  
+  `/cancelpoll`
+- End the poll, preventing further votes from coming in and showing some poll information in chat:  
+  `/endpoll`
 
 {/* prettier-ignore */}
 <Callout type="note">
@@ -98,11 +92,7 @@ Examples:
   <a href="https://twitch.uservoice.com/forums/310213-developers/suggestions/43347684-allow-channel-moderators-to-control-polls-predicti">this Twitch UserVoice</a>.
 </Callout>
 
-<Credit
-  author="iProdigy"
-  helper="Nerixyz, pajlada"
-  prs="6583, 6605"
-/>
+<Credit author="iProdigy" helper="Nerixyz, pajlada" prs="6583, 6605" />
 
 </div>
 
@@ -110,17 +100,18 @@ Examples:
 
 Streamers can now use `/prediction`, `/cancelprediction`, `/lockprediction`, and `/completeprediction` to manage predictions inside Chatterino.
 
-<br/>
+<br />
 
 Examples:
- - Start a prediction for what programming language to use:  
- `/prediction --title "what lang will i use today" --duration 5m --choice "golang" --choice "kotlin" --choice "rust"`
- - Lock the prediction votes early:  
- `/lockprediction`
- - Cancel the prediction, refunding all points:  
- `/cancelprediction`
- - Complete the prediction, declaring a winner:  
- `/completeprediction --choice "rust"`
+
+- Start a prediction for what programming language to use:  
+  `/prediction --title "what lang will i use today" --duration 5m --choice "golang" --choice "kotlin" --choice "rust"`
+- Lock the prediction votes early:  
+  `/lockprediction`
+- Cancel the prediction, refunding all points:  
+  `/cancelprediction`
+- Complete the prediction, declaring a winner:  
+  `/completeprediction --choice "rust"`
 
 {/* prettier-ignore */}
 <Callout type="note">
@@ -141,16 +132,14 @@ Examples:
 
 Streamers and moderators can now use `/monitor`, `/unmonitor`, `/restrict`, and `/unrestrict` to control the suspicious chatter list from Chatterino.
 
-<br/>
+<br />
 
 Examples:
- - Restrict forsen from chatting:  
- `/restrict forsen`
 
-<Credit
-  author="iProdigy"
-  prs="6750, 6785"
-/>
+- Restrict forsen from chatting:  
+  `/restrict forsen`
+
+<Credit author="iProdigy" prs="6750, 6785" />
 
 </div>
 
@@ -162,10 +151,7 @@ The emote popup now includes categories for the emoji list.
 
 <Figure src="./changelog/2.5.5/emoji-categories.png"></Figure>
 
-<Credit
-  author="treejadey"
-  prs="6598"
-/>
+<Credit author="treejadey" prs="6598" />
 
 </div>
 
@@ -177,11 +163,7 @@ Your BetterTTV Pro subscriber badge is now visible in Chatterino.
 
 <Figure src="./changelog/2.5.5/betterttv-badge.png"></Figure>
 
-<Credit
-  author="Nerixyz"
-  helper="pajlada"
-  prs="6625, 6724"
-/>
+<Credit author="Nerixyz" helper="pajlada" prs="6625, 6724" />
 
 </div>
 
@@ -195,11 +177,7 @@ accompanying options/preset search engines.
 
 <Figure src="./changelog/2.5.5/search-context-menu.png"></Figure>
 
-<Credit
-  author="leafyzito"
-  helper="4rneee, pajlada"
-  prs="6743, 6770"
-/>
+<Credit author="leafyzito" helper="4rneee, pajlada" prs="6743, 6770" />
 
 </div>
 
@@ -207,71 +185,71 @@ accompanying options/preset search engines.
 
 <div className="changelog-entry">
 
- - Added a separate highlight option for watchstreak notifications. <Credit
-  author="devPoland"
-  helper="pajlada"
-  prs="6571, 6581"
-  inline
-/>
+- Added a separate highlight option for watchstreak notifications. <Credit
+    author="devPoland"
+    helper="pajlada"
+    prs="6571, 6581"
+    inline
+  />
 
- - You can now control the character limit of deleted messages with the "Limit length of deleted messages" setting. <Credit
-  author="jacob-thompson"
-  prs="6491"
-  inline
-/>
+- You can now control the character limit of deleted messages with the "Limit length of deleted messages" setting. <Credit
+    author="jacob-thompson"
+    prs="6491"
+    inline
+  />
 
- - You can now right-click any tab and sort your tabs by name alphabetically. This is an action, not a setting meaning if you want to sort your tabs again, you have to click the sort action again. <Credit
-  author="teknsl, ruinivist"
-  helper="Nerixyz, pajlada"
-  prs="6551, 6710"
-  inline
-/>
+- You can now right-click any tab and sort your tabs by name alphabetically. This is an action, not a setting meaning if you want to sort your tabs again, you have to click the sort action again. <Credit
+    author="teknsl, ruinivist"
+    helper="Nerixyz, pajlada"
+    prs="6551, 6710"
+    inline
+  />
 
- - You can now close multiple tabs at the same time (e.g. close other tabs, or close tabs to the right) <Credit
-  author="otaviobia"
-  helper="jupjohn"
-  prs="6515, 6619"
-  inline
-/>
+- You can now close multiple tabs at the same time (e.g. close other tabs, or close tabs to the right) <Credit
+    author="otaviobia"
+    helper="jupjohn"
+    prs="6515, 6619"
+    inline
+  />
 
- - You can now customize the /live messages to include the stream title. <Credit
-  author="Julia-Roman"
-  prs="6572"
-  inline
-/>
+- You can now customize the /live messages to include the stream title. <Credit
+    author="Julia-Roman"
+    prs="6572"
+    inline
+  />
 
- - You can now pre-define the title & duration of a clip (Usage: `/clip --duration 10 the title`). <Credit
-  author="iProdigy"
-  prs="6669"
-  inline
-/>
+- You can now pre-define the title & duration of a clip (Usage: `/clip --duration 10 the title`). <Credit
+    author="iProdigy"
+    prs="6669"
+    inline
+  />
 
- - You can now create a filter based on the author's external badges. (e.g.
-		 `author.external_badges contains "chatterino:Top Donator"` or
-		 `author.external_badges contains "frankerfacez:bot"`) <Credit
-  author="achow101, pajlada"
-  prs="6709"
-  inline
-/>
+- You can now create a filter based on the author's external badges. (e.g.
+  `author.external_badges contains "chatterino:Top Donator"` or
+  `author.external_badges contains "frankerfacez:bot"`) <Credit
+    author="achow101, pajlada"
+    prs="6709"
+    inline
+  />
 
- - You can now use Markdown in user notes. <Credit
-  author="jacob-thompson"
-  helper="pajlada, Nerixyz"
-  prs="6490, 6676"
-  inline
-/>
+- You can now use Markdown in user notes. <Credit
+    author="jacob-thompson"
+    helper="pajlada, Nerixyz"
+    prs="6490, 6676"
+    inline
+  />
 
- - You can now reset the channel in the `/watching` chat. <Credit
-  author="Nerixyz"
-  prs="6759"
-  inline
-/>
+- You can now reset the channel in the `/watching` chat. <Credit
+    author="Nerixyz"
+    prs="6759"
+    inline
+  />
 
- - Follower-mode duration now displays as hours or days if possible. <Credit
-  author="Nerixyz"
-  prs="6812"
-  inline
-/>
+- Follower-mode duration now displays as hours or days if possible. <Credit
+    author="Nerixyz"
+    prs="6812"
+    inline
+  />
 
 </div>
 
@@ -321,7 +299,7 @@ In this update, plugins can make use of several new APIs:
 
 Some fixes to plugins:
 
- - Fixed Lua errors from handlers of HTTP requests not being logged. <Credit author="Nerixyz" prs="6452" inline />
+- Fixed Lua errors from handlers of HTTP requests not being logged. <Credit author="Nerixyz" prs="6452" inline />
 
  </div>
 
@@ -383,7 +361,7 @@ Various changes made to the stability of Chatterino.
 
 </div>
 
-{/*TODO: Add list of all new contributors here and thank them*/}
+{/* TODO: Add list of all new contributors here and thank them */}
 
 <br />
 <br />

@@ -17,9 +17,7 @@ import { discord, github } from "../links";
 
 # Chatterino Changelog
 
-{/* TODO: Update date */}
-
-## 2.5.5 Beta 1 (Released 2026-02-??) {#2.5.5}
+## 2.5.5 Beta 1 (Released 2026-03-01) {#2.5.5}
 
 ### Lead Moderator support {#2.5.5-lead-moderator}
 
@@ -259,12 +257,12 @@ accompanying options/preset search engines.
 
 In this update, plugins can make use of several new APIs:
 
-{/* TODO: Replace commit hashes with tag when 2.5.5 is released */}
+{/* TODO: Replace when 2.5.5 is released */}
 
 - **Access and modify messages in channels**: New methods like
-  [`Channel:message_snapshot`](https://github.com/Chatterino/chatterino2/blob/09a6c3fd7a19fe0178a0e0060c848febab3ae294/docs/wip-plugins.md#channelmessage_snapshotn_items) allow plugins to retrieve all messages available in a channel.
-  The returned [`c2.Message`](https://github.com/Chatterino/chatterino2/blob/09a6c3fd7a19fe0178a0e0060c848febab3ae294/docs/wip-plugins.md#message)s can be queried (e.g. accessing individual elements). Except for their flags,
-  messages in a channel can't be modified. However, you can replace messages in channels ([`Channel:replace_message`](https://github.com/Chatterino/chatterino2/blob/09a6c3fd7a19fe0178a0e0060c848febab3ae294/docs/wip-plugins.md#channelreplace_messagemessage-replacement-hint)).
+  [`Channel:message_snapshot`](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md#channelmessage_snapshotn_items) allow plugins to retrieve all messages available in a channel. The returned
+  [`c2.Message`](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md#message)s can be queried (e.g. accessing individual elements). Except for their flags,
+  messages in a channel can't be modified. However, you can replace messages in channels ([`Channel:replace_message`](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md#channelreplace_messagemessage-replacement-hint)).
 
   <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6353, 6650" inline />
 
@@ -273,12 +271,18 @@ In this update, plugins can make use of several new APIs:
 
   <Credit author="Mm2PL" helper="Nerixyz, pajlada" prs="6386, 6527" inline />
 
+{/* TODO: Replace when 2.5.5 is released */}
+
 - **Parse and serialize JSON**: Many APIs communicate through JSON. To avoid having to include a third party library
-  every time, Chatterino now provides a built-in [`chatterino.json`](https://github.com/Chatterino/chatterino2/blob/09a6c3fd7a19fe0178a0e0060c848febab3ae294/docs/wip-plugins.md#json-api) module that you can `require()`.
+  every time, Chatterino now provides a built-in
+  [`chatterino.json`](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md#json-api) module that you can `require()`.
 
   <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6420, 6530" inline />
 
-- **Get the current Twitch account**: [`c2.current_account()`](https://github.com/Chatterino/chatterino2/blob/09a6c3fd7a19fe0178a0e0060c848febab3ae294/docs/wip-plugins.md#current_account) gives you the currently logged in account and its ID.
+{/* TODO: Replace when 2.5.5 is released */}
+
+- **Get the current Twitch account**:
+  [`c2.current_account()`](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md#current_account) gives you the currently logged in account and its ID.
 
   <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6554, 6675" inline />
 
@@ -289,8 +293,10 @@ In this update, plugins can make use of several new APIs:
 
   <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6652" inline />
 
+{/* TODO: Replace when 2.5.5 is released */}
+
 - **Display name change events**: Plugins can now get notified when the display name of a channel changes with
-  [`Channel:on_display_name_changed`](https://github.com/Chatterino/chatterino2/blob/09a6c3fd7a19fe0178a0e0060c848febab3ae294/docs/wip-plugins.md#channelon_display_name_changedcb).
+  [`Channel:on_display_name_changed`](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md#channelon_display_name_changedcb).
   <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6594" inline />
 
 </div>
@@ -303,7 +309,7 @@ Some fixes to plugins:
 
  </div>
 
-{/* TODO: Replace commit hashes with tag when 2.5.5 is released */}
+{/* TODO: Replace tag when 2.5.5 is released */}
 The LuaLS meta files moved from `docs/plugin-meta.lua` to [`docs/lua-meta/globals.lua`](https://github.com/Chatterino/chatterino2/blob/master/docs/lua-meta/globals.lua) because of the new JSON module, which has a separate meta file.
 
 <br />
@@ -315,9 +321,9 @@ comment](https://github.com/Chatterino/chatterino2/discussions/4999#discussionco
 
 <br />
 
-{/* TODO: Replace commit hashes with tag when 2.5.5 is released */}
+{/* TODO: Replace tag when 2.5.5 is released */}
 You can find technical documentation for plugins
-[here](https://github.com/Chatterino/chatterino2/blob/09a6c3fd7a19fe0178a0e0060c848febab3ae294/docs/wip-plugins.md).
+[here](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md).
 
 ### Stability {#2.5.5-stability}
 

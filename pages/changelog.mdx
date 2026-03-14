@@ -179,16 +179,26 @@ accompanying options/preset search engines.
 
 </div>
 
+### Watch streak {#2.5.5-watch-streak}
+
+Watch streaks are now seperated from subscriptions in highlights and filters.
+
+<br />
+
+#### Example filters:
+
+- Hide watch streak notifications, including the message the user sent: `!flags.watch_streak`
+- Hide watch streak notifications, but show the message the user sent: `!(flags.watch_streak && message.content contains "consecutive streams this month and sparked a watch streak")`
+
+<Figure src="./changelog/2.5.5/watch-streak-filter.png">
+  Showing off the two example filters in action
+</Figure>
+
+<Credit author="devPoland, pajlada" prs="6571, 6581, 6841" />
+
 ### Miscellaneous features {#2.5.5-miscellaneous-features}
 
 <div className="changelog-entry">
-
-- Added a separate highlight option for watchstreak notifications. <Credit
-    author="devPoland"
-    helper="pajlada"
-    prs="6571, 6581"
-    inline
-  />
 
 - You can now control the character limit of deleted messages with the "Limit length of deleted messages" setting. <Credit
     author="jacob-thompson"

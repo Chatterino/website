@@ -10,7 +10,7 @@ function Figure({ children, src, width }: Props) {
   return (
     <figure>
       {src.endsWith(".webm") ? (
-        <video src={src} width={width} controls autoPlay loop />
+        <video src={src} width={width} controls autoPlay playsInline loop />
       ) : (
         <img src={src} width={width} />
       )}

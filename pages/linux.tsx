@@ -107,9 +107,9 @@ function LinuxPage() {
               yay -S chatterino2-git
             </code>
             )
-          </Text>
-          {/* Fedora official */}
-          <h2 className="text-3xl pt-10 pb-4">Fedora</h2>
+            </Text>
+          {/* Fedora */}
+          <h2 className="text-3xl pt-10 pb-4">Fedora Linux</h2>
           <Text>
             Get the latest stable version of Chatterino through{" "}
             <a href="https://src.fedoraproject.org/rpms/chatterino2">
@@ -123,6 +123,19 @@ function LinuxPage() {
             <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
               sudo dnf install chatterino
             </code>
+          </Text>
+          </Text>
+          {/* OpenSuse */}
+          <h2 className="text-3xl pt-10 pb-4">OpenSuse</h2>
+          <Text>
+            Run{" "}
+            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+              opi install chatterino2
+            </code>{" "}
+            {" "}
+            Install Chatterino from
+            <Link href="https://en.opensuse.org/SDB:OBS_Package_Installer)">
+            OBS (Open Build Service)
           </Text>
           {/* AppImage */}
           <h2 className="text-3xl pt-10 pb-4">AppImage for all distros</h2>

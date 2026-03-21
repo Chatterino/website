@@ -44,6 +44,20 @@ This feature is disabled by default, and can be enabled with the "Show countdown
 
 </div>
 
+### Unicode 17.0 emojis {#2.5.5-unicode-17-emojis}
+
+<div className="changelog-entry">
+
+Added support for <a
+href="https://www.unicode.org/emoji/charts-17.0/emoji-released.html">Unicode
+17.0 emojis</a>.
+
+<Figure src="./changelog/2.5.5/unicode-17-emojis.png"></Figure>
+
+<Credit author="Nerixyz" prs="6471" />
+
+</div>
+
 ### Experimental spell checking {#2.5.5-spell-checking}
 
 <div className="changelog-entry">
@@ -66,7 +80,7 @@ You can find all spell checker options under the <strong>External tools</strong>
 
 </div>
 
-### Shared moderator command improvements {#2.5.5-moderator-commands}
+### Polls, predictions, and suspicious users {#2.5.5-polls-predictions-sus-users}
 
 <div className="changelog-entry">
 
@@ -85,8 +99,7 @@ Examples:
 
 {/* prettier-ignore */}
 <Callout type="note">
-  This is only available for streamers, not moderators. If you would like
-  moderators to be able to do this please see
+  If you would like this feature for moderators, please see
   <a href="https://twitch.uservoice.com/forums/310213-developers/suggestions/43347684-allow-channel-moderators-to-control-polls-predicti">this Twitch UserVoice</a>.
 </Callout>
 
@@ -113,8 +126,7 @@ Examples:
 
 {/* prettier-ignore */}
 <Callout type="note">
-  This is only available for streamers, not moderators. If you would like
-  moderators to be able to do this please see
+  If you would like this feature for moderators, please see
   <a href="https://twitch.uservoice.com/forums/310213-developers/suggestions/43347684-allow-channel-moderators-to-control-polls-predicti">this Twitch UserVoice</a>.
 </Callout>
 
@@ -179,16 +191,26 @@ accompanying options/preset search engines.
 
 </div>
 
+### Watch streak {#2.5.5-watch-streak}
+
+Watch streaks are now seperated from subscriptions in highlights and filters.
+
+<br />
+
+#### Example filters:
+
+- Hide watch streak notifications, including the message the user sent: `!flags.watch_streak`
+- Hide watch streak notifications, but show the message the user sent: `!(flags.watch_streak && message.content contains "consecutive streams this month and sparked a watch streak")`
+
+<Figure src="./changelog/2.5.5/watch-streak-filter.png">
+  Showing off the two example filters in action
+</Figure>
+
+<Credit author="devPoland, pajlada" prs="6571, 6581, 6841" />
+
 ### Miscellaneous features {#2.5.5-miscellaneous-features}
 
 <div className="changelog-entry">
-
-- Added a separate highlight option for watchstreak notifications. <Credit
-    author="devPoland"
-    helper="pajlada"
-    prs="6571, 6581"
-    inline
-  />
 
 - You can now control the character limit of deleted messages with the "Limit length of deleted messages" setting. <Credit
     author="jacob-thompson"
@@ -246,6 +268,12 @@ accompanying options/preset search engines.
 - Follower-mode duration now displays as hours or days if possible. <Credit
     author="Nerixyz"
     prs="6812"
+    inline
+  />
+
+- You can now keep the sound backend alive if you're noticing issues with highlights not playing their first sound. <Credit
+    author="pajlada"
+    prs="6859"
     inline
   />
 
@@ -357,6 +385,7 @@ Various changes made to the stability of Chatterino.
 - Fixed middle-clicking usernames in a local channel opening an invalid viewercard. <Credit author="Julia-Roman" prs="6577" inline />
 - The "Your username (automatic)" highlight now correctly updates if you've changed your username. <Credit author="SonicSegFault" helper="Nerixyz, pajlada" prs="6723, 6739" inline />
 - Fixed some tab-completion inconsistencies when the completion included emojis. <Credit author="ruinivist" prs="6800" inline />
+- Improved loading of the Twitch blocked users list for users with poor internet connections. <Credit author="Obertura777" prs="6846" inline />
 - Notify the user if the update fails in a portable installation if the updater is not present. <Credit author="Nerixyz" prs="6801" inline />
 - Fixed WebSocket connection issues with IPv6. <Credit author="pajlada, Nerixyz" prs="6631, 6804" inline />
 - Improved WebSocket connection retries on Windows. <Credit author="Nerixyz" prs="6805" inline />
@@ -364,6 +393,17 @@ Various changes made to the stability of Chatterino.
 - Linux notifications now have a `desktop-entry` hint added to them. <Credit author="teknsl" prs="6615" inline />
 - Better described moderation logging options. <Credit author="Nikk0o" helper="Nerixyz, jupjohn, pajlada" prs="6514" inline />
 - Fixed scrollbar rect computation potentially resulting in overflows. <Credit author="Nerixyz" prs="6547" inline />
+- Fixed a rare issue that could stop your Twitch subscription emotes from loading. <Credit author="pajlada" prs="6860" inline />
+
+</div>
+
+### Packaging {#2.5.5-packaging}
+
+<div className="changelog-entry">
+
+TODO: https://github.com/Chatterino/chatterino2/pull/6766
+
+TODO: mention dependency changes? e.g. minimum qt version etc
 
 </div>
 

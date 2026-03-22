@@ -3,16 +3,11 @@ import Section from "../components/section";
 import Link from "../components/link";
 import Text from "../components/text";
 import Page from "../components/page";
-import {
-  currentVersion,
-  linuxAppimageUrl,
-  linuxBuildFromSource,
-} from "../links";
+import { currentVersion, linuxBuildFromSource } from "../links";
 
 function LinuxPage() {
   const ubuntu2404Link = `https://github.com/Chatterino/chatterino2/releases/download/v${currentVersion}/Chatterino-Ubuntu-24.04.deb`;
   const ubuntu2204Link = `https://github.com/Chatterino/chatterino2/releases/download/v${currentVersion}/Chatterino-Ubuntu-22.04.deb`;
-  const ubuntu2004Link = `https://github.com/Chatterino/chatterino2/releases/download/v${currentVersion}/Chatterino-Ubuntu-20.04.deb`;
   return (
     <Page title="Chatterino on Linux">
       <div className="p-16">
@@ -35,16 +30,6 @@ function LinuxPage() {
           <Text>
             A .deb file is available from{" "}
             <Link href={ubuntu2204Link}>here</Link>.
-          </Text>
-          <Text>
-            The Universe repository must be enabled for it to download the
-            relevant dependencies.
-          </Text>
-          {/* Ubuntu 20.04 */}
-          <h2 className="text-3xl pt-10 pb-4">Ubuntu 20.04 (Focal Fossa)</h2>
-          <Text>
-            A .deb file is available from{" "}
-            <Link href={ubuntu2004Link}>here</Link>.
           </Text>
           <Text>
             The Universe repository must be enabled for it to download the
@@ -124,25 +109,30 @@ function LinuxPage() {
               sudo dnf install chatterino
             </code>
           </Text>
-          {/* AppImage */}
-          <h2 className="text-3xl pt-10 pb-4">AppImage for all distros</h2>
-          <Text>
-            You can install an AppImage with all dependencies bundled in a
-            single executable. Run this script in a terminal to install:
-            <div className="p-4 mt-4 bg-gray-900 border-gray-600 border">
-              <pre>cd /usr/local/bin</pre>
-              <pre>
-                sudo bash -c "curl {linuxAppimageUrl} &gt; ./chatterino"
-              </pre>
-              <pre>sudo chmod +x ./chatterino</pre>
-            </div>
-          </Text>
           {/* Building from Source */}
           <h2 className="text-3xl pt-10 pb-4">Building from Source</h2>
           <Text>
             If the options above don't work, then you can try{" "}
             <Link href={linuxBuildFromSource}>this guide</Link> to build it from
             source.
+          </Text>
+          {/* Ubuntu 20.04 */}
+          <h2 className="text-3xl pt-10 pb-4">Ubuntu 20.04 (Focal Fossa)</h2>
+          <Text>
+            We no longer support Ubuntu 20.04 as of Chatterino v2.5.5. See{" "}
+            <a href="https://github.com/Chatterino/chatterino2/discussions/6522">
+              this discussion
+            </a>{" "}
+            for more information.
+          </Text>
+          {/* AppImage */}
+          <h2 className="text-3xl pt-10 pb-4">AppImage</h2>
+          <Text>
+            We no longer support AppImage as of Chatterino v2.5.5. See{" "}
+            <a href="https://github.com/Chatterino/chatterino2/discussions/6110">
+              this discussion
+            </a>{" "}
+            for more information.
           </Text>
         </Section>
       </div>

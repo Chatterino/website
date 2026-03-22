@@ -9,7 +9,7 @@ export const nightly =
   "https://github.com/Chatterino/chatterino2/releases/tag/nightly-build";
 export const allDownloads = "download";
 
-export const currentVersion = "2.5.4";
+export const currentVersion = "2.5.5";
 export const baseDownloadLink = `https://chatterino.fra1.digitaloceanspaces.com/bin`;
 const dl = `https://chatterino.fra1.digitaloceanspaces.com/bin/${currentVersion}`;
 
@@ -40,6 +40,7 @@ export const allVersions = [
   "2.5.1",
   "2.5.2",
   "2.5.3",
+  "2.5.4",
 ];
 export const allV1Versions = [
   "0.2.6.4",
@@ -68,7 +69,6 @@ export const linux: DownloadType = [Tux, "Linux", "linux"];
 export const freeBsd: DownloadType = [FreeBSD, "FreeBSD", "freebsd"];
 export const macOs: DownloadType = [Apple, "macOS", `${dl}/Chatterino.dmg`];
 export const windowsPortable = `${dl}/Chatterino.Portable.zip`;
-export const linuxAppimageUrl = `${dl}/Chatterino-x86_64.AppImage`;
 
 export const linuxBuildFromSource =
   "https://github.com/Chatterino/chatterino2/blob/master/BUILDING_ON_LINUX.md";

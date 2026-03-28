@@ -13,11 +13,11 @@ import { discord, github } from "../links";
 
 <Nav />
 
- <Section className="changelog px-16" prose>
+ <Section className="changelog sm:px-16" prose>
 
 # Chatterino Changelog
 
-## 2.5.5 Beta 1 (Released 2026-03-01) {#2.5.5}
+## 2.5.5 (Released 2026-03-22) {#2.5.5}
 
 ### Lead Moderator support {#2.5.5-lead-moderator}
 
@@ -44,6 +44,20 @@ This feature is disabled by default, and can be enabled with the "Show countdown
 
 </div>
 
+### Unicode 17.0 emojis {#2.5.5-unicode-17-emojis}
+
+<div className="changelog-entry">
+
+Added support for <a
+href="https://www.unicode.org/emoji/charts-17.0/emoji-released.html">Unicode
+17.0 emojis</a>.
+
+<Figure src="./changelog/2.5.5/unicode-17-emojis.png"></Figure>
+
+<Credit author="Nerixyz" prs="6471" />
+
+</div>
+
 ### Experimental spell checking {#2.5.5-spell-checking}
 
 <div className="changelog-entry">
@@ -66,7 +80,7 @@ You can find all spell checker options under the <strong>External tools</strong>
 
 </div>
 
-### Shared moderator command improvements {#2.5.5-moderator-commands}
+### Polls, predictions, and suspicious users {#2.5.5-polls-predictions-sus-users}
 
 <div className="changelog-entry">
 
@@ -85,8 +99,7 @@ Examples:
 
 {/* prettier-ignore */}
 <Callout type="note">
-  This is only available for streamers, not moderators. If you would like
-  moderators to be able to do this please see
+  If you would like this feature for moderators, please see
   <a href="https://twitch.uservoice.com/forums/310213-developers/suggestions/43347684-allow-channel-moderators-to-control-polls-predicti">this Twitch UserVoice</a>.
 </Callout>
 
@@ -113,8 +126,7 @@ Examples:
 
 {/* prettier-ignore */}
 <Callout type="note">
-  This is only available for streamers, not moderators. If you would like
-  moderators to be able to do this please see
+  If you would like this feature for moderators, please see
   <a href="https://twitch.uservoice.com/forums/310213-developers/suggestions/43347684-allow-channel-moderators-to-control-polls-predicti">this Twitch UserVoice</a>.
 </Callout>
 
@@ -179,16 +191,26 @@ accompanying options/preset search engines.
 
 </div>
 
+### Watch streak {#2.5.5-watch-streak}
+
+Watch streaks are now seperated from subscriptions in highlights and filters.
+
+<br />
+
+#### Example filters:
+
+- Hide watch streak notifications, including the message the user sent: `!flags.watch_streak`
+- Hide watch streak notifications, but show the message the user sent: `!(flags.watch_streak && message.content contains "consecutive streams this month and sparked a watch streak")`
+
+<Figure src="./changelog/2.5.5/watch-streak-filter.png">
+  Showing off the two example filters in action
+</Figure>
+
+<Credit author="devPoland, pajlada" prs="6571, 6581, 6841" />
+
 ### Miscellaneous features {#2.5.5-miscellaneous-features}
 
 <div className="changelog-entry">
-
-- Added a separate highlight option for watchstreak notifications. <Credit
-    author="devPoland"
-    helper="pajlada"
-    prs="6571, 6581"
-    inline
-  />
 
 - You can now control the character limit of deleted messages with the "Limit length of deleted messages" setting. <Credit
     author="jacob-thompson"
@@ -249,6 +271,12 @@ accompanying options/preset search engines.
     inline
   />
 
+- You can now keep the sound backend alive if you're noticing issues with highlights not playing their first sound. <Credit
+    author="pajlada"
+    prs="6859"
+    inline
+  />
+
 </div>
 
 ### Plugins {#2.5.5-plugins}
@@ -257,12 +285,10 @@ accompanying options/preset search engines.
 
 In this update, plugins can make use of several new APIs:
 
-{/* TODO: Replace when 2.5.5 is released */}
-
 - **Access and modify messages in channels**: New methods like
-  [`Channel:message_snapshot`](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md#channelmessage_snapshotn_items) allow plugins to retrieve all messages available in a channel. The returned
-  [`c2.Message`](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md#message)s can be queried (e.g. accessing individual elements). Except for their flags,
-  messages in a channel can't be modified. However, you can replace messages in channels ([`Channel:replace_message`](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md#channelreplace_messagemessage-replacement-hint)).
+  [`Channel:message_snapshot`](https://github.com/Chatterino/chatterino2/blob/v2.5.5/docs/wip-plugins.md#channelmessage_snapshotn_items) allow plugins to retrieve all messages available in a channel. The returned
+  [`c2.Message`](https://github.com/Chatterino/chatterino2/blob/v2.5.5/docs/wip-plugins.md#message)s can be queried (e.g. accessing individual elements). Except for their flags,
+  messages in a channel can't be modified. However, you can replace messages in channels ([`Channel:replace_message`](https://github.com/Chatterino/chatterino2/blob/v2.5.5/docs/wip-plugins.md#channelreplace_messagemessage-replacement-hint)).
 
   <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6353, 6650" inline />
 
@@ -271,18 +297,14 @@ In this update, plugins can make use of several new APIs:
 
   <Credit author="Mm2PL" helper="Nerixyz, pajlada" prs="6386, 6527" inline />
 
-{/* TODO: Replace when 2.5.5 is released */}
-
 - **Parse and serialize JSON**: Many APIs communicate through JSON. To avoid having to include a third party library
   every time, Chatterino now provides a built-in
-  [`chatterino.json`](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md#json-api) module that you can `require()`.
+  [`chatterino.json`](https://github.com/Chatterino/chatterino2/blob/v2.5.5/docs/wip-plugins.md#json-api) module that you can `require()`.
 
   <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6420, 6530" inline />
 
-{/* TODO: Replace when 2.5.5 is released */}
-
 - **Get the current Twitch account**:
-  [`c2.current_account()`](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md#current_account) gives you the currently logged in account and its ID.
+  [`c2.current_account()`](https://github.com/Chatterino/chatterino2/blob/v2.5.5/docs/wip-plugins.md#current_account) gives you the currently logged in account and its ID.
 
   <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6554, 6675" inline />
 
@@ -293,10 +315,8 @@ In this update, plugins can make use of several new APIs:
 
   <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6652" inline />
 
-{/* TODO: Replace when 2.5.5 is released */}
-
 - **Display name change events**: Plugins can now get notified when the display name of a channel changes with
-  [`Channel:on_display_name_changed`](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md#channelon_display_name_changedcb).
+  [`Channel:on_display_name_changed`](https://github.com/Chatterino/chatterino2/blob/v2.5.5/docs/wip-plugins.md#channelon_display_name_changedcb).
   <Credit author="Nerixyz" helper="Mm2PL, pajlada" prs="6594" inline />
 
 </div>
@@ -309,8 +329,7 @@ Some fixes to plugins:
 
  </div>
 
-{/* TODO: Replace tag when 2.5.5 is released */}
-The LuaLS meta files moved from `docs/plugin-meta.lua` to [`docs/lua-meta/globals.lua`](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/lua-meta/globals.lua) because of the new JSON module, which has a separate meta file.
+The LuaLS meta files moved from `docs/plugin-meta.lua` to [`docs/lua-meta/globals.lua`](https://github.com/Chatterino/chatterino2/blob/v2.5.5/docs/lua-meta/globals.lua) because of the new JSON module, which has a separate meta file.
 
 <br />
 
@@ -321,9 +340,8 @@ comment](https://github.com/Chatterino/chatterino2/discussions/4999#discussionco
 
 <br />
 
-{/* TODO: Replace tag when 2.5.5 is released */}
 You can find technical documentation for plugins
-[here](https://github.com/Chatterino/chatterino2/blob/v2.5.5-beta.1/docs/wip-plugins.md).
+[here](https://github.com/Chatterino/chatterino2/blob/v2.5.5/docs/wip-plugins.md).
 
 ### Stability {#2.5.5-stability}
 
@@ -357,6 +375,7 @@ Various changes made to the stability of Chatterino.
 - Fixed middle-clicking usernames in a local channel opening an invalid viewercard. <Credit author="Julia-Roman" prs="6577" inline />
 - The "Your username (automatic)" highlight now correctly updates if you've changed your username. <Credit author="SonicSegFault" helper="Nerixyz, pajlada" prs="6723, 6739" inline />
 - Fixed some tab-completion inconsistencies when the completion included emojis. <Credit author="ruinivist" prs="6800" inline />
+- Improved loading of the Twitch blocked users list for users with poor internet connections. <Credit author="Obertura777" prs="6846" inline />
 - Notify the user if the update fails in a portable installation if the updater is not present. <Credit author="Nerixyz" prs="6801" inline />
 - Fixed WebSocket connection issues with IPv6. <Credit author="pajlada, Nerixyz" prs="6631, 6804" inline />
 - Improved WebSocket connection retries on Windows. <Credit author="Nerixyz" prs="6805" inline />
@@ -364,6 +383,20 @@ Various changes made to the stability of Chatterino.
 - Linux notifications now have a `desktop-entry` hint added to them. <Credit author="teknsl" prs="6615" inline />
 - Better described moderation logging options. <Credit author="Nikk0o" helper="Nerixyz, jupjohn, pajlada" prs="6514" inline />
 - Fixed scrollbar rect computation potentially resulting in overflows. <Credit author="Nerixyz" prs="6547" inline />
+- Fixed a rare issue that could stop your Twitch subscription emotes from loading. <Credit author="pajlada" prs="6860" inline />
+
+</div>
+
+### Packaging {#2.5.5-packaging}
+
+<div className="changelog-entry">
+
+- The oldest supported Qt version is now `6.7.1`. This likely only impacts macOS older than 10.15 which is no longer supported. <Credit author="pajlada" prs="6628" inline />
+- We no longer support Ubuntu 20.04. <Credit author="pajlada" prs="6630" inline />
+- We no longer support AppImage builds. <Credit author="pajlada" prs="6504" inline />
+- Added a CMake option `CHATTERINO_EXTRA_BUILD_STRING` which allows the packager to provide an optional freestanding Qt-HTML string that shows up in the About page under the Chatterino version. <Credit author="pajlada" prs="6766" inline />
+- Chatterino now requires C++23. <Credit author="pajlada" prs="6693" inline />
+- Nightly builds no longer use the `modes` file to know they are nightly, a new build option is used: `CHATTERINO_NIGHTLY_BUILD`. <Credit author="pajlada" prs="6798" inline />
 
 </div>
 

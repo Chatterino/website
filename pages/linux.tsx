@@ -50,48 +50,83 @@ function LinuxPage() {
           {/* AUR */}
           <h2 className="text-3xl pt-10 pb-4">Arch Linux</h2>
           <Text>
-            Get the latest stable version with{" "}
+            You can install Chatterino through the{" "}
+            <Link href="https://wiki.archlinux.org/title/Arch_User_Repository">
+              Arch User Repository
+            </Link>{" "}
+            with{" "}
+            <Link href="https://wiki.archlinux.org/title/Makepkg">makepkg</Link>{" "}
+            or with an{" "}
+            <Link href="https://wiki.archlinux.org/title/AUR_helpers">
+              AUR helper
+            </Link>{" "}
+            like <Link href="https://github.com/Jguer/yay">yay</Link> or{" "}
+            <Link href="https://github.com/Morganamilo/paru">Paru</Link>.
+          </Text>
+          <br />
+          <Text>
+            Get the latest stable version from{" "}
             <Link href="https://aur.archlinux.org/packages/chatterino2-bin/">
               chatterino2-bin
-            </Link>{" "}
-            (e.g. with yay{" "}
-            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-              yay -S chatterino2-bin
-            </code>
-            )
+            </Link>
+            <p className="pl-3 pb-3">
+              e.g.{" "}
+              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+                yay -S chatterino2-bin
+              </code>{" "}
+              or{" "}
+              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+                paru -S chatterino2-bin
+              </code>
+            </p>
           </Text>
           <Text>
-            Get the latest nightly version with{" "}
+            Get the latest nightly version from{" "}
             <Link href="https://aur.archlinux.org/packages/chatterino2-nightly-bin/">
               chatterino2-nightly-bin
-            </Link>{" "}
-            (e.g. with yay{" "}
-            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-              yay -S chatterino2-nightly-bin
-            </code>
-            )
+            </Link>
+            <p className="pl-3 pb-3">
+              e.g.{" "}
+              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+                yay -S chatterino2-nightly-bin
+              </code>{" "}
+              or{" "}
+              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+                paru -S chatterino2-nightly-bin
+              </code>
+            </p>
           </Text>
           <Text>
-            Build latest stable version from source with{" "}
+            Build latest stable version from source from{" "}
             <Link href="https://aur.archlinux.org/packages/chatterino2/">
               chatterino2
-            </Link>{" "}
-            (e.g. with yay{" "}
-            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-              yay -S chatterino2
-            </code>
-            )
+            </Link>
+            <p className="pl-3 pb-3">
+              e.g.{" "}
+              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+                yay -S chatterino2
+              </code>{" "}
+              or{" "}
+              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+                paru -S chatterino2
+              </code>
+            </p>
           </Text>
           <Text>
-            Build latest development version from source with{" "}
+            Build latest development version from source from{" "}
             <Link href="https://aur.archlinux.org/packages/chatterino2-git/">
               chatterino2-git
-            </Link>{" "}
-            (e.g. with yay{" "}
-            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-              yay -S chatterino2-git
-            </code>
-            )
+            </Link>
+            <p className="pl-3">
+              e.g.{" "}
+              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+                yay -S chatterino2-git
+              </code>{" "}
+              or{" "}
+              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+                paru -S chatterino2-git
+              </code>
+            </p>
           </Text>
           {/* Fedora official */}
           <h2 className="text-3xl pt-10 pb-4">Fedora</h2>

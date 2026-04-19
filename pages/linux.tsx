@@ -124,7 +124,7 @@ function LinuxPage() {
             )
             </Text>
           {/* Fedora linux */}
-            </Link>
+          <Text>
             <p className="pl-3">
               e.g.{" "}
               <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">

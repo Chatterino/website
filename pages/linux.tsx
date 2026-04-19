@@ -124,6 +124,19 @@ function LinuxPage() {
             )
             </Text>
           {/* Fedora linux */}
+            </Link>
+            <p className="pl-3">
+              e.g.{" "}
+              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+                yay -S chatterino2-git
+              </code>{" "}
+              or{" "}
+              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+                paru -S chatterino2-git
+              </code>
+            </p>
+          </Text>
+          {/* Fedora official */}
           <h2 className="text-3xl pt-10 pb-4">Fedora</h2>
           <Text>
             Get the latest stable version of Chatterino through{" "}
@@ -149,6 +162,26 @@ function LinuxPage() {
             <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
               sudo opi install chatterino2
             </code>
+          </Text>
+          {/* Ubuntu 20.04 */}
+          <h2 className="text-3xl pt-10 pb-4">Ubuntu 20.04 (Focal Fossa)</h2>
+          {/* Building from Source */}
+          <h2 className="text-3xl pt-10 pb-4">Building from Source</h2>
+          <Text>
+            We no longer support Ubuntu 20.04 as of Chatterino v2.5.5. See{" "}
+            <a href="https://github.com/Chatterino/chatterino2/discussions/6522">
+              this discussion
+            </a>{" "}
+            for more information.
+          </Text>
+          {/* AppImage */}
+          <h2 className="text-3xl pt-10 pb-4">AppImage</h2>
+          <Text>
+            We no longer support AppImage as of Chatterino v2.5.5. See{" "}
+            <a href="https://github.com/Chatterino/chatterino2/discussions/6110">
+              this discussion
+            </a>{" "}
+            for more information.
           </Text>
           {/* Ubuntu 20.04 */}
           <h2 className="text-3xl pt-10 pb-4">Ubuntu 20.04 (Focal Fossa)</h2>

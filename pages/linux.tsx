@@ -136,13 +136,12 @@ function LinuxPage() {
             <a href="https://gitweb.gentoo.org/repo/proj/guru.git/tree/net-im/chatterino">
               gentoo's official package
             </a>{" "}
-            </a>
             :{" "}
             <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
               #make sure that the guru repo is enabled
               doas emerge chatterino --ask
-            </code>
-
+            </code>{" "}
+            </Text>
           {/* Fedora official */}
           <h2 className="text-3xl pt-10 pb-4">Fedora</h2>
           <Text>

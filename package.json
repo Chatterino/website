@@ -15,10 +15,10 @@
     "@next/mdx": "^15.0.0",
     "@tailwindcss/postcss": "^4.0.0",
     "mdast-util-find-and-replace": "^3.0.0",
-    "next": "^15.5.9",
+    "next": "^15.5.15",
     "postcss": "^8.4.18",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
     "react-elm-components": "^1.1.0",
     "react-responsive-carousel": "^3.2.23",
     "rehype-autolink-headings": "^7.1.0",
@@ -28,13 +28,13 @@
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.8.2",
-    "@types/node": "24.10.13",
+    "@types/node": "24.12.2",
     "@types/react": "19.2.14",
-    "prettier": "3.8.1",
+    "prettier": "3.8.3",
     "typescript": "5.9.3",
-    "vercel": "^50.0.0"
+    "vercel": "^51.0.0"
   },
-  "packageManager": "yarn@4.12.0",
+  "packageManager": "yarn@4.14.1",
   "engines": {
     "node": ">=18",
     "yarn": "^4"

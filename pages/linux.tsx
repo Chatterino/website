@@ -124,13 +124,13 @@ function LinuxPage() {
               sudo dnf install chatterino
             </code>
           </Text>
-          </Text>
           {/* OpenSuse */}
           <h2 className="text-3xl pt-10 pb-4">OpenSuse</h2>
           <Text>
             Run{" "}
             <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
               opi install chatterino2
+              </Text>
             </code>{" "}
             {" "}
             Install Chatterino from

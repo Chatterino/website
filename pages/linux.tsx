@@ -134,11 +134,14 @@ function LinuxPage() {
           <Text>
             Get the latest stable version of Chatterino through{" "}
             <a href="https://gitweb.gentoo.org/repo/proj/guru.git/tree/net-im/chatterino">
-              gentoo's official package
+              Gentoo's official package
             </a>{" "}
             :{" "}
             <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+
               #make sure that the guru repo is enabled
+              #https://wiki.gentoo.org/wiki/Project:GURU/Information_for_End_Users
+
               doas emerge chatterino --ask
             </code>{" "}
             </Text>

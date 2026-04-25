@@ -1404,9 +1404,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/node@npm:4.2.2":
-  version: 4.2.2
-  resolution: "@tailwindcss/node@npm:4.2.2"
+"@tailwindcss/node@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/node@npm:4.2.4"
   dependencies:
     "@jridgewell/remapping": "npm:^2.3.5"
     enhanced-resolve: "npm:^5.19.0"
@@ -1414,77 +1414,77 @@ __metadata:
     lightningcss: "npm:1.32.0"
     magic-string: "npm:^0.30.21"
     source-map-js: "npm:^1.2.1"
-    tailwindcss: "npm:4.2.2"
-  checksum: 10c0/4c0019355cd85a08f93ba3e179de37b83cc233b8ded4bd7714e633f89dd108928742e50966593257c2c1ab8db8914ea187dae007b5c692c869ceace11aeccede
+    tailwindcss: "npm:4.2.4"
+  checksum: 10c0/58a0b8c4b8e8425e34a5240e58d90f6ef462705f790b93e6e74ae0bbd05d228457b8438a34a272b447393bfdb2ea1605400ccc5b0edb87d9dd9d092f1d8a0bb2
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-android-arm64@npm:4.2.2":
-  version: 4.2.2
-  resolution: "@tailwindcss/oxide-android-arm64@npm:4.2.2"
+"@tailwindcss/oxide-android-arm64@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-android-arm64@npm:4.2.4"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-darwin-arm64@npm:4.2.2":
-  version: 4.2.2
-  resolution: "@tailwindcss/oxide-darwin-arm64@npm:4.2.2"
+"@tailwindcss/oxide-darwin-arm64@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-darwin-arm64@npm:4.2.4"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-darwin-x64@npm:4.2.2":
-  version: 4.2.2
-  resolution: "@tailwindcss/oxide-darwin-x64@npm:4.2.2"
+"@tailwindcss/oxide-darwin-x64@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-darwin-x64@npm:4.2.4"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-freebsd-x64@npm:4.2.2":
-  version: 4.2.2
-  resolution: "@tailwindcss/oxide-freebsd-x64@npm:4.2.2"
+"@tailwindcss/oxide-freebsd-x64@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-freebsd-x64@npm:4.2.4"
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-linux-arm-gnueabihf@npm:4.2.2":
-  version: 4.2.2
-  resolution: "@tailwindcss/oxide-linux-arm-gnueabihf@npm:4.2.2"
+"@tailwindcss/oxide-linux-arm-gnueabihf@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-linux-arm-gnueabihf@npm:4.2.4"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-linux-arm64-gnu@npm:4.2.2":
-  version: 4.2.2
-  resolution: "@tailwindcss/oxide-linux-arm64-gnu@npm:4.2.2"
+"@tailwindcss/oxide-linux-arm64-gnu@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-linux-arm64-gnu@npm:4.2.4"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-linux-arm64-musl@npm:4.2.2":
-  version: 4.2.2
-  resolution: "@tailwindcss/oxide-linux-arm64-musl@npm:4.2.2"
+"@tailwindcss/oxide-linux-arm64-musl@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-linux-arm64-musl@npm:4.2.4"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-linux-x64-gnu@npm:4.2.2":
-  version: 4.2.2
-  resolution: "@tailwindcss/oxide-linux-x64-gnu@npm:4.2.2"
+"@tailwindcss/oxide-linux-x64-gnu@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-linux-x64-gnu@npm:4.2.4"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-linux-x64-musl@npm:4.2.2":
-  version: 4.2.2
-  resolution: "@tailwindcss/oxide-linux-x64-musl@npm:4.2.2"
+"@tailwindcss/oxide-linux-x64-musl@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-linux-x64-musl@npm:4.2.4"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-wasm32-wasi@npm:4.2.2":
-  version: 4.2.2
-  resolution: "@tailwindcss/oxide-wasm32-wasi@npm:4.2.2"
+"@tailwindcss/oxide-wasm32-wasi@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-wasm32-wasi@npm:4.2.4"
   dependencies:
     "@emnapi/core": "npm:^1.8.1"
     "@emnapi/runtime": "npm:^1.8.1"
@@ -1496,36 +1496,36 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-win32-arm64-msvc@npm:4.2.2":
-  version: 4.2.2
-  resolution: "@tailwindcss/oxide-win32-arm64-msvc@npm:4.2.2"
+"@tailwindcss/oxide-win32-arm64-msvc@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-win32-arm64-msvc@npm:4.2.4"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-win32-x64-msvc@npm:4.2.2":
-  version: 4.2.2
-  resolution: "@tailwindcss/oxide-win32-x64-msvc@npm:4.2.2"
+"@tailwindcss/oxide-win32-x64-msvc@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide-win32-x64-msvc@npm:4.2.4"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide@npm:4.2.2":
-  version: 4.2.2
-  resolution: "@tailwindcss/oxide@npm:4.2.2"
+"@tailwindcss/oxide@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@tailwindcss/oxide@npm:4.2.4"
   dependencies:
-    "@tailwindcss/oxide-android-arm64": "npm:4.2.2"
-    "@tailwindcss/oxide-darwin-arm64": "npm:4.2.2"
-    "@tailwindcss/oxide-darwin-x64": "npm:4.2.2"
-    "@tailwindcss/oxide-freebsd-x64": "npm:4.2.2"
-    "@tailwindcss/oxide-linux-arm-gnueabihf": "npm:4.2.2"
-    "@tailwindcss/oxide-linux-arm64-gnu": "npm:4.2.2"
-    "@tailwindcss/oxide-linux-arm64-musl": "npm:4.2.2"
-    "@tailwindcss/oxide-linux-x64-gnu": "npm:4.2.2"
-    "@tailwindcss/oxide-linux-x64-musl": "npm:4.2.2"
-    "@tailwindcss/oxide-wasm32-wasi": "npm:4.2.2"
-    "@tailwindcss/oxide-win32-arm64-msvc": "npm:4.2.2"
-    "@tailwindcss/oxide-win32-x64-msvc": "npm:4.2.2"
+    "@tailwindcss/oxide-android-arm64": "npm:4.2.4"
+    "@tailwindcss/oxide-darwin-arm64": "npm:4.2.4"
+    "@tailwindcss/oxide-darwin-x64": "npm:4.2.4"
+    "@tailwindcss/oxide-freebsd-x64": "npm:4.2.4"
+    "@tailwindcss/oxide-linux-arm-gnueabihf": "npm:4.2.4"
+    "@tailwindcss/oxide-linux-arm64-gnu": "npm:4.2.4"
+    "@tailwindcss/oxide-linux-arm64-musl": "npm:4.2.4"
+    "@tailwindcss/oxide-linux-x64-gnu": "npm:4.2.4"
+    "@tailwindcss/oxide-linux-x64-musl": "npm:4.2.4"
+    "@tailwindcss/oxide-wasm32-wasi": "npm:4.2.4"
+    "@tailwindcss/oxide-win32-arm64-msvc": "npm:4.2.4"
+    "@tailwindcss/oxide-win32-x64-msvc": "npm:4.2.4"
   dependenciesMeta:
     "@tailwindcss/oxide-android-arm64":
       optional: true
@@ -1551,20 +1551,20 @@ __metadata:
       optional: true
     "@tailwindcss/oxide-win32-x64-msvc":
       optional: true
-  checksum: 10c0/22f78d73ffcec2d0d91f9fbfc29fed23c260e3e53f510f0b2598e322bf56a92ceb7e6f5a1c88ad1e3c7cfee9dd8d39285c411de5ec3225cdae2cbfdb737862e5
+  checksum: 10c0/f9fe3d19d4384e754155030482f664c6747c7d5d1556795a510c517c2a3408bebbe60c25cebb1da47187c347c04d993585b9c2580e43df9f522e1c7692ae25fc
   languageName: node
   linkType: hard
 
 "@tailwindcss/postcss@npm:^4.0.0":
-  version: 4.2.2
-  resolution: "@tailwindcss/postcss@npm:4.2.2"
+  version: 4.2.4
+  resolution: "@tailwindcss/postcss@npm:4.2.4"
   dependencies:
     "@alloc/quick-lru": "npm:^5.2.0"
-    "@tailwindcss/node": "npm:4.2.2"
-    "@tailwindcss/oxide": "npm:4.2.2"
+    "@tailwindcss/node": "npm:4.2.4"
+    "@tailwindcss/oxide": "npm:4.2.4"
     postcss: "npm:^8.5.6"
-    tailwindcss: "npm:4.2.2"
-  checksum: 10c0/b2501269d9eb2d8e80b548769b4552115ada36f7f7777d3b7656f7c7fe8b12d22305f9deb8a1fb9e41b30b98685ed3a1920ebb0b0e782b63f9483af9bc6e58a5
+    tailwindcss: "npm:4.2.4"
+  checksum: 10c0/e6abad7065558bf3c39d30f392100c934c3381a572df21d934dd5a9399e0a62e16ba3d74a51ec0b1d670b1990ae73d01dfc560db0bf0e24bad827e00be0e62c2
   languageName: node
   linkType: hard
 
@@ -1724,11 +1724,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/backends@npm:0.1.1":
-  version: 0.1.1
-  resolution: "@vercel/backends@npm:0.1.1"
+"@vercel/backends@npm:0.2.0":
+  version: 0.2.0
+  resolution: "@vercel/backends@npm:0.2.0"
   dependencies:
-    "@vercel/build-utils": "npm:13.19.0"
+    "@vercel/build-utils": "npm:13.20.0"
     "@vercel/nft": "npm:1.5.0"
     "@yarnpkg/parsers": "npm:^3.0.0"
     execa: "npm:3.2.0"
@@ -1743,7 +1743,7 @@ __metadata:
     zod: "npm:3.22.4"
   peerDependencies:
     typescript: ^4.0.0 || ^5.0.0
-  checksum: 10c0/d0559d89bbe98a32e1e47b096789a34faec2688a44e37e9da223c28de04d9b679da0b076cefccc3bf48d4955bbc03782c8a0085b4114c71240ce6682839a90b4
+  checksum: 10c0/d2fcb56787bb730e209869e513deb994b22a0fdeb1dad8500a0ac526520d567b4f099d7474a6923720fd09ab8e8d4e69f01e337612d732194f8a237a746c56c3
   languageName: node
   linkType: hard
 
@@ -1760,27 +1760,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/build-utils@npm:13.19.0":
-  version: 13.19.0
-  resolution: "@vercel/build-utils@npm:13.19.0"
+"@vercel/build-utils@npm:13.20.0":
+  version: 13.20.0
+  resolution: "@vercel/build-utils@npm:13.20.0"
   dependencies:
     "@vercel/python-analysis": "npm:0.11.0"
     cjs-module-lexer: "npm:1.2.3"
     es-module-lexer: "npm:1.5.0"
-  checksum: 10c0/23039faa36267e1ca8c9d7e9c025cf2d567dbc4f1f8b14a4a4475f710f6d37e4b91e6d013b6a6144e3960d346d4fe9404811b0b774f2277d3e3a8afc575fce7d
+  checksum: 10c0/efcd0ca6cca2ebcaa6ada34a4f2caadae18e4e8a1605a8a8a7a19514787043607eb3652e542509a821a4de3aa77d74e6c45deee8a65d01ceeea92b908d29ceba
   languageName: node
   linkType: hard
 
-"@vercel/cervel@npm:0.0.53":
-  version: 0.0.53
-  resolution: "@vercel/cervel@npm:0.0.53"
+"@vercel/cervel@npm:0.0.55":
+  version: 0.0.55
+  resolution: "@vercel/cervel@npm:0.0.55"
   dependencies:
-    "@vercel/backends": "npm:0.1.1"
+    "@vercel/backends": "npm:0.2.0"
   peerDependencies:
     typescript: ^4.0.0 || ^5.0.0
   bin:
     cervel: bin/cervel.mjs
-  checksum: 10c0/e7dbbec390c2a2d8670cae9c6016837d9511a374cfcba669f67fe2d53f12c018d076fba93905de4ea47749fc1fe570036befb760b0ff97b772e0443334af4fd5
+  checksum: 10c0/62af6f496b74229b92f3ee8ed576bba78d5a3cae94f780221e7d0b319683c59cc9004db91894c9c1d958f69bc8516f8d342e1e9e3b5836fa3a1bccc37ec56937
   languageName: node
   linkType: hard
 
@@ -1791,13 +1791,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/elysia@npm:0.1.69":
-  version: 0.1.69
-  resolution: "@vercel/elysia@npm:0.1.69"
+"@vercel/elysia@npm:0.1.71":
+  version: 0.1.71
+  resolution: "@vercel/elysia@npm:0.1.71"
   dependencies:
-    "@vercel/node": "npm:5.7.11"
+    "@vercel/node": "npm:5.7.13"
     "@vercel/static-config": "npm:3.2.0"
-  checksum: 10c0/b291827030db6ded6f2fce9c2b0a9a0b956b115383b0508b08f3c18b5a2430f2474d7ae6acfe0ff7b79897ed117d2c2158bfeb7e4af0350ec7baa140d27636e7
+  checksum: 10c0/5a1f88e9a1337e21443920dcb70f9273e42afe718aa15ac71317b18dc69ac52592a8dd75fa4ae406ac559b54a8156011fd9d78aaeec04c1c106acf8a15e35d30
   languageName: node
   linkType: hard
 
@@ -1808,29 +1808,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/express@npm:0.1.79":
-  version: 0.1.79
-  resolution: "@vercel/express@npm:0.1.79"
+"@vercel/express@npm:0.1.81":
+  version: 0.1.81
+  resolution: "@vercel/express@npm:0.1.81"
   dependencies:
-    "@vercel/cervel": "npm:0.0.53"
+    "@vercel/cervel": "npm:0.0.55"
     "@vercel/nft": "npm:1.5.0"
-    "@vercel/node": "npm:5.7.11"
+    "@vercel/node": "npm:5.7.13"
     "@vercel/static-config": "npm:3.2.0"
     fs-extra: "npm:11.1.0"
     path-to-regexp: "npm:8.3.0"
     ts-morph: "npm:12.0.0"
     zod: "npm:3.22.4"
-  checksum: 10c0/264ea06856b2c7d61ff2c5b1781abf68de681bd293ac02b2f6860f4aa330f541291fdf72b64a9f3172b86e60dde7bd6c1fd852c91b1820e39e4d9ad657b00713
+  checksum: 10c0/1751863ceb7807e9abbdc4c9a887190d404612070b8f9d197bdd91ae89fcbce33a75d58f40a41cdb6dd7348469a0b818eb3ca8474776975aa6c3ca9f53c28ab1
   languageName: node
   linkType: hard
 
-"@vercel/fastify@npm:0.1.72":
-  version: 0.1.72
-  resolution: "@vercel/fastify@npm:0.1.72"
+"@vercel/fastify@npm:0.1.74":
+  version: 0.1.74
+  resolution: "@vercel/fastify@npm:0.1.74"
   dependencies:
-    "@vercel/node": "npm:5.7.11"
+    "@vercel/node": "npm:5.7.13"
     "@vercel/static-config": "npm:3.2.0"
-  checksum: 10c0/7fc28d212e1bfc80b3813693d6cc197283f270e3ed50531f907f263c8548486230fda1ee2419ed613bff9ebb427f22fe1a4a64a610c8ccbb9d330c0e24a80e57
+  checksum: 10c0/7bc772aa50f075b7caa76a821852e1b959e5cb4f7530a1269325b4be5c8b4a051b3baccfabc11d80ad89ee9d2e9d4e59e3c2cf34b58bb0c6eaf9629ba0949678
   languageName: node
   linkType: hard
 
@@ -1869,16 +1869,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/gatsby-plugin-vercel-builder@npm:2.1.19":
-  version: 2.1.19
-  resolution: "@vercel/gatsby-plugin-vercel-builder@npm:2.1.19"
+"@vercel/gatsby-plugin-vercel-builder@npm:2.1.21":
+  version: 2.1.21
+  resolution: "@vercel/gatsby-plugin-vercel-builder@npm:2.1.21"
   dependencies:
     "@sinclair/typebox": "npm:0.25.24"
-    "@vercel/build-utils": "npm:13.19.0"
+    "@vercel/build-utils": "npm:13.20.0"
     esbuild: "npm:0.27.0"
     etag: "npm:1.8.1"
     fs-extra: "npm:11.1.0"
-  checksum: 10c0/62d36471caa8d8edbad659ba27f6451cea8733a60b3971c74a64b8e4447609d1fa35908eeded7a0d811209e632eb2f61caf5ef6fed7453227addf52948f3ad2f
+  checksum: 10c0/82a9656829e1098b28e3463f7fa79c0732ff859c4d50a1ab3adbe75083d9aff767af6ac7aaea59a2b5a8793f042b9879dd02347463c7d1858a851d25f6770b37
   languageName: node
   linkType: hard
 
@@ -1889,28 +1889,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/h3@npm:0.1.78":
-  version: 0.1.78
-  resolution: "@vercel/h3@npm:0.1.78"
+"@vercel/h3@npm:0.1.80":
+  version: 0.1.80
+  resolution: "@vercel/h3@npm:0.1.80"
   dependencies:
-    "@vercel/node": "npm:5.7.11"
+    "@vercel/node": "npm:5.7.13"
     "@vercel/static-config": "npm:3.2.0"
-  checksum: 10c0/f5a4f81dec6d092188c9642b4cf44a773a87ecca234d02c546ca77f4b2e2d5f34c2a36921c139f0fc69c60c9bd1d333e5c2246d667644845b649f437f6ee2d24
+  checksum: 10c0/63a28c55e24c4785b7acf30c9474d9c78811641c58fe71f32814ec743e099fafb036b0dec20c6f2c7c02cbee4164c449bc882494fd87f111dcbb16e43dbe129f
   languageName: node
   linkType: hard
 
-"@vercel/hono@npm:0.2.72":
-  version: 0.2.72
-  resolution: "@vercel/hono@npm:0.2.72"
+"@vercel/hono@npm:0.2.74":
+  version: 0.2.74
+  resolution: "@vercel/hono@npm:0.2.74"
   dependencies:
     "@vercel/nft": "npm:1.5.0"
-    "@vercel/node": "npm:5.7.11"
+    "@vercel/node": "npm:5.7.13"
     "@vercel/static-config": "npm:3.2.0"
     fs-extra: "npm:11.1.0"
     path-to-regexp: "npm:8.3.0"
     ts-morph: "npm:12.0.0"
     zod: "npm:3.22.4"
-  checksum: 10c0/4ec70fd5835d9310ef69a26646aa8f33158d0ea8132f4c69addca8b5eb4f325436b3490f41c54d13187220256b16df6a7229485106457c3d65adac8b43f08a84
+  checksum: 10c0/750e8e5e73aed662b07a9c27418b8e8a176f68b9f36038e311487ce0e92de4ede6bc70fce0b806f56e61c788dd041e8364b1a7f31f2180b831bdce80277f57af
   languageName: node
   linkType: hard
 
@@ -1924,23 +1924,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/koa@npm:0.1.52":
-  version: 0.1.52
-  resolution: "@vercel/koa@npm:0.1.52"
+"@vercel/koa@npm:0.1.54":
+  version: 0.1.54
+  resolution: "@vercel/koa@npm:0.1.54"
   dependencies:
-    "@vercel/node": "npm:5.7.11"
+    "@vercel/node": "npm:5.7.13"
     "@vercel/static-config": "npm:3.2.0"
-  checksum: 10c0/40bda9c3cdf0ead2a84aef27b0135bffc888cb42f2f737cfd695b695543537e32fdf9494d343b6485e7aa150c41c8927dc840806b9450bf24003e60c64e67748
+  checksum: 10c0/cf3b55216857af91d57f3092e9ab0c53d339ab8a56fbed62c1f48891ebcd629cfe0bc7191d0dfc58ba9012ee419b30eaf37b4235deb0d2bd950b0a09c951c32a
   languageName: node
   linkType: hard
 
-"@vercel/nestjs@npm:0.2.73":
-  version: 0.2.73
-  resolution: "@vercel/nestjs@npm:0.2.73"
+"@vercel/nestjs@npm:0.2.75":
+  version: 0.2.75
+  resolution: "@vercel/nestjs@npm:0.2.75"
   dependencies:
-    "@vercel/node": "npm:5.7.11"
+    "@vercel/node": "npm:5.7.13"
     "@vercel/static-config": "npm:3.2.0"
-  checksum: 10c0/3fcac48ba9073683f8ec2a1e1fd69af11919ec062fafcee77ffcf778404159f2467a3bd2f80a77f33234004ce0a73e56ec0082a97eb7aed237caa8e808b8e4c3
+  checksum: 10c0/2008719ab805d6045f5a699eebb4a423fbc7e1ff9d666f22d8f54e7911ad89a720415e2b5d36f2907e3cf348a2a182436041bdf10d4971f7589a0848d3768fb1
   languageName: node
   linkType: hard
 
@@ -1975,15 +1975,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/node@npm:5.7.11":
-  version: 5.7.11
-  resolution: "@vercel/node@npm:5.7.11"
+"@vercel/node@npm:5.7.13":
+  version: 5.7.13
+  resolution: "@vercel/node@npm:5.7.13"
   dependencies:
     "@edge-runtime/node-utils": "npm:2.3.0"
     "@edge-runtime/primitives": "npm:4.1.0"
     "@edge-runtime/vm": "npm:3.2.0"
     "@types/node": "npm:20.11.0"
-    "@vercel/build-utils": "npm:13.19.0"
+    "@vercel/build-utils": "npm:13.20.0"
     "@vercel/error-utils": "npm:2.0.3"
     "@vercel/nft": "npm:1.5.0"
     "@vercel/static-config": "npm:3.2.0"
@@ -2001,7 +2001,7 @@ __metadata:
     tsx: "npm:4.21.0"
     typescript: "npm:typescript@5.9.3"
     undici: "npm:5.28.4"
-  checksum: 10c0/8ffa36dc83d8b069e910dba522a4b2768f529568982ee8dc1792cac717ed705abb055fa19477e745e180390716bcd89bb8c6365f77e5866b891d9a203b5ce1f0
+  checksum: 10c0/5d6bb74434cb3b94ad968b0e5a6eeba31eddab9591fad511ad3dc819e25fc79462562069ed1f6315d5008ede6b5fbe877153e1482a41b71b3e9c3051ded46d8d
   languageName: node
   linkType: hard
 
@@ -2034,12 +2034,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/python@npm:6.35.0":
-  version: 6.35.0
-  resolution: "@vercel/python@npm:6.35.0"
+"@vercel/python@npm:6.36.0":
+  version: 6.36.0
+  resolution: "@vercel/python@npm:6.36.0"
   dependencies:
     "@vercel/python-analysis": "npm:0.11.0"
-  checksum: 10c0/947d1a2002fa20459eae6d5412efe7fad8f3061de628198398ed624b7cbcd8a89cfa7a68679de87a5f750462f6e82642eb51a14de5cbd1bbefcff768abecc572
+  checksum: 10c0/ccf86d613da0a496b8f8f2c244a9fa2bbe05fc6107555c7bc8dbbb2f0024dc6f4f5cabace7f701c6b3c6b7578dd6f98f80aac1530ca6511ad78a3da28c9a22ff
   languageName: node
   linkType: hard
 
@@ -2103,15 +2103,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/static-build@npm:2.9.19":
-  version: 2.9.19
-  resolution: "@vercel/static-build@npm:2.9.19"
+"@vercel/static-build@npm:2.9.21":
+  version: 2.9.21
+  resolution: "@vercel/static-build@npm:2.9.21"
   dependencies:
     "@vercel/gatsby-plugin-vercel-analytics": "npm:1.0.11"
-    "@vercel/gatsby-plugin-vercel-builder": "npm:2.1.19"
+    "@vercel/gatsby-plugin-vercel-builder": "npm:2.1.21"
     "@vercel/static-config": "npm:3.2.0"
     ts-morph: "npm:12.0.0"
-  checksum: 10c0/111e4d4cc905fb4308a083a1c28ab72c4ca2a7b5184d14d02bf3be32b8090a573b9df4aab71edc54470970b4bca0bd2e652b086b38b02a1c4d8becc21f689f34
+  checksum: 10c0/e4ce002c7e6aaba9ecbcf3216bdcbb9e41fa14c8394f69873b844f39cb73fcdb8dbca56a19cfd5b0da153846278a291a06fc83724864a72872eb1f633e9e7211
   languageName: node
   linkType: hard
 
@@ -2626,7 +2626,7 @@ __metadata:
     remark-github: "npm:^12.0.0"
     tailwindcss: "npm:^4.0.0"
     typescript: "npm:5.9.3"
-    vercel: "npm:^51.0.0"
+    vercel: "npm:^52.0.0"
   languageName: unknown
   linkType: soft
 
@@ -6868,10 +6868,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:4.2.2, tailwindcss@npm:^4.0.0":
-  version: 4.2.2
-  resolution: "tailwindcss@npm:4.2.2"
-  checksum: 10c0/6eae8a125c35d504ba6c518d26ec64fba694ff4a9ab9b9cd9883050128e0b7afdf491388c472d9bed2624664c1c7d4a133d19b653151a6b52e6ce6953168a857
+"tailwindcss@npm:4.2.4, tailwindcss@npm:^4.0.0":
+  version: 4.2.4
+  resolution: "tailwindcss@npm:4.2.4"
+  checksum: 10c0/1069304b6bf2855daa029ac4af382abb95ed26ae4d05bc09ea01a56e6af3de8b6fb1b4d508d8bbb39abf30a69766e6f2f75835e112ac6fc39ed94ae5d4901048
   languageName: node
   linkType: hard
 
@@ -7254,33 +7254,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vercel@npm:^51.0.0":
-  version: 51.7.0
-  resolution: "vercel@npm:51.7.0"
+"vercel@npm:^52.0.0":
+  version: 52.0.0
+  resolution: "vercel@npm:52.0.0"
   dependencies:
-    "@vercel/backends": "npm:0.1.1"
+    "@vercel/backends": "npm:0.2.0"
     "@vercel/blob": "npm:2.3.0"
-    "@vercel/build-utils": "npm:13.19.0"
+    "@vercel/build-utils": "npm:13.20.0"
     "@vercel/detect-agent": "npm:1.2.3"
-    "@vercel/elysia": "npm:0.1.69"
-    "@vercel/express": "npm:0.1.79"
-    "@vercel/fastify": "npm:0.1.72"
+    "@vercel/elysia": "npm:0.1.71"
+    "@vercel/express": "npm:0.1.81"
+    "@vercel/fastify": "npm:0.1.74"
     "@vercel/fun": "npm:1.3.0"
     "@vercel/go": "npm:3.5.0"
-    "@vercel/h3": "npm:0.1.78"
-    "@vercel/hono": "npm:0.2.72"
+    "@vercel/h3": "npm:0.1.80"
+    "@vercel/hono": "npm:0.2.74"
     "@vercel/hydrogen": "npm:1.3.6"
-    "@vercel/koa": "npm:0.1.52"
-    "@vercel/nestjs": "npm:0.2.73"
+    "@vercel/koa": "npm:0.1.54"
+    "@vercel/nestjs": "npm:0.2.75"
     "@vercel/next": "npm:4.16.8"
-    "@vercel/node": "npm:5.7.11"
+    "@vercel/node": "npm:5.7.13"
     "@vercel/prepare-flags-definitions": "npm:0.2.1"
-    "@vercel/python": "npm:6.35.0"
+    "@vercel/python": "npm:6.36.0"
     "@vercel/redwood": "npm:2.4.12"
     "@vercel/remix-builder": "npm:5.7.2"
     "@vercel/ruby": "npm:2.3.2"
     "@vercel/rust": "npm:1.1.1"
-    "@vercel/static-build": "npm:2.9.19"
+    "@vercel/static-build": "npm:2.9.21"
     chokidar: "npm:4.0.0"
     esbuild: "npm:0.27.0"
     form-data: "npm:^4.0.0"
@@ -7292,7 +7292,7 @@ __metadata:
   bin:
     vc: dist/vc.js
     vercel: dist/vc.js
-  checksum: 10c0/68a97fcf0cc0ff53673e58cf798cc48b24b87a47441451cb3e6238904a8af2354cae126de506d6b812465feab3c514524798220f328ffbd13b9e9a4df00c9c23
+  checksum: 10c0/c186d0cee1ca87a25d1da0d54aa8a8da05bfa5818a539cb9f30c1acb9bd5234a098ed5a88e06b4f16f6a3d425214784dd7cd455cb5e115a782224f928628a551
   languageName: node
   linkType: hard
 

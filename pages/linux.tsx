@@ -4,7 +4,6 @@ import Link from "../components/link";
 import Text from "../components/text";
 import Page from "../components/page";
 import { currentVersion, linuxBuildFromSource } from "../links";
-
 function LinuxPage() {
   const ubuntu2404Link = `https://github.com/Chatterino/chatterino2/releases/download/v${currentVersion}/Chatterino-Ubuntu-24.04.deb`;
   const ubuntu2204Link = `https://github.com/Chatterino/chatterino2/releases/download/v${currentVersion}/Chatterino-Ubuntu-22.04.deb`;
@@ -130,21 +129,47 @@ function LinuxPage() {
           </Text>
 
           {/* Gentoo */}
-          <h2 className="text-3xl pt-10 pb-4">Gentoo</h2>
+          <h2 className="text-3xl pt-10 pb-4">Gentoo Linux</h2>
           <Text>
             Get the latest stable version of Chatterino through{" "}
-            <a href="https://gitweb.gentoo.org/repo/proj/guru.git/tree/net-im/chatterino">
-              Gentoo's official package
-            </a>{" "}
-            :{" "}
+            <Link href="https://gitweb.gentoo.org/repo/proj/guru.git/tree/net-im/chatterino">
+              gentoo's official package
+            </Link>{" "}
+          </Text>
+          <Text>
+            <br></br>
+            make sure that the guru repo is enabled
+            <br></br>
+            <Link href="https://wiki.gentoo.org/wiki/Project:GURU/Information_for_End_Users">
+              {" "}
+              instructions for using the GURU
+            </Link>
+          </Text>
+          <Text>
+            <br></br>
+            then run:
             <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-
-              #make sure that the guru repo is enabled
-              #https://wiki.gentoo.org/wiki/Project:GURU/Information_for_End_Users
-
-              doas emerge chatterino --ask
-            </code>{" "}
+              emerge chatterino --ask{" "}
+            </code>
+          </Text>
+          <br></br>
+          <Text>
+            Build latest development version from source from{" "}
+            <Link href="https://gitweb.gentoo.org/repo/proj/guru.git/tree/net-im/chatterino/chatterino-9999.ebuild">
+              Gentoo's official package
+            </Link>
+            <br></br>
+            <br></br>
+            <Text>
+              Add net-im/chatterino ** in your package.accept_keywords
             </Text>
+            <br></br>
+            then:
+            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+              emerge chatterino --ask
+            </code>{" "}
+          </Text>
+
           {/* Fedora official */}
           <h2 className="text-3xl pt-10 pb-4">Fedora</h2>
           <Text>

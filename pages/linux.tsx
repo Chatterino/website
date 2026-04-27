@@ -4,6 +4,7 @@ import Link from "../components/link";
 import Text from "../components/text";
 import Page from "../components/page";
 import { currentVersion, linuxBuildFromSource } from "../links";
+
 function LinuxPage() {
   const ubuntu2404Link = `https://github.com/Chatterino/chatterino2/releases/download/v${currentVersion}/Chatterino-Ubuntu-24.04.deb`;
   const ubuntu2204Link = `https://github.com/Chatterino/chatterino2/releases/download/v${currentVersion}/Chatterino-Ubuntu-22.04.deb`;

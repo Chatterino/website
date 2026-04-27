@@ -1,51 +1,16 @@
-import remarkHeadingId from "remark-custom-heading-id";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
-
-const { findAndReplace } = await import("mdast-util-find-and-replace");
-
-const baseRepoUrl = "https://github.com/Chatterino/Chatterino2";
-
-// -- #1234 issues
-function githubIssueLinks(options) {
-  return (tree) => {
-    findAndReplace(tree, [[/#\d+/g, replace]], {
-      ignore: ["link", "linkReference"],
-    });
-  };
-
-  function replace(value, _no, _match) {
-    return {
-      type: "link",
-      title: null,
-      url: `${baseRepoUrl}/issues/${value.slice(1)}`,
-      children: [{ type: "text", value }],
-    };
-  }
-}
-
-function majorMinorColoring() {
-  return (tree) => {
-    findAndReplace(tree, [[/Major:/g, replace]], {
-      ignore: ["link", "linkReference"],
-    });
-  };
-
-  function replace(value, _no, _match) {
-    return {
-      type: "strong",
-      children: [{ type: "text", value }],
-    };
-  }
-}
-
 // -- config
 const withMDX = (await import("@next/mdx")).default({
   extension: /\.mdx$/,
   options: {
-    remarkPlugins: [githubIssueLinks, majorMinorColoring, remarkHeadingId],
+    remarkPlugins: [
+      // Paths relative to project root (pages/)
+      "../scripts/c2-gh-issue-links.mjs",
+      "../scripts/c2-major-minor-coloring.mjs",
+      "remark-custom-heading-id",
+    ],
     rehypePlugins: [
       [
-        rehypeAutolinkHeadings,
+        "rehype-autolink-headings",
         {
           behavior: "append",
           content: {

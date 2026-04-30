@@ -123,20 +123,6 @@ function LinuxPage() {
             </code>
             {""})
           </Text>
-          {/* Fedora linux */}
-          <Text>
-            <p className="pl-3">
-              e.g.{" "}
-              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-                yay -S chatterino2-git
-              </code>{" "}
-              or{" "}
-              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-                paru -S chatterino2-git
-              </code>
-            </p>
-          </Text>
-
           {/* Gentoo */}
           <h2 className="text-3xl pt-10 pb-4">Gentoo Linux</h2>
           <Text>
@@ -191,7 +177,7 @@ function LinuxPage() {
             </a>
             :{" "}
             <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-              sudo dnf install chatterino
+              dnf install chatterino
             </code>
           </Text>
           {/* OpenSuse */}
@@ -202,7 +188,7 @@ function LinuxPage() {
               OBS (Open Build Service)
             </a>{" "}
             <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-              sudo opi install chatterino2
+              opi install chatterino2
             </code>
           </Text>
           {/* Ubuntu 20.04 */}

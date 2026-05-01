@@ -52,7 +52,7 @@ function LinuxPage() {
           <Text>
             You can install Chatterino through the{" "}
             <Link href="https://wiki.archlinux.org/title/Arch_User_Repository">
-              Arch User Repository
+              Arch User Repository TEST
             </Link>{" "}
             with{" "}
             <Link href="https://wiki.archlinux.org/title/Makepkg">makepkg</Link>{" "}

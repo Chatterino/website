@@ -2060,12 +2060,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/python@npm:6.36.0":
-  version: 6.36.0
-  resolution: "@vercel/python@npm:6.36.0"
+"@vercel/python@npm:6.36.1":
+  version: 6.36.1
+  resolution: "@vercel/python@npm:6.36.1"
   dependencies:
     "@vercel/python-analysis": "npm:0.11.0"
-  checksum: 10c0/ccf86d613da0a496b8f8f2c244a9fa2bbe05fc6107555c7bc8dbbb2f0024dc6f4f5cabace7f701c6b3c6b7578dd6f98f80aac1530ca6511ad78a3da28c9a22ff
+  checksum: 10c0/3ad7ac770c036bf5dfc644caf2afda4bfec15db872d05632df02fb2d293b9e026b579da328654f015f2f1ca808b69c73ff93cd16cfc936f4cd95c178c18c9693
   languageName: node
   linkType: hard
 
@@ -7266,8 +7266,8 @@ __metadata:
   linkType: hard
 
 "vercel@npm:^52.0.0":
-  version: 52.0.0
-  resolution: "vercel@npm:52.0.0"
+  version: 52.2.1
+  resolution: "vercel@npm:52.2.1"
   dependencies:
     "@vercel/backends": "npm:0.2.0"
     "@vercel/blob": "npm:2.3.0"
@@ -7286,7 +7286,7 @@ __metadata:
     "@vercel/next": "npm:4.16.8"
     "@vercel/node": "npm:5.7.13"
     "@vercel/prepare-flags-definitions": "npm:0.2.1"
-    "@vercel/python": "npm:6.36.0"
+    "@vercel/python": "npm:6.36.1"
     "@vercel/redwood": "npm:2.4.12"
     "@vercel/remix-builder": "npm:5.7.2"
     "@vercel/ruby": "npm:2.3.2"
@@ -7303,7 +7303,7 @@ __metadata:
   bin:
     vc: dist/vc.js
     vercel: dist/vc.js
-  checksum: 10c0/c186d0cee1ca87a25d1da0d54aa8a8da05bfa5818a539cb9f30c1acb9bd5234a098ed5a88e06b4f16f6a3d425214784dd7cd455cb5e115a782224f928628a551
+  checksum: 10c0/c60b5648efbda3d9f4e90db21cf2efd361ad19d7d0fe7b6532bd9d7c410185c02792746813f5218e57aa0fa73e9ae6d6793c45d3b3c5b4770882045e5f51d639
   languageName: node
   linkType: hard
 

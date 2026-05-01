@@ -116,19 +116,13 @@ function LinuxPage() {
             Build latest development version from source from{" "}
             <Link href="https://aur.archlinux.org/packages/chatterino2-git/">
               chatterino2-git
-            </Link>
-            <p className="pl-3">
-              e.g.{" "}
-              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-                yay -S chatterino2-git
-              </code>{" "}
-              or{" "}
-              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-                paru -S chatterino2-git
-              </code>
-            </p>
+            </Link>{" "}
+            (e.g. with yay{" "}
+            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+              yay -S chatterino2-git
+            </code>
+            {""})
           </Text>
-
           {/* Gentoo */}
           <h2 className="text-3xl pt-10 pb-4">Gentoo Linux</h2>
           <Text>
@@ -183,15 +177,39 @@ function LinuxPage() {
             </a>
             :{" "}
             <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-              sudo dnf install chatterino
+              dnf install chatterino
             </code>
           </Text>
+          {/* OpenSuse */}
+          <h2 className="text-3xl pt-10 pb-4">OpenSuse</h2>
+          <Text>
+            Get the latest stable version of Chatterino through{" "}
+            <a href="https://en.opensuse.org/SDB:OBS_Package_Installer">
+              OBS (Open Build Service)
+            </a>{" "}
+            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
+              opi install chatterino2
+            </code>
+          </Text>
+          {/* Ubuntu 20.04 */}
+          <h2 className="text-3xl pt-10 pb-4">Ubuntu 20.04 (Focal Fossa)</h2>
           {/* Building from Source */}
           <h2 className="text-3xl pt-10 pb-4">Building from Source</h2>
           <Text>
-            If the options above don't work, then you can try{" "}
-            <Link href={linuxBuildFromSource}>this guide</Link> to build it from
-            source.
+            We no longer support Ubuntu 20.04 as of Chatterino v2.5.5. See{" "}
+            <a href="https://github.com/Chatterino/chatterino2/discussions/6522">
+              this discussion
+            </a>{" "}
+            for more information.
+          </Text>
+          {/* AppImage */}
+          <h2 className="text-3xl pt-10 pb-4">AppImage</h2>
+          <Text>
+            We no longer support AppImage as of Chatterino v2.5.5. See{" "}
+            <a href="https://github.com/Chatterino/chatterino2/discussions/6110">
+              this discussion
+            </a>{" "}
+            for more information.
           </Text>
           {/* Ubuntu 20.04 */}
           <h2 className="text-3xl pt-10 pb-4">Ubuntu 20.04 (Focal Fossa)</h2>

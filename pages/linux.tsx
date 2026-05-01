@@ -171,7 +171,7 @@ function LinuxPage() {
           </Text>
 
           {/* Fedora official */}
-          <h2 className="text-3xl pt-10 pb-4">Fedora</h2>
+          <h2 className="text-3xl pt-10 pb-4">Fedora Linux</h2>
           <Text>
             Get the latest stable version of Chatterino through{" "}
             <a href="https://src.fedoraproject.org/rpms/chatterino2">

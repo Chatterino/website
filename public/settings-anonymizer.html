@@ -37,6 +37,9 @@
               if (json && typeof json === "object" && "accounts" in json) {
                 delete json.accounts;
               }
+              if (json && typeof json === "object" && "moltorino" in json) {
+                delete json.moltorino;
+              }
               strippedText = JSON.stringify(json, null, 2);
               output.textContent = strippedText;
               copy.disabled = false;

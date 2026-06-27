@@ -179,7 +179,7 @@ function LinuxPage() {
             </a>{" "}
             :{" "}
             <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-             dnf install chatterino
+              dnf install chatterino
             </code>
           </Text>
           {/* Building from Source */}
@@ -190,21 +190,16 @@ function LinuxPage() {
             source.
           </Text>
 
-{/* openSUSE */}
+          {/* openSUSE */}
           <h2 className="text-3xl pt-10 pb-4">openSUSE</h2>
           <Text>
             Get the latest stable version of Chatterino through{" "}
             <a href="https://en.opensuse.org/SDB:OBS_Package_Installer">
               OBS (Open Build Service)
-            
-            
             </a>
             :{" "}
-                 
-            
-            
             <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-             opi install chatterino
+              opi install chatterino
             </code>
           </Text>
           {/* Building from Source */}
@@ -214,7 +209,6 @@ function LinuxPage() {
             <Link href={linuxBuildFromSource}>this guide</Link> to build it from
             source.
           </Text>
-
 
           {/* Ubuntu 20.04 */}
           <h2 className="text-3xl pt-10 pb-4">Ubuntu 20.04 (Focal Fossa)</h2>

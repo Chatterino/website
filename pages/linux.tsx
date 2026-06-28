@@ -177,10 +177,10 @@ function LinuxPage() {
             <a href="https://src.fedoraproject.org/rpms/chatterino2">
               Fedora's official package
             </a>{" "}
-	     packaged by{" "}
+            packaged by{" "}
             <a href="https://src.fedoraproject.org/user/solomoncyj">
               solomoncyj
-	     </a >{" "}
+            </a>{" "}
             <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
               sudo dnf install chatterino
             </code>

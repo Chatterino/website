@@ -2774,7 +2774,6 @@ __metadata:
     "@types/react": "npm:19.2.17"
     mdast-util-find-and-replace: "npm:^3.0.0"
     next: "npm:^16.2.4"
-    postcss: "npm:^8.4.18"
     prettier: "npm:3.9.6"
     react: "npm:19.2.7"
     react-dom: "npm:19.2.7"
@@ -5868,7 +5867,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.18, postcss@npm:^8.5.16":
+"postcss@npm:^8.5.16":
   version: 8.5.25
   resolution: "postcss@npm:8.5.25"
   dependencies:

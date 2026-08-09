@@ -8,16 +8,14 @@ type Props = {
 
 function configFor(type: CalloutType): {
   title: string;
-  borderColor: string;
-  textColor: string;
+  className: string;
   icon: ReactNode;
 } {
   switch (type) {
     case "note":
       return {
         title: "Note",
-        borderColor: "border-blue-500",
-        textColor: "text-blue-500",
+        className: "callout-note",
         icon: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -32,8 +30,7 @@ function configFor(type: CalloutType): {
     case "warning":
       return {
         title: "Warning",
-        borderColor: "border-orange-500",
-        textColor: "text-orange-500",
+        className: "callout-warning",
         icon: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -49,10 +46,10 @@ function configFor(type: CalloutType): {
 }
 
 export default function Callout({ type, children }: Props) {
-  const { title, borderColor, textColor, icon } = configFor(type);
+  const { title, className, icon } = configFor(type);
   return (
-    <div className={"border-l-4 px-3 py-1 my-4 " + borderColor}>
-      <div className={"inline-flex gap-2 " + textColor}>
+    <div className={"callout " + className}>
+      <div className="callout-title">
         {icon} {title}
       </div>
       <div>{children}</div>

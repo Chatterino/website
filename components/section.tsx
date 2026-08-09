@@ -10,9 +10,11 @@ type Props = {
 function Section({ children, className, style, prose }: Props) {
   return (
     <div className={className} style={style}>
-      <div className="grid">
+      <div className="section-center">
         <div
-          className={`${prose ? "max-w-256" : "max-w-320"} place-self-center`}
+          className={
+            "section-content" + (prose ? " section-content-prose" : "")
+          }
         >
           {children}
         </div>

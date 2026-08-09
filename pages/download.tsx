@@ -3,11 +3,11 @@ import { allVersions, baseDownloadLink } from "../links";
 
 function V2() {
   return (
-    <table className="table-auto text-blue-200">
+    <table className="builds-table">
       {[...allVersions].reverse().map((v) => (
         <tbody>
           <tr>
-            <td className="text-white">{v}</td>
+            <td className="builds-version">{v}</td>
             <td>
               <a href={`${baseDownloadLink}/${v}/Chatterino.Installer.exe`}>
                 Windows Installer
@@ -38,8 +38,8 @@ function V2() {
 export default function Downloads() {
   return (
     <Page title="Old Builds - Chatterino">
-      <div className="w-max m-auto">
-        <h1 className="py-16">Old Builds</h1>
+      <div className="builds">
+        <h1 className="builds-title">Old Builds</h1>
         <V2 />
       </div>
     </Page>

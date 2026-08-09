@@ -4,8 +4,8 @@ import Section from "./section";
 
 function Footer() {
   return (
-    <Section className="bg-gray-900">
-      <div className="p-6 flex flex-wrap justify-evenly space-x-8">
+    <Section className="footer">
+      <div className="footer-inner">
         <div>
           Chatterino is made by{" "}
           <Link href="https://twitter.com/fourtf_xd">fourtf</Link>,{" "}

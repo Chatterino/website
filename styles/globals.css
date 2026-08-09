@@ -1079,6 +1079,11 @@ td {
   color: var(--blue-200);
 }
 
+/* this is used in older changelog entries and should be hidden */
+by {
+  display: none;
+}
+
 /* "#" on-hover for changelog headings */
 :is(h1, h2, h3, h4, h5, h6)[id] {
   & > a {

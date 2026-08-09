@@ -1111,11 +1111,6 @@ td {
   }
 }
 
-/* hack: give chat widget children 100% width */
-#chatprop-host > * {
-  width: 100%;
-}
-
 /* react-responsive-carousel overrides */
 .carousel {
   max-width: 800px;

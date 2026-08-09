@@ -17,15 +17,12 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v7
-        with:
-          node-version-file: "package.json"
-          cache: "yarn"
+      - uses: dtolnay/rust-toolchain@stable
 
-      - name: Run Cloudflare build
-        run: |
-          yarn install
-          yarn run cloudflare-build
+      - uses: Swatinem/rust-cache@v2
+
+      - name: Build site
+        run: cargo run --release
 
       - name: Upload output files
         uses: actions/upload-artifact@v7

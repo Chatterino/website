@@ -1,0 +1,12 @@
+[package]
+name = "website-rust"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.104"
+minijinja = { version = "2.23.0", features = ["custom_syntax"] }
+pulldown-cmark = { version = "0.13.4", default-features = false, features = ["html", "simd"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+walkdir = "2.5.0"

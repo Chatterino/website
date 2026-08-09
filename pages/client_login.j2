@@ -1,0 +1,34 @@
+{% extends "page.j2" %}
+{% block title %}Login - Chatterino{% endblock %}
+{% block content %}
+<div class="login" id="login" data-client-id="{{ twitch_client_id }}" data-redirect-url="{{ twitch_redirect_url }}">
+  <div class="section-center">
+    <div class="section-content">
+      <h2 class="login-title">Chatterino Login</h2>
+      <h5 class="login-warning">Do not show on stream</h5>
+      <h6 class="login-warning" id="login-error" hidden></h6>
+
+      <a class="login-button" id="login-button">Login with Twitch</a>
+
+      <div id="login-token" hidden>
+        <div class="token-row">
+          <div class="token-box">
+            <div class="token-cover" id="token-cover"></div>
+            <input type="text" readonly class="token-input" id="token-input">
+          </div>
+          <div class="token-toggle" id="token-toggle">🔎</div>
+        </div>
+        <button class="copy-button" id="copy-button">Copy</button>
+        <div class="login-steps">
+          Steps:
+          <ul>
+            <li>Click "Copy" or copy the text manually.</li>
+            <li>Then, in Chatterino, click "Paste login info".</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/client_login.js" defer></script>
+{% endblock %}

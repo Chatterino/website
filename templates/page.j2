@@ -1,0 +1,8 @@
+{% extends "base.j2" %}
+{% block body %}
+<div class="page">
+  {% include "nav.j2" %}
+  <div class="page-body">{% block content %}{% endblock %}</div>
+  {% include "footer.j2" %}
+</div>
+{% endblock %}

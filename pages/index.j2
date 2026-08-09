@@ -1,0 +1,331 @@
+{% extends "page.j2" %}
+{% set links = read_json("links.json") %}
+{% set download_link = "%s/%s" | format(links.base_download_link, links.current_version) %}
+{% set downloads = ({
+  "windows": ({
+    "icon": "windows",
+    "label": "%s for Windows 64-Bit" | format(links.current_version),
+    "href": "%s/Chatterino.Installer.exe" | format(download_link),
+  }),
+  "linux": ({
+    "icon": "tux",
+    "label": "Linux",
+    "href": "linux",
+  }),
+  "macos": ({
+    "icon": "apple",
+    "label": "macOS",
+    "href": "%s/Chatterino.dmg" | format(download_link),
+  }),
+  "freebsd": ({
+    "icon": "freebsd",
+    "label": "FreeBSD",
+    "href": "freebsd",
+  }),
+  
+}) %}
+
+{% macro testimonial(name, occupation, imgsrc) %}
+<div class="testimonial">
+  <div class="testimonial-row">
+    <div class="testimonial-avatar" style="background-image:url({{ imgsrc }});background-size:cover"></div>
+    <div class="testimonial-body">
+      <div class="testimonial-quote">{{ caller() }}</div>
+      <div class="testimonial-fill"></div>
+      <div class="testimonial-name">{{ name }}</div>
+      <div class="testimonial-role">{{ occupation }}</div>
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
+{% set t_pokelawls %}
+{% call testimonial(name="pokelawls", occupation="Streamer", imgsrc="avatars/pokelawls.jpg") %}
+I love Chatterino! It’s made my life much easier as a streamer. Such a
+great chat program. Would highly recommend, has a lot of cool features!
+{% endcall %}
+{% endset %}
+{% set t_moonmoon %}
+{% call testimonial(name="MOONMOON", occupation="Streamer", imgsrc="avatars/moonmoon.jpg") %}
+<div class="testimonial-inline">
+  This program is not cringe. It is extremely POGGERS. I pepeRun from the
+  normal Twitch chat client because it is EXTREMELY cringe and lacking in
+  basic features sported by Chatterino.
+</div>
+{% endcall %}
+{% endset %}
+{% set t_nymn %}
+{% call testimonial(name="NymN", occupation="Streamer", imgsrc="avatars/nymn.jpg") %}
+With a chat full of loud spammers, I wouldn't survive a day without my
+beloved mentions tab!
+{% endcall %}
+{% endset %}
+{% set t_ewroon %}
+{% call testimonial(name="EWROON", occupation="Streamer", imgsrc="avatars/ewroon.jpg") %}
+Ever since i've discovered Chatterino my chat experience has changed
+completely. It is really easy to use and very functional. Such a great
+chat program. Would highly recommend!
+{% endcall %}
+{% endset %}
+{% set testimonials = [t_pokelawls, t_moonmoon, t_nymn, t_ewroon] %}
+
+{% block head %}
+<link rel="stylesheet" href="/styles/site.css">
+<link rel="stylesheet" href="/styles/chatprop.css">
+<script src="/chat.js" defer></script>
+<script src="/carousel.js" defer></script>
+{% endblock %}
+
+{% block content %}
+<div class="hero">
+  <div class="section-center">
+    <div class="section-content">
+      <div class="hero-grid">
+        <div class="hero-intro">
+          <h1 class="hero-title">Best Twitch<br>Chat Experience.</h1>
+
+          <div class="hero-lead">
+            Chatterino is a chat client for Twitch chat. It aims to be an
+            improved/extended version of the Twitch web chat.
+          </div>
+
+          {% macro download_cta(download) %}
+          <a href="{{ download.href }}">
+            <button class="button">
+              <div class="download-cta">
+                <div class="download-cta-icon">{% include "icons/" ~ download.icon ~ ".svg" %}</div>
+                <div>
+                  <div>Download Chatterino</div>
+                  <div class="download-cta-sub">{{ download.label }}</div>
+                </div>
+              </div>
+            </button>
+          </a>
+          {% endmacro %}
+
+          <div class="hero-cta" data-platform="windows" id="hero-cta">
+            <div>
+              <div class="dl-auto dl-auto-windows">{{ download_cta(downloads.windows) }}</div>
+              <div class="dl-auto dl-auto-linux">{{ download_cta(downloads.linux) }}</div>
+              <div class="dl-auto dl-auto-macos">{{ download_cta(downloads.macos) }}</div>
+              <div class="dl-auto dl-auto-freebsd">{{ download_cta(downloads.freebsd) }}</div>
+            </div>
+          </div>
+          <script>
+            (() => {
+              const platform = window.navigator.platform;
+              document.getElementById("hero-cta").dataset.platform =
+                /linux|x11|ubuntu|debian|fedora/i.test(platform) ? "linux"
+                : /mac/i.test(platform) ? "macos"
+                : /freebsd/i.test(platform) ? "freebsd"
+                : "windows";
+            })();
+          </script>
+
+          <div class="hero-links">
+            <a href="#downloads">More Downloads</a>
+          </div>
+        </div>
+
+        <div class="hero-chat" style="height:70vh;max-height:600px;z-index:1" id="chatprop-host" data-version="{{ links.current_version }}">
+          <noscript>Enable JavaScript to see this.</noscript>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="features">
+  <div class="section-center">
+    <div class="section-content">
+      <div style="display:block;top:-100px;position:relative;visibility:hidden" id="features"></div>
+      <div class="features-inner">
+        <div class="features-header">
+          <h1>Key Features</h1>
+          <div>Check out our key features.</div>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div>
+              <h2>Batteries Included</h2>
+              <div class="feature-card-text">
+                <ul>
+                  <li>Support for Twitch, BetterTTV, FrankerFaceZ, and 7TV emotes.</li>
+                  <li>Dark Theme. (also Light Theme.)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div>
+              <h2>Lots of Customizations</h2>
+              <div class="feature-card-text">
+                <ul>
+                  <li>View multiple chats side-by-side in one tab.</li>
+                  <li>Ignore or highlight messages based on your own criteria.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div>
+              <h2>Engage in Your Communities</h2>
+              <div class="feature-card-text">
+                <ul>
+                  <li>Talk in both online and top-secret offline chats.</li>
+                  <li>Get notified when people mention you.</li>
+                  <li>Connect to as many channels as you like to.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div>
+              <h2>Your Laptop Fans Get to Take a Break</h2>
+              <div class="feature-card-text">
+                <ul>
+                  <li>Chatterino is a native desktop application that’s easy on your CPU &amp; GPU.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="highlights">
+  <div class="section-center">
+    <div class="section-content">
+      <div class="highlights-inner">
+        <div class="highlight">
+          {% include "icons/privacy.svg" %}
+          <div class="highlight-title">Streamer Mode</div>
+          <div class="body-text">
+            Hide user content while OBS is running. Horses strictly prohibited.
+          </div>
+        </div>
+        <div class="highlight">
+          {% include "icons/link_information.svg" %}
+          <div class="highlight-title">Link Information</div>
+          <div class="body-text">
+            Preview image links before opening them. View YouTube stats. Preview
+            emotes from links.
+            <br>
+            Note: This is disabled by default for privacy reasons.
+          </div>
+        </div>
+        <div class="highlight">
+          {% include "icons/message.svg" %}
+          <div class="highlight-title">Mentions Panel</div>
+          <div class="body-text">
+            Combine all your mentions in the “/mentions” panel to keep track.
+            Don’t miss important messages while streaming.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="testimonials">
+  <div class="section-center">
+    <div class="section-content">
+      <div class="testimonials-inner">
+        <h1 class="testimonials-title">What Are the Users Saying?</h1>
+
+        <div class="testimonials-stack">
+          {%- for t in testimonials %}{{ t }}{% endfor %}
+        </div>
+        <div class="testimonials-carousel">
+          <div class="carousel">
+            <button type="button" class="carousel-arrow carousel-prev" aria-label="previous slide"></button>
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                {%- for t in testimonials %}
+                <div class="carousel-slide">{{ t }}</div>
+                {%- endfor %}
+              </div>
+            </div>
+            <button type="button" class="carousel-arrow carousel-next" aria-label="next slide"></button>
+            <div class="carousel-dots">
+              {%- for t in testimonials %}
+              <button type="button" class="carousel-dot{% if loop.first %} selected{% endif %}" aria-label="slide {{ loop.index }}"></button>
+              {%- endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="background-image:url(bg_footer.jpg);background-size:cover">
+  <div class="section-center">
+    <div class="section-content">
+      <div style="display:block;top:-100px;position:relative;visibility:hidden" id="downloads"></div>
+      <div class="downloads-inner">
+        <h2 class="downloads-title">Downloads</h2>
+
+{% macro small_download_button(download) %}
+<a href="{{ download.href }}">
+  <button class="button">
+    <div class="download-tag">
+      <div class="download-tag-icon">{% include "icons/" ~ download.icon ~ ".svg" %}</div>
+      <div class="download-tag-label">
+        {{ download.label }}
+      </div>
+    </div>
+  </button>
+</a>
+{% endmacro %}
+
+        <div class="downloads-buttons">
+          {{ small_download_button(downloads.windows) }}
+          {{ small_download_button(downloads.linux) }}
+          {{ small_download_button(downloads.macos) }}
+          {{ small_download_button(downloads.freebsd) }}
+        </div>
+
+        <div class="downloads-links">
+          <a href="changelog" class="downloads-link">Changelog</a>
+          <a href="{{ downloads.windows_portable }}" class="downloads-link">Windows Portable</a>
+          <a href="{{ links.nightly }}" class="downloads-link">Nightly Build</a>
+          <a href="{{ links.all_downloads }}" class="downloads-link">Old Builds</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="promo">
+  <div class="section-center">
+    <div class="section-content">
+      <div class="promo-grid">
+        <div class="promo-panel">
+          <div class="promo-title">Visit the Wiki</div>
+          <div>
+            Find information on Chatterino's features and help documents for
+            troubleshooting.
+          </div>
+          <a href="{{ links.wiki }}" class="promo-link">
+            <button class="button promo-button">Check It Out</button>
+          </a>
+        </div>
+        <div class="promo-panel promo-panel-accent">
+          <div class="promo-title">Check on the development</div>
+          <div>
+            Chatterino is developed out in the open on our GitHub page. You can
+            join the discussion or report issues there!
+          </div>
+          <a href="{{ links.github }}" class="promo-link">
+            <button class="button button-inverted promo-button">Pay us a visit</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

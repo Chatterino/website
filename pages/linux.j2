@@ -1,0 +1,123 @@
+{% extends "page.j2" %}
+{% block title %}Chatterino on Linux{% endblock %}
+{% block content %}
+{% set gh_download = "https://github.com/Chatterino/chatterino2/releases/download/v" ~ links.current_version %}
+<div class="guide">
+  <div>
+    <div class="section-center">
+      <div class="section-content">
+        <h1>Chatterino on Linux</h1>
+
+        <h2>Ubuntu 24.04 (Noble Numbat)</h2>
+        <div class="body-text">
+          A .deb file is available from
+          <a href="{{ gh_download }}/Chatterino-Ubuntu-24.04.deb">here</a>.
+        </div>
+        <div class="body-text">
+          The Universe repository must be enabled for it to download the
+          relevant dependencies.
+        </div>
+
+        <h2>Ubuntu 22.04 (Jammy Jellyfish)</h2>
+        <div class="body-text">
+          A .deb file is available from
+          <a href="{{ gh_download }}/Chatterino-Ubuntu-22.04.deb">here</a>.
+        </div>
+        <div class="body-text">
+          The Universe repository must be enabled for it to download the
+          relevant dependencies.
+        </div>
+
+        <h2>Flatpak</h2>
+        <div class="body-text">
+          Chatterino is available on
+          <a href="https://flathub.org/apps/details/com.chatterino.chatterino">Flathub</a>.
+          To install it run: <code>flatpak install chatterino</code>
+        </div>
+
+        <h2>Arch Linux</h2>
+        <div class="body-text">
+          You can install Chatterino through the
+          <a href="https://wiki.archlinux.org/title/Arch_User_Repository">Arch User Repository</a>
+          with <a href="https://wiki.archlinux.org/title/Makepkg">makepkg</a>
+          or with an <a href="https://wiki.archlinux.org/title/AUR_helpers">AUR helper</a>
+          like <a href="https://github.com/Jguer/yay">yay</a> or
+          <a href="https://github.com/Morganamilo/paru">Paru</a>.
+        </div>
+        <br>
+        <div class="body-text">
+          Get the latest stable version from
+          <a href="https://aur.archlinux.org/packages/chatterino2-bin/">chatterino2-bin</a>
+          <p>e.g. <code>yay -S chatterino2-bin</code> or <code>paru -S chatterino2-bin</code></p>
+        </div>
+        <div class="body-text">
+          Get the latest nightly version from
+          <a href="https://aur.archlinux.org/packages/chatterino2-nightly-bin/">chatterino2-nightly-bin</a>
+          <p>e.g. <code>yay -S chatterino2-nightly-bin</code> or <code>paru -S chatterino2-nightly-bin</code></p>
+        </div>
+        <div class="body-text">
+          Build latest stable version from source from
+          <a href="https://aur.archlinux.org/packages/chatterino2/">chatterino2</a>
+          <p>e.g. <code>yay -S chatterino2</code> or <code>paru -S chatterino2</code></p>
+        </div>
+        <div class="body-text">
+          Build latest development version from source from
+          <a href="https://aur.archlinux.org/packages/chatterino2-git/">chatterino2-git</a>
+          <p>e.g. <code>yay -S chatterino2-git</code> or <code>paru -S chatterino2-git</code></p>
+        </div>
+
+        <h2>Gentoo Linux</h2>
+        <div class="body-text">
+          Chatterino is available on Gentoo from
+          <a href="https://wiki.gentoo.org/wiki/Project:GURU">GURU</a>.
+          For information on how to enable the GURU repository, see
+          <a href="https://wiki.gentoo.org/wiki/Project:GURU/Information_for_End_Users">this page</a>.
+        </div>
+        <br>
+        <div class="body-text">
+          Get the latest stable version from
+          <a href="https://gitweb.gentoo.org/repo/proj/guru.git/tree/net-im/chatterino">Gentoo's GURU net-im/chatterino package</a>
+          by running <code>emerge chatterino --ask</code>
+        </div>
+        <div class="body-text">
+          Get the latest development version from
+          <a href="https://gitweb.gentoo.org/repo/proj/guru.git/tree/net-im/chatterino/chatterino-9999.ebuild">Gentoo's GURU net-im/chatterino-9999 package</a>
+          by adding <code>net-im/chatterino **</code> to your
+          <code>package.accept_keywords</code>, then running
+          <code>emerge chatterino --ask</code>
+        </div>
+
+        <h2>Fedora Linux</h2>
+        <div class="body-text">
+          Get the latest stable version of Chatterino through
+          <a href="https://src.fedoraproject.org/rpms/chatterino2">Fedora's official package</a>
+          packaged by
+          <a href="https://src.fedoraproject.org/user/solomoncyj">solomoncyj</a>:
+          <code>sudo dnf install chatterino</code>
+        </div>
+
+        <h2>Building from Source</h2>
+        <div class="body-text">
+          If the options above don't work, then you can try
+          <a href="{{ links.linux_build_from_source }}">this guide</a>
+          to build it from source.
+        </div>
+
+        <h2>Ubuntu 20.04 (Focal Fossa)</h2>
+        <div class="body-text">
+          We no longer support Ubuntu 20.04 as of Chatterino v2.5.5. See
+          <a href="https://github.com/Chatterino/chatterino2/discussions/6522">this discussion</a>
+          for more information.
+        </div>
+
+        <h2>AppImage</h2>
+        <div class="body-text">
+          We no longer support AppImage as of Chatterino v2.5.5. See
+          <a href="https://github.com/Chatterino/chatterino2/discussions/6110">this discussion</a>
+          for more information.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

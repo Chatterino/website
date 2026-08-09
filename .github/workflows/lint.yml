@@ -18,18 +18,12 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v7
+      - uses: dtolnay/rust-toolchain@stable
         with:
-          node-version: "24"
-          cache: "yarn"
+          components: rustfmt, clippy
 
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
+      - name: Run rustfmt
+        run: cargo fmt --check
 
-      - name: Run prettier
-        run: |-
-          npx --no-install prettier --write .
-
-      - name: Show diff
-        run: git --no-pager diff --exit-code --color=never
-        shell: bash
+      - name: Run clippy
+        run: cargo clippy -- -D warnings

@@ -1960,12 +1960,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/python@npm:6.51.0":
-  version: 6.51.0
-  resolution: "@vercel/python@npm:6.51.0"
+"@vercel/python@npm:6.51.1":
+  version: 6.51.1
+  resolution: "@vercel/python@npm:6.51.1"
   dependencies:
     "@vercel/python-analysis": "npm:0.11.1"
-  checksum: 10c0/d3f91ee8293ea58d4ae447793e7b76198d68e73d34b9e2bed756c02d6d1c16f6511c8357d5913756f80cc78d3965d6e43722c7c811fd9953c2b0792750488cf2
+  checksum: 10c0/5830f40a2aacce5f7214958f96b11fa2fe02c9d1d3b5107e6e67069405e006a46ed1477609269c160b7e0237d1c1e5977a257d11a02ba5e56499bd853d97420a
   languageName: node
   linkType: hard
 
@@ -6598,8 +6598,8 @@ __metadata:
   linkType: hard
 
 "vercel@npm:^56.0.0":
-  version: 56.3.1
-  resolution: "vercel@npm:56.3.1"
+  version: 56.5.0
+  resolution: "vercel@npm:56.5.0"
   dependencies:
     "@vercel/backends": "npm:0.8.25"
     "@vercel/blob": "npm:2.4.0"
@@ -6621,7 +6621,7 @@ __metadata:
     "@vercel/next": "npm:4.20.4"
     "@vercel/node": "npm:5.8.26"
     "@vercel/prepare-flags-definitions": "npm:0.3.0"
-    "@vercel/python": "npm:6.51.0"
+    "@vercel/python": "npm:6.51.1"
     "@vercel/redwood": "npm:2.5.0"
     "@vercel/remix-builder": "npm:5.9.1"
     "@vercel/ruby": "npm:2.5.1"
@@ -6636,10 +6636,69 @@ __metadata:
     smol-toml: "npm:1.5.2"
     undici: "npm:5.29.0"
     zod: "npm:4.1.11"
+  peerDependencies:
+    "@vercel/backends": 0.8.25
+    "@vercel/container": 0.0.5
+    "@vercel/elysia": 0.1.102
+    "@vercel/express": 0.1.116
+    "@vercel/fastify": 0.1.105
+    "@vercel/go": 3.10.2
+    "@vercel/h3": 0.1.111
+    "@vercel/hono": 0.2.105
+    "@vercel/hydrogen": 1.4.0
+    "@vercel/koa": 0.1.85
+    "@vercel/nestjs": 0.2.106
+    "@vercel/next": 4.20.4
+    "@vercel/node": 5.8.26
+    "@vercel/python": 6.51.1
+    "@vercel/redwood": 2.5.0
+    "@vercel/remix-builder": 5.9.1
+    "@vercel/ruby": 2.5.1
+    "@vercel/rust": 1.4.0
+    "@vercel/static-build": 2.11.8
+  peerDependenciesMeta:
+    "@vercel/backends":
+      optional: true
+    "@vercel/container":
+      optional: true
+    "@vercel/elysia":
+      optional: true
+    "@vercel/express":
+      optional: true
+    "@vercel/fastify":
+      optional: true
+    "@vercel/go":
+      optional: true
+    "@vercel/h3":
+      optional: true
+    "@vercel/hono":
+      optional: true
+    "@vercel/hydrogen":
+      optional: true
+    "@vercel/koa":
+      optional: true
+    "@vercel/nestjs":
+      optional: true
+    "@vercel/next":
+      optional: true
+    "@vercel/node":
+      optional: true
+    "@vercel/python":
+      optional: true
+    "@vercel/redwood":
+      optional: true
+    "@vercel/remix-builder":
+      optional: true
+    "@vercel/ruby":
+      optional: true
+    "@vercel/rust":
+      optional: true
+    "@vercel/static-build":
+      optional: true
   bin:
     vc: dist/vc.js
     vercel: dist/vc.js
-  checksum: 10c0/ffafeb04097456edd69b00d81731e9d66deb2507453d072f2fd0d8c8883520611d4a305d125bc03bfbf83959ff32044f37ce4f0beed6f951b4dec5853a944fca
+  checksum: 10c0/82b245b9419217494f9d2b3c82c306133e7f7d7819f9bf7b1993da3e975217c9214afd6d91bfb34717812c3916044e7870de0c8e7a9e09f33beb9b36b5198c22
   languageName: node
   linkType: hard
 

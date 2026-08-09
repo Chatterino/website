@@ -35,38 +35,33 @@ export default function Home() {
 
 function FirstHero() {
   return (
-    <Section className="text-gray-200 bg-gray-800 pb-24">
-      <div className="md:grid md:grid-cols-2">
-        <div className="p-8 sm:p-16 place-self-center">
-          <h1 className="text-5xl text-center pb-6">
+    <Section className="hero">
+      <div className="hero-grid">
+        <div className="hero-intro">
+          <h1 className="hero-title">
             Best Twitch
             <br />
             Chat Experience.
           </h1>
 
-          <div className="text-center leading-relaxed pb-6">
+          <div className="hero-lead">
             Chatterino is a chat client for Twitch chat. It aims to be an
             improved/extended version of the Twitch web chat.
           </div>
 
-          <div className="grid pb-6">
-            <div className="place-self-center">
+          <div className="hero-cta">
+            <div>
               <AutoDownloadButton />
             </div>
           </div>
 
-          <div className="grid place-items-center">
-            <a href="#downloads" className="underline">
-              More Downloads
-            </a>
-            {/* <a href="xD" className="underline">
-              Get Nightly
-            </a> */}
+          <div className="hero-links">
+            <a href="#downloads">More Downloads</a>
           </div>
         </div>
 
         <div
-          className="flex p-16 md:pl-4 md:pr-28 max-xs:transform max-xs:scale-75 max-xs:p-0"
+          className="hero-chat"
           style={{ height: "70vh", maxHeight: 600, zIndex: 1 }}
           id="chatprop-host"
         >
@@ -86,10 +81,10 @@ function FeatureCard({
   title: string;
 }) {
   return (
-    <div className="bg-gray-700 p-8 rounded-sm grid">
-      <div className="place-self-center w-full">
-        <h2 className="text-3xl pb-6">{title}</h2>
-        <div className="text-blue-200">{children}</div>
+    <div className="feature-card">
+      <div>
+        <h2>{title}</h2>
+        <div className="feature-card-text">{children}</div>
       </div>
     </div>
   );
@@ -111,17 +106,17 @@ function Anchor({ id }: { id: string }) {
 
 function Features() {
   return (
-    <Section className="bg-gray-900/50 -mt-16">
+    <Section className="features">
       <Anchor id="features" />
-      <div className="text-gray-200 p-6 md:p-12 space-y-12">
-        <div className="space-y-6">
-          <h1 className="text-5xl text-center">Key Features</h1>
-          <div className="text-center">Check out our key features.</div>
+      <div className="features-inner">
+        <div className="features-header">
+          <h1>Key Features</h1>
+          <div>Check out our key features.</div>
         </div>
 
-        <div className="space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 gap-4 md:gap-y-12 md:gap-x-24">
+        <div className="features-grid">
           <FeatureCard title="Batteries Included">
-            <ul className="space-y-2">
+            <ul>
               <li>
                 Support for Twitch, BetterTTV, FrankerFaceZ, and 7TV emotes.
               </li>
@@ -129,20 +124,20 @@ function Features() {
             </ul>
           </FeatureCard>
           <FeatureCard title="Lots of Customizations">
-            <ul className="space-y-2">
+            <ul>
               <li>View multiple chats side-by-side in one tab.</li>
               <li>Ignore or highlight messages based on your own criteria.</li>
             </ul>
           </FeatureCard>
           <FeatureCard title="Engage in Your Communities">
-            <ul className="space-y-2">
+            <ul>
               <li>Talk in both online and top-secret offline chats.</li>
               <li>Get notified when people mention you.</li>
               <li>Connect to as many channels as you like to.</li>
             </ul>
           </FeatureCard>
           <FeatureCard title="Your Laptop Fans Get to Take a Break">
-            <ul className="space-y-2">
+            <ul>
               <li>
                 Chatterino is a native desktop application that’s easy on your
                 CPU &amp; GPU.
@@ -157,35 +152,33 @@ function Features() {
 
 function Features2() {
   return (
-    <Section className="bg-gray-900 ">
-      <div className="p-16 space-y-16 md:space-y-0 md:space-x-16 md:flex">
-        <div className="space-y-4 flex-1">
+    <Section className="highlights">
+      <div className="highlights-inner">
+        <div className="highlight">
           <Privacy />
-          <div className="text-3xl">Streamer Mode</div>
-          <div className="text-blue-200">
+          <div className="highlight-title">Streamer Mode</div>
+          <div className="body-text">
             Hide user content while OBS is running. Horses strictly prohibited.
           </div>
         </div>
-        <div className="space-y-4 flex-1">
+        <div className="highlight">
           <LinkInformation />
-          <div className="text-3xl">Link Information</div>
-          <div className="text-blue-200">
+          <div className="highlight-title">Link Information</div>
+          <div className="body-text">
             Preview image links before opening them. View YouTube stats. Preview
             emotes from links.
             <br />
             Note: This is disabled by default for privacy reasons.
           </div>
         </div>
-        <div className="space-y-4 flex-1">
+        <div className="highlight">
           <Message />
-          <div className="text-3xl">Mentions Panel</div>
-          <div className="text-blue-200">
+          <div className="highlight-title">Mentions Panel</div>
+          <div className="body-text">
             Combine all your mentions in the “/mentions” panel to keep track.
             Don’t miss important messages while streaming.
           </div>
         </div>
-        {/* Custom commands */}
-        {/* Recent messages */}
       </div>
     </Section>
   );
@@ -200,20 +193,20 @@ type TestimonialProps = {
 
 function Testimonial({ name, occupation, children, imgsrc }: TestimonialProps) {
   return (
-    <div className="text-gray-400 bg-gray-900 p-8 m-8 rounded-lg text-left">
-      <div className="flex space-x-8 max-xs:flex-col max-xs:space-x-0">
+    <div className="testimonial">
+      <div className="testimonial-row">
         <div
-          className="w-16 h-16 md:w-36 md:h-36 shrink-0 rounded-full max-xs:self-center max-xs:mb-4"
+          className="testimonial-avatar"
           style={{
             backgroundImage: "url(" + imgsrc + ")",
             backgroundSize: "cover",
           }}
         />
-        <div className="flex flex-col">
-          <div className="max-xs:mb-2">{children}</div>
-          <div className="grow" />
-          <div className="text-xl text-white">{name}</div>
-          <div className="text-sm text-white">{occupation}</div>
+        <div className="testimonial-body">
+          <div className="testimonial-quote">{children}</div>
+          <div className="testimonial-fill" />
+          <div className="testimonial-name">{name}</div>
+          <div className="testimonial-role">{occupation}</div>
         </div>
       </div>
     </div>
@@ -236,7 +229,7 @@ let testimonials = [
     imgsrc="avatars/moonmoon.jpg"
     key="moonmoon"
   >
-    <div className="flex flex-wrap items-center">
+    <div className="testimonial-inline">
       This program is not cringe. It is extremely POGGERS. I pepeRun from the
       normal Twitch chat client because it is EXTREMELY cringe and lacking in
       basic features sported by Chatterino.
@@ -265,14 +258,12 @@ let testimonials = [
 
 function Testimonials() {
   return (
-    <Section className="p-6 md:p-12 bg-gray-800 max-xs:p-0 mx-auto">
-      <div className="space-y-8">
-        <h1 className="text-white text-5xl text-center p-6">
-          What Are the Users Saying?
-        </h1>
+    <Section className="testimonials">
+      <div className="testimonials-inner">
+        <h1 className="testimonials-title">What Are the Users Saying?</h1>
 
-        <div className="block md:hidden">{testimonials}</div>
-        <div className="hidden md:block">
+        <div className="testimonials-stack">{testimonials}</div>
+        <div className="testimonials-carousel">
           <Carousel
             infiniteLoop={true}
             width="80vw"
@@ -291,31 +282,26 @@ function Testimonials() {
 
 function Miscellaneous() {
   return (
-    <Section className="bg-gray-800">
-      <div className="bg-gray-800 md:grid md:grid-cols-2 md:space-y-0">
-        <div className="p-16 space-y-4 max-xs:p-6">
-          <div className="text-5xl max-xs:text-4xl">Visit the Wiki</div>
+    <Section className="promo">
+      <div className="promo-grid">
+        <div className="promo-panel">
+          <div className="promo-title">Visit the Wiki</div>
           <div>
             Find information on Chatterino's features and help documents for
             troubleshooting.
           </div>
-          <a href={wiki} className="pt-3">
-            <Button className="ml-0 mt-6">Check It Out</Button>
+          <a href={wiki} className="promo-link">
+            <Button className="promo-button">Check It Out</Button>
           </a>
         </div>
-        <div className="p-16 space-y-4 bg-blue-500 max-xs:p-6">
-          <div className="text-5xl max-xs:text-4xl">
-            Check on the development
-          </div>
+        <div className="promo-panel promo-panel-accent">
+          <div className="promo-title">Check on the development</div>
           <div>
             Chatterino is developed out in the open on our GitHub page. You can
             join the discussion or report issues there!
           </div>
-          <a href={github} className="pt-3">
-            <Button
-              className="ml-0 mt-6"
-              colorsClassName="bg-white text-blue-500"
-            >
+          <a href={github} className="promo-link">
+            <Button className="promo-button" inverted>
               Pay us a visit
             </Button>
           </a>
@@ -331,27 +317,27 @@ function Downloads() {
       style={{ backgroundImage: "url(bg_footer.jpg)", backgroundSize: "cover" }}
     >
       <Anchor id="downloads" />
-      <div className="space-y-6 py-20 px-2">
-        <h2 className="text-center text-5xl">Downloads</h2>
+      <div className="downloads-inner">
+        <h2 className="downloads-title">Downloads</h2>
 
-        <div className="flex flex-wrap justify-evenly">
+        <div className="downloads-buttons">
           <SmallDownloadButton data={windows} />
           <SmallDownloadButton data={linux} />
           <SmallDownloadButton data={macOs} />
           <SmallDownloadButton data={freeBsd} />
         </div>
 
-        <div className="flex flex-wrap justify-around">
-          <Link className="px-4" href="changelog">
+        <div className="downloads-links">
+          <Link className="downloads-link" href="changelog">
             Changelog
           </Link>
-          <Link className="px-4" href={windowsPortable}>
+          <Link className="downloads-link" href={windowsPortable}>
             Windows Portable
           </Link>
-          <Link className="px-4" href={nightly}>
+          <Link className="downloads-link" href={nightly}>
             Nightly Build
           </Link>
-          <Link className="px-4" href={allDownloads}>
+          <Link className="downloads-link" href={allDownloads}>
             Old Builds
           </Link>
         </div>
@@ -366,14 +352,12 @@ function SmallDownloadButton({ data }: { data: DownloadType }) {
   return (
     <Link href={data[2]}>
       <Button>
-        <div className="flex items-center space-x-3">
-          {/* <div className="pr-6 h-6 w-auto"> */}
+        <div className="download-tag">
           {/* key to reset when it changes */}
-          <div className="transform scale-75">
+          <div className="download-tag-icon">
             <Icon key={data[1]} />
           </div>
-          {/* </div> */}
-          <div className="text-sm">{data[1]}</div>
+          <div className="download-tag-label">{data[1]}</div>
         </div>
       </Button>
     </Link>
@@ -386,14 +370,13 @@ function DownloadButton({ data }: { data: DownloadType }) {
   return (
     <Link href={data[2]}>
       <Button>
-        <div className="flex p-3">
-          <div className="pr-6 h-6 w-auto">
-            {/* <div  children={Icon} key={data[1]} /> */}
+        <div className="download-cta">
+          <div className="download-cta-icon">
             <Icon />
           </div>
           <div>
             <div>Download Chatterino</div>
-            <div className="text-sm">{data[1]}</div>
+            <div className="download-cta-sub">{data[1]}</div>
           </div>
         </div>
       </Button>

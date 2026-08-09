@@ -126,9 +126,7 @@ export default function ClientLogin() {
   const [oauthToken, setOauthToken] = useState<string | null>(null);
   const [hidden, setHidden] = useState(true);
   const [user, setUser] = useState<null | User>(null);
-  const [buttonColor, setButtonColor] = useState(
-    "bg-blue-500 hover:bg-blue-400"
-  );
+  const [copied, setCopied] = useState(false);
   const dataStringRef = useRef<HTMLInputElement | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
@@ -159,73 +157,56 @@ export default function ClientLogin() {
 
   const loggedIn = oauthToken && user;
 
-  const loginButtonClasses =
-    "p-3 flex justify-center rounded-sm shadow-sm bg-purple-800 hover:bg-purple-600 hover:opacity-100 whitespace-nowrap no-underline my-5".split(
-      " "
-    );
-  if (loggedIn) {
-    loginButtonClasses.push("opacity-25");
-  }
-
   const handleCopyClick = () => {
     if (dataStringRef.current) {
       dataStringRef.current.select();
       window.document.execCommand("copy");
-      setButtonColor("bg-green-600 hover:bg-green-500");
+      setCopied(true);
     }
   };
 
   return (
     <Page title="Login - Chatterino">
-      <Section className="p-16">
-        <h2 className="m-4 text-center">Chatterino Login</h2>
-        <h5 className="font-bold text-center my-2 text-red-600 text-xl">
-          Do not show on stream
-        </h5>
+      <Section className="login">
+        <h2 className="login-title">Chatterino Login</h2>
+        <h5 className="login-warning">Do not show on stream</h5>
         {errorMessage && (
-          <h6 className="font-bold text-center my-2 text-red-600 text-xl">
-            Error: {errorMessage}
-          </h6>
+          <h6 className="login-warning">Error: {errorMessage}</h6>
         )}
         {!loggedIn && (
-          <a
-            href={createLoginUrl().toString()}
-            className={loginButtonClasses.join(" ")}
-          >
+          <a href={createLoginUrl().toString()} className="login-button">
             Login with Twitch
           </a>
         )}
         {loggedIn && (
           <>
-            <div className="flex gap-1 align-center my-2">
-              <div className="relative w-full">
-                {hidden && (
-                  <div className="absolute top-0 left-0 w-full h-full bg-red-700 rounded-sm" />
-                )}
+            <div className="token-row">
+              <div className="token-box">
+                {hidden && <div className="token-cover" />}
                 <input
                   type="text"
                   ref={dataStringRef}
                   readOnly
-                  className={`appearance-none rounded-sm bg-gray-900 w-full overflow-hidden resize-none p-3`}
+                  className="token-input"
                   value={createChatterinoDataString(oauthToken, user)}
                 />
               </div>
               <div
-                className="flex align-center h-full bg-gray-900 rounded-sm p-3 select-none cursor-pointer hover:bg-gray-700"
+                className="token-toggle"
                 onClick={() => setHidden((hidden) => !hidden)}
               >
                 🔎
               </div>
             </div>
             <button
-              className={`rounded-sm w-full p-3 ${buttonColor}`}
+              className={"copy-button" + (copied ? " copied" : "")}
               onClick={handleCopyClick}
             >
               Copy
             </button>
-            <div className="mt-6">
+            <div className="login-steps">
               Steps:
-              <ul className="list-disc ml-4">
+              <ul>
                 <li>Click "Copy" or copy the text manually.</li>
                 <li>Then, in Chatterino, click "Paste login info".</li>
               </ul>

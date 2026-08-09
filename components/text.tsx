@@ -5,7 +5,7 @@ type Props = {
 };
 
 function Text({ children }: Props) {
-  return <div className="text-blue-200">{children}</div>;
+  return <div className="body-text">{children}</div>;
 }
 
 export default Text;

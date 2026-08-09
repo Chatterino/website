@@ -10,11 +10,11 @@ function LinuxPage() {
   const ubuntu2204Link = `https://github.com/Chatterino/chatterino2/releases/download/v${currentVersion}/Chatterino-Ubuntu-22.04.deb`;
   return (
     <Page title="Chatterino on Linux">
-      <div className="p-16">
+      <div className="guide">
         <Section>
-          <h1 className="text-5xl">Chatterino on Linux</h1>
+          <h1>Chatterino on Linux</h1>
           {/* Ubuntu 24.04 */}
-          <h2 className="text-3xl pt-10 pb-4">Ubuntu 24.04 (Noble Numbat)</h2>
+          <h2>Ubuntu 24.04 (Noble Numbat)</h2>
           <Text>
             A .deb file is available from{" "}
             <Link href={ubuntu2404Link}>here</Link>.
@@ -24,9 +24,7 @@ function LinuxPage() {
             relevant dependencies.
           </Text>
           {/* Ubuntu 22.04 */}
-          <h2 className="text-3xl pt-10 pb-4">
-            Ubuntu 22.04 (Jammy Jellyfish)
-          </h2>
+          <h2>Ubuntu 22.04 (Jammy Jellyfish)</h2>
           <Text>
             A .deb file is available from{" "}
             <Link href={ubuntu2204Link}>here</Link>.
@@ -36,19 +34,16 @@ function LinuxPage() {
             relevant dependencies.
           </Text>
           {/* Flatpak */}
-          <h2 className="text-3xl pt-10 pb-4">Flatpak</h2>
+          <h2>Flatpak</h2>
           <Text>
             Chatterino is available on{" "}
             <Link href="https://flathub.org/apps/details/com.chatterino.chatterino">
               Flathub
             </Link>
-            . To install it run:{" "}
-            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-              flatpak install chatterino
-            </code>{" "}
+            . To install it run: <code>flatpak install chatterino</code>{" "}
           </Text>
           {/* AUR */}
-          <h2 className="text-3xl pt-10 pb-4">Arch Linux</h2>
+          <h2>Arch Linux</h2>
           <Text>
             You can install Chatterino through the{" "}
             <Link href="https://wiki.archlinux.org/title/Arch_User_Repository">
@@ -69,15 +64,9 @@ function LinuxPage() {
             <Link href="https://aur.archlinux.org/packages/chatterino2-bin/">
               chatterino2-bin
             </Link>
-            <p className="pl-3 pb-3">
-              e.g.{" "}
-              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-                yay -S chatterino2-bin
-              </code>{" "}
-              or{" "}
-              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-                paru -S chatterino2-bin
-              </code>
+            <p>
+              e.g. <code>yay -S chatterino2-bin</code> or{" "}
+              <code>paru -S chatterino2-bin</code>
             </p>
           </Text>
           <Text>
@@ -85,15 +74,9 @@ function LinuxPage() {
             <Link href="https://aur.archlinux.org/packages/chatterino2-nightly-bin/">
               chatterino2-nightly-bin
             </Link>
-            <p className="pl-3 pb-3">
-              e.g.{" "}
-              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-                yay -S chatterino2-nightly-bin
-              </code>{" "}
-              or{" "}
-              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-                paru -S chatterino2-nightly-bin
-              </code>
+            <p>
+              e.g. <code>yay -S chatterino2-nightly-bin</code> or{" "}
+              <code>paru -S chatterino2-nightly-bin</code>
             </p>
           </Text>
           <Text>
@@ -101,15 +84,9 @@ function LinuxPage() {
             <Link href="https://aur.archlinux.org/packages/chatterino2/">
               chatterino2
             </Link>
-            <p className="pl-3 pb-3">
-              e.g.{" "}
-              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-                yay -S chatterino2
-              </code>{" "}
-              or{" "}
-              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-                paru -S chatterino2
-              </code>
+            <p>
+              e.g. <code>yay -S chatterino2</code> or{" "}
+              <code>paru -S chatterino2</code>
             </p>
           </Text>
           <Text>
@@ -117,20 +94,14 @@ function LinuxPage() {
             <Link href="https://aur.archlinux.org/packages/chatterino2-git/">
               chatterino2-git
             </Link>
-            <p className="pl-3">
-              e.g.{" "}
-              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-                yay -S chatterino2-git
-              </code>{" "}
-              or{" "}
-              <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-                paru -S chatterino2-git
-              </code>
+            <p>
+              e.g. <code>yay -S chatterino2-git</code> or{" "}
+              <code>paru -S chatterino2-git</code>
             </p>
           </Text>
 
           {/* Gentoo */}
-          <h2 className="text-3xl pt-10 pb-4">Gentoo Linux</h2>
+          <h2>Gentoo Linux</h2>
           <Text>
             Chatterino is available on Gentoo from{" "}
             <Link href="https://wiki.gentoo.org/wiki/Project:GURU">GURU</Link>.
@@ -146,32 +117,20 @@ function LinuxPage() {
             <Link href="https://gitweb.gentoo.org/repo/proj/guru.git/tree/net-im/chatterino">
               Gentoo's GURU net-im/chatterino package
             </Link>{" "}
-            by running{" "}
-            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-              emerge chatterino --ask
-            </code>
+            by running <code>emerge chatterino --ask</code>
           </Text>
           <Text>
             Get the latest development version from{" "}
             <Link href="https://gitweb.gentoo.org/repo/proj/guru.git/tree/net-im/chatterino/chatterino-9999.ebuild">
               Gentoo's GURU net-im/chatterino-9999 package
             </Link>{" "}
-            by adding{" "}
-            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-              net-im/chatterino **
-            </code>{" "}
-            to your{" "}
-            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-              package.accept_keywords
-            </code>
-            , then running{" "}
-            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-              emerge chatterino --ask
-            </code>
+            by adding <code>net-im/chatterino **</code> to your{" "}
+            <code>package.accept_keywords</code>, then running{" "}
+            <code>emerge chatterino --ask</code>
           </Text>
 
           {/* Fedora official */}
-          <h2 className="text-3xl pt-10 pb-4">Fedora Linux</h2>
+          <h2>Fedora Linux</h2>
           <Text>
             Get the latest stable version of Chatterino through{" "}
             <a href="https://src.fedoraproject.org/rpms/chatterino2">
@@ -181,20 +140,17 @@ function LinuxPage() {
             <a href="https://src.fedoraproject.org/user/solomoncyj">
               solomoncyj
             </a>
-            :{" "}
-            <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
-              sudo dnf install chatterino
-            </code>
+            : <code>sudo dnf install chatterino</code>
           </Text>
           {/* Building from Source */}
-          <h2 className="text-3xl pt-10 pb-4">Building from Source</h2>
+          <h2>Building from Source</h2>
           <Text>
             If the options above don't work, then you can try{" "}
             <Link href={linuxBuildFromSource}>this guide</Link> to build it from
             source.
           </Text>
           {/* Ubuntu 20.04 */}
-          <h2 className="text-3xl pt-10 pb-4">Ubuntu 20.04 (Focal Fossa)</h2>
+          <h2>Ubuntu 20.04 (Focal Fossa)</h2>
           <Text>
             We no longer support Ubuntu 20.04 as of Chatterino v2.5.5. See{" "}
             <a href="https://github.com/Chatterino/chatterino2/discussions/6522">
@@ -203,7 +159,7 @@ function LinuxPage() {
             for more information.
           </Text>
           {/* AppImage */}
-          <h2 className="text-3xl pt-10 pb-4">AppImage</h2>
+          <h2>AppImage</h2>
           <Text>
             We no longer support AppImage as of Chatterino v2.5.5. See{" "}
             <a href="https://github.com/Chatterino/chatterino2/discussions/6110">

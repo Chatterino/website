@@ -83,8 +83,8 @@ export default function Credit({ author, helper, inline, prs }: Props) {
   );
 
   if (inline) {
-    return <span className="text-gray-300 mt-3 mb-4 text-sm">{contents}</span>;
+    return <span className="credit">{contents}</span>;
   } else {
-    return <div className="text-gray-300 mt-3 mb-4 text-sm">{contents}</div>;
+    return <div className="credit">{contents}</div>;
   }
 }

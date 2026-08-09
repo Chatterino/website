@@ -10,13 +10,13 @@ type Props = {
 
 function Page({ children, title }: Props) {
   return (
-    <div className={"text-white flex flex-col "} style={{ minHeight: "100vh" }}>
+    <div className="page">
       <Head>
         <title>{title}</title>
       </Head>
       <Nav />
 
-      <div className="grow">{children}</div>
+      <div className="page-body">{children}</div>
       <Footer />
     </div>
   );

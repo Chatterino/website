@@ -8,7 +8,7 @@ type Props = {
 
 function Link({ href, className, children }: Props) {
   return (
-    <a href={href} className={"underline " + (className ?? "")}>
+    <a href={href} className={className}>
       {children}
     </a>
   );

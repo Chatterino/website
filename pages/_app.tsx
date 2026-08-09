@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="text-white bg-gray-800" style={{ minHeight: "100vh" }}>
+      <main className="app-main">
         <Component {...pageProps} />
       </main>
     </div>

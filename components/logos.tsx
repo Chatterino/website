@@ -7,7 +7,7 @@ export function Apple() {
       height="44"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 50 1000 1000 "
-      className="transform scale-125"
+      className="logo-apple"
     >
       <path
         fill="currentColor"
@@ -255,7 +255,7 @@ export function LinkInformation() {
 export function Download() {
   return (
     <svg
-      className="fill-current w-4 h-4 mr-2 inline"
+      className="icon-download"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
     >

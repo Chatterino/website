@@ -117,7 +117,7 @@ function LinuxPage() {
             <Link href="https://aur.archlinux.org/packages/chatterino2-git/">
               chatterino2-git
             </Link>
-            <p className="pl-3">
+            <p className="pl-3 pb-3">
               e.g.{" "}
               <code className="p-1 px-2 mt-4 border-gray-600 border bg-gray-900">
                 yay -S chatterino2-git

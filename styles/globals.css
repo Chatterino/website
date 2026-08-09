@@ -181,10 +181,6 @@ button {
   background: transparent !important;
 }
 
-by {
-  display: none;
-}
-
 :is(h1, h2, h3, h4, h5, h6)[id] {
   & > a {
     @apply opacity-0 ml-2 font-normal no-underline;

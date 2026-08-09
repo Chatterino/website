@@ -159,14 +159,6 @@ export default function ClientLogin() {
 
   const loggedIn = oauthToken && user;
 
-  const loginButtonClasses =
-    "p-3 flex justify-center rounded-sm shadow-sm bg-purple-800 hover:bg-purple-600 hover:opacity-100 whitespace-nowrap no-underline my-5".split(
-      " "
-    );
-  if (loggedIn) {
-    loginButtonClasses.push("opacity-25");
-  }
-
   const handleCopyClick = () => {
     if (dataStringRef.current) {
       dataStringRef.current.select();
@@ -190,14 +182,14 @@ export default function ClientLogin() {
         {!loggedIn && (
           <a
             href={createLoginUrl().toString()}
-            className={loginButtonClasses.join(" ")}
+            className="p-3 flex justify-center rounded-sm shadow-sm bg-purple-800 hover:bg-purple-600 whitespace-nowrap no-underline my-5"
           >
             Login with Twitch
           </a>
         )}
         {loggedIn && (
           <>
-            <div className="flex gap-1 align-center my-2">
+            <div className="flex gap-1 my-2">
               <div className="relative w-full">
                 {hidden && (
                   <div className="absolute top-0 left-0 w-full h-full bg-red-700 rounded-sm" />
@@ -211,7 +203,7 @@ export default function ClientLogin() {
                 />
               </div>
               <div
-                className="flex align-center h-full bg-gray-900 rounded-sm p-3 select-none cursor-pointer hover:bg-gray-700"
+                className="flex h-full bg-gray-900 rounded-sm p-3 select-none cursor-pointer hover:bg-gray-700"
                 onClick={() => setHidden((hidden) => !hidden)}
               >
                 🔎

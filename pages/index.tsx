@@ -59,14 +59,11 @@ function FirstHero() {
             <a href="#downloads" className="underline">
               More Downloads
             </a>
-            {/* <a href="xD" className="underline">
-              Get Nightly
-            </a> */}
           </div>
         </div>
 
         <div
-          className="flex p-16 md:pl-4 md:pr-28 max-xs:transform max-xs:scale-75 max-xs:p-0"
+          className="flex p-16 md:pl-4 md:pr-28 max-xs:scale-75 max-xs:p-0"
           style={{ height: "70vh", maxHeight: 600, zIndex: 1 }}
           id="chatprop-host"
         >
@@ -184,8 +181,6 @@ function Features2() {
             Don’t miss important messages while streaming.
           </div>
         </div>
-        {/* Custom commands */}
-        {/* Recent messages */}
       </div>
     </Section>
   );
@@ -292,7 +287,7 @@ function Testimonials() {
 function Miscellaneous() {
   return (
     <Section className="bg-gray-800">
-      <div className="bg-gray-800 md:grid md:grid-cols-2 md:space-y-0">
+      <div className="bg-gray-800 md:grid md:grid-cols-2">
         <div className="p-16 space-y-4 max-xs:p-6">
           <div className="text-5xl max-xs:text-4xl">Visit the Wiki</div>
           <div>
@@ -367,12 +362,10 @@ function SmallDownloadButton({ data }: { data: DownloadType }) {
     <Link href={data[2]}>
       <Button>
         <div className="flex items-center space-x-3">
-          {/* <div className="pr-6 h-6 w-auto"> */}
           {/* key to reset when it changes */}
-          <div className="transform scale-75">
+          <div className="scale-75">
             <Icon key={data[1]} />
           </div>
-          {/* </div> */}
           <div className="text-sm">{data[1]}</div>
         </div>
       </Button>
@@ -388,7 +381,6 @@ function DownloadButton({ data }: { data: DownloadType }) {
       <Button>
         <div className="flex p-3">
           <div className="pr-6 h-6 w-auto">
-            {/* <div  children={Icon} key={data[1]} /> */}
             <Icon />
           </div>
           <div>

@@ -7,7 +7,7 @@ export function Apple() {
       height="44"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 50 1000 1000 "
-      className="transform scale-125"
+      className="scale-125"
     >
       <path
         fill="currentColor"

@@ -1,0 +1,45 @@
+{% macro testimonial(name, occupation, imgsrc) %}
+<div class="testimonial">
+  <div class="testimonial-row">
+    <div class="testimonial-avatar" style="background-image:url({{ imgsrc }});background-size:cover"></div>
+    <div class="testimonial-body">
+      <div class="testimonial-quote">{{ caller() }}</div>
+      <div class="testimonial-fill"></div>
+      <div class="testimonial-name">{{ name }}</div>
+      <div class="testimonial-role">{{ occupation }}</div>
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
+{% set t_pokelawls %}
+{% call testimonial(name="pokelawls", occupation="Streamer", imgsrc="avatars/pokelawls.jpg") %}
+I love Chatterino! It’s made my life much easier as a streamer. Such a
+great chat program. Would highly recommend, has a lot of cool features!
+{% endcall %}
+{% endset %}
+{% set t_moonmoon %}
+{% call testimonial(name="MOONMOON", occupation="Streamer", imgsrc="avatars/moonmoon.jpg") %}
+<div class="testimonial-inline">
+  This program is not cringe. It is extremely POGGERS. I pepeRun from the
+  normal Twitch chat client because it is EXTREMELY cringe and lacking in
+  basic features sported by Chatterino.
+</div>
+{% endcall %}
+{% endset %}
+{% set t_nymn %}
+{% call testimonial(name="NymN", occupation="Streamer", imgsrc="avatars/nymn.jpg") %}
+With a chat full of loud spammers, I wouldn't survive a day without my
+beloved mentions tab!
+{% endcall %}
+{% endset %}
+{% set t_ewroon %}
+{% call testimonial(name="EWROON", occupation="Streamer", imgsrc="avatars/ewroon.jpg") %}
+Ever since i've discovered Chatterino my chat experience has changed
+completely. It is really easy to use and very functional. Such a great
+chat program. Would highly recommend!
+{% endcall %}
+{% endset %}
+{% set testimonials = [t_pokelawls, t_moonmoon, t_nymn, t_ewroon] %}
+
+

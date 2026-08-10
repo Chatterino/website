@@ -1,73 +1,7 @@
 {% extends "page.j2" %}
 {% set links = read_json("links.json") %}
-{% set download_link = "%s/%s" | format(links.base_download_link, links.current_version) %}
-{% set downloads = ({
-  "windows": ({
-    "icon": "windows",
-    "label": "%s for Windows 64-Bit" | format(links.current_version),
-    "href": "%s/Chatterino.Installer.exe" | format(download_link),
-  }),
-  "linux": ({
-    "icon": "tux",
-    "label": "Linux",
-    "href": "linux",
-  }),
-  "macos": ({
-    "icon": "apple",
-    "label": "macOS",
-    "href": "%s/Chatterino.dmg" | format(download_link),
-  }),
-  "freebsd": ({
-    "icon": "freebsd",
-    "label": "FreeBSD",
-    "href": "freebsd",
-  }),
-  
-}) %}
-
-{% macro testimonial(name, occupation, imgsrc) %}
-<div class="testimonial">
-  <div class="testimonial-row">
-    <div class="testimonial-avatar" style="background-image:url({{ imgsrc }});background-size:cover"></div>
-    <div class="testimonial-body">
-      <div class="testimonial-quote">{{ caller() }}</div>
-      <div class="testimonial-fill"></div>
-      <div class="testimonial-name">{{ name }}</div>
-      <div class="testimonial-role">{{ occupation }}</div>
-    </div>
-  </div>
-</div>
-{% endmacro %}
-
-{% set t_pokelawls %}
-{% call testimonial(name="pokelawls", occupation="Streamer", imgsrc="avatars/pokelawls.jpg") %}
-I love Chatterino! It’s made my life much easier as a streamer. Such a
-great chat program. Would highly recommend, has a lot of cool features!
-{% endcall %}
-{% endset %}
-{% set t_moonmoon %}
-{% call testimonial(name="MOONMOON", occupation="Streamer", imgsrc="avatars/moonmoon.jpg") %}
-<div class="testimonial-inline">
-  This program is not cringe. It is extremely POGGERS. I pepeRun from the
-  normal Twitch chat client because it is EXTREMELY cringe and lacking in
-  basic features sported by Chatterino.
-</div>
-{% endcall %}
-{% endset %}
-{% set t_nymn %}
-{% call testimonial(name="NymN", occupation="Streamer", imgsrc="avatars/nymn.jpg") %}
-With a chat full of loud spammers, I wouldn't survive a day without my
-beloved mentions tab!
-{% endcall %}
-{% endset %}
-{% set t_ewroon %}
-{% call testimonial(name="EWROON", occupation="Streamer", imgsrc="avatars/ewroon.jpg") %}
-Ever since i've discovered Chatterino my chat experience has changed
-completely. It is really easy to use and very functional. Such a great
-chat program. Would highly recommend!
-{% endcall %}
-{% endset %}
-{% set testimonials = [t_pokelawls, t_moonmoon, t_nymn, t_ewroon] %}
+{% from "downloads.j2" import downloads, download_cta, small_download_button %}
+{% from "testimonials.j2" import testimonials %}
 
 {% block head %}
 <link rel="stylesheet" href="/styles/site.css">
@@ -89,26 +23,13 @@ chat program. Would highly recommend!
             improved/extended version of the Twitch web chat.
           </div>
 
-          {% macro download_cta(download) %}
-          <a href="{{ download.href }}">
-            <button class="button">
-              <div class="download-cta">
-                <div class="download-cta-icon">{% include "icons/" ~ download.icon ~ ".svg" %}</div>
-                <div>
-                  <div>Download Chatterino</div>
-                  <div class="download-cta-sub">{{ download.label }}</div>
-                </div>
-              </div>
-            </button>
-          </a>
-          {% endmacro %}
 
           <div class="hero-cta" data-platform="windows" id="hero-cta">
             <div>
-              <div class="dl-auto dl-auto-windows">{{ download_cta(downloads.windows) }}</div>
-              <div class="dl-auto dl-auto-linux">{{ download_cta(downloads.linux) }}</div>
-              <div class="dl-auto dl-auto-macos">{{ download_cta(downloads.macos) }}</div>
-              <div class="dl-auto dl-auto-freebsd">{{ download_cta(downloads.freebsd) }}</div>
+              <div class="dl-auto dl-auto-windows">{{ download_cta("windows") }}</div>
+              <div class="dl-auto dl-auto-linux">{{ download_cta("linux") }}</div>
+              <div class="dl-auto dl-auto-macos">{{ download_cta("macos") }}</div>
+              <div class="dl-auto dl-auto-freebsd">{{ download_cta("freebsd") }}</div>
             </div>
           </div>
           <script>
@@ -268,25 +189,11 @@ chat program. Would highly recommend!
       <div style="display:block;top:-100px;position:relative;visibility:hidden" id="downloads"></div>
       <div class="downloads-inner">
         <h2 class="downloads-title">Downloads</h2>
-
-{% macro small_download_button(download) %}
-<a href="{{ download.href }}">
-  <button class="button">
-    <div class="download-tag">
-      <div class="download-tag-icon">{% include "icons/" ~ download.icon ~ ".svg" %}</div>
-      <div class="download-tag-label">
-        {{ download.label }}
-      </div>
-    </div>
-  </button>
-</a>
-{% endmacro %}
-
         <div class="downloads-buttons">
-          {{ small_download_button(downloads.windows) }}
-          {{ small_download_button(downloads.linux) }}
-          {{ small_download_button(downloads.macos) }}
-          {{ small_download_button(downloads.freebsd) }}
+          {{ small_download_button("windows") }}
+          {{ small_download_button("linux") }}
+          {{ small_download_button("macos") }}
+          {{ small_download_button("freebsd") }}
         </div>
 
         <div class="downloads-links">

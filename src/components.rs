@@ -78,7 +78,7 @@ fn read_json(path: &str) -> Result<Value, Error> {
 
     let mut cache = FILE_CACHE.lock().expect("not poisoned");
     if let Some(s) = cache.get(path) {
-        return Ok(serde_json::from_str(&s).expect("parsed before, cannot fail"));
+        return Ok(serde_json::from_str(s).expect("parsed before, cannot fail"));
     }
 
     let s = std::fs::read_to_string(path)

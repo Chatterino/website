@@ -18,7 +18,9 @@ npx serve out
 
 ## Site build process
 
-The site uses a custom build process:
+The site is made up of [minijinja](https://docs.rs/minijinja/latest/minijinja/) templates, with some Rust code to render it.
+
+The build process:
 
 - Constructs a `minijinja` environment from `templates`
 - Reads all content in `pages` and renders each `.j2` file into the output dir

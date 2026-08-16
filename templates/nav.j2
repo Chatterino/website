@@ -1,0 +1,28 @@
+{% set links = read_json("links.json") %}
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="navbar-brand">
+      <div>
+        <img src="/logo.svg">
+        <div>Chatterino</div>
+      </div>
+    </a>
+    <div class="navbar-menu">
+      <div class="navbar-links">
+        <div class="navbar-links-list">
+          <a href="/#features" class="nav-link nav-link-features">Features</a>
+          <a href="{{ links.wiki }}" class="nav-link">Wiki</a>
+          <a href="{{ links.tip }}" class="nav-link">Tip</a>
+        </div>
+      </div>
+      <div class="navbar-download">
+        <button class="button">
+          <a href="/#downloads">{% include "icons/download.svg" %}<span>Download</span></a>
+        </button>
+      </div>
+      <a href="{{ links.discord }}" class="navbar-icon navbar-icon-discord">{% include "icons/discord.svg" %}</a>
+      <a href="{{ links.github }}" class="navbar-icon">{% include "icons/github.svg" %}</a>
+    </div>
+  </div>
+</nav>
+<div class="navbar-spacer"></div>

@@ -1,0 +1,54 @@
+{% set links = read_json("links.json") %}
+{% set download_link = "%s/%s" | format(links.base_download_link, links.current_version) %}
+{% set downloads = ({
+  "windows": ({
+    "icon": "windows",
+    "label": "%s for Windows 64-Bit" | format(links.current_version),
+    "href": "%s/Chatterino.Installer.exe" | format(download_link),
+  }),
+  "linux": ({
+    "icon": "tux",
+    "label": "Linux",
+    "href": "linux",
+  }),
+  "macos": ({
+    "icon": "apple",
+    "label": "macOS",
+    "href": "%s/Chatterino.dmg" | format(download_link),
+  }),
+  "freebsd": ({
+    "icon": "freebsd",
+    "label": "FreeBSD",
+    "href": "freebsd",
+  }),
+  "windows_portable": "%s/Chatterino.Portable.zip" | format(download_link),
+}) %}
+
+{% macro download_cta(os) %}
+{% set download = downloads[os] %}
+<a href="{{ download.href }}">
+  <button class="button">
+    <div class="download-cta">
+      <div class="download-cta-icon">{% include "icons/" ~ download.icon ~ ".svg" %}</div>
+      <div>
+        <div>Download Chatterino</div>
+        <div class="download-cta-sub">{{ download.label }}</div>
+      </div>
+    </div>
+  </button>
+</a>
+{% endmacro %}
+
+{% macro small_download_button(os) %}
+{% set download = downloads[os] %}
+<a href="{{ download.href }}">
+  <button class="button">
+    <div class="download-tag">
+      <div class="download-tag-icon">{% include "icons/" ~ download.icon ~ ".svg" %}</div>
+      <div class="download-tag-label">
+        {{ download.label }}
+      </div>
+    </div>
+  </button>
+</a>
+{% endmacro %}

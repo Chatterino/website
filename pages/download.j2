@@ -1,0 +1,22 @@
+{% extends "page.j2" %}
+{% block title %}Old Builds - Chatterino{% endblock %}
+{% block content %}
+<div class="builds">
+  <h1 class="builds-title">Old Builds</h1>
+  <table class="builds-table">
+    <tbody>
+      {% set links = read_json("links.json") %}
+      {% for version in links.versions|reverse %}
+      {% set dl = links.base_download_link ~ "/" ~ version %}
+      <tr>
+        <td class="builds-version">{{ version }}</td>
+        <td><a href="{{ dl }}/Chatterino.Installer.exe">Windows Installer</a></td>
+        <td><a href="{{ dl }}/Chatterino.Portable.zip">Windows Portable</a></td>
+        <td><a href="{{ dl }}/Chatterino.dmg">Mac Installer</a></td>
+        <td><a href="{{ dl }}/Chatterino-x86_64.AppImage">Linux AppImage</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

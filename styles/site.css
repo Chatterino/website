@@ -1,0 +1,107 @@
+/* Additions for the static rewrite. Loaded after globals.css. */
+
+/* Hero download button matching the visitor's platform. */
+.hero-cta .dl-auto {
+  display: none;
+}
+
+.hero-cta[data-platform="windows"] .dl-auto-windows,
+.hero-cta[data-platform="linux"] .dl-auto-linux,
+.hero-cta[data-platform="macos"] .dl-auto-macos,
+.hero-cta[data-platform="freebsd"] .dl-auto-freebsd {
+  display: block;
+}
+
+/* Testimonial carousel, replaces react-responsive-carousel.
+   Styling mirrors that library; carousel.js drives the slides,
+   arrows, dots, and autoplay. */
+.carousel {
+  position: relative;
+  width: 80vw;
+  max-width: 800px;
+  margin: auto;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 350ms ease-in-out;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 5px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: all 0.25s ease-in;
+}
+
+.carousel-arrow:hover {
+  opacity: 1;
+  background: rgb(0 0 0 / 0.2);
+}
+
+.carousel-arrow::before {
+  content: "";
+  display: inline-block;
+  margin: 0 5px;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+.carousel-prev {
+  left: 0;
+}
+
+.carousel-prev::before {
+  border-right: 8px solid #fff;
+}
+
+.carousel-next {
+  right: 0;
+}
+
+.carousel-next::before {
+  border-left: 8px solid #fff;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 2;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 1px 1px 2px rgb(0 0 0 / 0.9);
+  opacity: 0.3;
+  cursor: pointer;
+  transition: opacity 0.25s ease-in;
+}
+
+.carousel-dot.selected,
+.carousel-dot:hover {
+  opacity: 1;
+}

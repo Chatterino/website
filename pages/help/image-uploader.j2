@@ -1,0 +1,3 @@
+{% set links = read_json("links.json") %}
+{% set url = links.wiki ~ "/Image%20Uploader" %}
+{% extends "redirect.j2" %}

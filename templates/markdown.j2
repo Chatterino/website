@@ -1,0 +1,12 @@
+{% extends "base.j2" %}
+{% block title %}{{ meta.title }}{% endblock %}
+{% block body %}
+{% include "nav.j2" %}
+<div class="{{ meta.class }}">
+  <div class="section-center">
+    <div class="section-content section-content-prose">
+{{ content }}
+    </div>
+  </div>
+</div>
+{% endblock %}

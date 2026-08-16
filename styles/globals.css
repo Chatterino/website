@@ -102,7 +102,7 @@ table {
 /* root */
 @font-face {
   font-family: "Noto Sans";
-  src: url("../fonts/NotoSans-Regular.ttf");
+  src: url("/fonts/NotoSans-Regular.ttf");
   font-display: swap;
 }
 
@@ -217,6 +217,13 @@ td {
   }
 }
 
+/* redirect pages */
+.redirect {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
 /* nav */
 .navbar {
   position: fixed;
@@ -287,6 +294,8 @@ td {
 }
 
 .navbar-links-list {
+  display: flex;
+  align-items: center;
   font-size: 0.875rem;
   line-height: calc(1.25 / 0.875);
 }
@@ -1120,12 +1129,3 @@ by {
   }
 }
 
-/* react-responsive-carousel overrides */
-.carousel {
-  max-width: 800px;
-  margin: auto !important;
-}
-
-.slide {
-  background: transparent !important;
-}

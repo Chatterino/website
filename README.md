@@ -1,34 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# chatterino.com
 
-## Getting Started
+Static site generator and content for the Chatterino website.
 
-First, run the development server:
+## Building
 
 ```bash
-npm run dev
-# or
-yarn dev
+cargo run
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+That puts the site into `out/`.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Use your preferred static HTTP server to serve it locally. For example:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+npx serve out
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Site build process
 
-## Learn More
+The site is made up of [minijinja](https://docs.rs/minijinja/latest/minijinja/) templates, with some Rust code to render it.
 
-To learn more about Next.js, take a look at the following resources:
+The build process:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Constructs a `minijinja` environment from `templates`
+- Reads all content in `pages` and renders each `.j2` file into the output dir
+- Copies `public` and `styles` into the output dir
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Configuration is split between `.env.*` files and `links.json`.
 
-## Deploy on Vercel
+Various components are exposed from Rust. These are mostly used in the changelog.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `credit(author="A, B", helper="C", prs="1234", inline=true)`: attribution
+- `github_user("name")`: inline GH profile icon + link
+- `figure("path/to/img/or/video.png", caption="Text under the media")`: annotated media
+- `redirect("https://example.com")`: creates redirect pages
+- `{% filter callout("note") %} ... {% endfilter %}`: highlights
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Some globals are also exposed:
+
+- `links`, which holds content from `links.json`
+
+Comments in `.j2` files are written `{! ... !}`, because the default `{#` collides with the `{#heading-id}` markdown syntax.
+
+## Configuration
+
+`TWITCH_OAUTH_CLIENT_ID` and `TWITCH_OAUTH_REDIRECT_URL` configure the login page.
+
+You can configure these in `.env.development` (`cargo run -- --dev`) and `.env.production` (`cargo run -- --prod`)

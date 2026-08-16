@@ -3,7 +3,8 @@ name: Build
 
 on:
   push:
-    branches: ["master", "main"]
+    branches:
+      - main
   pull_request:
 
 concurrency:
@@ -17,18 +18,36 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v7
-        with:
-          node-version-file: "package.json"
-          cache: "yarn"
+      - uses: dtolnay/rust-toolchain@stable
 
-      - name: Run Cloudflare build
-        run: |
-          yarn install
-          yarn run cloudflare-build
+      - uses: Swatinem/rust-cache@v2
+
+      - name: Build site
+        run: cargo run --release
 
       - name: Upload output files
         uses: actions/upload-artifact@v7
         with:
           name: Output Files
           path: out/*
+
+      - uses: cloudflare/wrangler-action@v4
+        id: deploy
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy out --project-name=website
+
+      - name: Comment deployment-url
+        if: github.ref != 'refs/heads/main'
+        uses: Chatterino/actions-comment-pull-request@main
+        env:
+          DEPLOYMENT_URL: ${{ steps.deploy.outputs.deployment-url }}
+          DEPLOYMENT_ALIAS_URL: ${{ steps.deploy.outputs.pages-deployment-alias-url }}
+        with:
+          comment-tag: preview
+          message: |
+            | Status  | ✅ Deploy Successful! |
+            | :------------ | :------------ |
+            | Preview Url:  |  ${{ steps.deploy.outputs.deployment-url }} |
+            | Branch Preview Url:  | ${{ steps.deploy.outputs.pages-deployment-alias-url }}  |

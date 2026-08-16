@@ -1,7 +1,7 @@
 {% extends "page.j2" %}
 {% block title %}Login - Chatterino{% endblock %}
 {% block content %}
-<div class="login" id="login" data-client-id="{{ twitch_client_id }}" data-redirect-url="{{ twitch_redirect_url }}">
+<div class="login" id="login" data-client-id="{{ env["twitch_oauth_client_id"] }}" data-redirect-url="{{ env["twitch_oauth_redirect_url"] }}">
   <div class="section-center">
     <div class="section-content">
       <h2 class="login-title">Chatterino Login</h2>

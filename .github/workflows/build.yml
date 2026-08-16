@@ -23,7 +23,7 @@ jobs:
       - uses: Swatinem/rust-cache@v2
 
       - name: Build site
-        run: cargo run --release
+        run: cargo run --release -- --prod
 
       - name: Upload output files
         uses: actions/upload-artifact@v7

@@ -857,6 +857,10 @@ td {
   }
 }
 
+.login-button[hidden] {
+  display: none;
+}
+
 .token-row {
   display: flex;
   gap: 0.25rem;
@@ -1128,4 +1132,3 @@ by {
     opacity: 1;
   }
 }
-

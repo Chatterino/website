@@ -3,6 +3,8 @@ name: Build
 
 on:
   push:
+    branches:
+      - main
   pull_request:
 
 concurrency:
@@ -30,6 +32,22 @@ jobs:
           path: out/*
 
       - uses: cloudflare/wrangler-action@v4
+        id: deploy
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy out --project-name=website
+
+      - name: Comment deployment-url
+        if: github.ref != 'refs/heads/main'
+        uses: Chatterino/actions-comment-pull-request@main
+        env:
+          DEPLOYMENT_URL: ${{ steps.deploy.outputs.deployment-url }}
+          DEPLOYMENT_ALIAS_URL: ${{ steps.deploy.outputs.pages-deployment-alias-url }}
+        with:
+          comment-tag: preview
+          message: |
+            | Status  | ✅ Deploy Successful! |
+            | :------------ | :------------ |
+            | Preview Url:  |  ${{ steps.deploy.outputs.deployment-url }} |
+            | Branch Preview Url:  | ${{ steps.deploy.outputs.pages-deployment-alias-url }}  |

@@ -217,6 +217,13 @@ td {
   }
 }
 
+/* redirect pages */
+.redirect {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
 /* nav */
 .navbar {
   position: fixed;

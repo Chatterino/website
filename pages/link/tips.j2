@@ -1,2 +1,3 @@
 {% set links = read_json("links.json") %}
-{{ redirect(links.tip) }}
+{% set url = links.tip %}
+{% extends "redirect.j2" %}

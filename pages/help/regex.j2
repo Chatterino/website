@@ -1,2 +1,3 @@
 {% set links = read_json("links.json") %}
-{{ redirect(links.wiki ~ "/Regex") }}
+{% set url = links.wiki ~ "/Regex" %}
+{% extends "redirect.j2" %}

@@ -1,0 +1,10 @@
+{% extends "base.j2" %}
+{% block title %}Redirecting - Chatterino{% endblock %}
+{% block head %}
+    <meta http-equiv="refresh" content="0; url={{ url }}">
+{%- endblock %}
+{% block body %}
+<div class="redirect">
+  <a href="{{ url }}">Click this if you are not being redirected.</a>
+</div>
+{% endblock %}

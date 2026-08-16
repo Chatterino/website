@@ -15,7 +15,6 @@ pub fn register(env: &mut Environment, vars: &Env) {
         Value::from_safe_string(github_user(&username))
     });
     env.add_function("figure", figure);
-    env.add_function("redirect", redirect);
     env.add_filter("callout", callout);
 }
 
@@ -143,26 +142,6 @@ fn figure(src: &str, kwargs: Kwargs) -> Result<Value, Error> {
     Ok(Value::from_safe_string(format!(
         "<figure>{media}<figcaption>{caption}</figcaption></figure>"
     )))
-}
-
-/// A full HTML document that redirects to `url`.
-fn redirect(url: &str) -> Value {
-    let url = basic_html_escape(url);
-    Value::from_safe_string(format!(
-        r#"
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="refresh" content="0; url={url}">
-    <title>Redirecting</title>
-  </head>
-  <body>
-    <a href="{url}">Click this if you are not being redirected.</a>
-  </body>
-</html>
-"#
-    ))
 }
 
 fn callout(state: &State, content: &str, kind: &str) -> Result<Value, Error> {

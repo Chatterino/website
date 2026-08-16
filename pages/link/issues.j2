@@ -1,2 +1,3 @@
 {% set links = read_json("links.json") %}
-{{ redirect(links.github ~ "/issues") }}
+{% set url = links.github ~ "/issues" %}
+{% extends "redirect.j2" %}

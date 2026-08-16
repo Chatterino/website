@@ -21,6 +21,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b588b76d00fde79687d7646a9b5bdf3cc0f655e0bbd080335a95d7e96f3587da"
 
 [[package]]
+name = "chatterino-website"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "minijinja",
+ "pulldown-cmark",
+ "serde",
+ "serde_json",
+ "walkdir",
+]
+
+[[package]]
 name = "itoa"
 version = "1.0.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -168,18 +180,6 @@ checksum = "29790946404f91d9c5d06f9874efddea1dc06c5efe94541a7d6863108e3a5e4b"
 dependencies = [
  "same-file",
  "winapi-util",
-]
-
-[[package]]
-name = "website-rust"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "minijinja",
- "pulldown-cmark",
- "serde",
- "serde_json",
- "walkdir",
 ]
 
 [[package]]

@@ -79,7 +79,10 @@ fn usage() {
 {exe} [OPTIONS]
 
 Options:
+    --dev          build in development mode
+    --prod         build in production mode
     -o, --output   path to output directory
+    -h, --help     print this message
 "
     )
 }

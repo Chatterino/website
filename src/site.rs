@@ -232,7 +232,6 @@ fn collect_files_sorted(dir: &Path) -> Result<Vec<String>> {
             .strip_prefix(dir)
             .expect("walked path is under its root")
             .components()
-            // TODO: don't panic here
             .map(|c| c.as_os_str().to_str().expect("non-utf8 path"))
             .collect::<Vec<_>>()
             .join("/");

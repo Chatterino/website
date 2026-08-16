@@ -20,7 +20,7 @@ pub fn register(env: &mut Environment, vars: &Env) {
 }
 
 /// Escape some characters into HTML entities
-pub fn basic_html_escape(text: &str) -> String {
+fn basic_html_escape(text: &str) -> String {
     let mut out = String::with_capacity(text.len());
     for c in text.chars() {
         match c {

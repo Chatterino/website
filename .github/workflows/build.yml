@@ -15,7 +15,11 @@ concurrency:
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
+    outputs:
+      deployment-url: ${{ steps.deploy.outputs.deployment-url }}
+      pages-deployment-alias-url: ${{ steps.deploy.outputs.pages-deployment-alias-url }}
 
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
@@ -40,16 +44,21 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy out --project-name=website
 
+  comment:
+    name: Comment
+    runs-on: ubuntu-latest
+    if: github.ref != 'refs/heads/main'
+    needs: [build]
+    permissions:
+      pull-requests: write
+
+    steps:
       - name: Comment deployment-url
-        if: github.ref != 'refs/heads/main'
         uses: Chatterino/actions-comment-pull-request@e4a76dd2b0a3c2027c3fd84147a67c22ee4c90fa # main
-        env:
-          DEPLOYMENT_URL: ${{ steps.deploy.outputs.deployment-url }}
-          DEPLOYMENT_ALIAS_URL: ${{ steps.deploy.outputs.pages-deployment-alias-url }}
         with:
           comment-tag: preview
           message: |
             | Status  | ✅ Deploy Successful! |
             | :------------ | :------------ |
-            | Preview Url:  |  ${{ steps.deploy.outputs.deployment-url }} |
-            | Branch Preview Url:  | ${{ steps.deploy.outputs.pages-deployment-alias-url }}  |
+            | Preview Url:  |  ${{ needs.build.outputs.deployment-url }} |
+            | Branch Preview Url:  | ${{ needs.build.outputs.pages-deployment-alias-url }}  |

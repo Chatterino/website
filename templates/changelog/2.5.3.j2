@@ -1,0 +1,246 @@
+{% set links = read_json("links.json") %}
+
+## 2.5.3 (Released 2025-03-23) {#2.5.3}
+
+### Twitch EventSub support {#2.5.3-eventsub}
+
+<div class="changelog-entry">
+
+Twitch is shutting down the old API we used to get moderation events & channel
+point events from. In this release we've updated to Twitch's new API
+["EventSub"](https://dev.twitch.tv/docs/eventsub/).
+
+This change has one known drawback:
+
+- Channel point redemptions might not render correctly. There's a feature
+  request on [Twitch's
+  UserVoice](https://twitch.uservoice.com/forums/310213-developers/suggestions/43371027-allow-getting-realtime-updates-on-polls-prediction)
+  that you can upvote if you'd like to see this feature return.
+
+To support the new API we've had to request some more scopes when you log in
+with your account. You will be prompted to log in again on startup if you're missing any
+required scopes.
+
+If you run into any issues with this, please let us know on our <a
+href="{{ links.discord }}">Discord</a>, or make a bug report on our <a
+href="{{ links.github }}">GitHub</a>.
+
+{{ credit(author="pajlada, Nerixyz, iProdigy", prs="5837, 5895, 5897, 5904, 5910, 5903, 5915, 5916, 5930, 5935, 5932, 5943,
+  5952, 5953, 5968, 5973, 5974, 5980, 5981, 5985, 5990, 5992, 5993, 5996,
+  5995, 6000, 6001, 6002, 6003, 6005, 6007, 6010, 6008, 6012, 6013, 6015,
+  6017, 6027, 6028, 6035, 6036, 6040, 6041, 6048, 6058, 6059, 6078, 6079,
+  6072, 6083, 6086, 6092, 6093") }}
+
+</div>
+
+### Crash fixes {#2.5.3-crash-fixes}
+
+<div class="changelog-entry">
+
+Fixes various crashes that could occur when:
+
+- making a Lua HTTP request from a coroutine
+- clicking the "Install" button for an update on Linux or macOS
+- closing down Chatterino
+- trying to search in an uninitialized split
+
+{{ credit(author="Mm2PL, pajlada", prs="5800, 5818, 6018, 6057") }}
+
+</div>
+
+### Windows shortcut {#2.5.3-windows-shortcut}
+
+<div class="changelog-entry">
+
+We've made some changes to the shortcut on Windows - this means that you might
+have to recreate the shortcut pointing to Chatterino in your start menu or
+task bar.
+This change was necessary to ensure desktop notifications can fetch the
+correct application information when they're being displayed.
+
+{{ credit(author="8thony", prs="5975") }}
+
+</div>
+
+### Join order {#2.5.3-join-order}
+
+<div class="changelog-entry">
+
+If you have a lot of channels open, you might have noticed that Chatterino can
+be slow at joining some of them.
+We now prioritize joining the channels that are in your active tab, reducing the time-to-type-a-message by anywhere from 0 seconds to 60 seconds!
+
+{{ credit(author="Nerixyz", prs="5850") }}
+
+</div>
+
+### Monospaced timestamps {#2.5.3-monospaced-timestamps}
+
+<div class="changelog-entry">
+
+Some fonts don't include monospaced numbers - with Chatterino 2.5.3 even fonts
+without monospaced numbers will render timestamps as if they were.
+
+<div class="figure-group">
+  {{ figure("/img/changelog/2.5.3/monospaced-timestamps-before.png", width=406, caption="Before the change") }}
+  {{ figure("/img/changelog/2.5.3/monospaced-timestamps-after.png", width=406, caption="After the change") }}
+</div>
+
+{{ credit(author="pajlada", prs="6062") }}
+
+</div>
+
+### Tab styles {#2.5.3-tab-styles}
+
+<div class="changelog-entry">
+
+You can now make your tabs a bit more compact with tab styles
+
+<div class="figure-group">
+  {{ figure("/img/changelog/2.5.3/tab-style-normal.png", width=406, caption="Normal") }}
+  {{ figure("/img/changelog/2.5.3/tab-style-compact.png", width=406, caption="Compact") }}
+</div>
+
+{{ credit(author="apa420", prs="5858") }}
+
+</div>
+
+### Linux desktop notifications {#2.5.3-linux-desktop-notifications}
+
+<div class="changelog-entry">
+
+We now support desktop notifications on Linux using
+[libnotify](https://gitlab.gnome.org/GNOME/libnotify). This requires
+you to be running a desktop notification daemon. You probably already have one
+installed, if not you can install and run [dunst](https://dunst-project.org/).
+
+{{ credit(author="camporter, 4rneee", prs="5881, 5971, 5976") }}
+
+</div>
+
+### Right-click to delete message {#2.5.3-right-click-delete-message}
+
+<div class="changelog-entry">
+
+As a moderator, there's now an option to delete the message in the menu when you
+right-click it.
+
+{{ figure("/img/changelog/2.5.3/delete-message-menu.png", width=552, caption="Delete MOSSCODE's message 🦀") }}
+
+{{ credit(author="Nerixyz", helper="pajlada", prs="5956, 6100") }}
+
+</div>
+
+### Shared chat badges {#2.5.3-shared-chat-badges}
+
+<div class="changelog-entry">
+
+Shared chat messages now use the source streamer's profile picture instead of
+a generic badge when possible.
+
+{{ figure("/img/changelog/2.5.3/shared-chat-badge.png", width=268, caption="Shared chat message from waterlynn's channel") }}
+
+{{ credit(author="treuks", helper="pajlada, Nerixyz", prs="5760") }}
+
+</div>
+
+### Miscellaneous changes {#2.5.3-miscellaneous-changes}
+
+<div class="changelog-entry">
+
+- You can now allow other browser extensions to interact with Chatterino. {{ credit(author="MiguVT", prs="5997", inline=true) }}
+
+- Added `Set highlight sounds` and `Open subscription page` hotkeys. {{ credit(author="brian6932", prs="5856, 6030", inline=true) }}
+
+- `/clear` messages now stack like timeouts. {{ credit(author="Nerixyz", prs="5806", inline=true) }}
+
+- Updated browser list for incognito browser support. {{ credit(author="teknsl, Wissididom", prs="5805, 5810", inline=true) }}
+
+- Improved error messaging of the `/clip` command. {{ credit(author="pajlada", prs="5879", inline=true) }}
+
+- Clicking on a live notification can now open the channel in a custom player. {{ credit(author="Nerixyz", prs="5880", inline=true) }}
+
+- Hotkeys and their keybinds are now searchable. {{ credit(author="apa420", prs="5884", inline=true) }}
+
+- Overlay windows can now be zoomed independently (by default: <kbd>CTRL</kbd>+<kbd>+</kbd>/<kbd>-</kbd>). {{ credit(author="Nerixyz", prs="6016", inline=true) }}
+
+- The `/watching` channel is now supported on all platforms. {{ credit(author="Nerixyz", prs="6031, 6043", inline=true) }}
+
+- You can now customize the font weight of chat messages. {{ credit(author="Nerixyz", prs="6037", inline=true) }}
+
+- Added the ability to filter on messages by the author's user ID. {{ credit(author="apa420", prs="5862", inline=true) }}
+
+  Example filter: `author.user_id == "22484632"`
+
+- Messages from restricted users are now hidden in streamer mode. {{ credit(author="pajlada", prs="6042, 6049", inline=true) }}
+
+  You can disable this in settings.
+
+- Linux & macOS now cleanly handle SIGINT/SIGTERM signals. {{ credit(author="pajlada", prs="6053", inline=true) }}
+
+</div>
+
+### Miscellaneous fixes {#2.5.3-miscellaneous-fixes}
+
+<div class="changelog-entry">
+
+- Fixed an issue where commands would sometimes reset if Chatterino was improperly shut down. {{ credit(author="pajlada", prs="6011", inline=true) }}
+
+- Fixed missing word wrap in update popup. {{ credit(author="8thony", prs="5811", inline=true) }}
+
+- Tabs now rescale as expected when changing the "Zoom" option. {{ credit(author="Nerixyz", prs="5794, 5833", inline=true) }}
+
+- Closing a usercard will no longer cause stop-logging messages to be generated in channel logs. {{ credit(author="Nerixyz", prs="5828", inline=true) }}
+
+- "Hide deleted messages" now works as expected. {{ credit(author="Nerixyz, pajlada", prs="5844, 5854", inline=true) }}
+
+- Fixed announcements not showing up in mentions tab. {{ credit(author="M4tthewDE", prs="5857", inline=true) }}
+
+- Fixed the reply button showing for inline whispers and announcements. {{ credit(author="M4tthewDE", prs="5863", inline=true) }}
+
+- Fixed suspicious user treatment update messages not being searchable. {{ credit(author="iProdigy", prs="5865", inline=true) }}
+
+- Ensure settings save after reauthenticating with a Twitch account. {{ credit(author="NyanyanKat", prs="5901", inline=true) }}
+
+- Fixed user info popup's opened from `/live` making invalid network requests. {{ credit(author="kyleScarmack", prs="5959", inline=true) }}
+
+- Ensure miniaudio backend exits even if it doesn't exit cleanly. {{ credit(author="pajlada", prs="5896", inline=true) }}
+
+- Fixed search in emote popup not always working correctly. {{ credit(author="Nerixyz", prs="5946", inline=true) }}
+
+- Fixed some text inputs being dark in light themes. {{ credit(author="pajlada", helper="Nerixyz", prs="6055, 6096, 6098", inline=true) }}
+
+- Fixed channel point redemptions with messages not showing up if PubSub is disconnected. {{ credit(author="Nerixyz", prs="5948", inline=true) }}
+
+- Fixed the input font not immediately updating when zooming in/out. {{ credit(author="Nerixyz", prs="5960", inline=true) }}
+
+- Fixed color input thinking blue is also red. {{ credit(author="Zakary2841", prs="5982", inline=true) }}
+
+- Fixed a thick border on Windows 11. {{ credit(author="Nerixyz", prs="5836", inline=true) }}
+
+- Fixed some windows not immediately closing. {{ credit(author="Nerixyz", prs="6054", inline=true) }}
+
+- The emote button no longer looks crunchy. {{ credit(author="pajlada", prs="6080", inline=true) }}
+
+- Fixed a potential way to escape the Lua Plugin sandbox. {{ credit(author="Mm2pl", prs="5846", inline=true) }}
+
+- Don't set default binding for "Toggle local R9K" on macOS. {{ credit(author="jacob-thompson", helper="pajlada", prs="5764", inline=true) }}
+
+  Was <kbd>CTRL</kbd> + <kdb>H</kdb> before, which clashes with a system binding.
+
+- Moderation buttons are no longer shown on your own usercard. {{ credit(author="Jujufrost", prs="6107", inline=true) }}
+
+</div>
+
+### Nerdier things {#2.5.3-nerd-things}
+
+<div class="changelog-entry">
+
+- From this release onwards, Qt 5 is no longer supported, meaning if you're on Windows 7 or 8 you won't
+  be able to run this. Please update your operating system.
+- A WEBP support check is run on startup. If your system doesn't support WEBP
+  for whatever reason (e.g. packaging has gone wrong), you'll see a warning
+  popup. Feel free to reach out if you need help figuring out why this is
+  showing up for you.
+
+</div>

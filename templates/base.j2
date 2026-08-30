@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    {% set page_title %}
+      {% block title %}Chatterino{% endblock %}
+    {% endset %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <meta property="og:site_name" content="Chatterino">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page_title | trim }}">
+    <meta property="og:description" content="Chat client for Twitch">
+    <meta property="og:image" content="https://chatterino.com/logo.svg">
     <link rel="icon" href="/logo.svg">
     <link rel="icon" href="/favicon.ico">
-    <title>{% block title %}Chatterino{% endblock %}</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" href="/styles/globals.css">
     {%- block head %}{% endblock %}
   </head>

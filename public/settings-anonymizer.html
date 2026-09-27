@@ -34,11 +34,28 @@
           reader.onload = () => {
             try {
               const json = JSON.parse(reader.result);
-              if (json && typeof json === "object" && "accounts" in json) {
-                delete json.accounts;
-              }
-              if (json && typeof json === "object" && "moltorino" in json) {
-                delete json.moltorino;
+              if (json && typeof json === "object") {
+                // Remove any key matching "account" (e.g. "accounts", "youtubeAccounts", etc.).
+                for (const key of Object.keys(json)) {
+                  if (key.toLowerCase().includes("account")) {
+                    delete json[key];
+                  }
+                }
+                if ("moltorino" in json) {
+                  delete json.moltorino;
+                }
+
+                if ("external" in json && typeof json.external === "object") {
+                  const external = json.external;
+                  if ("streamlink" in external) {
+                    // May have an auth token in the arguments.
+                    delete external.streamlink;
+                  }
+                  if ("imageUploader" in external) {
+                    // May have an auth token in the url or headers.
+                    delete external.imageUploader;
+                  }
+                }
               }
               strippedText = JSON.stringify(json, null, 2);
               output.textContent = strippedText;

@@ -11,7 +11,7 @@
   <table class="builds-table">
     <tbody>
       {% set links = read_json("links.json") %}
-      {# versions are listed newest first, so AppImages exist from last_appimage_version onwards #}
+      {! versions are listed newest first, so AppImages exist from last_appimage_version onwards !}
       {% set ns = namespace(has_appimage=false) %}
       {% for version in links.versions|reverse %}
       {% if version == links.last_appimage_version %}{% set ns.has_appimage = true %}{% endif %}

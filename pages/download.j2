@@ -3,17 +3,25 @@
 {% block content %}
 <div class="builds">
   <h1 class="builds-title">Old Builds</h1>
+  <p class="body-text builds-note">
+    Note: AppImage builds are no longer provided starting with Chatterino v2.5.5. See
+    <a href="https://github.com/Chatterino/chatterino2/discussions/6110">this discussion</a>
+    for more information.
+  </p>
   <table class="builds-table">
     <tbody>
       {% set links = read_json("links.json") %}
+      {# versions are listed newest first, so AppImages exist from last_appimage_version onwards #}
+      {% set ns = namespace(has_appimage=false) %}
       {% for version in links.versions|reverse %}
+      {% if version == links.last_appimage_version %}{% set ns.has_appimage = true %}{% endif %}
       {% set dl = links.base_download_link ~ "/" ~ version %}
       <tr>
         <td class="builds-version">{{ version }}</td>
         <td><a href="{{ dl }}/Chatterino.Installer.exe">Windows Installer</a></td>
         <td><a href="{{ dl }}/Chatterino.Portable.zip">Windows Portable</a></td>
         <td><a href="{{ dl }}/Chatterino.dmg">Mac Installer</a></td>
-        <td><a href="{{ dl }}/Chatterino-x86_64.AppImage">Linux AppImage</a></td>
+        <td>{% if ns.has_appimage %}<a href="{{ dl }}/Chatterino-x86_64.AppImage">Linux AppImage</a>{% endif %}</td>
       </tr>
       {% endfor %}
     </tbody>

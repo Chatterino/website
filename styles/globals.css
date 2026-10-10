@@ -794,6 +794,12 @@ td {
   color: #fff;
 }
 
+.builds-note {
+  margin-bottom: 2rem;
+  /* don't let the note widen .builds; wrap to the table's width instead */
+  contain: inline-size;
+}
+
 /* install guides */
 .guide {
   padding: 4rem;

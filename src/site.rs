@@ -123,7 +123,7 @@ fn render_single_page(env: &Environment, page: &Page, out_dir: &Path) -> Result<
             let wrapper = env.get_template("markdown.j2")?;
             wrapper.render(context! {
                 content => Value::from_safe_string(content),
-                meta => page.meta,
+                meta => page.meta.clone(),
             })?
         }
     };

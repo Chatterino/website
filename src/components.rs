@@ -1,13 +1,13 @@
 use std::collections::BTreeMap;
 use std::sync::Mutex;
 
-use minijinja::value::{Kwargs, Value};
+use minijinja::value::{Kwargs, Serde, Value};
 use minijinja::{Environment, Error, ErrorKind, State, context};
 
 use crate::env::Env;
 
 pub fn register(env: &mut Environment, vars: &Env) {
-    env.add_global("env", Value::from_serialize(vars));
+    env.add_global("env", Value::from(Serde(vars)));
 
     env.add_function("read_json", read_json);
     env.add_function("credit", credit);
